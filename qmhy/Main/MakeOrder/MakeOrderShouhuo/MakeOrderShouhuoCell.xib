@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="MakeOrderShouhuoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disc_huiyuanka" translatesAutoresizingMaskIntoConstraints="NO" id="8gX-Ec-VoK">
+                        <rect key="frame" x="10" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="31F-86-HkP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主标题1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCm-fk-UbY">
+                        <rect key="frame" x="71" y="2" width="252" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="副标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIe-PL-RbE">
+                        <rect key="frame" x="72" y="26" width="252" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0tu-S8-T4E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详细内容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Se-AH-77C">
+                        <rect key="frame" x="71" y="46" width="252" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Se-AH-77C" firstAttribute="top" secondItem="DCm-fk-UbY" secondAttribute="bottom" constant="21" id="CTS-L1-3P8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hIe-PL-RbE" secondAttribute="trailing" constant="-12" id="HIU-dV-r4k"/>
+                    <constraint firstAttribute="trailing" secondItem="DCm-fk-UbY" secondAttribute="trailing" constant="-3" id="J3q-MR-cBq"/>
+                    <constraint firstItem="DCm-fk-UbY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="P7o-rJ-Hrh"/>
+                    <constraint firstAttribute="bottom" secondItem="3Se-AH-77C" secondAttribute="bottom" id="hvU-Fh-btO"/>
+                    <constraint firstItem="hIe-PL-RbE" firstAttribute="top" secondItem="DCm-fk-UbY" secondAttribute="bottom" constant="1" id="lxm-CN-uyJ"/>
+                    <constraint firstItem="3Se-AH-77C" firstAttribute="trailing" secondItem="DCm-fk-UbY" secondAttribute="trailing" id="mWE-pZ-7ea"/>
+                    <constraint firstItem="DCm-fk-UbY" firstAttribute="leading" secondItem="8gX-Ec-VoK" secondAttribute="trailing" constant="11" id="muP-yr-rBv"/>
+                    <constraint firstItem="8gX-Ec-VoK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="nhZ-P3-TYA"/>
+                    <constraint firstItem="8gX-Ec-VoK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="p8Y-Mh-VyA"/>
+                    <constraint firstItem="8gX-Ec-VoK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qBB-CZ-u0C"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hIe-PL-RbE" secondAttribute="bottom" constant="12" id="reB-9t-s2M"/>
+                    <constraint firstItem="hIe-PL-RbE" firstAttribute="leading" secondItem="8gX-Ec-VoK" secondAttribute="trailing" constant="12" id="ta0-z5-4nl"/>
+                    <constraint firstItem="3Se-AH-77C" firstAttribute="leading" secondItem="DCm-fk-UbY" secondAttribute="leading" id="u9a-Ob-fP6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="UIImage" destination="8gX-Ec-VoK" id="Tal-K8-BZn"/>
+                <outlet property="detailedContent" destination="3Se-AH-77C" id="6Ae-7O-TcW"/>
+                <outlet property="mainTitle" destination="DCm-fk-UbY" id="mfo-fF-0C5"/>
+                <outlet property="subTitle" destination="hIe-PL-RbE" id="H8D-hS-nNm"/>
+            </connections>
+            <point key="canvasLocation" x="511" y="372"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Disc_huiyuanka" width="41" height="41"/>
+    </resources>
+</document>

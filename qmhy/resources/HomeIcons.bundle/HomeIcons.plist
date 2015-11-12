@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>我要下单</key>
+	<string>09999988.png</string>
+	<key>订单跟踪</key>
+	<string>09999999.png</string>
+	<key>分享</key>
+	<string>10000014.png</string>
+	<key>自助下单</key>
+	<string>20000032.png</string>
+	<key>电话下单</key>
+	<string>20000094.png</string>
+	<key>配置</key>
+	<string>09999976.png</string>
+	<key>我的发件</key>
+	<string>10000003.png</string>
+	<key>消息</key>
+	<string>20000132.png</string>
+	<key>邀请</key>
+	<string>2013082800000932.png</string>
+	<key>地图</key>
+	<string>20000134.png</string>
+	<key>客服中心</key>
+	<string>10000011.png</string>
+	<key>我的取件</key>
+	<string>20000150.png</string>
+</dict>
+</plist>

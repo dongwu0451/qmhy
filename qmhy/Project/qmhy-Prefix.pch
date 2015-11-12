@@ -1,0 +1,34 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import "QConfig.h"
+#import "AppDelegate.h"
+
+#ifdef DEBUG // 处于开发阶段
+#define QLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define QLog(...)
+#endif
+
+#define QNewClass(...) [[__VA_ARGS__ alloc] init]
+// RGB颜色
+#define QColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define QRandomColor XXCColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define QUrl @"http://113.6.252.161:9090/adminapp/WebAppController/json.html"
