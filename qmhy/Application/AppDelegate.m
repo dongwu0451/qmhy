@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  qmhy
+//  qmhy9999999999999
 //  应用程序入口
 //
 //  Created by lingsbb on 2015-08.
