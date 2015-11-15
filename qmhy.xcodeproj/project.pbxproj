@@ -7,152 +7,210 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */; };
+		04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D071BF5BF8B0003254F /* MBProgressHUD.m */; };
+		04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D0C1BF5BF900003254F /* MKAnnotationView+WebCache.m */; };
+		04155D2D1BF5BF900003254F /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D0E1BF5BF900003254F /* NSData+ImageContentType.m */; };
+		04155D2E1BF5BF900003254F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D101BF5BF900003254F /* SDImageCache.m */; };
+		04155D2F1BF5BF900003254F /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D121BF5BF900003254F /* SDWebImageCompat.m */; };
+		04155D301BF5BF900003254F /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D141BF5BF900003254F /* SDWebImageDecoder.m */; };
+		04155D311BF5BF900003254F /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D161BF5BF900003254F /* SDWebImageDownloader.m */; };
+		04155D321BF5BF900003254F /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D181BF5BF900003254F /* SDWebImageDownloaderOperation.m */; };
+		04155D331BF5BF900003254F /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D1A1BF5BF900003254F /* SDWebImageManager.m */; };
+		04155D341BF5BF900003254F /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D1D1BF5BF900003254F /* SDWebImagePrefetcher.m */; };
+		04155D351BF5BF900003254F /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D1F1BF5BF900003254F /* UIButton+WebCache.m */; };
+		04155D361BF5BF900003254F /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D211BF5BF900003254F /* UIImage+GIF.m */; };
+		04155D371BF5BF900003254F /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D231BF5BF900003254F /* UIImage+MultiFormat.m */; };
+		04155D381BF5BF900003254F /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D251BF5BF900003254F /* UIImage+WebP.m */; };
+		04155D391BF5BF900003254F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D271BF5BF900003254F /* UIImageView+HighlightedWebCache.m */; };
+		04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D291BF5BF900003254F /* UIImageView+WebCache.m */; };
+		04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */; };
+		04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
 		2BEB6C021A16062F003C2B91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEB6C011A16062F003C2B91 /* Security.framework */; };
-		360EF14E1BC8AEEE00385209 /* ConfigCPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF14D1BC8AEEE00385209 /* ConfigCPassword.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1511BC8AEF800385209 /* ConfigCommonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1501BC8AEF800385209 /* ConfigCommonTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1571BC8AF0D00385209 /* ConfigCCityTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1561BC8AF0D00385209 /* ConfigCCityTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF15C1BC8AF1E00385209 /* ConfigCBankVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1651BC8AF3C00385209 /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1601BC8AF3C00385209 /* HomeIconButton.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1661BC8AF3C00385209 /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1621BC8AF3C00385209 /* HomeNVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1671BC8AF3C00385209 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1641BC8AF3C00385209 /* HomeVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF16C1BC8AF5D00385209 /* AboutTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF16B1BC8AF5D00385209 /* AboutTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF17A1BC8AF7E00385209 /* MoreNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1771BC8AF7E00385209 /* MoreNVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF17B1BC8AF7E00385209 /* MoreTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1791BC8AF7E00385209 /* MoreTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1811BC8AF9400385209 /* pricetable.gif in Resources */ = {isa = PBXBuildFile; fileRef = 360EF17D1BC8AF9300385209 /* pricetable.gif */; settings = {ASSET_TAGS = (); }; };
-		360EF1821BC8AF9400385209 /* pricetable.html in Resources */ = {isa = PBXBuildFile; fileRef = 360EF17E1BC8AF9400385209 /* pricetable.html */; settings = {ASSET_TAGS = (); }; };
-		360EF1831BC8AF9400385209 /* PriceTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1801BC8AF9400385209 /* PriceTableVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1851BC8AFA900385209 /* userprotocol.gif */; settings = {ASSET_TAGS = (); }; };
-		360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1861BC8AFA900385209 /* userprotocol.html */; settings = {ASSET_TAGS = (); }; };
-		360EF18B1BC8AFA900385209 /* UserProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1881BC8AFA900385209 /* UserProtocolVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1901BC8AFD200385209 /* entlib.gif in Resources */ = {isa = PBXBuildFile; fileRef = 360EF18C1BC8AFD200385209 /* entlib.gif */; settings = {ASSET_TAGS = (); }; };
-		360EF1911BC8AFD200385209 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 360EF18D1BC8AFD200385209 /* help.html */; settings = {ASSET_TAGS = (); }; };
-		360EF1921BC8AFD200385209 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF18F1BC8AFD200385209 /* HelpVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1971BC8AFFE00385209 /* OrderGetTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1961BC8AFFE00385209 /* OrderGetTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF19A1BC8B06B00385209 /* MyNVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF19E1BC8B06B00385209 /* MyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF19C1BC8B06B00385209 /* MyTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1A21BC8B07C00385209 /* NotifyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A11BC8B07C00385209 /* NotifyTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A51BC8B08A00385209 /* NotifyContentTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1AA1BC8B09900385209 /* TousuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A91BC8B09900385209 /* TousuVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1AE1BC8B0AA00385209 /* YqTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1AD1BC8B0AA00385209 /* YqTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1B81BC8B0DC00385209 /* OrderSendQueryContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1B51BC8B0DC00385209 /* OrderSendQueryContentTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1B91BC8B0DC00385209 /* OrderSendQueryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1B71BC8B0DC00385209 /* OrderSendQueryTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1BC1BC8B0E500385209 /* OrderSendListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1BB1BC8B0E500385209 /* OrderSendListTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1C11BC8B0EE00385209 /* OrderSendCommentSubmitTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1BE1BC8B0EE00385209 /* OrderSendCommentSubmitTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C01BC8B0EE00385209 /* OrderSendCommentTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1C91BC8B0F700385209 /* OrderSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C41BC8B0F700385209 /* OrderSendButton.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C61BC8B0F700385209 /* OrderSendNVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1CB1BC8B0F700385209 /* OrderSendTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C81BC8B0F700385209 /* OrderSendTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1DF1BC8B18B00385209 /* AddShouhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1D51BC8B18B00385209 /* AddShouhuoVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1E01BC8B18B00385209 /* AddShouhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1D61BC8B18B00385209 /* AddShouhuoVC.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF1E11BC8B18B00385209 /* ShouhuoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1D81BC8B18B00385209 /* ShouhuoData.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1DA1BC8B18B00385209 /* ShouhuoModel.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1E31BC8B18B00385209 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1DC1BC8B18B00385209 /* MakeOrderShouhuoCell.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1DD1BC8B18B00385209 /* MakeOrderShouhuoCell.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF1EF1BC8B19600385209 /* AddQuhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1E71BC8B19600385209 /* AddQuhuoVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1F01BC8B19600385209 /* AddQuhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1E81BC8B19600385209 /* AddQuhuoVC.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF1F11BC8B19600385209 /* MakeOrderQuhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1EA1BC8B19600385209 /* MakeOrderQuhuoCell.m */; settings = {ASSET_TAGS = (); }; };
-		360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1EB1BC8B19600385209 /* MakeOrderQuhuoCell.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1ED1BC8B19600385209 /* QuhuoModel.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2021BC8B1A200385209 /* SelectGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1F61BC8B1A200385209 /* SelectGoodsVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2031BC8B1A200385209 /* AddGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1F81BC8B1A200385209 /* AddGoodsVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2051BC8B1A200385209 /* BigAndSmallGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1FC1BC8B1A200385209 /* BigAndSmallGoodsModel.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2061BC8B1A200385209 /* MakeOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1FE1BC8B1A200385209 /* MakeOrderGoodsCell.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2071BC8B1A200385209 /* MakeOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1FF1BC8B1A200385209 /* MakeOrderGoodsCell.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF21C1BC8B1BC00385209 /* CarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2171BC8B1BC00385209 /* CarModel.m */; settings = {ASSET_TAGS = (); }; };
-		360EF21D1BC8B1BC00385209 /* MakeOrderCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2191BC8B1BC00385209 /* MakeOrderCarCell.m */; settings = {ASSET_TAGS = (); }; };
-		360EF21E1BC8B1BC00385209 /* MakeOrderCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF21A1BC8B1BC00385209 /* MakeOrderCarCell.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF2271BC8B1CB00385209 /* MakeOrderOKTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2211BC8B1CB00385209 /* MakeOrderOKTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2281BC8B1CB00385209 /* MakeOrderTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2231BC8B1CB00385209 /* MakeOrderTVC.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2291BC8B1CB00385209 /* MakeOrderTotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2251BC8B1CB00385209 /* MakeOrderTotalCell.m */; settings = {ASSET_TAGS = (); }; };
-		360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF2261BC8B1CB00385209 /* MakeOrderTotalCell.xib */; settings = {ASSET_TAGS = (); }; };
-		360EF2301BC8B1E600385209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF22C1BC8B1E600385209 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2311BC8B1E600385209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360EF22D1BC8B1E600385209 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		360EF2321BC8B1E600385209 /* qmhy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 360EF22E1BC8B1E600385209 /* qmhy-Info.plist */; settings = {ASSET_TAGS = (); }; };
-		360EF23D1BC8B25100385209 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2361BC8B25100385209 /* AESCrypt.m */; settings = {ASSET_TAGS = (); }; };
-		360EF23E1BC8B25100385209 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2381BC8B25100385209 /* NSData+Base64.m */; settings = {ASSET_TAGS = (); }; };
-		360EF23F1BC8B25100385209 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF23A1BC8B25100385209 /* NSData+CommonCrypto.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2401BC8B25100385209 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF23C1BC8B25100385209 /* NSString+Base64.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2471BC8B58F00385209 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2421BC8B58F00385209 /* MJRefreshGifHeader.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2481BC8B58F00385209 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2441BC8B58F00385209 /* MJRefreshNormalHeader.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2461BC8B58F00385209 /* MJRefreshStateHeader.m */; settings = {ASSET_TAGS = (); }; };
-		360EF24D1BC8D7C200385209 /* TLTagsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF24C1BC8D7C200385209 /* TLTagsControl.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2501BC8DF8200385209 /* QConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF24F1BC8DF8200385209 /* QConfig.m */; settings = {ASSET_TAGS = (); }; };
-		360EF2531BCA321000385209 /* SelectCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2521BCA321000385209 /* SelectCarVC.m */; settings = {ASSET_TAGS = (); }; };
-		364556A01BCA388B008A0C80 /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */; settings = {ASSET_TAGS = (); }; };
-		364556A31BCA38A1008A0C80 /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */; settings = {ASSET_TAGS = (); }; };
-		364556A61BCA38B6008A0C80 /* ConfigCGoodsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A51BCA38B6008A0C80 /* ConfigCGoodsTVC.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2601BC7AC960045E75C /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2641BC7AC960045E75C /* tabbed_icon.bundle */; settings = {ASSET_TAGS = (); }; };
-		36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2761BC7AF650045E75C /* GesturePassword.bundle */; settings = {ASSET_TAGS = (); }; };
-		36ADF2801BC7AF650045E75C /* GesturePasswordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2781BC7AF650045E75C /* GesturePasswordButton.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2811BC7AF650045E75C /* GesturePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF27A1BC7AF650045E75C /* GesturePasswordController.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2821BC7AF650045E75C /* GesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF27C1BC7AF650045E75C /* GesturePasswordView.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2831BC7AF650045E75C /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF27E1BC7AF650045E75C /* TentacleView.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF29E1BC7B0560045E75C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF28C1BC7B0550045E75C /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF29F1BC7B0560045E75C /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF28E1BC7B0550045E75C /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A01BC7B0560045E75C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2901BC7B0550045E75C /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A11BC7B0560045E75C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2931BC7B0550045E75C /* AFNetworkReachabilityManager.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2951BC7B0550045E75C /* AFSecurityPolicy.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A31BC7B0560045E75C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2971BC7B0550045E75C /* AFURLConnectionOperation.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A41BC7B0560045E75C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2991BC7B0550045E75C /* AFURLRequestSerialization.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A51BC7B0560045E75C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF29B1BC7B0550045E75C /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2A61BC7B0560045E75C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF29D1BC7B0560045E75C /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2B11BC7B0650045E75C /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2A71BC7B0650045E75C /* MJRefresh.bundle */; settings = {ASSET_TAGS = (); }; };
-		36ADF2B21BC7B0650045E75C /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2AA1BC7B0650045E75C /* MJRefreshConst.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2AC1BC7B0650045E75C /* UIScrollView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2B41BC7B0650045E75C /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2AE1BC7B0650045E75C /* UIScrollView+MJRefresh.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2B51BC7B0650045E75C /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2B01BC7B0650045E75C /* UIView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2E71BC7B17B0045E75C /* MJConst.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2F81BC7B17B0045E75C /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2EA1BC7B17B0045E75C /* MJFoundation.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2F91BC7B17B0045E75C /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2EC1BC7B17B0045E75C /* MJProperty.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2FA1BC7B17B0045E75C /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2EE1BC7B17B0045E75C /* MJType.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2FB1BC7B17B0045E75C /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F01BC7B17B0045E75C /* NSObject+MJCoding.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F21BC7B17B0045E75C /* NSObject+MJKeyValue.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F41BC7B17B0045E75C /* NSObject+MJProperty.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF2FE1BC7B17B0045E75C /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F61BC7B17B0045E75C /* NSString+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3101BC7B3540045E75C /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3001BC7B3540045E75C /* AFNetworkActivityIndicatorManager.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3021BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3041BC7B3540045E75C /* UIAlertView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3131BC7B3540045E75C /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3061BC7B3540045E75C /* UIButton+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3141BC7B3540045E75C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3081BC7B3540045E75C /* UIImageView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3151BC7B3540045E75C /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF30B1BC7B3540045E75C /* UIProgressView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3161BC7B3540045E75C /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF30D1BC7B3540045E75C /* UIRefreshControl+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3171BC7B3540045E75C /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF30F1BC7B3540045E75C /* UIWebView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF31A1BC7B37B0045E75C /* AFNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3191BC7B37B0045E75C /* AFNetworkTool.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3251BC7B3C00045E75C /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF31C1BC7B3C00045E75C /* MJRefreshAutoFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3261BC7B3C00045E75C /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF31E1BC7B3C00045E75C /* MJRefreshBackFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3271BC7B3C00045E75C /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3201BC7B3C00045E75C /* MJRefreshComponent.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3281BC7B3C00045E75C /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3221BC7B3C00045E75C /* MJRefreshFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3291BC7B3C00045E75C /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3241BC7B3C00045E75C /* MJRefreshHeader.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3301BC7B3E10045E75C /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF32B1BC7B3E10045E75C /* MJRefreshAutoGifFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3311BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF32D1BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3321BC7B3E10045E75C /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF32F1BC7B3E10045E75C /* MJRefreshAutoStateFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3391BC7B3EA0045E75C /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3341BC7B3EA0045E75C /* MJRefreshBackGifFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF33A1BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3361BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF33B1BC7B3EA0045E75C /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3381BC7B3EA0045E75C /* MJRefreshBackStateFooter.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF33D1BC7B62D0045E75C /* LoginVC.xib */; settings = {ASSET_TAGS = (); }; };
-		36ADF3441BC7B62D0045E75C /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF33F1BC7B62D0045E75C /* LoginVC.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3451BC7B62D0045E75C /* RegisterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3411BC7B62D0045E75C /* RegisterTVC.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF3421BC7B62D0045E75C /* RegisterTVC.xib */; settings = {ASSET_TAGS = (); }; };
-		36ADF3621BC7B7130045E75C /* JSONModelCommonCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3571BC7B7130045E75C /* JSONModelCommonCity.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3631BC7B7130045E75C /* JSONModelCommonGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3591BC7B7130045E75C /* JSONModelCommonGoods.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3641BC7B7130045E75C /* JSONModelCommonLogistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF35B1BC7B7130045E75C /* JSONModelCommonLogistics.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3651BC7B7130045E75C /* JSONModelLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF35D1BC7B7130045E75C /* JSONModelLogin.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF35F1BC7B7130045E75C /* JSONModelPushMess.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3671BC7B7130045E75C /* JSONModelReg.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3611BC7B7130045E75C /* JSONModelReg.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3721BC7B7AF0045E75C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3691BC7B7AF0045E75C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3761BC7B7AF0045E75C /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF36F1BC7B7AF0045E75C /* RootTabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3771BC7B7AF0045E75C /* SinglePageNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3711BC7B7AF0045E75C /* SinglePageNVC.m */; settings = {ASSET_TAGS = (); }; };
-		36ADF3881BC895B80045E75C /* ConfigCWuliuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */; settings = {ASSET_TAGS = (); }; };
-		36D2E0561BCF260600DC0149 /* More.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0551BCF260600DC0149 /* More.bundle */; settings = {ASSET_TAGS = (); }; };
-		36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0571BCF26B900DC0149 /* HomeIcons.bundle */; settings = {ASSET_TAGS = (); }; };
-		36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0591BCF27AA00DC0149 /* Home.bundle */; settings = {ASSET_TAGS = (); }; };
+		360EF14E1BC8AEEE00385209 /* ConfigCPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF14D1BC8AEEE00385209 /* ConfigCPassword.m */; };
+		360EF1511BC8AEF800385209 /* ConfigCommonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1501BC8AEF800385209 /* ConfigCommonTVC.m */; };
+		360EF1571BC8AF0D00385209 /* ConfigCCityTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1561BC8AF0D00385209 /* ConfigCCityTVC.m */; };
+		360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF15C1BC8AF1E00385209 /* ConfigCBankVC.m */; };
+		360EF1651BC8AF3C00385209 /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1601BC8AF3C00385209 /* HomeIconButton.m */; };
+		360EF1661BC8AF3C00385209 /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1621BC8AF3C00385209 /* HomeNVC.m */; };
+		360EF1671BC8AF3C00385209 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1641BC8AF3C00385209 /* HomeVC.m */; };
+		360EF16C1BC8AF5D00385209 /* AboutTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF16B1BC8AF5D00385209 /* AboutTVC.m */; };
+		360EF17A1BC8AF7E00385209 /* MoreNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1771BC8AF7E00385209 /* MoreNVC.m */; };
+		360EF17B1BC8AF7E00385209 /* MoreTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1791BC8AF7E00385209 /* MoreTVC.m */; };
+		360EF1811BC8AF9400385209 /* pricetable.gif in Resources */ = {isa = PBXBuildFile; fileRef = 360EF17D1BC8AF9300385209 /* pricetable.gif */; };
+		360EF1821BC8AF9400385209 /* pricetable.html in Resources */ = {isa = PBXBuildFile; fileRef = 360EF17E1BC8AF9400385209 /* pricetable.html */; };
+		360EF1831BC8AF9400385209 /* PriceTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1801BC8AF9400385209 /* PriceTableVC.m */; };
+		360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1851BC8AFA900385209 /* userprotocol.gif */; };
+		360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1861BC8AFA900385209 /* userprotocol.html */; };
+		360EF18B1BC8AFA900385209 /* UserProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1881BC8AFA900385209 /* UserProtocolVC.m */; };
+		360EF1901BC8AFD200385209 /* entlib.gif in Resources */ = {isa = PBXBuildFile; fileRef = 360EF18C1BC8AFD200385209 /* entlib.gif */; };
+		360EF1911BC8AFD200385209 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 360EF18D1BC8AFD200385209 /* help.html */; };
+		360EF1921BC8AFD200385209 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF18F1BC8AFD200385209 /* HelpVC.m */; };
+		360EF1971BC8AFFE00385209 /* OrderGetTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1961BC8AFFE00385209 /* OrderGetTVC.m */; };
+		360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF19A1BC8B06B00385209 /* MyNVC.m */; };
+		360EF19E1BC8B06B00385209 /* MyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF19C1BC8B06B00385209 /* MyTVC.m */; };
+		360EF1A21BC8B07C00385209 /* NotifyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A11BC8B07C00385209 /* NotifyTVC.m */; };
+		360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A51BC8B08A00385209 /* NotifyContentTVC.m */; };
+		360EF1AA1BC8B09900385209 /* TousuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A91BC8B09900385209 /* TousuVC.m */; };
+		360EF1AE1BC8B0AA00385209 /* YqTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1AD1BC8B0AA00385209 /* YqTVC.m */; };
+		360EF1B81BC8B0DC00385209 /* OrderSendQueryContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1B51BC8B0DC00385209 /* OrderSendQueryContentTVC.m */; };
+		360EF1B91BC8B0DC00385209 /* OrderSendQueryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1B71BC8B0DC00385209 /* OrderSendQueryTVC.m */; };
+		360EF1BC1BC8B0E500385209 /* OrderSendListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1BB1BC8B0E500385209 /* OrderSendListTVC.m */; };
+		360EF1C11BC8B0EE00385209 /* OrderSendCommentSubmitTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1BE1BC8B0EE00385209 /* OrderSendCommentSubmitTVC.m */; };
+		360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C01BC8B0EE00385209 /* OrderSendCommentTVC.m */; };
+		360EF1C91BC8B0F700385209 /* OrderSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C41BC8B0F700385209 /* OrderSendButton.m */; };
+		360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C61BC8B0F700385209 /* OrderSendNVC.m */; };
+		360EF1CB1BC8B0F700385209 /* OrderSendTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C81BC8B0F700385209 /* OrderSendTVC.m */; };
+		360EF1DF1BC8B18B00385209 /* AddShouhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1D51BC8B18B00385209 /* AddShouhuoVC.m */; };
+		360EF1E01BC8B18B00385209 /* AddShouhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1D61BC8B18B00385209 /* AddShouhuoVC.xib */; };
+		360EF1E11BC8B18B00385209 /* ShouhuoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1D81BC8B18B00385209 /* ShouhuoData.m */; };
+		360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1DA1BC8B18B00385209 /* ShouhuoModel.m */; };
+		360EF1E31BC8B18B00385209 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1DC1BC8B18B00385209 /* MakeOrderShouhuoCell.m */; };
+		360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1DD1BC8B18B00385209 /* MakeOrderShouhuoCell.xib */; };
+		360EF1EF1BC8B19600385209 /* AddQuhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1E71BC8B19600385209 /* AddQuhuoVC.m */; };
+		360EF1F01BC8B19600385209 /* AddQuhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1E81BC8B19600385209 /* AddQuhuoVC.xib */; };
+		360EF1F11BC8B19600385209 /* MakeOrderQuhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1EA1BC8B19600385209 /* MakeOrderQuhuoCell.m */; };
+		360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1EB1BC8B19600385209 /* MakeOrderQuhuoCell.xib */; };
+		360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1ED1BC8B19600385209 /* QuhuoModel.m */; };
+		360EF2021BC8B1A200385209 /* SelectGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1F61BC8B1A200385209 /* SelectGoodsVC.m */; };
+		360EF2031BC8B1A200385209 /* AddGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1F81BC8B1A200385209 /* AddGoodsVC.m */; };
+		360EF2051BC8B1A200385209 /* BigAndSmallGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1FC1BC8B1A200385209 /* BigAndSmallGoodsModel.m */; };
+		360EF2061BC8B1A200385209 /* MakeOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1FE1BC8B1A200385209 /* MakeOrderGoodsCell.m */; };
+		360EF2071BC8B1A200385209 /* MakeOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1FF1BC8B1A200385209 /* MakeOrderGoodsCell.xib */; };
+		360EF21C1BC8B1BC00385209 /* CarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2171BC8B1BC00385209 /* CarModel.m */; };
+		360EF21D1BC8B1BC00385209 /* MakeOrderCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2191BC8B1BC00385209 /* MakeOrderCarCell.m */; };
+		360EF21E1BC8B1BC00385209 /* MakeOrderCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF21A1BC8B1BC00385209 /* MakeOrderCarCell.xib */; };
+		360EF2271BC8B1CB00385209 /* MakeOrderOKTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2211BC8B1CB00385209 /* MakeOrderOKTVC.m */; };
+		360EF2281BC8B1CB00385209 /* MakeOrderTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2231BC8B1CB00385209 /* MakeOrderTVC.m */; };
+		360EF2291BC8B1CB00385209 /* MakeOrderTotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2251BC8B1CB00385209 /* MakeOrderTotalCell.m */; };
+		360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF2261BC8B1CB00385209 /* MakeOrderTotalCell.xib */; };
+		360EF2301BC8B1E600385209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF22C1BC8B1E600385209 /* main.m */; };
+		360EF2311BC8B1E600385209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360EF22D1BC8B1E600385209 /* Main.storyboard */; };
+		360EF2321BC8B1E600385209 /* qmhy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 360EF22E1BC8B1E600385209 /* qmhy-Info.plist */; };
+		360EF23D1BC8B25100385209 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2361BC8B25100385209 /* AESCrypt.m */; };
+		360EF23E1BC8B25100385209 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2381BC8B25100385209 /* NSData+Base64.m */; };
+		360EF23F1BC8B25100385209 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF23A1BC8B25100385209 /* NSData+CommonCrypto.m */; };
+		360EF2401BC8B25100385209 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF23C1BC8B25100385209 /* NSString+Base64.m */; };
+		360EF2471BC8B58F00385209 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2421BC8B58F00385209 /* MJRefreshGifHeader.m */; };
+		360EF2481BC8B58F00385209 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2441BC8B58F00385209 /* MJRefreshNormalHeader.m */; };
+		360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2461BC8B58F00385209 /* MJRefreshStateHeader.m */; };
+		360EF24D1BC8D7C200385209 /* TLTagsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF24C1BC8D7C200385209 /* TLTagsControl.m */; };
+		360EF2501BC8DF8200385209 /* QConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF24F1BC8DF8200385209 /* QConfig.m */; };
+		360EF2531BCA321000385209 /* SelectCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2521BCA321000385209 /* SelectCarVC.m */; };
+		364556A01BCA388B008A0C80 /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */; };
+		364556A31BCA38A1008A0C80 /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */; };
+		364556A61BCA38B6008A0C80 /* ConfigCGoodsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A51BCA38B6008A0C80 /* ConfigCGoodsTVC.m */; };
+		36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2601BC7AC960045E75C /* Images.xcassets */; };
+		36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2641BC7AC960045E75C /* tabbed_icon.bundle */; };
+		36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2761BC7AF650045E75C /* GesturePassword.bundle */; };
+		36ADF2801BC7AF650045E75C /* GesturePasswordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2781BC7AF650045E75C /* GesturePasswordButton.m */; };
+		36ADF2811BC7AF650045E75C /* GesturePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF27A1BC7AF650045E75C /* GesturePasswordController.m */; };
+		36ADF2821BC7AF650045E75C /* GesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF27C1BC7AF650045E75C /* GesturePasswordView.m */; };
+		36ADF2831BC7AF650045E75C /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF27E1BC7AF650045E75C /* TentacleView.m */; };
+		36ADF29E1BC7B0560045E75C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF28C1BC7B0550045E75C /* AFHTTPRequestOperation.m */; };
+		36ADF29F1BC7B0560045E75C /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF28E1BC7B0550045E75C /* AFHTTPRequestOperationManager.m */; };
+		36ADF2A01BC7B0560045E75C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2901BC7B0550045E75C /* AFHTTPSessionManager.m */; };
+		36ADF2A11BC7B0560045E75C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2931BC7B0550045E75C /* AFNetworkReachabilityManager.m */; };
+		36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2951BC7B0550045E75C /* AFSecurityPolicy.m */; };
+		36ADF2A31BC7B0560045E75C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2971BC7B0550045E75C /* AFURLConnectionOperation.m */; };
+		36ADF2A41BC7B0560045E75C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2991BC7B0550045E75C /* AFURLRequestSerialization.m */; };
+		36ADF2A51BC7B0560045E75C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF29B1BC7B0550045E75C /* AFURLResponseSerialization.m */; };
+		36ADF2A61BC7B0560045E75C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF29D1BC7B0560045E75C /* AFURLSessionManager.m */; };
+		36ADF2B11BC7B0650045E75C /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2A71BC7B0650045E75C /* MJRefresh.bundle */; };
+		36ADF2B21BC7B0650045E75C /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2AA1BC7B0650045E75C /* MJRefreshConst.m */; };
+		36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2AC1BC7B0650045E75C /* UIScrollView+MJExtension.m */; };
+		36ADF2B41BC7B0650045E75C /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2AE1BC7B0650045E75C /* UIScrollView+MJRefresh.m */; };
+		36ADF2B51BC7B0650045E75C /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2B01BC7B0650045E75C /* UIView+MJExtension.m */; };
+		36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2E71BC7B17B0045E75C /* MJConst.m */; };
+		36ADF2F81BC7B17B0045E75C /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2EA1BC7B17B0045E75C /* MJFoundation.m */; };
+		36ADF2F91BC7B17B0045E75C /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2EC1BC7B17B0045E75C /* MJProperty.m */; };
+		36ADF2FA1BC7B17B0045E75C /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2EE1BC7B17B0045E75C /* MJType.m */; };
+		36ADF2FB1BC7B17B0045E75C /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F01BC7B17B0045E75C /* NSObject+MJCoding.m */; };
+		36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F21BC7B17B0045E75C /* NSObject+MJKeyValue.m */; };
+		36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F41BC7B17B0045E75C /* NSObject+MJProperty.m */; };
+		36ADF2FE1BC7B17B0045E75C /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF2F61BC7B17B0045E75C /* NSString+MJExtension.m */; };
+		36ADF3101BC7B3540045E75C /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3001BC7B3540045E75C /* AFNetworkActivityIndicatorManager.m */; };
+		36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3021BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m */; };
+		36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3041BC7B3540045E75C /* UIAlertView+AFNetworking.m */; };
+		36ADF3131BC7B3540045E75C /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3061BC7B3540045E75C /* UIButton+AFNetworking.m */; };
+		36ADF3141BC7B3540045E75C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3081BC7B3540045E75C /* UIImageView+AFNetworking.m */; };
+		36ADF3151BC7B3540045E75C /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF30B1BC7B3540045E75C /* UIProgressView+AFNetworking.m */; };
+		36ADF3161BC7B3540045E75C /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF30D1BC7B3540045E75C /* UIRefreshControl+AFNetworking.m */; };
+		36ADF3171BC7B3540045E75C /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF30F1BC7B3540045E75C /* UIWebView+AFNetworking.m */; };
+		36ADF31A1BC7B37B0045E75C /* AFNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3191BC7B37B0045E75C /* AFNetworkTool.m */; };
+		36ADF3251BC7B3C00045E75C /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF31C1BC7B3C00045E75C /* MJRefreshAutoFooter.m */; };
+		36ADF3261BC7B3C00045E75C /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF31E1BC7B3C00045E75C /* MJRefreshBackFooter.m */; };
+		36ADF3271BC7B3C00045E75C /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3201BC7B3C00045E75C /* MJRefreshComponent.m */; };
+		36ADF3281BC7B3C00045E75C /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3221BC7B3C00045E75C /* MJRefreshFooter.m */; };
+		36ADF3291BC7B3C00045E75C /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3241BC7B3C00045E75C /* MJRefreshHeader.m */; };
+		36ADF3301BC7B3E10045E75C /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF32B1BC7B3E10045E75C /* MJRefreshAutoGifFooter.m */; };
+		36ADF3311BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF32D1BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m */; };
+		36ADF3321BC7B3E10045E75C /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF32F1BC7B3E10045E75C /* MJRefreshAutoStateFooter.m */; };
+		36ADF3391BC7B3EA0045E75C /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3341BC7B3EA0045E75C /* MJRefreshBackGifFooter.m */; };
+		36ADF33A1BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3361BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m */; };
+		36ADF33B1BC7B3EA0045E75C /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3381BC7B3EA0045E75C /* MJRefreshBackStateFooter.m */; };
+		36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF33D1BC7B62D0045E75C /* LoginVC.xib */; };
+		36ADF3441BC7B62D0045E75C /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF33F1BC7B62D0045E75C /* LoginVC.m */; };
+		36ADF3451BC7B62D0045E75C /* RegisterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3411BC7B62D0045E75C /* RegisterTVC.m */; };
+		36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF3421BC7B62D0045E75C /* RegisterTVC.xib */; };
+		36ADF3621BC7B7130045E75C /* JSONModelCommonCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3571BC7B7130045E75C /* JSONModelCommonCity.m */; };
+		36ADF3631BC7B7130045E75C /* JSONModelCommonGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3591BC7B7130045E75C /* JSONModelCommonGoods.m */; };
+		36ADF3641BC7B7130045E75C /* JSONModelCommonLogistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF35B1BC7B7130045E75C /* JSONModelCommonLogistics.m */; };
+		36ADF3651BC7B7130045E75C /* JSONModelLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF35D1BC7B7130045E75C /* JSONModelLogin.m */; };
+		36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF35F1BC7B7130045E75C /* JSONModelPushMess.m */; };
+		36ADF3671BC7B7130045E75C /* JSONModelReg.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3611BC7B7130045E75C /* JSONModelReg.m */; };
+		36ADF3721BC7B7AF0045E75C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3691BC7B7AF0045E75C /* AppDelegate.m */; };
+		36ADF3761BC7B7AF0045E75C /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF36F1BC7B7AF0045E75C /* RootTabBarController.m */; };
+		36ADF3771BC7B7AF0045E75C /* SinglePageNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3711BC7B7AF0045E75C /* SinglePageNVC.m */; };
+		36ADF3881BC895B80045E75C /* ConfigCWuliuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */; };
+		36D2E0561BCF260600DC0149 /* More.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0551BCF260600DC0149 /* More.bundle */; };
+		36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0571BCF26B900DC0149 /* HomeIcons.bundle */; };
+		36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0591BCF27AA00DC0149 /* Home.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04155D041BF5BF8B0003254F /* MBProgressHUD+HM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HM.h"; sourceTree = "<group>"; };
+		04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HM.m"; sourceTree = "<group>"; };
+		04155D061BF5BF8B0003254F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		04155D071BF5BF8B0003254F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		04155D0B1BF5BF900003254F /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		04155D0C1BF5BF900003254F /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		04155D0D1BF5BF900003254F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		04155D0E1BF5BF900003254F /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		04155D0F1BF5BF900003254F /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		04155D101BF5BF900003254F /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		04155D111BF5BF900003254F /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		04155D121BF5BF900003254F /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		04155D131BF5BF900003254F /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		04155D141BF5BF900003254F /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		04155D151BF5BF900003254F /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		04155D161BF5BF900003254F /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		04155D171BF5BF900003254F /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		04155D181BF5BF900003254F /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		04155D191BF5BF900003254F /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		04155D1A1BF5BF900003254F /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		04155D1B1BF5BF900003254F /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		04155D1C1BF5BF900003254F /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		04155D1D1BF5BF900003254F /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		04155D1E1BF5BF900003254F /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		04155D1F1BF5BF900003254F /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		04155D201BF5BF900003254F /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		04155D211BF5BF900003254F /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		04155D221BF5BF900003254F /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		04155D231BF5BF900003254F /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		04155D241BF5BF900003254F /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		04155D251BF5BF900003254F /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		04155D261BF5BF900003254F /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		04155D271BF5BF900003254F /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		04155D281BF5BF900003254F /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		04155D291BF5BF900003254F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		04155D2A1BF5BF900003254F /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformResourceLocator.h; sourceTree = "<group>"; };
+		04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformResourceLocator.m; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -435,6 +493,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04155D031BF5BF8B0003254F /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				04155D041BF5BF8B0003254F /* MBProgressHUD+HM.h */,
+				04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */,
+				04155D061BF5BF8B0003254F /* MBProgressHUD.h */,
+				04155D071BF5BF8B0003254F /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		04155D0A1BF5BF900003254F /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				04155D0B1BF5BF900003254F /* MKAnnotationView+WebCache.h */,
+				04155D0C1BF5BF900003254F /* MKAnnotationView+WebCache.m */,
+				04155D0D1BF5BF900003254F /* NSData+ImageContentType.h */,
+				04155D0E1BF5BF900003254F /* NSData+ImageContentType.m */,
+				04155D0F1BF5BF900003254F /* SDImageCache.h */,
+				04155D101BF5BF900003254F /* SDImageCache.m */,
+				04155D111BF5BF900003254F /* SDWebImageCompat.h */,
+				04155D121BF5BF900003254F /* SDWebImageCompat.m */,
+				04155D131BF5BF900003254F /* SDWebImageDecoder.h */,
+				04155D141BF5BF900003254F /* SDWebImageDecoder.m */,
+				04155D151BF5BF900003254F /* SDWebImageDownloader.h */,
+				04155D161BF5BF900003254F /* SDWebImageDownloader.m */,
+				04155D171BF5BF900003254F /* SDWebImageDownloaderOperation.h */,
+				04155D181BF5BF900003254F /* SDWebImageDownloaderOperation.m */,
+				04155D191BF5BF900003254F /* SDWebImageManager.h */,
+				04155D1A1BF5BF900003254F /* SDWebImageManager.m */,
+				04155D1B1BF5BF900003254F /* SDWebImageOperation.h */,
+				04155D1C1BF5BF900003254F /* SDWebImagePrefetcher.h */,
+				04155D1D1BF5BF900003254F /* SDWebImagePrefetcher.m */,
+				04155D1E1BF5BF900003254F /* UIButton+WebCache.h */,
+				04155D1F1BF5BF900003254F /* UIButton+WebCache.m */,
+				04155D201BF5BF900003254F /* UIImage+GIF.h */,
+				04155D211BF5BF900003254F /* UIImage+GIF.m */,
+				04155D221BF5BF900003254F /* UIImage+MultiFormat.h */,
+				04155D231BF5BF900003254F /* UIImage+MultiFormat.m */,
+				04155D241BF5BF900003254F /* UIImage+WebP.h */,
+				04155D251BF5BF900003254F /* UIImage+WebP.m */,
+				04155D261BF5BF900003254F /* UIImageView+HighlightedWebCache.h */,
+				04155D271BF5BF900003254F /* UIImageView+HighlightedWebCache.m */,
+				04155D281BF5BF900003254F /* UIImageView+WebCache.h */,
+				04155D291BF5BF900003254F /* UIImageView+WebCache.m */,
+				04155D2A1BF5BF900003254F /* UIView+WebCacheOperation.h */,
+				04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		04155D3C1BF5C92A0003254F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */,
+				04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */,
+			);
+			name = Tool;
+			path = qmhy/Common/Tool;
+			sourceTree = "<group>";
+		};
 		2B4BFB991A152E5F00C25085 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,6 +975,7 @@
 		36ADF2841BC7AFA20045E75C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04155D3C1BF5C92A0003254F /* Tool */,
 				36ADF3551BC7B6E40045E75C /* Model */,
 				36ADF3471BC7B6790045E75C /* Util */,
 				36ADF2851BC7AFDF0045E75C /* lib */,
@@ -866,6 +986,8 @@
 		36ADF2851BC7AFDF0045E75C /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				04155D0A1BF5BF900003254F /* SDWebImage */,
+				04155D031BF5BF8B0003254F /* MBProgressHUD */,
 				360EF24A1BC8D77B00385209 /* TLTagsContol */,
 				36ADF28A1BC7B0400045E75C /* UIKit+AFNetworking */,
 				36ADF2891BC7B0140045E75C /* AFNetworkingTool */,
@@ -1261,12 +1383,16 @@
 				364556A31BCA38A1008A0C80 /* ConfigCQuhuoTVC.m in Sources */,
 				360EF1B91BC8B0DC00385209 /* OrderSendQueryTVC.m in Sources */,
 				36ADF3451BC7B62D0045E75C /* RegisterTVC.m in Sources */,
+				04155D371BF5BF900003254F /* UIImage+MultiFormat.m in Sources */,
 				36ADF3881BC895B80045E75C /* ConfigCWuliuTVC.m in Sources */,
+				04155D351BF5BF900003254F /* UIButton+WebCache.m in Sources */,
 				360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */,
 				36ADF3151BC7B3540045E75C /* UIProgressView+AFNetworking.m in Sources */,
 				36ADF29F1BC7B0560045E75C /* AFHTTPRequestOperationManager.m in Sources */,
+				04155D2F1BF5BF900003254F /* SDWebImageCompat.m in Sources */,
 				360EF1511BC8AEF800385209 /* ConfigCommonTVC.m in Sources */,
 				36ADF2A51BC7B0560045E75C /* AFURLResponseSerialization.m in Sources */,
+				04155D321BF5BF900003254F /* SDWebImageDownloaderOperation.m in Sources */,
 				360EF1E31BC8B18B00385209 /* MakeOrderShouhuoCell.m in Sources */,
 				360EF1921BC8AFD200385209 /* HelpVC.m in Sources */,
 				360EF17A1BC8AF7E00385209 /* MoreNVC.m in Sources */,
@@ -1274,8 +1400,13 @@
 				36ADF2FE1BC7B17B0045E75C /* NSString+MJExtension.m in Sources */,
 				36ADF2FA1BC7B17B0045E75C /* MJType.m in Sources */,
 				36ADF3761BC7B7AF0045E75C /* RootTabBarController.m in Sources */,
+				04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */,
 				364556A01BCA388B008A0C80 /* ConfigCShouhuoTVC.m in Sources */,
 				36ADF2A11BC7B0560045E75C /* AFNetworkReachabilityManager.m in Sources */,
+				04155D391BF5BF900003254F /* UIImageView+HighlightedWebCache.m in Sources */,
+				04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */,
+				04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */,
+				04155D381BF5BF900003254F /* UIImage+WebP.m in Sources */,
 				360EF2301BC8B1E600385209 /* main.m in Sources */,
 				360EF1671BC8AF3C00385209 /* HomeVC.m in Sources */,
 				360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */,
@@ -1292,6 +1423,7 @@
 				360EF1AA1BC8B09900385209 /* TousuVC.m in Sources */,
 				36ADF3271BC7B3C00045E75C /* MJRefreshComponent.m in Sources */,
 				360EF2021BC8B1A200385209 /* SelectGoodsVC.m in Sources */,
+				04155D361BF5BF900003254F /* UIImage+GIF.m in Sources */,
 				36ADF2821BC7AF650045E75C /* GesturePasswordView.m in Sources */,
 				36ADF3281BC7B3C00045E75C /* MJRefreshFooter.m in Sources */,
 				36ADF3391BC7B3EA0045E75C /* MJRefreshBackGifFooter.m in Sources */,
@@ -1313,6 +1445,7 @@
 				36ADF3641BC7B7130045E75C /* JSONModelCommonLogistics.m in Sources */,
 				36ADF3651BC7B7130045E75C /* JSONModelLogin.m in Sources */,
 				36ADF3171BC7B3540045E75C /* UIWebView+AFNetworking.m in Sources */,
+				04155D2D1BF5BF900003254F /* NSData+ImageContentType.m in Sources */,
 				36ADF3771BC7B7AF0045E75C /* SinglePageNVC.m in Sources */,
 				36ADF2811BC7AF650045E75C /* GesturePasswordController.m in Sources */,
 				36ADF2F91BC7B17B0045E75C /* MJProperty.m in Sources */,
@@ -1330,6 +1463,8 @@
 				360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */,
 				364556A61BCA38B6008A0C80 /* ConfigCGoodsTVC.m in Sources */,
 				360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */,
+				04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */,
+				04155D2E1BF5BF900003254F /* SDImageCache.m in Sources */,
 				36ADF2B51BC7B0650045E75C /* UIView+MJExtension.m in Sources */,
 				360EF2051BC8B1A200385209 /* BigAndSmallGoodsModel.m in Sources */,
 				360EF1AE1BC8B0AA00385209 /* YqTVC.m in Sources */,
@@ -1340,19 +1475,23 @@
 				36ADF3321BC7B3E10045E75C /* MJRefreshAutoStateFooter.m in Sources */,
 				360EF1BC1BC8B0E500385209 /* OrderSendListTVC.m in Sources */,
 				360EF23E1BC8B25100385209 /* NSData+Base64.m in Sources */,
+				04155D331BF5BF900003254F /* SDWebImageManager.m in Sources */,
 				360EF24D1BC8D7C200385209 /* TLTagsControl.m in Sources */,
 				360EF2401BC8B25100385209 /* NSString+Base64.m in Sources */,
 				360EF1C91BC8B0F700385209 /* OrderSendButton.m in Sources */,
 				360EF2031BC8B1A200385209 /* AddGoodsVC.m in Sources */,
 				36ADF2B41BC7B0650045E75C /* UIScrollView+MJRefresh.m in Sources */,
 				36ADF2A31BC7B0560045E75C /* AFURLConnectionOperation.m in Sources */,
+				04155D341BF5BF900003254F /* SDWebImagePrefetcher.m in Sources */,
 				360EF16C1BC8AF5D00385209 /* AboutTVC.m in Sources */,
 				36ADF33A1BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m in Sources */,
 				360EF21D1BC8B1BC00385209 /* MakeOrderCarCell.m in Sources */,
 				360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */,
 				36ADF2FB1BC7B17B0045E75C /* NSObject+MJCoding.m in Sources */,
+				04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */,
 				360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */,
 				36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */,
+				04155D301BF5BF900003254F /* SDWebImageDecoder.m in Sources */,
 				36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */,
 				36ADF31A1BC7B37B0045E75C /* AFNetworkTool.m in Sources */,
 				36ADF3311BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -1360,8 +1499,10 @@
 				36ADF3671BC7B7130045E75C /* JSONModelReg.m in Sources */,
 				36ADF3291BC7B3C00045E75C /* MJRefreshHeader.m in Sources */,
 				360EF2271BC8B1CB00385209 /* MakeOrderOKTVC.m in Sources */,
+				04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */,
 				360EF17B1BC8AF7E00385209 /* MoreTVC.m in Sources */,
 				360EF18B1BC8AFA900385209 /* UserProtocolVC.m in Sources */,
+				04155D311BF5BF900003254F /* SDWebImageDownloader.m in Sources */,
 				36ADF2B21BC7B0650045E75C /* MJRefreshConst.m in Sources */,
 				360EF2291BC8B1CB00385209 /* MakeOrderTotalCell.m in Sources */,
 				360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */,

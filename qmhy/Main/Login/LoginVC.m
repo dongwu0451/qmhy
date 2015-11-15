@@ -14,6 +14,9 @@
 #import "JSONModelLogin.h"//登录实体
 #import "AFNetworkTool.h"//httppost类
 #import "MJExtension.h"//JSON与模型转换类
+#import "UniformResourceLocator.h"
+#import "MBProgressHUD+HM.h"
+
 
 @interface LoginVC ()
 
@@ -67,21 +70,33 @@
 //登录按钮点击事件
 //=======================
 - (IBAction)login:(id)sender {
+    // 显示登录时的等待
+    [MBProgressHUD showMessage:@"正在登录中..." toView:self.view];
     NSString *username=self.textField_username.text;
     NSString *password=self.textField_password.text;
-    NSString *url=[NSString stringWithFormat:@"%@?methodName=%@&proName=%@_%@_%@", QUrl, @"login",username, password, @"consignor"];
-    [AFNetworkTool postJSONWithUrl:url parameters:nil success:^(id responseObject) {
+    NSString *consignor = @"consignor";
+    NSString *methodName = @"login";
+    NSString *params = @"&proName=%@_%@_%@";
+    NSString *URL = [[NSString stringWithFormat:[[UniformResourceLocator getURL] stringByAppendingString:params], methodName, username, password, consignor] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        
+        
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"login:%@", responseStr);
-        BOOL b=[AppDelegate isBlankString:responseStr];
+        
+        // 判断字符串是不是空
+//        NSLog(@"login:%@", responseStr);
+        BOOL b = [AppDelegate isBlankString:responseStr];
         NSLog(@"login:%@", @"isBlankString");
         if (b){
+            [MBProgressHUD hideHUDForView:self.view];
             NSLog(@"login:%@", @"网络故障，执行失败！");
             self.label_detail.text=@"网络故障，执行失败！";
             //[AppDelegate showAlert:@"网络故障，执行失败！"];
             return;
         }
+        
         
         NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
         NSArray *infoArray = [dic objectForKey:@"rs"];
@@ -91,6 +106,7 @@
         NSLog(@"login:%@", obj.uid);
         NSString *uid=obj.uid;
         if ([uid isEqualToString:@"0"]){
+            [MBProgressHUD hideHUDForView:self.view];
             NSLog(@"login:%@", @"账号或密码错误，请重新输入");
             self.label_detail.text=@"账号或密码错误，请重新输入";
             //[AppDelegate showAlert:@"用户名称或者密码错误！"];
@@ -98,12 +114,14 @@
         }
         else if ([uid isEqualToString:@"-1"]){
             NSLog(@"login:%@", @"客服正在审核！");
+            [MBProgressHUD hideHUDForView:self.view];
             self.label_detail.text=@"客服正在审核！";
             //[AppDelegate showAlert:@"客服正在审核！"];
             return;
         }
         else//显示结果
         {
+            [MBProgressHUD hideHUDForView:self.view];
             self.label_detail.text=@"输入正确";
             //NSLog(@"login:%@", @"输入正确");
             QLog(@"login:%@", @"输入正确!");

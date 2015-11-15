@@ -32,3 +32,8 @@
 #define QRandomColor XXCColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 #define QUrl @"http://113.6.252.161:9090/adminapp/WebAppController/json.html"
+
+// 新的服务器地址
+#define NQURL @"http://139.129.26.164:8080/adminappios/WebAppController/json.html"
+
+#define WLLIUGONGSI "本地开发"
