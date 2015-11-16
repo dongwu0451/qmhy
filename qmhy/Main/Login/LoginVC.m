@@ -132,6 +132,7 @@
             [self.delegate LoginVC:self loginOK:nil];//设置回调  向来源触发事件委托
         }
     } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
         NSLog(@"失败");
     }];
 //    if ([username isEqualToString:@"a"] && [password isEqualToString:@"a"]) {
