@@ -77,16 +77,14 @@
     NSString *consignor = @"consignor";
     NSString *methodName = @"login";
     NSString *params = @"&proName=%@_%@_%@";
-    NSString *URL = [[NSString stringWithFormat:[[UniformResourceLocator getURL] stringByAppendingString:params], methodName, username, password, consignor] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, username, password, consignor] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-        
-        
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        
+        NSLog(@"++++++++++++++++++++++++%@", responseStr);
         // 判断字符串是不是空
-//        NSLog(@"login:%@", responseStr);
+        NSLog(@"login:%@", responseStr);
         BOOL b = [AppDelegate isBlankString:responseStr];
         NSLog(@"login:%@", @"isBlankString");
         if (b){
@@ -96,9 +94,9 @@
             //[AppDelegate showAlert:@"网络故障，执行失败！"];
             return;
         }
-        
-        
+
         NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSLog(@"asdadasdasdasd%@", dic);
         NSArray *infoArray = [dic objectForKey:@"rs"];
         NSDictionary *nd = [infoArray objectAtIndex:0];
         JSONModelLogin *obj =[JSONModelLogin objectWithKeyValues:nd];

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface UniformResourceLocator : NSObject
-// 获取请求地址
-+ (NSString *)getURL;
 
-//+ (NSString *)sendVerificationCode;
+// 默认请求地址
+extern NSString *const UniformResourceLocatorURL;
+
 
 @end

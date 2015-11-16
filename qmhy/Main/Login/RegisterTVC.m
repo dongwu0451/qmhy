@@ -86,7 +86,7 @@ static int count = 0;
         if (recommendedCode.length == 0) {
             recommendedCode = @"";
         }
-        NSString *URL = [[NSString stringWithFormat:[[UniformResourceLocator getURL] stringByAppendingString:params], methodName, memid, password, flag, recommendedCode] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, memid, password, flag, recommendedCode] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
             NSError *error = nil;
             NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -101,11 +101,24 @@ static int count = 0;
                 //[AppDelegate showAlert:@"网络故障，执行失败！"];
                 return;
             }
-            NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-            NSArray *infoArray = [dic objectForKey:@"rs"];
-            NSLog(@"infoArray ================,%@", infoArray);
+            NSArray *array =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+//            NSLog(@"12312312%@", dic);
+            NSString *success = array[0][@"result"];
+            if ([success isEqualToString:@"ok"]) {
+                [MBProgressHUD hideHUDForView:self.view];
+                [MBProgressHUD showError:@"注册成功！"];
+                [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
+            } else {
+                [MBProgressHUD hideHUDForView:self.view];
+                [MBProgressHUD showError:@"注册失败！"];
+                [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
+            }
+//            NSArray *infoArray = [dic objectForKey:@"rs"];
+//            NSLog(@"infoArray ================,%@", infoArray);
         } fail:^{
-            
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"注册失败！"];
+            [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
         }];
         
 //        [self dismissViewControllerAnimated:YES completion:nil];//关闭自己

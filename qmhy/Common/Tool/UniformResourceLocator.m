@@ -10,15 +10,6 @@
 
 @implementation UniformResourceLocator
 
-+ (NSString *)getURL {
-    NSString *URL = @"http://139.129.26.164:8080/adminappios/WebAppController/json.html?methodName=%@";
-    return URL;
-}
-
-//+ (NSString *)sendVerificationCode {
-//    NSString *url = @"http://139.129.26.164:8090/tlandroidService.asmx";
-//    return url;
-//}
-
+NSString *const UniformResourceLocatorURL = @"http://139.129.26.164:8080/adminappios/WebAppController/json.html?methodName=%@";
 
 @end
