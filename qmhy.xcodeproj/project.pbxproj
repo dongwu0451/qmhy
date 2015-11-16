@@ -26,6 +26,8 @@
 		04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D291BF5BF900003254F /* UIImageView+WebCache.m */; };
 		04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */; };
 		04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */; };
+		04D8EDC41BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8EDC21BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m */; };
+		04D8EDC51BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D8EDC31BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -211,6 +213,9 @@
 		04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformResourceLocator.h; sourceTree = "<group>"; };
 		04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformResourceLocator.m; sourceTree = "<group>"; };
+		04D8EDC11BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCWuliuTableViewCell.h; sourceTree = "<group>"; };
+		04D8EDC21BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCWuliuTableViewCell.m; sourceTree = "<group>"; };
+		04D8EDC31BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCWuliuTableViewCell.xib; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1269,6 +1274,9 @@
 			children = (
 				36ADF3861BC895B80045E75C /* ConfigCWuliuTVC.h */,
 				36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */,
+				04D8EDC11BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.h */,
+				04D8EDC21BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m */,
+				04D8EDC31BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib */,
 			);
 			name = ConfigCWuliu;
 			sourceTree = "<group>";
@@ -1359,6 +1367,7 @@
 				360EF1811BC8AF9400385209 /* pricetable.gif in Resources */,
 				360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */,
 				360EF2311BC8B1E600385209 /* Main.storyboard in Resources */,
+				04D8EDC51BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib in Resources */,
 				36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */,
 				36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */,
 				360EF1911BC8AFD200385209 /* help.html in Resources */,
@@ -1412,6 +1421,7 @@
 				360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */,
 				360EF2531BCA321000385209 /* SelectCarVC.m in Sources */,
 				360EF2501BC8DF8200385209 /* QConfig.m in Sources */,
+				04D8EDC41BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m in Sources */,
 				36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */,
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,

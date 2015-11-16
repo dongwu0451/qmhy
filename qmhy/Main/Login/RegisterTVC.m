@@ -14,12 +14,12 @@
 #import "AFNetworking.h"
 #import "UniformResourceLocator.h"
 
-
-
 @interface RegisterTVC ()
+
 {
     NSTimer* _timer2; // 验证码显示时间
 }
+
 @property (weak, nonatomic) IBOutlet UITextField *tel;
 @property (weak, nonatomic) IBOutlet UITextField *verificationCode;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -37,101 +37,75 @@ static int count = 0;
     [super viewDidLoad];
 }
 
-
-
-
-
-
 //单击注册按钮
 - (IBAction)clickReg:(id)sender {
-    NSLog(@"clickreg");
-
     
     if (self.tel.text.length == 0) {
         [MBProgressHUD showError:@"请输入手机号"];
         return;
-    } else if (self.verificationCode.text.length == 0) {
+    }
+    if (self.verificationCode.text.length == 0) {
         [MBProgressHUD showError:@"请输入验证码"];
         return;
-    } else if (![self.verificationCode.text isEqualToString:self.randomNumber]) { // 判断输入的是不是正确的验证码如果不是return
+    }
+    if (![self.verificationCode.text isEqualToString:self.randomNumber]) { // 判断输入的是不是正确的验证码如果不是return
         NSLog(@"%@======", self.randomNumber);
         [MBProgressHUD showError:@"请输入正确验证码"];
         return;
-    } else if (self.password.text.length == 0) {
+    }
+    if (self.password.text.length == 0) {
         [MBProgressHUD showError:@"请输入密码"];
         return;
-    }  else if (self.recommendedCode.text.length > 0) {
-       BOOL isMatch = [self isValidateRecommendedCode:self.recommendedCode.text];
+    }
+    if (self.recommendedCode.text.length > 0) {
+        BOOL isMatch = [self isValidateRecommendedCode:self.recommendedCode.text];
         if (isMatch == 0) { // 如果不正确
             [MBProgressHUD showError:@"请输入正确推荐码"];
             return;
         }
     }
-//    } else if (self.randomNumber == self.verificationCode.text && self.tel.text.length > 0 && self.password.text.length > 0 && self.verificationCode.text.length == 0){
-//    
-//        // 发送请求
-//        // [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
-//    }
     
-    
-    //都填写了
-    else if (self.tel.text.length > 0 && self.verificationCode.text.length > 0 && self.password.text.length > 0 && [self.verificationCode.text isEqualToString:self.randomNumber]) {
-        [MBProgressHUD showMessage:@"正在注册中..." toView:self.view];
-        NSString *methodName = @"addtelreg";
-        NSString *params = @"&proName=%@_%@_%@_%@";
-        NSString *memid = self.tel.text;
-        NSString *password = self.password.text;
-        NSString *flag = @WLLIUGONGSI;
-        NSString *recommendedCode = self.recommendedCode.text;
-        if (recommendedCode.length == 0) {
-            recommendedCode = @"";
+    [MBProgressHUD showMessage:@"正在注册中..." toView:self.view];
+    NSString *methodName = @"addtelreg";
+    NSString *params = @"&proName=%@_%@_%@_%@";
+    NSString *memid = self.tel.text;
+    NSString *password = self.password.text;
+    NSString *flag = @WLLIUGONGSI;
+    NSString *recommendedCode = self.recommendedCode.text;
+    if (recommendedCode.length == 0) {
+        recommendedCode = @"";
+    }
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, memid, password, flag, recommendedCode] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        // 判断字符串是不是空
+        //        NSLog(@"login:%@", responseStr);
+        BOOL b = [AppDelegate isBlankString:responseStr];
+        NSLog(@"login:%@", @"isBlankString");
+        if (b){
+            [MBProgressHUD hideHUDForView:self.view];
+            return;
         }
-        NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, memid, password, flag, recommendedCode] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-            NSError *error = nil;
-            NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-            // 判断字符串是不是空
-            //        NSLog(@"login:%@", responseStr);
-            BOOL b = [AppDelegate isBlankString:responseStr];
-            NSLog(@"login:%@", @"isBlankString");
-            if (b){
-                [MBProgressHUD hideHUDForView:self.view];
-//                NSLog(@"login:%@", @"网络故障，执行失败！");
-//                self.label_detail.text=@"网络故障，执行失败！";
-                //[AppDelegate showAlert:@"网络故障，执行失败！"];
-                return;
-            }
-            NSArray *array =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-//            NSLog(@"12312312%@", dic);
-            NSString *success = array[0][@"result"];
-            if ([success isEqualToString:@"ok"]) {
-                [MBProgressHUD hideHUDForView:self.view];
-                [MBProgressHUD showError:@"注册成功！"];
-                [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
-            } else {
-                [MBProgressHUD hideHUDForView:self.view];
-                [MBProgressHUD showError:@"注册失败！"];
-                [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
-            }
-//            NSArray *infoArray = [dic objectForKey:@"rs"];
-//            NSLog(@"infoArray ================,%@", infoArray);
-        } fail:^{
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *infoArray = [dic objectForKey:@"rs"];
+        NSLog(@"infoArray ))))))   %@", infoArray);
+        NSString *success = infoArray[0][@"result"];
+        NSLog(@"success131312313123123  %@", success);
+        if ([success isEqualToString:@"ok"]) {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"注册成功！"];
+            [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
+        } else {
             [MBProgressHUD hideHUDForView:self.view];
             [MBProgressHUD showError:@"注册失败！"];
             [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
-        }];
-        
-//        [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
-    } else {
-        [AppDelegate showAlert:@"请填写完整信息！"];
-        // addtelreg
-       //  delegate 可设为nil 表示不响应事件 需按钮响应时必须要设置delegate 并实现下面方法；
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写完整信息" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-//        [alert show];
-    }
-    //[self dismissModalViewControllerAnimated:YES];
-    /*WidgetsVC *vc=(WidgetsVC *)self.parentViewController ;//[[WidgetsVC alloc]initWithNibName:@"WidgetsVC" bundle:[NSBundle mainBundle]];
-    [self presentViewController:vc animated:YES completion:nil];*/
+        }
+    } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"注册失败！"];
+        [self dismissViewControllerAnimated:YES completion:nil];//关闭自己
+    }];
 }
 
 
@@ -146,9 +120,6 @@ static int count = 0;
         
         NSString *strRandom = [self randomNumberSix];
         NSString *tel = self.tel.text;
-        NSString *methodName = @"regTelmess";
-        NSString *params = @"&proName=%@_%@";
-
         NSString *soapMessage =
         [NSString stringWithFormat:
          @"<?xml version=\"1.0\" encoding=\"utf-8\"?> \n"
@@ -161,9 +132,7 @@ static int count = 0;
          "</soap12:Body>"
          "</soap12:Envelope>",tel,strRandom];
         NSString *soapLength = [NSString stringWithFormat:@"%lu", (unsigned long)[soapMessage length]];
-        NSLog(@"+++++++++++++++++++++++++++%@", soapMessage);
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//        manager.responseSerializer = [AFJSONResponseSerializer serializer];
         manager.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
         [manager.requestSerializer setValue:@"application/soap+xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
         [manager.requestSerializer setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, NSDictionary *parameters, NSError *__autoreleasing *error) {
@@ -181,13 +150,10 @@ static int count = 0;
                 count = 0;
                 NSTimer* timer2 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
                 _timer2 = timer2;
-
                 [MBProgressHUD hideHUDForView:self.view];
                 [MBProgressHUD showError:@"验证码发送成功"];
-//                [MBProgressHUD hideHUDForView:self.view];
                 NSLog(@"yes");
-            }
-            else {
+            } else {
                 self.randomNumber = @"";
                 [MBProgressHUD hideHUDForView:self.view];
                 [MBProgressHUD showError:@"验证码发送失败"];
@@ -261,4 +227,6 @@ static int count = 0;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
+
+
 @end
