@@ -869,6 +869,78 @@
             </objects>
             <point key="canvasLocation" x="1259" y="1462"/>
         </scene>
+        <!--添加常用物流-->
+        <scene sceneID="Ybt-Yf-zkx">
+            <objects>
+                <viewController id="mww-uY-IQz" customClass="ADDConfigCWuliuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kIh-Y1-IWJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cCB-wU-FDe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Gx-GK-rs1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="常用物流名称：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOP-JD-Yny">
+                                <rect key="frame" x="20" y="100" width="119" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Lvk-sM-t3S"/>
+                                    <constraint firstAttribute="width" constant="119" id="dXl-Cl-OdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-9f-umd">
+                                <rect key="frame" x="20" y="141" width="280" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="40Z-qT-O1G"/>
+                                    <constraint firstAttribute="height" constant="30" id="7xv-m5-fPl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-6E-lnl">
+                                <rect key="frame" x="20" y="241" width="280" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="mUt-cJ-Mjz"/>
+                                    <constraint firstAttribute="height" constant="50" id="y4m-1A-ZQv"/>
+                                </constraints>
+                                <state key="normal" title="添加">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addWuliuBtnClick:" destination="mww-uY-IQz" eventType="touchUpInside" id="TSO-8q-fbA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PfO-6E-lnl" firstAttribute="leading" secondItem="3Gx-GK-rs1" secondAttribute="leading" constant="20" id="Coq-jP-w1H"/>
+                            <constraint firstAttribute="trailing" secondItem="kOP-JD-Yny" secondAttribute="trailing" constant="181" id="Dct-RN-UGp"/>
+                            <constraint firstItem="kOP-JD-Yny" firstAttribute="leading" secondItem="3Gx-GK-rs1" secondAttribute="leading" constant="20" id="FOj-Tu-8hI"/>
+                            <constraint firstItem="0lH-9f-umd" firstAttribute="top" secondItem="kOP-JD-Yny" secondAttribute="bottom" constant="20" id="TkA-HU-waS"/>
+                            <constraint firstItem="PfO-6E-lnl" firstAttribute="top" secondItem="0lH-9f-umd" secondAttribute="bottom" constant="70" id="W2y-Rg-Akr"/>
+                            <constraint firstItem="0lH-9f-umd" firstAttribute="leading" secondItem="3Gx-GK-rs1" secondAttribute="leading" constant="20" id="doS-MK-VIe"/>
+                            <constraint firstItem="kOP-JD-Yny" firstAttribute="top" secondItem="kIh-Y1-IWJ" secondAttribute="bottom" constant="36" id="eSa-YG-gOZ"/>
+                            <constraint firstAttribute="trailing" secondItem="0lH-9f-umd" secondAttribute="trailing" constant="20" id="tQd-sr-T4w"/>
+                            <constraint firstAttribute="trailing" secondItem="PfO-6E-lnl" secondAttribute="trailing" constant="20" id="zYE-lt-q6r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加常用物流" id="gQX-oT-EP4"/>
+                    <connections>
+                        <outlet property="wuliuNameTextField" destination="0lH-9f-umd" id="2jJ-Mg-tpI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvQ-jn-fwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="2849"/>
+        </scene>
         <!--添加常用货物-->
         <scene sceneID="tVZ-5m-eW0">
             <objects>
@@ -1349,6 +1421,7 @@
                         <barButtonItem key="rightBarButtonItem" title="添加" id="Pmz-UB-zm6">
                             <connections>
                                 <action selector="addWuliu:" destination="84o-D3-fDl" id="oeT-zR-Ruh"/>
+                                <segue destination="mww-uY-IQz" kind="push" id="Q2v-ks-6qg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1356,7 +1429,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJ9-1r-yKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="1651"/>
+            <point key="canvasLocation" x="601" y="2089"/>
         </scene>
         <!--选择车型-->
         <scene sceneID="a9S-u9-hOA">
@@ -2000,7 +2073,7 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fu9-42-drm">
-                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <rect key="frame" x="96" y="5.5" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -2558,7 +2631,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="选择货物" id="WtN-00-ZQw">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="iEa-on-f5V">
-                            <rect key="frame" x="94" y="7" width="133" height="30"/>
+                            <rect key="frame" x="93.5" y="7" width="133" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
                             <segments>

@@ -153,6 +153,9 @@ static int count = 0;
                 [MBProgressHUD hideHUDForView:self.view];
                 [MBProgressHUD showError:@"验证码发送成功"];
                 NSLog(@"yes");
+            } else if ([response rangeOfString:@"<regTelmessResult>No</regTelmessResult>"].location !=NSNotFound) {
+                [MBProgressHUD hideHUDForView:self.view];
+                [MBProgressHUD showError:@"您的手机号已经注册过"];
             } else {
                 self.randomNumber = @"";
                 [MBProgressHUD hideHUDForView:self.view];

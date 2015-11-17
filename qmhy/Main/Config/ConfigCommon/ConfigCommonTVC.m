@@ -142,6 +142,7 @@
     }
     if (section==1 && row==0){//配置常用物流
         [self performSegueWithIdentifier:@"showConfigCWuliu" sender:nil];
+        
         NSLog(@"showConfigCWuliu");
     }
     if (section==1 && row==1){//配置常用货物

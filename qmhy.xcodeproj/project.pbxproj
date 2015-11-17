@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040A85C31BFAACD300323C0F /* ConfigCWuliuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A85C11BFAACD300323C0F /* ConfigCWuliuTableViewCell.m */; };
+		040A85C41BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040A85C21BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib */; };
+		040A85CA1BFAB81F00323C0F /* JSONModelConfigCWuLiu.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A85C91BFAB81F00323C0F /* JSONModelConfigCWuLiu.m */; };
+		040A86781BFB111A00323C0F /* ADDConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A86771BFB111A00323C0F /* ADDConfigCWuliuViewController.m */; };
 		04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */; };
 		04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D071BF5BF8B0003254F /* MBProgressHUD.m */; };
 		04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D0C1BF5BF900003254F /* MKAnnotationView+WebCache.m */; };
@@ -26,8 +30,8 @@
 		04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D291BF5BF900003254F /* UIImageView+WebCache.m */; };
 		04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */; };
 		04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */; };
-		04D8EDC41BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8EDC21BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m */; };
-		04D8EDC51BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D8EDC31BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib */; };
+		047ED3751BFB5DC70020152F /* EditConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED3731BFB5DC70020152F /* EditConfigCWuliuViewController.m */; };
+		047ED3761BFB5DC70020152F /* EditConfigCWuliuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ED3741BFB5DC70020152F /* EditConfigCWuliuViewController.xib */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -174,6 +178,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040A85C01BFAACD300323C0F /* ConfigCWuliuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCWuliuTableViewCell.h; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTableViewCell.h; sourceTree = "<group>"; };
+		040A85C11BFAACD300323C0F /* ConfigCWuliuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCWuliuTableViewCell.m; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTableViewCell.m; sourceTree = "<group>"; };
+		040A85C21BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConfigCWuliuTableViewCell.xib; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTableViewCell.xib; sourceTree = "<group>"; };
+		040A85C81BFAB81F00323C0F /* JSONModelConfigCWuLiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelConfigCWuLiu.h; path = qmhy/Main/Config/ConfigCWuliu/JSONModelConfigCWuLiu.h; sourceTree = "<group>"; };
+		040A85C91BFAB81F00323C0F /* JSONModelConfigCWuLiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModelConfigCWuLiu.m; path = qmhy/Main/Config/ConfigCWuliu/JSONModelConfigCWuLiu.m; sourceTree = "<group>"; };
+		040A86761BFB111A00323C0F /* ADDConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDConfigCWuliuViewController.h; path = qmhy/Main/Config/ConfigCWuliu/ADDConfigCWuliuViewController.h; sourceTree = "<group>"; };
+		040A86771BFB111A00323C0F /* ADDConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDConfigCWuliuViewController.m; path = qmhy/Main/Config/ConfigCWuliu/ADDConfigCWuliuViewController.m; sourceTree = "<group>"; };
 		04155D041BF5BF8B0003254F /* MBProgressHUD+HM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HM.h"; sourceTree = "<group>"; };
 		04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HM.m"; sourceTree = "<group>"; };
 		04155D061BF5BF8B0003254F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -213,9 +224,9 @@
 		04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformResourceLocator.h; sourceTree = "<group>"; };
 		04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformResourceLocator.m; sourceTree = "<group>"; };
-		04D8EDC11BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCWuliuTableViewCell.h; sourceTree = "<group>"; };
-		04D8EDC21BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCWuliuTableViewCell.m; sourceTree = "<group>"; };
-		04D8EDC31BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCWuliuTableViewCell.xib; sourceTree = "<group>"; };
+		047ED3721BFB5DC70020152F /* EditConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditConfigCWuliuViewController.h; path = qmhy/Main/Config/ConfigCWuliu/EditConfigCWuliuViewController.h; sourceTree = "<group>"; };
+		047ED3731BFB5DC70020152F /* EditConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditConfigCWuliuViewController.m; path = qmhy/Main/Config/ConfigCWuliu/EditConfigCWuliuViewController.m; sourceTree = "<group>"; };
+		047ED3741BFB5DC70020152F /* EditConfigCWuliuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditConfigCWuliuViewController.xib; path = qmhy/Main/Config/ConfigCWuliu/EditConfigCWuliuViewController.xib; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1272,11 +1283,18 @@
 		36ADF3851BC895AF0045E75C /* ConfigCWuliu */ = {
 			isa = PBXGroup;
 			children = (
+				040A85C81BFAB81F00323C0F /* JSONModelConfigCWuLiu.h */,
+				040A85C91BFAB81F00323C0F /* JSONModelConfigCWuLiu.m */,
 				36ADF3861BC895B80045E75C /* ConfigCWuliuTVC.h */,
 				36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */,
-				04D8EDC11BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.h */,
-				04D8EDC21BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m */,
-				04D8EDC31BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib */,
+				040A85C01BFAACD300323C0F /* ConfigCWuliuTableViewCell.h */,
+				040A85C11BFAACD300323C0F /* ConfigCWuliuTableViewCell.m */,
+				040A85C21BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib */,
+				040A86761BFB111A00323C0F /* ADDConfigCWuliuViewController.h */,
+				040A86771BFB111A00323C0F /* ADDConfigCWuliuViewController.m */,
+				047ED3721BFB5DC70020152F /* EditConfigCWuliuViewController.h */,
+				047ED3731BFB5DC70020152F /* EditConfigCWuliuViewController.m */,
+				047ED3741BFB5DC70020152F /* EditConfigCWuliuViewController.xib */,
 			);
 			name = ConfigCWuliu;
 			sourceTree = "<group>";
@@ -1353,6 +1371,7 @@
 				36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */,
 				360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */,
 				360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */,
+				047ED3761BFB5DC70020152F /* EditConfigCWuliuViewController.xib in Resources */,
 				360EF1821BC8AF9400385209 /* pricetable.html in Resources */,
 				36D2E0561BCF260600DC0149 /* More.bundle in Resources */,
 				360EF2321BC8B1E600385209 /* qmhy-Info.plist in Resources */,
@@ -1367,7 +1386,7 @@
 				360EF1811BC8AF9400385209 /* pricetable.gif in Resources */,
 				360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */,
 				360EF2311BC8B1E600385209 /* Main.storyboard in Resources */,
-				04D8EDC51BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.xib in Resources */,
+				040A85C41BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib in Resources */,
 				36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */,
 				36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */,
 				360EF1911BC8AFD200385209 /* help.html in Resources */,
@@ -1395,6 +1414,7 @@
 				04155D371BF5BF900003254F /* UIImage+MultiFormat.m in Sources */,
 				36ADF3881BC895B80045E75C /* ConfigCWuliuTVC.m in Sources */,
 				04155D351BF5BF900003254F /* UIButton+WebCache.m in Sources */,
+				047ED3751BFB5DC70020152F /* EditConfigCWuliuViewController.m in Sources */,
 				360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */,
 				36ADF3151BC7B3540045E75C /* UIProgressView+AFNetworking.m in Sources */,
 				36ADF29F1BC7B0560045E75C /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1419,9 +1439,10 @@
 				360EF2301BC8B1E600385209 /* main.m in Sources */,
 				360EF1671BC8AF3C00385209 /* HomeVC.m in Sources */,
 				360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */,
+				040A86781BFB111A00323C0F /* ADDConfigCWuliuViewController.m in Sources */,
 				360EF2531BCA321000385209 /* SelectCarVC.m in Sources */,
 				360EF2501BC8DF8200385209 /* QConfig.m in Sources */,
-				04D8EDC41BF9C2BB00B7D411 /* ConfigCWuliuTableViewCell.m in Sources */,
+				040A85C31BFAACD300323C0F /* ConfigCWuliuTableViewCell.m in Sources */,
 				36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */,
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
@@ -1469,6 +1490,7 @@
 				360EF14E1BC8AEEE00385209 /* ConfigCPassword.m in Sources */,
 				36ADF3161BC7B3540045E75C /* UIRefreshControl+AFNetworking.m in Sources */,
 				36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */,
+				040A85CA1BFAB81F00323C0F /* JSONModelConfigCWuLiu.m in Sources */,
 				36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */,
 				364556A61BCA38B6008A0C80 /* ConfigCGoodsTVC.m in Sources */,
