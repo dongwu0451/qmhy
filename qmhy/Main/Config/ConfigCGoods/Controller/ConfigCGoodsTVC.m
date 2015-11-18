@@ -17,9 +17,9 @@
 #import "MBProgressHUD+HM.h"
 #import "JSONModelConfigGGoods.h"
 #import "ConfigCGoodsTableViewCell.h"
-#import "EditConfigCGoodsViewController.h"
+//
 
-
+#import "EditGoodsVC.h"
 
 @interface ConfigCGoodsTVC () <ConfigCGoodsTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
@@ -36,7 +36,8 @@
 }
 
 - (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn {
-    EditConfigCGoodsViewController *editConfigCGoodsViewController = [[EditConfigCGoodsViewController alloc] init];
+    NSLog(@"123123");
+    EditGoodsVC *editConfigCGoodsViewController = [[EditGoodsVC alloc] init];
     editConfigCGoodsViewController.configCGoodsTableViewCell = cell;
     [self.navigationController pushViewController:editConfigCGoodsViewController animated:YES];
 }

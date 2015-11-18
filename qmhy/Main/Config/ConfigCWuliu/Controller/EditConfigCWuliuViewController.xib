@@ -16,35 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑常用物流" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCF-OA-YQx">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="编辑常用物流" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCF-OA-YQx">
                     <rect key="frame" x="20" y="100" width="280" height="21"/>
                     <animations/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="280" id="3RK-tE-AnP"/>
-                        <constraint firstAttribute="height" constant="21" id="Q51-Bu-NhW"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytr-De-QKQ">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytr-De-QKQ">
                     <rect key="frame" x="20" y="141" width="280" height="30"/>
                     <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="8wx-Tg-C0C"/>
-                        <constraint firstAttribute="width" constant="280" id="oG2-Kb-DNj"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ss-Qx-LQZ">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ss-Qx-LQZ">
                     <rect key="frame" x="20" y="221" width="280" height="40"/>
                     <animations/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="pGD-tI-XUH"/>
-                        <constraint firstAttribute="width" constant="280" id="viV-bf-Sij"/>
-                    </constraints>
                     <state key="normal" title="确定">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -55,18 +43,7 @@
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="jCF-OA-YQx" secondAttribute="trailing" constant="20" id="0P0-IV-BW2"/>
-                <constraint firstItem="ytr-De-QKQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="6qS-MN-pvk"/>
-                <constraint firstItem="ytr-De-QKQ" firstAttribute="top" secondItem="jCF-OA-YQx" secondAttribute="bottom" constant="20" id="CGz-Sh-NbF"/>
-                <constraint firstItem="8Ss-Qx-LQZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="DW8-vW-NwS"/>
-                <constraint firstItem="jCF-OA-YQx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="UGD-Ar-pdn"/>
-                <constraint firstAttribute="trailing" secondItem="8Ss-Qx-LQZ" secondAttribute="trailing" constant="20" id="bZr-D6-exL"/>
-                <constraint firstItem="jCF-OA-YQx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="e61-v1-SI2"/>
-                <constraint firstAttribute="trailing" secondItem="ytr-De-QKQ" secondAttribute="trailing" constant="20" id="lH6-2D-kTk"/>
-                <constraint firstItem="8Ss-Qx-LQZ" firstAttribute="top" secondItem="ytr-De-QKQ" secondAttribute="bottom" constant="50" id="o6C-zf-Xeq"/>
-            </constraints>
-            <point key="canvasLocation" x="497" y="342"/>
+            <point key="canvasLocation" x="266" y="363"/>
         </view>
     </objects>
 </document>

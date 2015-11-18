@@ -1,22 +1,22 @@
 //
-//  EditConfigCGoodsViewController.m
+//  EditGoodsVC.m
 //  qmhy
 //
 //  Created by mac on 15/11/18.
 //  Copyright © 2015年 wsy.Inc. All rights reserved.
 //
 
-#import "EditConfigCGoodsViewController.h"
+#import "EditGoodsVC.h"
 #import "MBProgressHUD+HM.h"
 #import "UniformResourceLocator.h"
 #import "AFNetworkTool.h"
 
-@interface EditConfigCGoodsViewController ()
+@interface EditGoodsVC ()
 @property (weak, nonatomic) IBOutlet UITextField *huowuTextField;
 
 @end
 
-@implementation EditConfigCGoodsViewController
+@implementation EditGoodsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,6 +54,5 @@
     }];
     
 }
-
 
 @end

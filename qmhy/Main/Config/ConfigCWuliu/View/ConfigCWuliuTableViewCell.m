@@ -27,9 +27,6 @@
     if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didClickBianJiLikeBtn:)]) {
         [self.delegate configCWuliuTableViewCell:self didClickBianJiLikeBtn:sender];
     }
-    
-
-
 }
 
 - (IBAction)shanChuBtnClick:(UIButton *)sender {

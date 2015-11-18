@@ -1,5 +1,5 @@
 //
-//  EditConfigCGoodsViewController.h
+//  EditGoodsVC.h
 //  qmhy
 //
 //  Created by mac on 15/11/18.
@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ConfigCGoodsTableViewCell.h"
 
-@interface EditConfigCGoodsViewController : UIViewController
+@interface EditGoodsVC : UIViewController
 @property (nonatomic, strong) ConfigCGoodsTableViewCell *configCGoodsTableViewCell;
-
 
 @end
