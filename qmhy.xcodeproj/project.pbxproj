@@ -40,6 +40,18 @@
 		04CAEB1A1BFC24710060979D /* ConfigCGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB131BFC24710060979D /* ConfigCGoodsTableViewCell.xib */; };
 		04CAEB2D1BFC3DB10060979D /* EditGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB2B1BFC3DB10060979D /* EditGoodsVC.m */; };
 		04CAEB2E1BFC3DB10060979D /* EditGoodsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB2C1BFC3DB10060979D /* EditGoodsVC.xib */; };
+		04CAEB3A1BFC4C510060979D /* ConfigCFahuoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB381BFC4C510060979D /* ConfigCFahuoTableViewCell.m */; };
+		04CAEB3B1BFC4C510060979D /* ConfigCFahuoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB391BFC4C510060979D /* ConfigCFahuoTableViewCell.xib */; };
+		04CAEB3F1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB3D1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m */; };
+		04CAEB401BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */; };
+		04CAEB431BFC4EE30060979D /* JSONModelConfigFahuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */; };
+		04CAEB461BFC4EFE0060979D /* JSONModelConfigShouhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB451BFC4EFE0060979D /* JSONModelConfigShouhuo.m */; };
+		04CAEB4C1BFC4F330060979D /* AddQuhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB481BFC4F330060979D /* AddQuhuoVC.m */; };
+		04CAEB4D1BFC4F330060979D /* AddQuhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */; };
+		04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */; };
+		04CAEB541BFC4FB10060979D /* AddShouhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB501BFC4FB10060979D /* AddShouhuoVC.m */; };
+		04CAEB551BFC4FB10060979D /* AddShouhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB511BFC4FB10060979D /* AddShouhuoVC.xib */; };
+		04CAEB561BFC4FB10060979D /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -78,14 +90,10 @@
 		360EF1C91BC8B0F700385209 /* OrderSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C41BC8B0F700385209 /* OrderSendButton.m */; };
 		360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C61BC8B0F700385209 /* OrderSendNVC.m */; };
 		360EF1CB1BC8B0F700385209 /* OrderSendTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1C81BC8B0F700385209 /* OrderSendTVC.m */; };
-		360EF1DF1BC8B18B00385209 /* AddShouhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1D51BC8B18B00385209 /* AddShouhuoVC.m */; };
-		360EF1E01BC8B18B00385209 /* AddShouhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1D61BC8B18B00385209 /* AddShouhuoVC.xib */; };
 		360EF1E11BC8B18B00385209 /* ShouhuoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1D81BC8B18B00385209 /* ShouhuoData.m */; };
 		360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1DA1BC8B18B00385209 /* ShouhuoModel.m */; };
 		360EF1E31BC8B18B00385209 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1DC1BC8B18B00385209 /* MakeOrderShouhuoCell.m */; };
 		360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1DD1BC8B18B00385209 /* MakeOrderShouhuoCell.xib */; };
-		360EF1EF1BC8B19600385209 /* AddQuhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1E71BC8B19600385209 /* AddQuhuoVC.m */; };
-		360EF1F01BC8B19600385209 /* AddQuhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1E81BC8B19600385209 /* AddQuhuoVC.xib */; };
 		360EF1F11BC8B19600385209 /* MakeOrderQuhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1EA1BC8B19600385209 /* MakeOrderQuhuoCell.m */; };
 		360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1EB1BC8B19600385209 /* MakeOrderQuhuoCell.xib */; };
 		360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1ED1BC8B19600385209 /* QuhuoModel.m */; };
@@ -113,8 +121,6 @@
 		360EF24D1BC8D7C200385209 /* TLTagsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF24C1BC8D7C200385209 /* TLTagsControl.m */; };
 		360EF2501BC8DF8200385209 /* QConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF24F1BC8DF8200385209 /* QConfig.m */; };
 		360EF2531BCA321000385209 /* SelectCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2521BCA321000385209 /* SelectCarVC.m */; };
-		364556A01BCA388B008A0C80 /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */; };
-		364556A31BCA38A1008A0C80 /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */; };
 		36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2601BC7AC960045E75C /* Images.xcassets */; };
 		36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2641BC7AC960045E75C /* tabbed_icon.bundle */; };
 		36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2761BC7AF650045E75C /* GesturePassword.bundle */; };
@@ -246,6 +252,26 @@
 		04CAEB2A1BFC3DB10060979D /* EditGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGoodsVC.h; sourceTree = "<group>"; };
 		04CAEB2B1BFC3DB10060979D /* EditGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoodsVC.m; sourceTree = "<group>"; };
 		04CAEB2C1BFC3DB10060979D /* EditGoodsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditGoodsVC.xib; sourceTree = "<group>"; };
+		04CAEB371BFC4C510060979D /* ConfigCFahuoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCFahuoTableViewCell.h; sourceTree = "<group>"; };
+		04CAEB381BFC4C510060979D /* ConfigCFahuoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCFahuoTableViewCell.m; sourceTree = "<group>"; };
+		04CAEB391BFC4C510060979D /* ConfigCFahuoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCFahuoTableViewCell.xib; sourceTree = "<group>"; };
+		04CAEB3C1BFC4C750060979D /* ConfigCShouhuoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCShouhuoTableViewCell.h; sourceTree = "<group>"; };
+		04CAEB3D1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCShouhuoTableViewCell.m; sourceTree = "<group>"; };
+		04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCShouhuoTableViewCell.xib; sourceTree = "<group>"; };
+		04CAEB411BFC4EE30060979D /* JSONModelConfigFahuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigFahuo.h; sourceTree = "<group>"; };
+		04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigFahuo.m; sourceTree = "<group>"; };
+		04CAEB441BFC4EFE0060979D /* JSONModelConfigShouhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigShouhuo.h; sourceTree = "<group>"; };
+		04CAEB451BFC4EFE0060979D /* JSONModelConfigShouhuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigShouhuo.m; sourceTree = "<group>"; };
+		04CAEB471BFC4F330060979D /* AddQuhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuhuoVC.h; sourceTree = "<group>"; };
+		04CAEB481BFC4F330060979D /* AddQuhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuhuoVC.m; sourceTree = "<group>"; };
+		04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuhuoVC.xib; sourceTree = "<group>"; };
+		04CAEB4A1BFC4F330060979D /* ConfigCQuhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCQuhuoTVC.h; sourceTree = "<group>"; };
+		04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCQuhuoTVC.m; sourceTree = "<group>"; };
+		04CAEB4F1BFC4FB10060979D /* AddShouhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShouhuoVC.h; sourceTree = "<group>"; };
+		04CAEB501BFC4FB10060979D /* AddShouhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShouhuoVC.m; sourceTree = "<group>"; };
+		04CAEB511BFC4FB10060979D /* AddShouhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShouhuoVC.xib; sourceTree = "<group>"; };
+		04CAEB521BFC4FB10060979D /* ConfigCShouhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCShouhuoTVC.h; sourceTree = "<group>"; };
+		04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCShouhuoTVC.m; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -315,9 +341,6 @@
 		360EF1C61BC8B0F700385209 /* OrderSendNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderSendNVC.m; path = qmhy/Main/OrderSend/OrderSend/OrderSendNVC.m; sourceTree = "<group>"; };
 		360EF1C71BC8B0F700385209 /* OrderSendTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderSendTVC.h; path = qmhy/Main/OrderSend/OrderSend/OrderSendTVC.h; sourceTree = "<group>"; };
 		360EF1C81BC8B0F700385209 /* OrderSendTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderSendTVC.m; path = qmhy/Main/OrderSend/OrderSend/OrderSendTVC.m; sourceTree = "<group>"; };
-		360EF1D41BC8B18B00385209 /* AddShouhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddShouhuoVC.h; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/AddShouhuoVC.h; sourceTree = "<group>"; };
-		360EF1D51BC8B18B00385209 /* AddShouhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddShouhuoVC.m; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/AddShouhuoVC.m; sourceTree = "<group>"; };
-		360EF1D61BC8B18B00385209 /* AddShouhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddShouhuoVC.xib; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/AddShouhuoVC.xib; sourceTree = "<group>"; };
 		360EF1D71BC8B18B00385209 /* ShouhuoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouhuoData.h; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/ShouhuoData.h; sourceTree = "<group>"; };
 		360EF1D81BC8B18B00385209 /* ShouhuoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShouhuoData.m; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/ShouhuoData.m; sourceTree = "<group>"; };
 		360EF1D91BC8B18B00385209 /* ShouhuoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouhuoModel.h; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/ShouhuoModel.h; sourceTree = "<group>"; };
@@ -325,9 +348,6 @@
 		360EF1DB1BC8B18B00385209 /* MakeOrderShouhuoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MakeOrderShouhuoCell.h; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/MakeOrderShouhuoCell.h; sourceTree = "<group>"; };
 		360EF1DC1BC8B18B00385209 /* MakeOrderShouhuoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MakeOrderShouhuoCell.m; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/MakeOrderShouhuoCell.m; sourceTree = "<group>"; };
 		360EF1DD1BC8B18B00385209 /* MakeOrderShouhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MakeOrderShouhuoCell.xib; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/MakeOrderShouhuoCell.xib; sourceTree = "<group>"; };
-		360EF1E61BC8B19600385209 /* AddQuhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddQuhuoVC.h; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/AddQuhuoVC.h; sourceTree = "<group>"; };
-		360EF1E71BC8B19600385209 /* AddQuhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddQuhuoVC.m; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/AddQuhuoVC.m; sourceTree = "<group>"; };
-		360EF1E81BC8B19600385209 /* AddQuhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddQuhuoVC.xib; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/AddQuhuoVC.xib; sourceTree = "<group>"; };
 		360EF1E91BC8B19600385209 /* MakeOrderQuhuoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MakeOrderQuhuoCell.h; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/MakeOrderQuhuoCell.h; sourceTree = "<group>"; };
 		360EF1EA1BC8B19600385209 /* MakeOrderQuhuoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MakeOrderQuhuoCell.m; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/MakeOrderQuhuoCell.m; sourceTree = "<group>"; };
 		360EF1EB1BC8B19600385209 /* MakeOrderQuhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MakeOrderQuhuoCell.xib; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/MakeOrderQuhuoCell.xib; sourceTree = "<group>"; };
@@ -376,10 +396,6 @@
 		360EF24F1BC8DF8200385209 /* QConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QConfig.m; path = qmhy/Common/Util/QConfig.m; sourceTree = "<group>"; };
 		360EF2511BCA321000385209 /* SelectCarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectCarVC.h; path = qmhy/Main/MakeOrder/MakeOrderCar/SelectCarVC.h; sourceTree = "<group>"; };
 		360EF2521BCA321000385209 /* SelectCarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectCarVC.m; path = qmhy/Main/MakeOrder/MakeOrderCar/SelectCarVC.m; sourceTree = "<group>"; };
-		3645569E1BCA388B008A0C80 /* ConfigCShouhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCShouhuoTVC.h; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/ConfigCShouhuoTVC.h; sourceTree = "<group>"; };
-		3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCShouhuoTVC.m; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/ConfigCShouhuoTVC.m; sourceTree = "<group>"; };
-		364556A11BCA38A1008A0C80 /* ConfigCQuhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCQuhuoTVC.h; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/ConfigCQuhuoTVC.h; sourceTree = "<group>"; };
-		364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCQuhuoTVC.m; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/ConfigCQuhuoTVC.m; sourceTree = "<group>"; };
 		36ADF2601BC7AC960045E75C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = qmhy/resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		36ADF2641BC7AC960045E75C /* tabbed_icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = tabbed_icon.bundle; path = qmhy/resources/tabbed_icon.bundle; sourceTree = SOURCE_ROOT; };
 		36ADF2761BC7AF650045E75C /* GesturePassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GesturePassword.bundle; path = qmhy/Main/GesturePassword/GesturePassword.bundle; sourceTree = "<group>"; };
@@ -659,6 +675,90 @@
 				04CAEB111BFC24710060979D /* ConfigCGoodsTableViewCell.h */,
 				04CAEB121BFC24710060979D /* ConfigCGoodsTableViewCell.m */,
 				04CAEB131BFC24710060979D /* ConfigCGoodsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CAEB2F1BFC497F0060979D /* ConfigCQuhuo(据说改成发货了) */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB311BFC4A910060979D /* Controller */,
+				04CAEB321BFC4A910060979D /* Model */,
+				04CAEB331BFC4A910060979D /* View */,
+			);
+			name = "ConfigCQuhuo(据说改成发货了)";
+			path = qmhy/Main/Config/ConfigCQuhuo;
+			sourceTree = "<group>";
+		};
+		04CAEB301BFC497F0060979D /* ConfigCShouhuo */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB341BFC4AA10060979D /* Controller */,
+				04CAEB351BFC4AA10060979D /* Model */,
+				04CAEB361BFC4AA10060979D /* View */,
+			);
+			name = ConfigCShouhuo;
+			path = qmhy/Main/Config/ConfigCShouhuo;
+			sourceTree = "<group>";
+		};
+		04CAEB311BFC4A910060979D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB471BFC4F330060979D /* AddQuhuoVC.h */,
+				04CAEB481BFC4F330060979D /* AddQuhuoVC.m */,
+				04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */,
+				04CAEB4A1BFC4F330060979D /* ConfigCQuhuoTVC.h */,
+				04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CAEB321BFC4A910060979D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB411BFC4EE30060979D /* JSONModelConfigFahuo.h */,
+				04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CAEB331BFC4A910060979D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB371BFC4C510060979D /* ConfigCFahuoTableViewCell.h */,
+				04CAEB381BFC4C510060979D /* ConfigCFahuoTableViewCell.m */,
+				04CAEB391BFC4C510060979D /* ConfigCFahuoTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CAEB341BFC4AA10060979D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB4F1BFC4FB10060979D /* AddShouhuoVC.h */,
+				04CAEB501BFC4FB10060979D /* AddShouhuoVC.m */,
+				04CAEB511BFC4FB10060979D /* AddShouhuoVC.xib */,
+				04CAEB521BFC4FB10060979D /* ConfigCShouhuoTVC.h */,
+				04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CAEB351BFC4AA10060979D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB441BFC4EFE0060979D /* JSONModelConfigShouhuo.h */,
+				04CAEB451BFC4EFE0060979D /* JSONModelConfigShouhuo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CAEB361BFC4AA10060979D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB3C1BFC4C750060979D /* ConfigCShouhuoTableViewCell.h */,
+				04CAEB3D1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m */,
+				04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -965,11 +1065,6 @@
 		360EF1D21BC8B17400385209 /* MakeOrderQuhuo */ = {
 			isa = PBXGroup;
 			children = (
-				364556A11BCA38A1008A0C80 /* ConfigCQuhuoTVC.h */,
-				364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */,
-				360EF1E61BC8B19600385209 /* AddQuhuoVC.h */,
-				360EF1E71BC8B19600385209 /* AddQuhuoVC.m */,
-				360EF1E81BC8B19600385209 /* AddQuhuoVC.xib */,
 				360EF1E91BC8B19600385209 /* MakeOrderQuhuoCell.h */,
 				360EF1EA1BC8B19600385209 /* MakeOrderQuhuoCell.m */,
 				360EF1EB1BC8B19600385209 /* MakeOrderQuhuoCell.xib */,
@@ -982,11 +1077,6 @@
 		360EF1D31BC8B17F00385209 /* MakeOrderShouhuo */ = {
 			isa = PBXGroup;
 			children = (
-				3645569E1BCA388B008A0C80 /* ConfigCShouhuoTVC.h */,
-				3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */,
-				360EF1D41BC8B18B00385209 /* AddShouhuoVC.h */,
-				360EF1D51BC8B18B00385209 /* AddShouhuoVC.m */,
-				360EF1D61BC8B18B00385209 /* AddShouhuoVC.xib */,
 				360EF1D71BC8B18B00385209 /* ShouhuoData.h */,
 				360EF1D81BC8B18B00385209 /* ShouhuoData.m */,
 				360EF1D91BC8B18B00385209 /* ShouhuoModel.h */,
@@ -1324,6 +1414,8 @@
 		36ADF37C1BC895190045E75C /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				04CAEB2F1BFC497F0060979D /* ConfigCQuhuo(据说改成发货了) */,
+				04CAEB301BFC497F0060979D /* ConfigCShouhuo */,
 				04CAEB041BFC24710060979D /* ConfigCGoods */,
 				36ADF3851BC895AF0045E75C /* ConfigCWuliu */,
 				36ADF3821BC895910045E75C /* ConfigCPassword */,
@@ -1460,9 +1552,10 @@
 				360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */,
 				36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */,
 				360EF1901BC8AFD200385209 /* entlib.gif in Resources */,
-				360EF1E01BC8B18B00385209 /* AddShouhuoVC.xib in Resources */,
+				04CAEB401BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib in Resources */,
+				04CAEB551BFC4FB10060979D /* AddShouhuoVC.xib in Resources */,
+				04CAEB3B1BFC4C510060979D /* ConfigCFahuoTableViewCell.xib in Resources */,
 				36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */,
-				360EF1F01BC8B19600385209 /* AddQuhuoVC.xib in Resources */,
 				360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */,
 				04CAEB1A1BFC24710060979D /* ConfigCGoodsTableViewCell.xib in Resources */,
 				360EF21E1BC8B1BC00385209 /* MakeOrderCarCell.xib in Resources */,
@@ -1473,6 +1566,7 @@
 				36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */,
 				36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */,
 				360EF1911BC8AFD200385209 /* help.html in Resources */,
+				04CAEB4D1BFC4F330060979D /* AddQuhuoVC.xib in Resources */,
 				36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */,
 				36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */,
 				36ADF2B11BC7B0650045E75C /* MJRefresh.bundle in Resources */,
@@ -1491,9 +1585,9 @@
 				360EF2061BC8B1A200385209 /* MakeOrderGoodsCell.m in Sources */,
 				36ADF2A41BC7B0560045E75C /* AFURLRequestSerialization.m in Sources */,
 				36ADF3101BC7B3540045E75C /* AFNetworkActivityIndicatorManager.m in Sources */,
-				364556A31BCA38A1008A0C80 /* ConfigCQuhuoTVC.m in Sources */,
 				360EF1B91BC8B0DC00385209 /* OrderSendQueryTVC.m in Sources */,
 				36ADF3451BC7B62D0045E75C /* RegisterTVC.m in Sources */,
+				04CAEB561BFC4FB10060979D /* ConfigCShouhuoTVC.m in Sources */,
 				04155D371BF5BF900003254F /* UIImage+MultiFormat.m in Sources */,
 				04155D351BF5BF900003254F /* UIButton+WebCache.m in Sources */,
 				360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */,
@@ -1508,16 +1602,17 @@
 				360EF17A1BC8AF7E00385209 /* MoreNVC.m in Sources */,
 				36ADF3251BC7B3C00045E75C /* MJRefreshAutoFooter.m in Sources */,
 				36ADF2FE1BC7B17B0045E75C /* NSString+MJExtension.m in Sources */,
+				04CAEB431BFC4EE30060979D /* JSONModelConfigFahuo.m in Sources */,
 				36ADF2FA1BC7B17B0045E75C /* MJType.m in Sources */,
 				36ADF3761BC7B7AF0045E75C /* RootTabBarController.m in Sources */,
 				04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */,
-				364556A01BCA388B008A0C80 /* ConfigCShouhuoTVC.m in Sources */,
 				36ADF2A11BC7B0560045E75C /* AFNetworkReachabilityManager.m in Sources */,
 				04155D391BF5BF900003254F /* UIImageView+HighlightedWebCache.m in Sources */,
 				04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */,
 				04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */,
 				04CAEB191BFC24710060979D /* ConfigCGoodsTableViewCell.m in Sources */,
 				04155D381BF5BF900003254F /* UIImage+WebP.m in Sources */,
+				04CAEB3F1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m in Sources */,
 				360EF2301BC8B1E600385209 /* main.m in Sources */,
 				360EF1671BC8AF3C00385209 /* HomeVC.m in Sources */,
 				360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */,
@@ -1529,7 +1624,9 @@
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
 				360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */,
-				360EF1DF1BC8B18B00385209 /* AddShouhuoVC.m in Sources */,
+				04CAEB4C1BFC4F330060979D /* AddQuhuoVC.m in Sources */,
+				04CAEB3A1BFC4C510060979D /* ConfigCFahuoTableViewCell.m in Sources */,
+				04CAEB461BFC4EFE0060979D /* JSONModelConfigShouhuo.m in Sources */,
 				36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */,
 				36ADF3441BC7B62D0045E75C /* LoginVC.m in Sources */,
 				36ADF3621BC7B7130045E75C /* JSONModelCommonCity.m in Sources */,
@@ -1609,16 +1706,17 @@
 				360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */,
 				36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */,
 				04155D301BF5BF900003254F /* SDWebImageDecoder.m in Sources */,
+				04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */,
 				36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */,
 				04CAEB151BFC24710060979D /* ConfigCGoodsTVC.m in Sources */,
 				36ADF31A1BC7B37B0045E75C /* AFNetworkTool.m in Sources */,
 				36ADF3311BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m in Sources */,
-				360EF1EF1BC8B19600385209 /* AddQuhuoVC.m in Sources */,
 				36ADF3671BC7B7130045E75C /* JSONModelReg.m in Sources */,
 				36ADF3291BC7B3C00045E75C /* MJRefreshHeader.m in Sources */,
 				360EF2271BC8B1CB00385209 /* MakeOrderOKTVC.m in Sources */,
 				04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */,
 				360EF17B1BC8AF7E00385209 /* MoreTVC.m in Sources */,
+				04CAEB541BFC4FB10060979D /* AddShouhuoVC.m in Sources */,
 				360EF18B1BC8AFA900385209 /* UserProtocolVC.m in Sources */,
 				04155D311BF5BF900003254F /* SDWebImageDownloader.m in Sources */,
 				36ADF2B21BC7B0650045E75C /* MJRefreshConst.m in Sources */,

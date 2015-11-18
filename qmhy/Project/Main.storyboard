@@ -293,7 +293,7 @@
             </objects>
             <point key="canvasLocation" x="3827" y="489"/>
         </scene>
-        <!--配置常用取货信息-->
+        <!--配置常用发货信息-->
         <scene sceneID="oOX-7G-LD3">
             <objects>
                 <tableViewController storyboardIdentifier="SIDConfigCQuhuoTVC" id="r9F-65-RCu" customClass="ConfigCQuhuoTVC" sceneMemberID="viewController">
@@ -337,7 +337,7 @@
                             <outlet property="delegate" destination="r9F-65-RCu" id="Mpp-Oj-Ip7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="配置常用取货信息" id="4iS-KM-dw0">
+                    <navigationItem key="navigationItem" title="配置常用发货信息" id="4iS-KM-dw0">
                         <barButtonItem key="rightBarButtonItem" title="添加" id="2e9-N7-AXB">
                             <connections>
                                 <action selector="addQuhuoMessage:" destination="r9F-65-RCu" id="C8H-V1-vQs"/>
@@ -347,7 +347,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Eh-aL-xeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1413" y="1444"/>
+            <point key="canvasLocation" x="1283" y="1686"/>
         </scene>
         <!--关于-->
         <scene sceneID="FQE-O1-xym">
@@ -1236,7 +1236,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMc-8Z-mby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="361"/>
+            <point key="canvasLocation" x="802" y="471"/>
         </scene>
         <!--银行卡-->
         <scene sceneID="t5I-46-T9e">
@@ -1365,7 +1365,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xh-rE-7cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="1421"/>
+            <point key="canvasLocation" x="858" y="1441"/>
         </scene>
         <!--配置常用物流-->
         <scene sceneID="hhI-Wy-eSI">

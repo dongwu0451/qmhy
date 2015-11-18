@@ -115,7 +115,7 @@
     }else if (indexPath.section==1 && indexPath.row==3){
         //1.3
         cell.imageView.image=[UIImage imageNamed:@"Wea_aixinjuanzeng"];
-        [cell.textLabel setText:@"配置常用取货信息"];
+        [cell.textLabel setText:@"配置常用发货信息"]; // 据说改成发货
         [cell.detailTextLabel setText:@""];
     }else if (indexPath.section==1 && indexPath.row==4){
         //1.4
@@ -153,7 +153,7 @@
         [self performSegueWithIdentifier:@"showConfigCCity" sender:nil];
         NSLog(@"showConfigCCity");
     }
-    if (section==1 && row==3){//配置常用取货信息
+    if (section==1 && row==3){//配置常用取货信息  据说改成发货
         [self performSegueWithIdentifier:@"showConfigCQuhuo" sender:nil];
         NSLog(@"showConfigCQuhuo");
     }
