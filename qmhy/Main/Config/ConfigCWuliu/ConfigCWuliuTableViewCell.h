@@ -19,6 +19,8 @@
 - (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn;
 - (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didClickShanChuLikeBtn:(UIButton *)likeBtn;
 
+//- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didRemoveJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model  andClickShanChuLikeBtn:(UIButton *)likeBtn;
+
 @end
 
 @interface ConfigCWuliuTableViewCell : UITableViewCell

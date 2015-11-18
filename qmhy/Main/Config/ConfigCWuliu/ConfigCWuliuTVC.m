@@ -26,6 +26,11 @@
 @property (nonatomic, strong) ConfigCWuliuTableViewCell *configCWuliuTableViewCell;
 
 
+@property (nonatomic, strong) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
+
+
+
+
 @end
 
 @implementation ConfigCWuliuTVC
@@ -36,6 +41,8 @@
     [super viewDidLoad];
     
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [self loadNewData];
@@ -72,6 +79,13 @@
 
 
 }
+
+//- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didRemoveJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model  andClickShanChuLikeBtn:(UIButton *)likeBtn {
+//    NSLog(@"%@", model.name);
+//    NSLog(@"%@", model.uid);
+//    NSLog(@"%@", model.code);
+////    self.jsonModelConfigCWuLiu = model;
+//}
 
 
 // ⑧ 实现代理的方法
@@ -147,7 +161,10 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"ConfigCWuliuTableViewCell" owner:nil options:nil] lastObject];
     }
+    //获取模型
     [cell config:_dataArray[indexPath.row]];
+//    JSONModelConfigCWuLiu *jsonModelConfigCWuLiu = _dataArray[indexPath.row];
+//    cell.wuLiuNameLabel.text = jsonModelConfigCWuLiu.name;
     // ⑥在创建cell的时候设置自己为代理
     cell.delegate = self;
     return cell;
