@@ -867,7 +867,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTp-Am-lgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1259" y="1462"/>
+            <point key="canvasLocation" x="1050" y="1847"/>
         </scene>
         <!--添加常用物流-->
         <scene sceneID="Ybt-Yf-zkx">
@@ -982,7 +982,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftd-6B-fS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="2274"/>
+            <point key="canvasLocation" x="1050" y="2632"/>
         </scene>
         <!--配置-->
         <scene sceneID="hSQ-zw-RoI">

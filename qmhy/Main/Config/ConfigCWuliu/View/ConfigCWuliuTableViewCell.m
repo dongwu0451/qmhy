@@ -38,7 +38,7 @@
     }
     
 //    if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didRemoveJSONModelConfigCWuLiu:andClickShanChuLikeBtn:)]) {
-//        [self.delegate configCWuliuTableViewCell:self didRemoveJSONModelConfigCWuLiu:_jsonModelConfigCWuLiu andClickShanChuLikeBtn:sender];
+//        [self.delegate configCWuliuTableViewCell:self didRemoveJSONModelConfigCWuLiu:self.jsonModelConfigCWuLiu andClickShanChuLikeBtn:sender];
 //    }
 
 }

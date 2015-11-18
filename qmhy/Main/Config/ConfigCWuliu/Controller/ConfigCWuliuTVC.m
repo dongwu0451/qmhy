@@ -26,7 +26,7 @@
 @property (nonatomic, strong) ConfigCWuliuTableViewCell *configCWuliuTableViewCell;
 
 
-@property (nonatomic, strong) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
+//@property (nonatomic, strong) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
 
 
 
@@ -34,14 +34,6 @@
 @end
 
 @implementation ConfigCWuliuTVC
-
-- (void)viewDidLoad
-{
-
-    [super viewDidLoad];
-    
-}
-
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -142,9 +134,6 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataArray.count;

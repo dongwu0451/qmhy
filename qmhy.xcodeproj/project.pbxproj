@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040A85C31BFAACD300323C0F /* ConfigCWuliuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A85C11BFAACD300323C0F /* ConfigCWuliuTableViewCell.m */; };
-		040A85C41BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040A85C21BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib */; };
-		040A85CA1BFAB81F00323C0F /* JSONModelConfigCWuLiu.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A85C91BFAB81F00323C0F /* JSONModelConfigCWuLiu.m */; };
-		040A86781BFB111A00323C0F /* ADDConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A86771BFB111A00323C0F /* ADDConfigCWuliuViewController.m */; };
 		04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */; };
 		04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D071BF5BF8B0003254F /* MBProgressHUD.m */; };
 		04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D0C1BF5BF900003254F /* MKAnnotationView+WebCache.m */; };
@@ -30,8 +26,20 @@
 		04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D291BF5BF900003254F /* UIImageView+WebCache.m */; };
 		04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */; };
 		04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */; };
-		047ED3751BFB5DC70020152F /* EditConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED3731BFB5DC70020152F /* EditConfigCWuliuViewController.m */; };
-		047ED3761BFB5DC70020152F /* EditConfigCWuliuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ED3741BFB5DC70020152F /* EditConfigCWuliuViewController.xib */; };
+		04CAEAFD1BFC237B0060979D /* ADDConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */; };
+		04CAEAFE1BFC237B0060979D /* ConfigCWuliuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF21BFC237B0060979D /* ConfigCWuliuTVC.m */; };
+		04CAEAFF1BFC237B0060979D /* EditConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF41BFC237B0060979D /* EditConfigCWuliuViewController.m */; };
+		04CAEB001BFC237B0060979D /* EditConfigCWuliuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEAF51BFC237B0060979D /* EditConfigCWuliuViewController.xib */; };
+		04CAEB011BFC237B0060979D /* JSONModelConfigCWuLiu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF81BFC237B0060979D /* JSONModelConfigCWuLiu.m */; };
+		04CAEB021BFC237B0060979D /* ConfigCWuliuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAFB1BFC237B0060979D /* ConfigCWuliuTableViewCell.m */; };
+		04CAEB031BFC237B0060979D /* ConfigCWuliuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEAFC1BFC237B0060979D /* ConfigCWuliuTableViewCell.xib */; };
+		04CAEB141BFC24710060979D /* AddGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB071BFC24710060979D /* AddGoodsVC.m */; };
+		04CAEB151BFC24710060979D /* ConfigCGoodsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB091BFC24710060979D /* ConfigCGoodsTVC.m */; };
+		04CAEB161BFC24710060979D /* EditConfigCGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB0B1BFC24710060979D /* EditConfigCGoodsViewController.m */; };
+		04CAEB171BFC24710060979D /* EditConfigCGoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB0C1BFC24710060979D /* EditConfigCGoodsViewController.xib */; };
+		04CAEB181BFC24710060979D /* JSONModelConfigGGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB0F1BFC24710060979D /* JSONModelConfigGGoods.m */; };
+		04CAEB191BFC24710060979D /* ConfigCGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB121BFC24710060979D /* ConfigCGoodsTableViewCell.m */; };
+		04CAEB1A1BFC24710060979D /* ConfigCGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB131BFC24710060979D /* ConfigCGoodsTableViewCell.xib */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -82,7 +90,6 @@
 		360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1EB1BC8B19600385209 /* MakeOrderQuhuoCell.xib */; };
 		360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1ED1BC8B19600385209 /* QuhuoModel.m */; };
 		360EF2021BC8B1A200385209 /* SelectGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1F61BC8B1A200385209 /* SelectGoodsVC.m */; };
-		360EF2031BC8B1A200385209 /* AddGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1F81BC8B1A200385209 /* AddGoodsVC.m */; };
 		360EF2051BC8B1A200385209 /* BigAndSmallGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1FC1BC8B1A200385209 /* BigAndSmallGoodsModel.m */; };
 		360EF2061BC8B1A200385209 /* MakeOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1FE1BC8B1A200385209 /* MakeOrderGoodsCell.m */; };
 		360EF2071BC8B1A200385209 /* MakeOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF1FF1BC8B1A200385209 /* MakeOrderGoodsCell.xib */; };
@@ -108,7 +115,6 @@
 		360EF2531BCA321000385209 /* SelectCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2521BCA321000385209 /* SelectCarVC.m */; };
 		364556A01BCA388B008A0C80 /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */; };
 		364556A31BCA38A1008A0C80 /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */; };
-		364556A61BCA38B6008A0C80 /* ConfigCGoodsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 364556A51BCA38B6008A0C80 /* ConfigCGoodsTVC.m */; };
 		36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2601BC7AC960045E75C /* Images.xcassets */; };
 		36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2641BC7AC960045E75C /* tabbed_icon.bundle */; };
 		36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36ADF2761BC7AF650045E75C /* GesturePassword.bundle */; };
@@ -171,20 +177,12 @@
 		36ADF3721BC7B7AF0045E75C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3691BC7B7AF0045E75C /* AppDelegate.m */; };
 		36ADF3761BC7B7AF0045E75C /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF36F1BC7B7AF0045E75C /* RootTabBarController.m */; };
 		36ADF3771BC7B7AF0045E75C /* SinglePageNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3711BC7B7AF0045E75C /* SinglePageNVC.m */; };
-		36ADF3881BC895B80045E75C /* ConfigCWuliuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */; };
 		36D2E0561BCF260600DC0149 /* More.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0551BCF260600DC0149 /* More.bundle */; };
 		36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0571BCF26B900DC0149 /* HomeIcons.bundle */; };
 		36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36D2E0591BCF27AA00DC0149 /* Home.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040A85C01BFAACD300323C0F /* ConfigCWuliuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCWuliuTableViewCell.h; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTableViewCell.h; sourceTree = "<group>"; };
-		040A85C11BFAACD300323C0F /* ConfigCWuliuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCWuliuTableViewCell.m; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTableViewCell.m; sourceTree = "<group>"; };
-		040A85C21BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConfigCWuliuTableViewCell.xib; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTableViewCell.xib; sourceTree = "<group>"; };
-		040A85C81BFAB81F00323C0F /* JSONModelConfigCWuLiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelConfigCWuLiu.h; path = qmhy/Main/Config/ConfigCWuliu/JSONModelConfigCWuLiu.h; sourceTree = "<group>"; };
-		040A85C91BFAB81F00323C0F /* JSONModelConfigCWuLiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModelConfigCWuLiu.m; path = qmhy/Main/Config/ConfigCWuliu/JSONModelConfigCWuLiu.m; sourceTree = "<group>"; };
-		040A86761BFB111A00323C0F /* ADDConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDConfigCWuliuViewController.h; path = qmhy/Main/Config/ConfigCWuliu/ADDConfigCWuliuViewController.h; sourceTree = "<group>"; };
-		040A86771BFB111A00323C0F /* ADDConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDConfigCWuliuViewController.m; path = qmhy/Main/Config/ConfigCWuliu/ADDConfigCWuliuViewController.m; sourceTree = "<group>"; };
 		04155D041BF5BF8B0003254F /* MBProgressHUD+HM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HM.h"; sourceTree = "<group>"; };
 		04155D051BF5BF8B0003254F /* MBProgressHUD+HM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HM.m"; sourceTree = "<group>"; };
 		04155D061BF5BF8B0003254F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -224,9 +222,30 @@
 		04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformResourceLocator.h; sourceTree = "<group>"; };
 		04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformResourceLocator.m; sourceTree = "<group>"; };
-		047ED3721BFB5DC70020152F /* EditConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditConfigCWuliuViewController.h; path = qmhy/Main/Config/ConfigCWuliu/EditConfigCWuliuViewController.h; sourceTree = "<group>"; };
-		047ED3731BFB5DC70020152F /* EditConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditConfigCWuliuViewController.m; path = qmhy/Main/Config/ConfigCWuliu/EditConfigCWuliuViewController.m; sourceTree = "<group>"; };
-		047ED3741BFB5DC70020152F /* EditConfigCWuliuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditConfigCWuliuViewController.xib; path = qmhy/Main/Config/ConfigCWuliu/EditConfigCWuliuViewController.xib; sourceTree = "<group>"; };
+		04CAEAEF1BFC237B0060979D /* ADDConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDConfigCWuliuViewController.h; sourceTree = "<group>"; };
+		04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDConfigCWuliuViewController.m; sourceTree = "<group>"; };
+		04CAEAF11BFC237B0060979D /* ConfigCWuliuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCWuliuTVC.h; sourceTree = "<group>"; };
+		04CAEAF21BFC237B0060979D /* ConfigCWuliuTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCWuliuTVC.m; sourceTree = "<group>"; };
+		04CAEAF31BFC237B0060979D /* EditConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfigCWuliuViewController.h; sourceTree = "<group>"; };
+		04CAEAF41BFC237B0060979D /* EditConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfigCWuliuViewController.m; sourceTree = "<group>"; };
+		04CAEAF51BFC237B0060979D /* EditConfigCWuliuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditConfigCWuliuViewController.xib; sourceTree = "<group>"; };
+		04CAEAF71BFC237B0060979D /* JSONModelConfigCWuLiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigCWuLiu.h; sourceTree = "<group>"; };
+		04CAEAF81BFC237B0060979D /* JSONModelConfigCWuLiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigCWuLiu.m; sourceTree = "<group>"; };
+		04CAEAFA1BFC237B0060979D /* ConfigCWuliuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCWuliuTableViewCell.h; sourceTree = "<group>"; };
+		04CAEAFB1BFC237B0060979D /* ConfigCWuliuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCWuliuTableViewCell.m; sourceTree = "<group>"; };
+		04CAEAFC1BFC237B0060979D /* ConfigCWuliuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCWuliuTableViewCell.xib; sourceTree = "<group>"; };
+		04CAEB061BFC24710060979D /* AddGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoodsVC.h; sourceTree = "<group>"; };
+		04CAEB071BFC24710060979D /* AddGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoodsVC.m; sourceTree = "<group>"; };
+		04CAEB081BFC24710060979D /* ConfigCGoodsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCGoodsTVC.h; sourceTree = "<group>"; };
+		04CAEB091BFC24710060979D /* ConfigCGoodsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCGoodsTVC.m; sourceTree = "<group>"; };
+		04CAEB0A1BFC24710060979D /* EditConfigCGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfigCGoodsViewController.h; sourceTree = "<group>"; };
+		04CAEB0B1BFC24710060979D /* EditConfigCGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfigCGoodsViewController.m; sourceTree = "<group>"; };
+		04CAEB0C1BFC24710060979D /* EditConfigCGoodsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditConfigCGoodsViewController.xib; sourceTree = "<group>"; };
+		04CAEB0E1BFC24710060979D /* JSONModelConfigGGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigGGoods.h; sourceTree = "<group>"; };
+		04CAEB0F1BFC24710060979D /* JSONModelConfigGGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigGGoods.m; sourceTree = "<group>"; };
+		04CAEB111BFC24710060979D /* ConfigCGoodsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCGoodsTableViewCell.h; sourceTree = "<group>"; };
+		04CAEB121BFC24710060979D /* ConfigCGoodsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCGoodsTableViewCell.m; sourceTree = "<group>"; };
+		04CAEB131BFC24710060979D /* ConfigCGoodsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCGoodsTableViewCell.xib; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -316,8 +335,6 @@
 		360EF1ED1BC8B19600385209 /* QuhuoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuhuoModel.m; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/QuhuoModel.m; sourceTree = "<group>"; };
 		360EF1F51BC8B1A200385209 /* SelectGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectGoodsVC.h; path = qmhy/Main/MakeOrder/MakeOrderGoods/SelectGoodsVC.h; sourceTree = "<group>"; };
 		360EF1F61BC8B1A200385209 /* SelectGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectGoodsVC.m; path = qmhy/Main/MakeOrder/MakeOrderGoods/SelectGoodsVC.m; sourceTree = "<group>"; };
-		360EF1F71BC8B1A200385209 /* AddGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGoodsVC.h; path = qmhy/Main/MakeOrder/MakeOrderGoods/AddGoodsVC.h; sourceTree = "<group>"; };
-		360EF1F81BC8B1A200385209 /* AddGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoodsVC.m; path = qmhy/Main/MakeOrder/MakeOrderGoods/AddGoodsVC.m; sourceTree = "<group>"; };
 		360EF1FB1BC8B1A200385209 /* BigAndSmallGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BigAndSmallGoodsModel.h; path = qmhy/Main/MakeOrder/MakeOrderGoods/BigAndSmallGoodsModel.h; sourceTree = "<group>"; };
 		360EF1FC1BC8B1A200385209 /* BigAndSmallGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BigAndSmallGoodsModel.m; path = qmhy/Main/MakeOrder/MakeOrderGoods/BigAndSmallGoodsModel.m; sourceTree = "<group>"; };
 		360EF1FD1BC8B1A200385209 /* MakeOrderGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MakeOrderGoodsCell.h; path = qmhy/Main/MakeOrder/MakeOrderGoods/MakeOrderGoodsCell.h; sourceTree = "<group>"; };
@@ -363,8 +380,6 @@
 		3645569F1BCA388B008A0C80 /* ConfigCShouhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCShouhuoTVC.m; path = qmhy/Main/MakeOrder/MakeOrderShouhuo/ConfigCShouhuoTVC.m; sourceTree = "<group>"; };
 		364556A11BCA38A1008A0C80 /* ConfigCQuhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCQuhuoTVC.h; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/ConfigCQuhuoTVC.h; sourceTree = "<group>"; };
 		364556A21BCA38A1008A0C80 /* ConfigCQuhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCQuhuoTVC.m; path = qmhy/Main/MakeOrder/MakeOrderQuhuo/ConfigCQuhuoTVC.m; sourceTree = "<group>"; };
-		364556A41BCA38B6008A0C80 /* ConfigCGoodsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCGoodsTVC.h; path = qmhy/Main/MakeOrder/MakeOrderGoods/ConfigCGoodsTVC.h; sourceTree = "<group>"; };
-		364556A51BCA38B6008A0C80 /* ConfigCGoodsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCGoodsTVC.m; path = qmhy/Main/MakeOrder/MakeOrderGoods/ConfigCGoodsTVC.m; sourceTree = "<group>"; };
 		36ADF2601BC7AC960045E75C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = qmhy/resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		36ADF2641BC7AC960045E75C /* tabbed_icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = tabbed_icon.bundle; path = qmhy/resources/tabbed_icon.bundle; sourceTree = SOURCE_ROOT; };
 		36ADF2761BC7AF650045E75C /* GesturePassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GesturePassword.bundle; path = qmhy/Main/GesturePassword/GesturePassword.bundle; sourceTree = "<group>"; };
@@ -487,8 +502,6 @@
 		36ADF36F1BC7B7AF0045E75C /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootTabBarController.m; path = qmhy/Application/RootTabBarController.m; sourceTree = "<group>"; };
 		36ADF3701BC7B7AF0045E75C /* SinglePageNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SinglePageNVC.h; path = qmhy/Application/SinglePageNVC.h; sourceTree = "<group>"; };
 		36ADF3711BC7B7AF0045E75C /* SinglePageNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SinglePageNVC.m; path = qmhy/Application/SinglePageNVC.m; sourceTree = "<group>"; };
-		36ADF3861BC895B80045E75C /* ConfigCWuliuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCWuliuTVC.h; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTVC.h; sourceTree = "<group>"; };
-		36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCWuliuTVC.m; path = qmhy/Main/Config/ConfigCWuliu/ConfigCWuliuTVC.m; sourceTree = "<group>"; };
 		36D2E0551BCF260600DC0149 /* More.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = More.bundle; path = qmhy/resources/More.bundle; sourceTree = SOURCE_ROOT; };
 		36D2E0571BCF26B900DC0149 /* HomeIcons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HomeIcons.bundle; path = qmhy/resources/HomeIcons.bundle; sourceTree = SOURCE_ROOT; };
 		36D2E0591BCF27AA00DC0149 /* Home.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Home.bundle; path = qmhy/resources/Home.bundle; sourceTree = SOURCE_ROOT; };
@@ -568,6 +581,86 @@
 			);
 			name = Tool;
 			path = qmhy/Common/Tool;
+			sourceTree = "<group>";
+		};
+		04CAEAEE1BFC237B0060979D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEAEF1BFC237B0060979D /* ADDConfigCWuliuViewController.h */,
+				04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */,
+				04CAEAF11BFC237B0060979D /* ConfigCWuliuTVC.h */,
+				04CAEAF21BFC237B0060979D /* ConfigCWuliuTVC.m */,
+				04CAEAF31BFC237B0060979D /* EditConfigCWuliuViewController.h */,
+				04CAEAF41BFC237B0060979D /* EditConfigCWuliuViewController.m */,
+				04CAEAF51BFC237B0060979D /* EditConfigCWuliuViewController.xib */,
+			);
+			name = Controller;
+			path = qmhy/Main/Config/ConfigCWuliu/Controller;
+			sourceTree = "<group>";
+		};
+		04CAEAF61BFC237B0060979D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEAF71BFC237B0060979D /* JSONModelConfigCWuLiu.h */,
+				04CAEAF81BFC237B0060979D /* JSONModelConfigCWuLiu.m */,
+			);
+			name = Model;
+			path = qmhy/Main/Config/ConfigCWuliu/Model;
+			sourceTree = "<group>";
+		};
+		04CAEAF91BFC237B0060979D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEAFA1BFC237B0060979D /* ConfigCWuliuTableViewCell.h */,
+				04CAEAFB1BFC237B0060979D /* ConfigCWuliuTableViewCell.m */,
+				04CAEAFC1BFC237B0060979D /* ConfigCWuliuTableViewCell.xib */,
+			);
+			name = View;
+			path = qmhy/Main/Config/ConfigCWuliu/View;
+			sourceTree = "<group>";
+		};
+		04CAEB041BFC24710060979D /* ConfigCGoods */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB051BFC24710060979D /* Controller */,
+				04CAEB0D1BFC24710060979D /* Model */,
+				04CAEB101BFC24710060979D /* View */,
+			);
+			name = ConfigCGoods;
+			path = qmhy/Main/Config/ConfigCGoods;
+			sourceTree = "<group>";
+		};
+		04CAEB051BFC24710060979D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB061BFC24710060979D /* AddGoodsVC.h */,
+				04CAEB071BFC24710060979D /* AddGoodsVC.m */,
+				04CAEB081BFC24710060979D /* ConfigCGoodsTVC.h */,
+				04CAEB091BFC24710060979D /* ConfigCGoodsTVC.m */,
+				04CAEB0A1BFC24710060979D /* EditConfigCGoodsViewController.h */,
+				04CAEB0B1BFC24710060979D /* EditConfigCGoodsViewController.m */,
+				04CAEB0C1BFC24710060979D /* EditConfigCGoodsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CAEB0D1BFC24710060979D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB0E1BFC24710060979D /* JSONModelConfigGGoods.h */,
+				04CAEB0F1BFC24710060979D /* JSONModelConfigGGoods.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CAEB101BFC24710060979D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CAEB111BFC24710060979D /* ConfigCGoodsTableViewCell.h */,
+				04CAEB121BFC24710060979D /* ConfigCGoodsTableViewCell.m */,
+				04CAEB131BFC24710060979D /* ConfigCGoodsTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2B4BFB991A152E5F00C25085 /* resources */ = {
@@ -858,12 +951,8 @@
 		360EF1D11BC8B16B00385209 /* MakeOrderGoods */ = {
 			isa = PBXGroup;
 			children = (
-				364556A41BCA38B6008A0C80 /* ConfigCGoodsTVC.h */,
-				364556A51BCA38B6008A0C80 /* ConfigCGoodsTVC.m */,
 				360EF1F51BC8B1A200385209 /* SelectGoodsVC.h */,
 				360EF1F61BC8B1A200385209 /* SelectGoodsVC.m */,
-				360EF1F71BC8B1A200385209 /* AddGoodsVC.h */,
-				360EF1F81BC8B1A200385209 /* AddGoodsVC.m */,
 				360EF1FB1BC8B1A200385209 /* BigAndSmallGoodsModel.h */,
 				360EF1FC1BC8B1A200385209 /* BigAndSmallGoodsModel.m */,
 				360EF1FD1BC8B1A200385209 /* MakeOrderGoodsCell.h */,
@@ -1235,6 +1324,7 @@
 		36ADF37C1BC895190045E75C /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				04CAEB041BFC24710060979D /* ConfigCGoods */,
 				36ADF3851BC895AF0045E75C /* ConfigCWuliu */,
 				36ADF3821BC895910045E75C /* ConfigCPassword */,
 				36ADF3811BC895850045E75C /* ConfigCommon */,
@@ -1283,18 +1373,9 @@
 		36ADF3851BC895AF0045E75C /* ConfigCWuliu */ = {
 			isa = PBXGroup;
 			children = (
-				040A85C81BFAB81F00323C0F /* JSONModelConfigCWuLiu.h */,
-				040A85C91BFAB81F00323C0F /* JSONModelConfigCWuLiu.m */,
-				36ADF3861BC895B80045E75C /* ConfigCWuliuTVC.h */,
-				36ADF3871BC895B80045E75C /* ConfigCWuliuTVC.m */,
-				040A85C01BFAACD300323C0F /* ConfigCWuliuTableViewCell.h */,
-				040A85C11BFAACD300323C0F /* ConfigCWuliuTableViewCell.m */,
-				040A85C21BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib */,
-				040A86761BFB111A00323C0F /* ADDConfigCWuliuViewController.h */,
-				040A86771BFB111A00323C0F /* ADDConfigCWuliuViewController.m */,
-				047ED3721BFB5DC70020152F /* EditConfigCWuliuViewController.h */,
-				047ED3731BFB5DC70020152F /* EditConfigCWuliuViewController.m */,
-				047ED3741BFB5DC70020152F /* EditConfigCWuliuViewController.xib */,
+				04CAEAEE1BFC237B0060979D /* Controller */,
+				04CAEAF61BFC237B0060979D /* Model */,
+				04CAEAF91BFC237B0060979D /* View */,
 			);
 			name = ConfigCWuliu;
 			sourceTree = "<group>";
@@ -1371,9 +1452,9 @@
 				36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */,
 				360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */,
 				360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */,
-				047ED3761BFB5DC70020152F /* EditConfigCWuliuViewController.xib in Resources */,
 				360EF1821BC8AF9400385209 /* pricetable.html in Resources */,
 				36D2E0561BCF260600DC0149 /* More.bundle in Resources */,
+				04CAEB001BFC237B0060979D /* EditConfigCWuliuViewController.xib in Resources */,
 				360EF2321BC8B1E600385209 /* qmhy-Info.plist in Resources */,
 				360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */,
 				36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */,
@@ -1382,16 +1463,18 @@
 				36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */,
 				360EF1F01BC8B19600385209 /* AddQuhuoVC.xib in Resources */,
 				360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */,
+				04CAEB1A1BFC24710060979D /* ConfigCGoodsTableViewCell.xib in Resources */,
 				360EF21E1BC8B1BC00385209 /* MakeOrderCarCell.xib in Resources */,
+				04CAEB031BFC237B0060979D /* ConfigCWuliuTableViewCell.xib in Resources */,
 				360EF1811BC8AF9400385209 /* pricetable.gif in Resources */,
 				360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */,
 				360EF2311BC8B1E600385209 /* Main.storyboard in Resources */,
-				040A85C41BFAACD300323C0F /* ConfigCWuliuTableViewCell.xib in Resources */,
 				36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */,
 				36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */,
 				360EF1911BC8AFD200385209 /* help.html in Resources */,
 				36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */,
 				36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */,
+				04CAEB171BFC24710060979D /* EditConfigCGoodsViewController.xib in Resources */,
 				36ADF2B11BC7B0650045E75C /* MJRefresh.bundle in Resources */,
 				360EF2071BC8B1A200385209 /* MakeOrderGoodsCell.xib in Resources */,
 			);
@@ -1412,9 +1495,7 @@
 				360EF1B91BC8B0DC00385209 /* OrderSendQueryTVC.m in Sources */,
 				36ADF3451BC7B62D0045E75C /* RegisterTVC.m in Sources */,
 				04155D371BF5BF900003254F /* UIImage+MultiFormat.m in Sources */,
-				36ADF3881BC895B80045E75C /* ConfigCWuliuTVC.m in Sources */,
 				04155D351BF5BF900003254F /* UIButton+WebCache.m in Sources */,
-				047ED3751BFB5DC70020152F /* EditConfigCWuliuViewController.m in Sources */,
 				360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */,
 				36ADF3151BC7B3540045E75C /* UIProgressView+AFNetworking.m in Sources */,
 				36ADF29F1BC7B0560045E75C /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1435,14 +1516,15 @@
 				04155D391BF5BF900003254F /* UIImageView+HighlightedWebCache.m in Sources */,
 				04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */,
 				04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */,
+				04CAEB191BFC24710060979D /* ConfigCGoodsTableViewCell.m in Sources */,
 				04155D381BF5BF900003254F /* UIImage+WebP.m in Sources */,
 				360EF2301BC8B1E600385209 /* main.m in Sources */,
 				360EF1671BC8AF3C00385209 /* HomeVC.m in Sources */,
 				360EF1CA1BC8B0F700385209 /* OrderSendNVC.m in Sources */,
-				040A86781BFB111A00323C0F /* ADDConfigCWuliuViewController.m in Sources */,
+				04CAEAFD1BFC237B0060979D /* ADDConfigCWuliuViewController.m in Sources */,
+				04CAEB181BFC24710060979D /* JSONModelConfigGGoods.m in Sources */,
 				360EF2531BCA321000385209 /* SelectCarVC.m in Sources */,
 				360EF2501BC8DF8200385209 /* QConfig.m in Sources */,
-				040A85C31BFAACD300323C0F /* ConfigCWuliuTableViewCell.m in Sources */,
 				36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */,
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
@@ -1451,6 +1533,7 @@
 				36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */,
 				36ADF3441BC7B62D0045E75C /* LoginVC.m in Sources */,
 				36ADF3621BC7B7130045E75C /* JSONModelCommonCity.m in Sources */,
+				04CAEB141BFC24710060979D /* AddGoodsVC.m in Sources */,
 				360EF1AA1BC8B09900385209 /* TousuVC.m in Sources */,
 				36ADF3271BC7B3C00045E75C /* MJRefreshComponent.m in Sources */,
 				360EF2021BC8B1A200385209 /* SelectGoodsVC.m in Sources */,
@@ -1478,6 +1561,7 @@
 				36ADF3171BC7B3540045E75C /* UIWebView+AFNetworking.m in Sources */,
 				04155D2D1BF5BF900003254F /* NSData+ImageContentType.m in Sources */,
 				36ADF3771BC7B7AF0045E75C /* SinglePageNVC.m in Sources */,
+				04CAEAFE1BFC237B0060979D /* ConfigCWuliuTVC.m in Sources */,
 				36ADF2811BC7AF650045E75C /* GesturePasswordController.m in Sources */,
 				36ADF2F91BC7B17B0045E75C /* MJProperty.m in Sources */,
 				360EF1F11BC8B19600385209 /* MakeOrderQuhuoCell.m in Sources */,
@@ -1490,14 +1574,13 @@
 				360EF14E1BC8AEEE00385209 /* ConfigCPassword.m in Sources */,
 				36ADF3161BC7B3540045E75C /* UIRefreshControl+AFNetworking.m in Sources */,
 				36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */,
-				040A85CA1BFAB81F00323C0F /* JSONModelConfigCWuLiu.m in Sources */,
 				36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */,
-				364556A61BCA38B6008A0C80 /* ConfigCGoodsTVC.m in Sources */,
 				360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */,
 				04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */,
 				04155D2E1BF5BF900003254F /* SDImageCache.m in Sources */,
 				36ADF2B51BC7B0650045E75C /* UIView+MJExtension.m in Sources */,
+				04CAEB021BFC237B0060979D /* ConfigCWuliuTableViewCell.m in Sources */,
 				360EF2051BC8B1A200385209 /* BigAndSmallGoodsModel.m in Sources */,
 				360EF1AE1BC8B0AA00385209 /* YqTVC.m in Sources */,
 				360EF2281BC8B1CB00385209 /* MakeOrderTVC.m in Sources */,
@@ -1505,14 +1588,16 @@
 				36ADF2A61BC7B0560045E75C /* AFURLSessionManager.m in Sources */,
 				36ADF3631BC7B7130045E75C /* JSONModelCommonGoods.m in Sources */,
 				36ADF3321BC7B3E10045E75C /* MJRefreshAutoStateFooter.m in Sources */,
+				04CAEB161BFC24710060979D /* EditConfigCGoodsViewController.m in Sources */,
+				04CAEB011BFC237B0060979D /* JSONModelConfigCWuLiu.m in Sources */,
 				360EF1BC1BC8B0E500385209 /* OrderSendListTVC.m in Sources */,
 				360EF23E1BC8B25100385209 /* NSData+Base64.m in Sources */,
 				04155D331BF5BF900003254F /* SDWebImageManager.m in Sources */,
 				360EF24D1BC8D7C200385209 /* TLTagsControl.m in Sources */,
 				360EF2401BC8B25100385209 /* NSString+Base64.m in Sources */,
 				360EF1C91BC8B0F700385209 /* OrderSendButton.m in Sources */,
-				360EF2031BC8B1A200385209 /* AddGoodsVC.m in Sources */,
 				36ADF2B41BC7B0650045E75C /* UIScrollView+MJRefresh.m in Sources */,
+				04CAEAFF1BFC237B0060979D /* EditConfigCWuliuViewController.m in Sources */,
 				36ADF2A31BC7B0560045E75C /* AFURLConnectionOperation.m in Sources */,
 				04155D341BF5BF900003254F /* SDWebImagePrefetcher.m in Sources */,
 				360EF16C1BC8AF5D00385209 /* AboutTVC.m in Sources */,
@@ -1525,6 +1610,7 @@
 				36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */,
 				04155D301BF5BF900003254F /* SDWebImageDecoder.m in Sources */,
 				36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */,
+				04CAEB151BFC24710060979D /* ConfigCGoodsTVC.m in Sources */,
 				36ADF31A1BC7B37B0045E75C /* AFNetworkTool.m in Sources */,
 				36ADF3311BC7B3E10045E75C /* MJRefreshAutoNormalFooter.m in Sources */,
 				360EF1EF1BC8B19600385209 /* AddQuhuoVC.m in Sources */,

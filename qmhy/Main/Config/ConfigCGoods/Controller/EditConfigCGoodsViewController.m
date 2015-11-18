@@ -1,57 +1,59 @@
 //
-//  ADDConfigCWuliuViewController.m
+//  EditConfigCGoodsViewController.m
 //  qmhy
 //
-//  Created by mac on 15/11/17.
+//  Created by mac on 15/11/18.
 //  Copyright © 2015年 wsy.Inc. All rights reserved.
 //
 
-#import "ADDConfigCWuliuViewController.h"
-#import "AFNetworkTool.h"
-#import "QConfig.h"
+#import "EditConfigCGoodsViewController.h"
 #import "MBProgressHUD+HM.h"
 #import "UniformResourceLocator.h"
+#import "AFNetworkTool.h"
 
-@interface ADDConfigCWuliuViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *wuliuNameTextField;
+@interface EditConfigCGoodsViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *huowuTextField;
 
 @end
 
-@implementation ADDConfigCWuliuViewController
+@implementation EditConfigCGoodsViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.huowuTextField.text = self.configCGoodsTableViewCell.name;
+}
 
-- (IBAction)addWuliuBtnClick:(UIButton *)sender {
-    NSString *methodName = @"settabCommonLogistics";
-    NSString *params = @"&proName=%d_%@_%@_%d";
-    QConfig *config = [[QConfig alloc] init];
-    int uid = [config.uid intValue];
-    NSString *name = self.wuliuNameTextField.text;
-    NSString *code = @"";
-    int setType = 1; // 1为添加
+- (IBAction)editHuowuBtnClick:(UIButton *)sender {
+    [MBProgressHUD showMessage:@"正在修改中..." toView:self.view];
+    NSString *methodName = @"settabCommonGoods";
+    NSString *params = @"&proName=%d_%@_%d_%d";
+    int uid = [self.configCGoodsTableViewCell.uid intValue];
+    NSString *name = self.huowuTextField.text;
+    int code = [self.configCGoodsTableViewCell.code intValue];
+    int setType = 0; // 0 为更新
+    
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, name, code, setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
     // 发送请求
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
         NSArray *infoArray = [dic objectForKey:@"rs"];
-         NSString *success = infoArray[0][@"result"];
+        NSString *success = infoArray[0][@"result"];
         if ([success isEqualToString:@"ok"]) {
-            
             [MBProgressHUD hideHUDForView:self.view];
-            [MBProgressHUD showError:@"添加成功！"];
+            [MBProgressHUD showError:@"修改成功！"];
             [self.navigationController popViewControllerAnimated:YES];
         } else {
             [MBProgressHUD hideHUDForView:self.view];
-            [MBProgressHUD showError:@"添加失败！"];
+            [MBProgressHUD showError:@"修改失败！"];
         }
     } fail:^{
         [MBProgressHUD hideHUDForView:self.view];
-        [MBProgressHUD showError:@"添加失败！"];
+        [MBProgressHUD showError:@"修改失败！"];
     }];
+    
 }
-
 
 
 @end
