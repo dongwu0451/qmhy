@@ -13,30 +13,20 @@
 
 - (void)config:(JSONModelConfigCWuLiu *)model {
     self.wuLiuNameLabel.text = model.name;
-    self.uid = model.uid;
-    self.name = model.name;
-    self.code = model.code;
-}
+    self.jsonModelConfigCWuLiu = model;
 
-//- (void)setJsonModelConfigCWuLiu:(JSONModelConfigCWuLiu *)jsonModelConfigCWuLiu {
-//    _jsonModelConfigCWuLiu = jsonModelConfigCWuLiu;
-//    self.wuLiuNameLabel.text = jsonModelConfigCWuLiu.name;
-//}
+}
 
 - (IBAction)bianJiBtnClick:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didClickBianJiLikeBtn:)]) {
-        [self.delegate configCWuliuTableViewCell:self didClickBianJiLikeBtn:sender];
+    if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didEditJSONModelConfigCWuLiu:andClickBianJiLikeBtn:)]) {
+        [self.delegate configCWuliuTableViewCell:self didEditJSONModelConfigCWuLiu:self.jsonModelConfigCWuLiu andClickBianJiLikeBtn:sender];
     }
 }
 
-- (IBAction)shanChuBtnClick:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didClickShanChuLikeBtn:)]) {
-        [self.delegate configCWuliuTableViewCell:self didClickShanChuLikeBtn:sender];
+- (IBAction)shanChuBtnClick:(UIButton *)sender {    
+    if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didRemoveJSONModelConfigCWuLiu:andClickShanChuLikeBtn:)]) {
+        [self.delegate configCWuliuTableViewCell:self didRemoveJSONModelConfigCWuLiu:self.jsonModelConfigCWuLiu andClickShanChuLikeBtn:sender];
     }
-    
-//    if ([self.delegate respondsToSelector:@selector(configCWuliuTableViewCell:didRemoveJSONModelConfigCWuLiu:andClickShanChuLikeBtn:)]) {
-//        [self.delegate configCWuliuTableViewCell:self didRemoveJSONModelConfigCWuLiu:self.jsonModelConfigCWuLiu andClickShanChuLikeBtn:sender];
-//    }
 
 }
 

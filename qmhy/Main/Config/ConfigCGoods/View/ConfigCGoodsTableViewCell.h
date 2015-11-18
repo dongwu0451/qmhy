@@ -13,8 +13,8 @@
 @protocol ConfigCGoodsTableViewCellDelegate <NSObject> // ②写协议，协议名在类名后加上delegate
 
 // ③协议方法，以类名开头，去掉前缀，后面跟上传参likeBtn
-- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn;
-- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didClickShanChuLikeBtn:(UIButton *)likeBtn;
+- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didEditJSONModelConfigCGoods:(JSONModelConfigGGoods *)model andClickBianJiLikeBtn:(UIButton *)likeBtn;
+- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didRemoveJSONModelConfigCGoods:(JSONModelConfigGGoods *)model andClickShanChuLikeBtn:(UIButton *)likeBtn;
 
 
 @end
@@ -26,11 +26,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *shanchuBtn;
 
 @property (nonatomic, strong) JSONModelConfigGGoods *jsonModelConfigGGoods;
-
-@property (copy, nonatomic) NSString *uid;
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *code;
-
 
 
 @property (nonatomic, weak) id<ConfigCGoodsTableViewCellDelegate> delegate; // ④声明一个代理属性

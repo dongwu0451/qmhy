@@ -88,6 +88,13 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="bianjiBtn" destination="m9b-H5-U0F" id="kJs-PF-uV5"/>
+                <outlet property="shanchuBtn" destination="xbq-IR-70O" id="qMR-6V-00W"/>
+                <outlet property="shouhuoAddressLabel" destination="HKg-wi-mdc" id="6hE-KJ-wUc"/>
+                <outlet property="shouhuoNameLabel" destination="A8C-QG-jyY" id="fqp-0G-CRj"/>
+                <outlet property="shouhuoPhoneLabel" destination="459-zK-hzD" id="FHz-iJ-6Wi"/>
+            </connections>
             <point key="canvasLocation" x="397" y="391.5"/>
         </tableViewCell>
     </objects>

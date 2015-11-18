@@ -20,16 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.huowuTextField.text = self.configCGoodsTableViewCell.name;
+    self.huowuTextField.text = self.jsonModelConfigGGoods.name;
 }
 
 - (IBAction)editHuowuBtnClick:(UIButton *)sender {
     [MBProgressHUD showMessage:@"正在修改中..." toView:self.view];
     NSString *methodName = @"settabCommonGoods";
     NSString *params = @"&proName=%d_%@_%d_%d";
-    int uid = [self.configCGoodsTableViewCell.uid intValue];
+    int uid = [self.jsonModelConfigGGoods.uid intValue];
     NSString *name = self.huowuTextField.text;
-    int code = [self.configCGoodsTableViewCell.code intValue];
+    int code = [self.jsonModelConfigGGoods.code intValue];
     int setType = 0; // 0 为更新
     
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, name, code, setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

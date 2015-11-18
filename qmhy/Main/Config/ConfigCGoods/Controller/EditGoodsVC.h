@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConfigCGoodsTableViewCell.h"
+#import "JSONModelConfigGGoods.h"
 
 @interface EditGoodsVC : UIViewController
-@property (nonatomic, strong) ConfigCGoodsTableViewCell *configCGoodsTableViewCell;
+@property (nonatomic, strong) JSONModelConfigGGoods *jsonModelConfigGGoods;
 
 @end

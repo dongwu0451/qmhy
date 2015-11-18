@@ -10,4 +10,9 @@
 
 @implementation JSONModelConfigShouhuo
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    if([key isEqualToString:@"id"])
+        self.x_id = value;
+}
+
 @end

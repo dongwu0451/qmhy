@@ -23,13 +23,8 @@
 @interface ConfigCWuliuTVC () <ConfigCWuliuTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
 @property (strong, nonatomic) NSMutableArray *dataArray; // 数据数组
-@property (nonatomic, strong) ConfigCWuliuTableViewCell *configCWuliuTableViewCell;
 
-
-//@property (nonatomic, strong) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
-
-
-
+@property (nonatomic, strong) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
 
 @end
 
@@ -61,41 +56,31 @@
     }];
 }
 
-
-// ⑧ 实现代理的方法
-- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn {
+- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didEditJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model andClickBianJiLikeBtn:(UIButton *)likeBtn {
     EditConfigCWuliuViewController *editConfigCWuliuViewController = [[EditConfigCWuliuViewController alloc] init];
-    editConfigCWuliuViewController.configCWuliuTableViewCell = cell;
+    editConfigCWuliuViewController.jsonModelConfigCWuLiu = model;
     [self.navigationController pushViewController:editConfigCWuliuViewController animated:YES];
-
-
-
 }
 
-//- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didRemoveJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model  andClickShanChuLikeBtn:(UIButton *)likeBtn {
-//    NSLog(@"%@", model.name);
-//    NSLog(@"%@", model.uid);
-//    NSLog(@"%@", model.code);
-////    self.jsonModelConfigCWuLiu = model;
-//}
 
-
-// ⑧ 实现代理的方法
-- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didClickShanChuLikeBtn:(UIButton *)likeBtn {
-    self.configCWuliuTableViewCell = cell;
+- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didRemoveJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model  andClickShanChuLikeBtn:(UIButton *)likeBtn {
+    self.jsonModelConfigCWuLiu = model;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"确定要删除吗？"delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
 
 
+
+
+
 // 删除方法
-- (void)removeConfigCWuliu:(ConfigCWuliuTableViewCell *)cell  {
+- (void)removeConfigCWuliu:(JSONModelConfigCWuLiu *)model  {
     [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
         NSString *methodName = @"settabCommonLogistics";
         NSString *params = @"&proName=%d_%@_%d_%d";
-        int uid = [cell.uid intValue];
-        NSString *name = cell.name;
-        int code = [cell.code intValue];
+        int uid = [model.uid intValue];
+        NSString *name = model.name;
+        int code = [model.code intValue];
         int setType = -1; // -1 为删除
         NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, name, code, setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         // 发送请求
@@ -125,7 +110,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 
     if (buttonIndex == 1) {
-        [self removeConfigCWuliu:self.configCWuliuTableViewCell];
+        [self removeConfigCWuliu:self.jsonModelConfigCWuLiu];
         NSLog(@"确定");
     } else {
         NSLog(@"取消");

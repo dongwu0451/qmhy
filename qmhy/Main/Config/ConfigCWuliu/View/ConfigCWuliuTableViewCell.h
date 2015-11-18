@@ -16,10 +16,9 @@
 @protocol ConfigCWuliuTableViewCellDelegate <NSObject> // ②写协议，协议名在类名后加上delegate
 
 // ③协议方法，以类名开头，去掉前缀，后面跟上传参likeBtn
-- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn;
-- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didClickShanChuLikeBtn:(UIButton *)likeBtn;
+- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didEditJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model andClickBianJiLikeBtn:(UIButton *)likeBtn;
 
-//- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didRemoveJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model  andClickShanChuLikeBtn:(UIButton *)likeBtn;
+- (void)configCWuliuTableViewCell:(ConfigCWuliuTableViewCell *)cell didRemoveJSONModelConfigCWuLiu:(JSONModelConfigCWuLiu *)model andClickShanChuLikeBtn:(UIButton *)likeBtn;
 
 @end
 
@@ -29,11 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *shanChuBtn;
 
 @property (strong, nonatomic) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
-
-@property (copy, nonatomic) NSString *uid;
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *code;
-
 
 
 @property (nonatomic, weak) id<ConfigCWuliuTableViewCellDelegate> delegate; // ④声明一个代理属性

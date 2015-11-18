@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
 @property (strong, nonatomic) NSMutableArray *dataArray; // 数据数组
 
-@property (nonatomic, strong) ConfigCGoodsTableViewCell *configCGoodsTableViewCell;
+@property (nonatomic, strong ) JSONModelConfigGGoods *jsonModelConfigGGoods;
 
 @end
 
@@ -35,18 +35,24 @@
     [self loadNewData];
 }
 
-- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn {
-    NSLog(@"123123");
+
+
+- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didEditJSONModelConfigCGoods:(JSONModelConfigGGoods *)model andClickBianJiLikeBtn:(UIButton *)likeBtn {
     EditGoodsVC *editConfigCGoodsViewController = [[EditGoodsVC alloc] init];
-    editConfigCGoodsViewController.configCGoodsTableViewCell = cell;
+    editConfigCGoodsViewController.jsonModelConfigGGoods = model;
     [self.navigationController pushViewController:editConfigCGoodsViewController animated:YES];
+
 }
 
-- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didClickShanChuLikeBtn:(UIButton *)likeBtn {
-    self.configCGoodsTableViewCell = cell;
+- (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didRemoveJSONModelConfigCGoods:(JSONModelConfigGGoods *)model andClickShanChuLikeBtn:(UIButton *)likeBtn {
+    self.jsonModelConfigGGoods = model;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"确定要删除吗？"delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
+
+
+
+
 
 - (void)loadNewData {
 
@@ -67,13 +73,13 @@
     }];
 }
 
-- (void)removeConfigCHuowu:(ConfigCGoodsTableViewCell *)cell  {
+- (void)removeConfigCHuowu:(JSONModelConfigGGoods *)model  {
     [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
     NSString *methodName = @"settabCommonGoods";
     NSString *params = @"&proName=%d_%@_%d_%d";
-    int uid = [cell.uid intValue];
-    NSString *name = cell.name;
-    int code = [cell.code intValue];
+    int uid = [model.uid intValue];
+    NSString *name = model.name;
+    int code = [model.code intValue];
     int setType = -1; // -1 为删除
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, name, code, setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // 发送请求
@@ -101,7 +107,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 1) {
-        [self removeConfigCHuowu:self.configCGoodsTableViewCell];
+        [self removeConfigCHuowu:self.jsonModelConfigGGoods];
         NSLog(@"确定");
     } else {
         NSLog(@"取消");

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConfigCWuliuTableViewCell.h"
+#import "JSONModelConfigCWuLiu.h"
 
 @interface EditConfigCWuliuViewController : UIViewController
-@property (nonatomic, strong) ConfigCWuliuTableViewCell *configCWuliuTableViewCell;
+@property (nonatomic , strong) JSONModelConfigCWuLiu *jsonModelConfigCWuLiu;
 
 @end

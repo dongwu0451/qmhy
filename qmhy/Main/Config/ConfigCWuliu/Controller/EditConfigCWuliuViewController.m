@@ -21,16 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.wuliuTextField.text = self.configCWuliuTableViewCell.name;
+    self.wuliuTextField.text = self.jsonModelConfigCWuLiu.name;
 }
 
 - (IBAction)editWuliuBtnClick:(UIButton *)sender {
     [MBProgressHUD showMessage:@"正在修改中..." toView:self.view];
     NSString *methodName = @"settabCommonLogistics";
     NSString *params = @"&proName=%d_%@_%d_%d";
-    int uid = [self.configCWuliuTableViewCell.uid intValue];
+    int uid = [self.jsonModelConfigCWuLiu.uid intValue];
     NSString *name = self.wuliuTextField.text;
-    int code = [self.configCWuliuTableViewCell.code intValue];
+    int code = [self.jsonModelConfigCWuLiu.code intValue];
     int setType = 0; // 0 为更新
 
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, name, code, setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
