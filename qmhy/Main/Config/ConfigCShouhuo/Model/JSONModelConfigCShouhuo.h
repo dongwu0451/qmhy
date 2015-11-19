@@ -11,7 +11,7 @@
 @interface JSONModelConfigCShouhuo : NSObject
 
 //前提一: 属性必须和服务器返回的key一模一样
-//前提二: 服务器返回的key不能包含任何关键词(description)
+//前提二: 服务器返回的key不能包含任何关键词
 //如果不满足第二个前提, 就必须重写- (void)setValue:(id)value forUndefinedKey:(NSString *)key方法
 
 @property (nonatomic, copy) NSString *x_id; // 175

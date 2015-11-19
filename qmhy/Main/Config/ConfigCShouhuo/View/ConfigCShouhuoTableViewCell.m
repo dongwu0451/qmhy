@@ -15,6 +15,7 @@
     self.shouhuoPhoneLabel.text = model.tel;
     self.shouhuoAddressLabel.text = [NSString stringWithFormat:@"%@%@%@", model.Province, model.city, model.area];
     self.jsonModelConfigCShouhuo = model;
+    
 }
 
 - (IBAction)bianjiBtnClick:(UIButton *)sender {

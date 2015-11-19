@@ -127,6 +127,7 @@
 //            [[NSUserDefaults standardUserDefaults] synchronize];
             QConfig *config = [[QConfig alloc] init];
             config.uid=obj.uid;
+            config.username = obj.name;
             [self.delegate LoginVC:self loginOK:nil];//设置回调  向来源触发事件委托
         }
     } fail:^{

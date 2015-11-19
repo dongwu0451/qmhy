@@ -33,9 +33,9 @@
 
 
 //所有收货联系人
-@property (strong, nonatomic) NSMutableArray *allShouhuo;
+@property (strong, nonatomic) NSMutableArray *allShouhuo;  // 加数据以后要删除的
 //选中的收货联系人
-@property (strong, nonatomic) ShouhuoModel *selectedShouhuo;
+@property (strong, nonatomic) ShouhuoModel *selectedShouhuo;  // 加数据以后要删除的
 
 
 
@@ -86,6 +86,7 @@
         NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
         _infoArray = [dic objectForKey:@"rs"];//第一次数据
         _dataArray = [JSONModelConfigCShouhuo objectArrayWithKeyValuesArray:_infoArray];
+        NSLog(@"%@", _dataArray);
         // 刷新数据
         [self.tableView reloadData];
     } fail:^{
@@ -95,10 +96,11 @@
 
 // 删除方法
 - (void)removeConfigCShouhuo:(JSONModelConfigCShouhuo *)model  {
-    [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
+    [MBProgressHUD showMessage:@"正在删除中..." toView:self.view];
     NSString *methodName = @"updatetabcommonconsigneeinfo";
     NSString *params = @"&proName=%d_%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d_%d";
     int x_id = [model.x_id intValue];
+    NSLog(@"%d", x_id);
     int uid = [model.uid intValue];
     NSString *contant = model.contact;
     NSString *tel = model.tel;
@@ -130,7 +132,7 @@
         }
     } fail:^{
         [MBProgressHUD hideHUDForView:self.view];
-        [MBProgressHUD showError:@"添加失败！"];
+        [MBProgressHUD showError:@"删除失败！"];
     }];
 }
 
@@ -138,7 +140,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 1) {
-//        [self removeConfigCShouhuo:self.jsonModelConfigCShouhuo];
+        [self removeConfigCShouhuo:self.jsonModelConfigCShouhuo];
         NSLog(@"确定");
     } else {
         NSLog(@"取消");
@@ -187,28 +189,26 @@
 
 
 
+
+
+
+
+
+
+
+// 加数据以后要删除的
 //选中行事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
-    //触发代理给下单页面
-    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
-    //关闭
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-// 删除
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //删除数组
-    [self.allShouhuo removeObjectAtIndex:indexPath.row];
-    //重新装载
-    [self.tableView reloadData];
-    
+//    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
+//    //触发代理给下单页面
+//    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
+//    //关闭
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
 
-
+ // 加数据以后要删除的
 //初始化 所有收货联系人
 - (NSMutableArray *)allShouhuo
 {

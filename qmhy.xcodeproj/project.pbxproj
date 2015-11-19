@@ -50,7 +50,6 @@
 		04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */; };
 		04CAEB561BFC4FB10060979D /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */; };
 		04E4E8B91BFD5E24003C300D /* AddConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */; };
-		04E4E8BB1BFD6238003C300D /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8BA1BFD6238003C300D /* province_data.xml */; };
 		04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */; };
 		04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */; };
 		04E4E8C31BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8C11BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib */; };
@@ -58,6 +57,8 @@
 		04E4E8C81BFD837E003C300D /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C71BFD837E003C300D /* Foundation+Log.m */; };
 		04E4E8CC1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8CA1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m */; };
 		04E4E8CD1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8CB1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib */; };
+		04E4E8D41BFDC63E003C300D /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8D21BFDC63E003C300D /* area.plist */; };
+		04E4E8D51BFDC63E003C300D /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8D31BFDC63E003C300D /* province_data.xml */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -275,7 +276,6 @@
 		04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCShouhuoTVC.m; sourceTree = "<group>"; };
 		04E4E8B71BFD5E24003C300D /* AddConfigCShouhuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigCShouhuoViewController.h; sourceTree = "<group>"; };
 		04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigCShouhuoViewController.m; sourceTree = "<group>"; };
-		04E4E8BA1BFD6238003C300D /* province_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = province_data.xml; sourceTree = "<group>"; };
 		04E4E8BC1BFD67A5003C300D /* JSONModelConfigCShouhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigCShouhuo.h; sourceTree = "<group>"; };
 		04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigCShouhuo.m; sourceTree = "<group>"; };
 		04E4E8BF1BFD6E4F003C300D /* EditConfigCShouhuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfigCShouhuoViewController.h; sourceTree = "<group>"; };
@@ -287,6 +287,8 @@
 		04E4E8C91BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigShouHuoAddressPickerViewController.h; sourceTree = "<group>"; };
 		04E4E8CA1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigShouHuoAddressPickerViewController.m; sourceTree = "<group>"; };
 		04E4E8CB1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigShouHuoAddressPickerViewController.xib; sourceTree = "<group>"; };
+		04E4E8D21BFDC63E003C300D /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = area.plist; path = qmhy/Project/area.plist; sourceTree = "<group>"; };
+		04E4E8D31BFDC63E003C300D /* province_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = province_data.xml; path = qmhy/Project/province_data.xml; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1114,7 +1116,8 @@
 		360EF22B1BC8B1DE00385209 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				04E4E8BA1BFD6238003C300D /* province_data.xml */,
+				04E4E8D21BFDC63E003C300D /* area.plist */,
+				04E4E8D31BFDC63E003C300D /* province_data.xml */,
 				360EF22C1BC8B1E600385209 /* main.m */,
 				360EF22D1BC8B1E600385209 /* Main.storyboard */,
 				360EF22E1BC8B1E600385209 /* qmhy-Info.plist */,
@@ -1570,6 +1573,7 @@
 				360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */,
 				360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */,
 				04CAEB2E1BFC3DB10060979D /* EditGoodsVC.xib in Resources */,
+				04E4E8D51BFDC63E003C300D /* province_data.xml in Resources */,
 				04E4E8C31BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib in Resources */,
 				360EF1821BC8AF9400385209 /* pricetable.html in Resources */,
 				36D2E0561BCF260600DC0149 /* More.bundle in Resources */,
@@ -1594,9 +1598,9 @@
 				04CAEB4D1BFC4F330060979D /* AddQuhuoVC.xib in Resources */,
 				36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */,
 				36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */,
+				04E4E8D41BFDC63E003C300D /* area.plist in Resources */,
 				36ADF2B11BC7B0650045E75C /* MJRefresh.bundle in Resources */,
 				360EF2071BC8B1A200385209 /* MakeOrderGoodsCell.xib in Resources */,
-				04E4E8BB1BFD6238003C300D /* province_data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
