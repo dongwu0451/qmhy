@@ -56,6 +56,8 @@
 		04E4E8C31BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8C11BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib */; };
 		04E4E8C61BFD82CE003C300D /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C51BFD82CE003C300D /* XMLDictionary.m */; };
 		04E4E8C81BFD837E003C300D /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C71BFD837E003C300D /* Foundation+Log.m */; };
+		04E4E8CC1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8CA1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m */; };
+		04E4E8CD1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8CB1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -282,6 +284,9 @@
 		04E4E8C41BFD82CE003C300D /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		04E4E8C51BFD82CE003C300D /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		04E4E8C71BFD837E003C300D /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		04E4E8C91BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigShouHuoAddressPickerViewController.h; sourceTree = "<group>"; };
+		04E4E8CA1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigShouHuoAddressPickerViewController.m; sourceTree = "<group>"; };
+		04E4E8CB1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigShouHuoAddressPickerViewController.xib; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -755,6 +760,9 @@
 				04E4E8BF1BFD6E4F003C300D /* EditConfigCShouhuoViewController.h */,
 				04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */,
 				04E4E8C11BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib */,
+				04E4E8C91BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.h */,
+				04E4E8CA1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m */,
+				04E4E8CB1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1558,6 +1566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */,
+				04E4E8CD1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib in Resources */,
 				360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */,
 				360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */,
 				04CAEB2E1BFC3DB10060979D /* EditGoodsVC.xib in Resources */,
@@ -1692,6 +1701,7 @@
 				36ADF3161BC7B3540045E75C /* UIRefreshControl+AFNetworking.m in Sources */,
 				36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */,
 				36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				04E4E8CC1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m in Sources */,
 				360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */,
 				360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */,
 				04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */,

@@ -18,15 +18,40 @@
 #import "MBProgressHUD+HM.h"
 #import "EditConfigCShouhuoViewController.h"
 
+
+#import "ShouhuoModel.h"
+#import "ShouhuoData.h"
+
+
+
 @interface ConfigCShouhuoTVC () <ConfigCShouhuoTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
 @property (strong, nonatomic) NSMutableArray *dataArray; // 数据数组
 
 @property (nonatomic, strong) JSONModelConfigCShouhuo *jsonModelConfigCShouhuo;
 
+
+
+//所有收货联系人
+@property (strong, nonatomic) NSMutableArray *allShouhuo;
+//选中的收货联系人
+@property (strong, nonatomic) ShouhuoModel *selectedShouhuo;
+
+
+
+
 @end
 
 @implementation ConfigCShouhuoTVC
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    ShouhuoModel *h = self.allShouhuo[0];
+    NSLog(@"ConfigCShouhuoTVC viewDidLoad %@",h.consigneeName);
+}
+
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -149,6 +174,57 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 125;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//选中行事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
+    //触发代理给下单页面
+    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
+    //关闭
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+// 删除
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //删除数组
+    [self.allShouhuo removeObjectAtIndex:indexPath.row];
+    //重新装载
+    [self.tableView reloadData];
+    
+}
+
+
+
+
+//初始化 所有收货联系人
+- (NSMutableArray *)allShouhuo
+{
+    if (!_allShouhuo) {
+        ShouhuoData *ah = [[ShouhuoData alloc] init];
+        NSLog(@"ConfigCShouhuoTVC allShouhuoData %@",ah.allShouhuo);
+        _allShouhuo = ah.allShouhuo;
+    }
+    return _allShouhuo;
+}
+
+
+
+
+
+
 
 
 @end
