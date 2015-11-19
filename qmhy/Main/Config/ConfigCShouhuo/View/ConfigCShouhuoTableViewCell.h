@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JSONModelConfigShouhuo.h"
+#import "JSONModelConfigCShouhuo.h"
 
 
 @class ConfigCShouhuoTableViewCell;
 @protocol ConfigCShouhuoTableViewCellDelegate <NSObject>
-- (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didClickBianJiLikeBtn:(UIButton *)likeBtn;
-- (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didClickShanChuLikeBtn:(UIButton *)likeBtn;
+- (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didEditJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)model andClickBianJiLikeBtn:(UIButton *)likeBtn;
+
+- (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didRemoveJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)model andClickShanChuLikeBtn:(UIButton *)likeBtn;
 
 
 @end
@@ -26,10 +27,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *shanchuBtn;
 @property (weak, nonatomic) IBOutlet UIButton *bianjiBtn;
 
-@property (strong, nonatomic) JSONModelConfigShouhuo *jsonModelConfigShouhuo;
+@property (strong, nonatomic) JSONModelConfigCShouhuo *jsonModelConfigCShouhuo;
+
+
+@property (nonatomic, weak) id<ConfigCShouhuoTableViewCellDelegate> delegate; // ④声明一个代理属性
 
 // cell加在数据
-- (void)config:(JSONModelConfigShouhuo *)model;
+- (void)config:(JSONModelConfigCShouhuo *)model;
 
 
 @end

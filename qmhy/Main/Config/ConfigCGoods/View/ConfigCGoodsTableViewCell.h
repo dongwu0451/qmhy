@@ -16,9 +16,7 @@
 - (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didEditJSONModelConfigCGoods:(JSONModelConfigGGoods *)model andClickBianJiLikeBtn:(UIButton *)likeBtn;
 - (void)configCGoodsTableViewCell:(ConfigCGoodsTableViewCell *)cell didRemoveJSONModelConfigCGoods:(JSONModelConfigGGoods *)model andClickShanChuLikeBtn:(UIButton *)likeBtn;
 
-
 @end
-
 
 @interface ConfigCGoodsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *huowuNameLabel;
@@ -26,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *shanchuBtn;
 
 @property (nonatomic, strong) JSONModelConfigGGoods *jsonModelConfigGGoods;
-
 
 @property (nonatomic, weak) id<ConfigCGoodsTableViewCellDelegate> delegate; // ④声明一个代理属性
 

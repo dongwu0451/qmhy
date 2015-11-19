@@ -45,13 +45,17 @@
 		04CAEB3F1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB3D1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m */; };
 		04CAEB401BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */; };
 		04CAEB431BFC4EE30060979D /* JSONModelConfigFahuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */; };
-		04CAEB461BFC4EFE0060979D /* JSONModelConfigShouhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB451BFC4EFE0060979D /* JSONModelConfigShouhuo.m */; };
 		04CAEB4C1BFC4F330060979D /* AddQuhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB481BFC4F330060979D /* AddQuhuoVC.m */; };
 		04CAEB4D1BFC4F330060979D /* AddQuhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */; };
 		04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */; };
-		04CAEB541BFC4FB10060979D /* AddShouhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB501BFC4FB10060979D /* AddShouhuoVC.m */; };
-		04CAEB551BFC4FB10060979D /* AddShouhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB511BFC4FB10060979D /* AddShouhuoVC.xib */; };
 		04CAEB561BFC4FB10060979D /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */; };
+		04E4E8B91BFD5E24003C300D /* AddConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */; };
+		04E4E8BB1BFD6238003C300D /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8BA1BFD6238003C300D /* province_data.xml */; };
+		04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */; };
+		04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */; };
+		04E4E8C31BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4E8C11BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib */; };
+		04E4E8C61BFD82CE003C300D /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C51BFD82CE003C300D /* XMLDictionary.m */; };
+		04E4E8C81BFD837E003C300D /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C71BFD837E003C300D /* Foundation+Log.m */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -260,18 +264,24 @@
 		04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCShouhuoTableViewCell.xib; sourceTree = "<group>"; };
 		04CAEB411BFC4EE30060979D /* JSONModelConfigFahuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigFahuo.h; sourceTree = "<group>"; };
 		04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigFahuo.m; sourceTree = "<group>"; };
-		04CAEB441BFC4EFE0060979D /* JSONModelConfigShouhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigShouhuo.h; sourceTree = "<group>"; };
-		04CAEB451BFC4EFE0060979D /* JSONModelConfigShouhuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigShouhuo.m; sourceTree = "<group>"; };
 		04CAEB471BFC4F330060979D /* AddQuhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuhuoVC.h; sourceTree = "<group>"; };
 		04CAEB481BFC4F330060979D /* AddQuhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuhuoVC.m; sourceTree = "<group>"; };
 		04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuhuoVC.xib; sourceTree = "<group>"; };
 		04CAEB4A1BFC4F330060979D /* ConfigCQuhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCQuhuoTVC.h; sourceTree = "<group>"; };
 		04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCQuhuoTVC.m; sourceTree = "<group>"; };
-		04CAEB4F1BFC4FB10060979D /* AddShouhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShouhuoVC.h; sourceTree = "<group>"; };
-		04CAEB501BFC4FB10060979D /* AddShouhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShouhuoVC.m; sourceTree = "<group>"; };
-		04CAEB511BFC4FB10060979D /* AddShouhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShouhuoVC.xib; sourceTree = "<group>"; };
 		04CAEB521BFC4FB10060979D /* ConfigCShouhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCShouhuoTVC.h; sourceTree = "<group>"; };
 		04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCShouhuoTVC.m; sourceTree = "<group>"; };
+		04E4E8B71BFD5E24003C300D /* AddConfigCShouhuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigCShouhuoViewController.h; sourceTree = "<group>"; };
+		04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigCShouhuoViewController.m; sourceTree = "<group>"; };
+		04E4E8BA1BFD6238003C300D /* province_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = province_data.xml; sourceTree = "<group>"; };
+		04E4E8BC1BFD67A5003C300D /* JSONModelConfigCShouhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigCShouhuo.h; sourceTree = "<group>"; };
+		04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigCShouhuo.m; sourceTree = "<group>"; };
+		04E4E8BF1BFD6E4F003C300D /* EditConfigCShouhuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfigCShouhuoViewController.h; sourceTree = "<group>"; };
+		04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfigCShouhuoViewController.m; sourceTree = "<group>"; };
+		04E4E8C11BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditConfigCShouhuoViewController.xib; sourceTree = "<group>"; };
+		04E4E8C41BFD82CE003C300D /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		04E4E8C51BFD82CE003C300D /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		04E4E8C71BFD837E003C300D /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -592,6 +602,9 @@
 		04155D3C1BF5C92A0003254F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04E4E8C71BFD837E003C300D /* Foundation+Log.m */,
+				04E4E8C41BFD82CE003C300D /* XMLDictionary.h */,
+				04E4E8C51BFD82CE003C300D /* XMLDictionary.m */,
 				04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */,
 				04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */,
 			);
@@ -735,11 +748,13 @@
 		04CAEB341BFC4AA10060979D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04CAEB4F1BFC4FB10060979D /* AddShouhuoVC.h */,
-				04CAEB501BFC4FB10060979D /* AddShouhuoVC.m */,
-				04CAEB511BFC4FB10060979D /* AddShouhuoVC.xib */,
 				04CAEB521BFC4FB10060979D /* ConfigCShouhuoTVC.h */,
 				04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */,
+				04E4E8B71BFD5E24003C300D /* AddConfigCShouhuoViewController.h */,
+				04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */,
+				04E4E8BF1BFD6E4F003C300D /* EditConfigCShouhuoViewController.h */,
+				04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */,
+				04E4E8C11BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -747,8 +762,8 @@
 		04CAEB351BFC4AA10060979D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04CAEB441BFC4EFE0060979D /* JSONModelConfigShouhuo.h */,
-				04CAEB451BFC4EFE0060979D /* JSONModelConfigShouhuo.m */,
+				04E4E8BC1BFD67A5003C300D /* JSONModelConfigCShouhuo.h */,
+				04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1091,6 +1106,7 @@
 		360EF22B1BC8B1DE00385209 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				04E4E8BA1BFD6238003C300D /* province_data.xml */,
 				360EF22C1BC8B1E600385209 /* main.m */,
 				360EF22D1BC8B1E600385209 /* Main.storyboard */,
 				360EF22E1BC8B1E600385209 /* qmhy-Info.plist */,
@@ -1545,6 +1561,7 @@
 				360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */,
 				360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */,
 				04CAEB2E1BFC3DB10060979D /* EditGoodsVC.xib in Resources */,
+				04E4E8C31BFD6E4F003C300D /* EditConfigCShouhuoViewController.xib in Resources */,
 				360EF1821BC8AF9400385209 /* pricetable.html in Resources */,
 				36D2E0561BCF260600DC0149 /* More.bundle in Resources */,
 				04CAEB001BFC237B0060979D /* EditConfigCWuliuViewController.xib in Resources */,
@@ -1553,7 +1570,6 @@
 				36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */,
 				360EF1901BC8AFD200385209 /* entlib.gif in Resources */,
 				04CAEB401BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib in Resources */,
-				04CAEB551BFC4FB10060979D /* AddShouhuoVC.xib in Resources */,
 				04CAEB3B1BFC4C510060979D /* ConfigCFahuoTableViewCell.xib in Resources */,
 				36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */,
 				360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */,
@@ -1571,6 +1587,7 @@
 				36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */,
 				36ADF2B11BC7B0650045E75C /* MJRefresh.bundle in Resources */,
 				360EF2071BC8B1A200385209 /* MakeOrderGoodsCell.xib in Resources */,
+				04E4E8BB1BFD6238003C300D /* province_data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1599,6 +1616,7 @@
 				04155D321BF5BF900003254F /* SDWebImageDownloaderOperation.m in Sources */,
 				360EF1E31BC8B18B00385209 /* MakeOrderShouhuoCell.m in Sources */,
 				360EF1921BC8AFD200385209 /* HelpVC.m in Sources */,
+				04E4E8B91BFD5E24003C300D /* AddConfigCShouhuoViewController.m in Sources */,
 				360EF17A1BC8AF7E00385209 /* MoreNVC.m in Sources */,
 				36ADF3251BC7B3C00045E75C /* MJRefreshAutoFooter.m in Sources */,
 				36ADF2FE1BC7B17B0045E75C /* NSString+MJExtension.m in Sources */,
@@ -1611,6 +1629,7 @@
 				04155D091BF5BF8B0003254F /* MBProgressHUD.m in Sources */,
 				04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */,
 				04CAEB191BFC24710060979D /* ConfigCGoodsTableViewCell.m in Sources */,
+				04E4E8C81BFD837E003C300D /* Foundation+Log.m in Sources */,
 				04155D381BF5BF900003254F /* UIImage+WebP.m in Sources */,
 				04CAEB3F1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m in Sources */,
 				360EF2301BC8B1E600385209 /* main.m in Sources */,
@@ -1621,12 +1640,12 @@
 				360EF2531BCA321000385209 /* SelectCarVC.m in Sources */,
 				360EF2501BC8DF8200385209 /* QConfig.m in Sources */,
 				36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */,
+				04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */,
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
 				360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */,
 				04CAEB4C1BFC4F330060979D /* AddQuhuoVC.m in Sources */,
 				04CAEB3A1BFC4C510060979D /* ConfigCFahuoTableViewCell.m in Sources */,
-				04CAEB461BFC4EFE0060979D /* JSONModelConfigShouhuo.m in Sources */,
 				36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */,
 				36ADF3441BC7B62D0045E75C /* LoginVC.m in Sources */,
 				36ADF3621BC7B7130045E75C /* JSONModelCommonCity.m in Sources */,
@@ -1702,6 +1721,7 @@
 				360EF21D1BC8B1BC00385209 /* MakeOrderCarCell.m in Sources */,
 				360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */,
 				36ADF2FB1BC7B17B0045E75C /* NSObject+MJCoding.m in Sources */,
+				04E4E8C61BFD82CE003C300D /* XMLDictionary.m in Sources */,
 				04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */,
 				360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */,
 				36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */,
@@ -1716,11 +1736,11 @@
 				360EF2271BC8B1CB00385209 /* MakeOrderOKTVC.m in Sources */,
 				04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */,
 				360EF17B1BC8AF7E00385209 /* MoreTVC.m in Sources */,
-				04CAEB541BFC4FB10060979D /* AddShouhuoVC.m in Sources */,
 				360EF18B1BC8AFA900385209 /* UserProtocolVC.m in Sources */,
 				04155D311BF5BF900003254F /* SDWebImageDownloader.m in Sources */,
 				36ADF2B21BC7B0650045E75C /* MJRefreshConst.m in Sources */,
 				360EF2291BC8B1CB00385209 /* MakeOrderTotalCell.m in Sources */,
+				04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */,
 				360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */,
 				360EF1571BC8AF0D00385209 /* ConfigCCityTVC.m in Sources */,
 				36ADF33B1BC7B3EA0045E75C /* MJRefreshBackStateFooter.m in Sources */,

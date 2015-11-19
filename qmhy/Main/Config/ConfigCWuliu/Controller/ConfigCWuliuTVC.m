@@ -41,6 +41,8 @@
     NSString *params = @"&proName=%d";
     QConfig *config = [[QConfig alloc] init];
     int uid = [config.uid intValue];
+
+    
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // 发送请求
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
@@ -68,10 +70,6 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"确定要删除吗？"delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
-
-
-
-
 
 // 删除方法
 - (void)removeConfigCWuliu:(JSONModelConfigCWuLiu *)model  {

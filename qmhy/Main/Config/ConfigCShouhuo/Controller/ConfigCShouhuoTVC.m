@@ -7,132 +7,148 @@
 //
 
 #import "ConfigCShouhuoTVC.h"
-#import "ShouhuoModel.h"
-#import "ShouhuoData.h"
-#import "AddShouhuoVC.h"
+#import "ConfigCShouhuoTableViewCell.h"
+#import "UniformResourceLocator.h"
+#import "AFNetworkTool.h"
+#import "MJExtension.h"
+#import "MJRefreshFooter.h"
+#import "MJRefresh.h"
+#import "QConfig.h"
+#import "JSONModelConfigCShouhuo.h"
+#import "MBProgressHUD+HM.h"
+#import "EditConfigCShouhuoViewController.h"
 
+@interface ConfigCShouhuoTVC () <ConfigCShouhuoTableViewCellDelegate, UIAlertViewDelegate>
+@property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
+@property (strong, nonatomic) NSMutableArray *dataArray; // 数据数组
 
-
-@interface ConfigCShouhuoTVC () <AddShouhuoVCDelegate>
-//所有收货联系人
-@property (strong, nonatomic) NSMutableArray *allShouhuo;
-//选中的收货联系人
-@property (strong, nonatomic) ShouhuoModel *selectedShouhuo;
+@property (nonatomic, strong) JSONModelConfigCShouhuo *jsonModelConfigCShouhuo;
 
 @end
 
 @implementation ConfigCShouhuoTVC
 
-//接收对方代理  添加收货联系人界面传给本页面的数据
-- (void)addShouhuoVC:(AddShouhuoVC *)hvc didInputReturnShouhuo:(ShouhuoModel *)shouhuo {
-    [self.allShouhuo addObject:shouhuo];
-}
-
-//初始化 所有收货联系人
-- (NSMutableArray *)allShouhuo
-{
-    if (!_allShouhuo) {
-        ShouhuoData *ah = [[ShouhuoData alloc] init];
-        NSLog(@"ConfigCShouhuoTVC allShouhuoData %@",ah.allShouhuo);
-        _allShouhuo = ah.allShouhuo;
-    }
-    return _allShouhuo;
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    ShouhuoModel *h = self.allShouhuo[0];
-    NSLog(@"ConfigCShouhuoTVC viewDidLoad %@",h.consigneeName);
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-//即将完成界面显示的事件
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    //重新加载数据
-    [self.tableView reloadData];
-    //关闭
-    self.navigationController.toolbarHidden = YES;
+    [self loadNewData];
 }
 
-//组数量
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didEditJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)model andClickBianJiLikeBtn:(UIButton *)likeBtn {
+    EditConfigCShouhuoViewController *editConfigCShouhuoViewController = [[EditConfigCShouhuoViewController alloc] init];
+    editConfigCShouhuoViewController.jsonModelConfigCShouhuo = model;
+    [self.navigationController pushViewController:editConfigCShouhuoViewController animated:YES];
+
 }
 
-//行数量
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.allShouhuo.count;
+- (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didRemoveJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)model andClickShanChuLikeBtn:(UIButton *)likeBtn {
+    self.jsonModelConfigCShouhuo = model;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"确定要删除吗？"delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
 }
 
-//行高度 标准高度
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return 80;
-//}
+- (void)loadNewData {
+    // 请求参数
+    NSString *methodName = @"gettabcommonconsigneeinfo";
+    NSString *params = @"&proName=%@_%d";
+    QConfig *config = [[QConfig alloc] init];
+    NSString *uid = config.uid;
+    int isOnly = 0;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, isOnly] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // 发送请求
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        _infoArray = [dic objectForKey:@"rs"];//第一次数据
+        _dataArray = [JSONModelConfigCShouhuo objectArrayWithKeyValuesArray:_infoArray];
+        // 刷新数据
+        [self.tableView reloadData];
+    } fail:^{
+        
+    }];
+}
 
-//重新绘制单元格
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SIDConfigCShouhuoTVC"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"SIDConfigCShouhuoTVC"];
+// 删除方法
+- (void)removeConfigCShouhuo:(JSONModelConfigCShouhuo *)model  {
+    [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
+    NSString *methodName = @"updatetabcommonconsigneeinfo";
+    NSString *params = @"&proName=%d_%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d_%d";
+    int x_id = [model.x_id intValue];
+    int uid = [model.uid intValue];
+    NSString *contant = model.contact;
+    NSString *tel = model.tel;
+    NSString *province = model.Province;
+    NSString *city = model.city;
+    NSString *area = model.area;
+    NSString *addressCode = model.addressCode;
+    NSString *Address = model.Address;
+    NSString *status = model.status;
+    NSString *createby = model.createby;
+    int isOnly = 1;
+    int setType = -1;
+    
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, x_id,uid,contant,tel,province,city,area,addressCode,Address,status,createby,isOnly,setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // 发送请求
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *infoArray = [dic objectForKey:@"rs"];
+        NSString *success = infoArray[0][@"result"];
+        if ([success isEqualToString:@"ok"]) {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"删除成功！"];
+            [self loadNewData];
+        } else {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"删除失败！"];
+        }
+    } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"添加失败！"];
+    }];
+}
+
+//根据被点击按钮的索引处理点击事件
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+//        [self removeConfigCShouhuo:self.jsonModelConfigCShouhuo];
+        NSLog(@"确定");
+    } else {
+        NSLog(@"取消");
+    }
+}
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _dataArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 1. 可重用标识符
+    static NSString *ID = @"ConfigCShouhuoTableViewCell";
+    // 2. tableView查询可重用Cell
+    ConfigCShouhuoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    // 3. 如果没有可重用cell
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ConfigCShouhuoTableViewCell" owner:nil options:nil] lastObject];
     }
     //获取模型
-    ShouhuoModel *h = self.allShouhuo[indexPath.row];
-    //给标准单元格赋值
-//    NSString* string1;
-//    string1= [NSString stringWithFormat:@"%@%@%@%@", h.consigneeName, @"(",h.area,@")" ];
-    
-    cell.textLabel.text = [[h.consigneeName stringByAppendingString:@"   "] stringByAppendingString:h.mobilePhoneNumber];
-    cell.detailTextLabel.text = h.detailedAddress;
-    return cell;
+    [cell config:_dataArray[indexPath.row]];
+    //    JSONModelConfigCWuLiu *jsonModelConfigCWuLiu = _dataArray[indexPath.row];
+    //    cell.wuLiuNameLabel.text = jsonModelConfigCWuLiu.name;
+    // ⑥在创建cell的时候设置自己为代理
+    cell.delegate = self;
+    return cell;}
 
-//    string = [NSString initWithFormat:@"%@,%@", string1, string2 ];
-//    string = [string1 stringByAppendingString:string2];
-//    string = [string stringByAppendingFormat:@"%@,%@",string1, string2];
-
+//行高度 标准高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 125;
 }
 
-//选中行事件
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
-    //触发代理给下单页面
-    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
-    //关闭
-    [self.navigationController popViewControllerAnimated:YES];
-}
-//本页面是列表 点击右上角的添加按钮事件
-- (IBAction)addShouhuo:(UIBarButtonItem *)sender {
-    //从xib来数据
-    AddShouhuoVC *hvc = [[AddShouhuoVC alloc] initWithNibName:@"AddShouhuoVC" bundle:nil];
-    hvc.delegate = self;
-    [self.navigationController pushViewController:hvc animated:YES];
-    
-    
-}
-
-// 删除
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //删除数组
-    [self.allShouhuo removeObjectAtIndex:indexPath.row];
-    //重新装载
-    [self.tableView reloadData];
-    
-}
 
 @end
