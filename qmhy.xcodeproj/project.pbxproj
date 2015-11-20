@@ -49,9 +49,9 @@
 		04CAEB561BFC4FB10060979D /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */; };
 		04D426821BFEA3D500A8D672 /* EditConfigCFahuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D426801BFEA3D500A8D672 /* EditConfigCFahuoViewController.m */; };
 		04D426831BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D426811BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib */; };
-		04D426901BFEA66800A8D672 /* AddConfigFahuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4268F1BFEA66800A8D672 /* AddConfigFahuoViewController.m */; };
-		04D426941BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D426921BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.m */; };
-		04D426951BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D426931BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.xib */; };
+		04D426901BFEA66800A8D672 /* AddConfigCFahuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4268F1BFEA66800A8D672 /* AddConfigCFahuoViewController.m */; };
+		04D426991BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D426971BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.m */; };
+		04D4269A1BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D426981BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.xib */; };
 		04E4E8B91BFD5E24003C300D /* AddConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */; };
 		04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */; };
 		04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */; };
@@ -277,11 +277,11 @@
 		04D4267F1BFEA3D500A8D672 /* EditConfigCFahuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfigCFahuoViewController.h; sourceTree = "<group>"; };
 		04D426801BFEA3D500A8D672 /* EditConfigCFahuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfigCFahuoViewController.m; sourceTree = "<group>"; };
 		04D426811BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditConfigCFahuoViewController.xib; sourceTree = "<group>"; };
-		04D4268E1BFEA66800A8D672 /* AddConfigFahuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigFahuoViewController.h; sourceTree = "<group>"; };
-		04D4268F1BFEA66800A8D672 /* AddConfigFahuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigFahuoViewController.m; sourceTree = "<group>"; };
-		04D426911BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigFaHuoAddressPickerViewController.h; sourceTree = "<group>"; };
-		04D426921BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigFaHuoAddressPickerViewController.m; sourceTree = "<group>"; };
-		04D426931BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigFaHuoAddressPickerViewController.xib; sourceTree = "<group>"; };
+		04D4268E1BFEA66800A8D672 /* AddConfigCFahuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigCFahuoViewController.h; sourceTree = "<group>"; };
+		04D4268F1BFEA66800A8D672 /* AddConfigCFahuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigCFahuoViewController.m; sourceTree = "<group>"; };
+		04D426961BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigFaHuoAddressPickerViewController.h; sourceTree = "<group>"; };
+		04D426971BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigFaHuoAddressPickerViewController.m; sourceTree = "<group>"; };
+		04D426981BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigFaHuoAddressPickerViewController.xib; sourceTree = "<group>"; };
 		04E4E8B71BFD5E24003C300D /* AddConfigCShouhuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigCShouhuoViewController.h; sourceTree = "<group>"; };
 		04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigCShouhuoViewController.m; sourceTree = "<group>"; };
 		04E4E8BC1BFD67A5003C300D /* JSONModelConfigCShouhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigCShouhuo.h; sourceTree = "<group>"; };
@@ -737,11 +737,11 @@
 				04D4267F1BFEA3D500A8D672 /* EditConfigCFahuoViewController.h */,
 				04D426801BFEA3D500A8D672 /* EditConfigCFahuoViewController.m */,
 				04D426811BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib */,
-				04D4268E1BFEA66800A8D672 /* AddConfigFahuoViewController.h */,
-				04D4268F1BFEA66800A8D672 /* AddConfigFahuoViewController.m */,
-				04D426911BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.h */,
-				04D426921BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.m */,
-				04D426931BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.xib */,
+				04D4268E1BFEA66800A8D672 /* AddConfigCFahuoViewController.h */,
+				04D4268F1BFEA66800A8D672 /* AddConfigCFahuoViewController.m */,
+				04D426961BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.h */,
+				04D426971BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.m */,
+				04D426981BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1602,11 +1602,11 @@
 				360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */,
 				04CAEB1A1BFC24710060979D /* ConfigCGoodsTableViewCell.xib in Resources */,
 				360EF21E1BC8B1BC00385209 /* MakeOrderCarCell.xib in Resources */,
-				04D426951BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.xib in Resources */,
 				04CAEB031BFC237B0060979D /* ConfigCWuliuTableViewCell.xib in Resources */,
 				360EF1811BC8AF9400385209 /* pricetable.gif in Resources */,
 				360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */,
 				360EF2311BC8B1E600385209 /* Main.storyboard in Resources */,
+				04D4269A1BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.xib in Resources */,
 				36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */,
 				36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */,
 				360EF1911BC8AFD200385209 /* help.html in Resources */,
@@ -1720,7 +1720,6 @@
 				36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */,
 				36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				04E4E8CC1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.m in Sources */,
-				04D426941BFEA76500A8D672 /* ConfigFaHuoAddressPickerViewController.m in Sources */,
 				360EF1C21BC8B0EE00385209 /* OrderSendCommentTVC.m in Sources */,
 				360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */,
 				04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */,
@@ -1749,13 +1748,14 @@
 				36ADF33A1BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m in Sources */,
 				360EF21D1BC8B1BC00385209 /* MakeOrderCarCell.m in Sources */,
 				360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */,
+				04D426991BFEC55000A8D672 /* ConfigFaHuoAddressPickerViewController.m in Sources */,
 				36ADF2FB1BC7B17B0045E75C /* NSObject+MJCoding.m in Sources */,
 				04E4E8C61BFD82CE003C300D /* XMLDictionary.m in Sources */,
 				04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */,
 				360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */,
 				36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */,
 				04155D301BF5BF900003254F /* SDWebImageDecoder.m in Sources */,
-				04D426901BFEA66800A8D672 /* AddConfigFahuoViewController.m in Sources */,
+				04D426901BFEA66800A8D672 /* AddConfigCFahuoViewController.m in Sources */,
 				04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */,
 				36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */,
 				04CAEB151BFC24710060979D /* ConfigCGoodsTVC.m in Sources */,

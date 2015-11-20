@@ -1327,12 +1327,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKe-Fv-9RE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="1512"/>
+            <point key="canvasLocation" x="1212" y="1610"/>
         </scene>
-        <!--Add Config Fahuo View Controller-->
+        <!--添加常用发货信息-->
         <scene sceneID="VZN-w0-wtE">
             <objects>
-                <viewController id="1ai-hZ-gRI" customClass="AddConfigFahuoViewController" sceneMemberID="viewController">
+                <viewController id="1ai-hZ-gRI" userLabel="添加常用发货信息" customClass="AddConfigCFahuoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aGO-Yb-ois"/>
                         <viewControllerLayoutGuide type="bottom" id="oiF-0j-9nW"/>
@@ -1386,11 +1386,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详细地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2O-G0-GQ9">
-                                <rect key="frame" x="20" y="302" width="68" height="21"/>
+                                <rect key="frame" x="20" y="281" width="68" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="HfE-mL-SDH"/>
-                                    <constraint firstAttribute="width" constant="68" id="o6d-KJ-atw"/>
+                                    <constraint firstAttribute="width" constant="68" id="20O-ZB-lzT"/>
+                                    <constraint firstAttribute="height" constant="21" id="PpT-A2-BOG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1421,30 +1421,30 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="f26-28-2Cb"/>
-                                    <constraint firstAttribute="width" constant="280" id="jn5-29-xRr"/>
+                                    <constraint firstAttribute="width" constant="280" id="I7l-pS-9aL"/>
+                                    <constraint firstAttribute="height" constant="30" id="djv-Hp-r4F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bF4-ao-a6f">
-                                <rect key="frame" x="20" y="328" width="280" height="30"/>
+                                <rect key="frame" x="20" y="307" width="280" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9zX-5n-ktL"/>
-                                    <constraint firstAttribute="width" constant="280" id="cQo-ub-O3k"/>
+                                    <constraint firstAttribute="width" constant="280" id="5Cv-q0-S8f"/>
+                                    <constraint firstAttribute="height" constant="30" id="p57-gE-hpq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vC-xL-06T">
-                                <rect key="frame" x="20" y="368" width="280" height="40"/>
+                                <rect key="frame" x="20" y="342" width="280" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="NMm-V7-OZV"/>
-                                    <constraint firstAttribute="width" constant="280" id="uCR-r9-1OQ"/>
+                                    <constraint firstAttribute="width" constant="280" id="bMl-Jp-aap"/>
+                                    <constraint firstAttribute="height" constant="40" id="iOo-c8-XEQ"/>
                                 </constraints>
                                 <state key="normal" title="确定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1459,24 +1459,26 @@
                         <constraints>
                             <constraint firstItem="pR6-yA-upY" firstAttribute="top" secondItem="zqn-3X-t71" secondAttribute="bottom" constant="5" id="2DD-t3-gEi"/>
                             <constraint firstItem="zqn-3X-t71" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="3OR-J9-wNp"/>
-                            <constraint firstItem="FzK-RQ-Tze" firstAttribute="top" secondItem="dlv-f3-wtn" secondAttribute="bottom" constant="5" id="6dO-wK-IFV"/>
-                            <constraint firstAttribute="trailing" secondItem="8vC-xL-06T" secondAttribute="trailing" constant="20" id="920-26-DQi"/>
+                            <constraint firstItem="a2O-G0-GQ9" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="7Rv-CD-FqQ"/>
+                            <constraint firstItem="8vC-xL-06T" firstAttribute="top" secondItem="bF4-ao-a6f" secondAttribute="bottom" constant="5" id="8CI-9Q-4CF"/>
+                            <constraint firstItem="FzK-RQ-Tze" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="99f-da-oTT"/>
                             <constraint firstItem="dlv-f3-wtn" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="9Di-ke-UBO"/>
-                            <constraint firstItem="FzK-RQ-Tze" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="9dO-5H-8cV"/>
-                            <constraint firstItem="a2O-G0-GQ9" firstAttribute="top" secondItem="FzK-RQ-Tze" secondAttribute="bottom" constant="26" id="KCM-9R-hzs"/>
+                            <constraint firstItem="bF4-ao-a6f" firstAttribute="top" secondItem="a2O-G0-GQ9" secondAttribute="bottom" constant="5" id="Ajz-iw-EBQ"/>
                             <constraint firstItem="zqn-3X-t71" firstAttribute="top" secondItem="Utt-dK-q3a" secondAttribute="bottom" constant="5" id="Mxj-6t-a3U"/>
                             <constraint firstItem="Utt-dK-q3a" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="NLK-hZ-r23"/>
                             <constraint firstItem="dlv-f3-wtn" firstAttribute="top" secondItem="Ljl-Pl-q2T" secondAttribute="bottom" constant="5" id="NpI-nu-EGB"/>
-                            <constraint firstItem="bF4-ao-a6f" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="QRB-NV-s2u"/>
+                            <constraint firstAttribute="trailing" secondItem="bF4-ao-a6f" secondAttribute="trailing" constant="20" id="Wmg-6b-hq4"/>
+                            <constraint firstItem="a2O-G0-GQ9" firstAttribute="top" secondItem="FzK-RQ-Tze" secondAttribute="bottom" constant="5" id="YGU-82-xKr"/>
+                            <constraint firstItem="FzK-RQ-Tze" firstAttribute="top" secondItem="dlv-f3-wtn" secondAttribute="bottom" constant="5" id="YaA-b6-ouF"/>
                             <constraint firstItem="Ljl-Pl-q2T" firstAttribute="top" secondItem="fte-Dj-aE8" secondAttribute="bottom" constant="5" id="bLB-vI-Udd"/>
-                            <constraint firstItem="bF4-ao-a6f" firstAttribute="top" secondItem="a2O-G0-GQ9" secondAttribute="bottom" constant="5" id="c8b-PX-up1"/>
                             <constraint firstItem="Utt-dK-q3a" firstAttribute="top" secondItem="aGO-Yb-ois" secondAttribute="bottom" constant="8" id="d7C-O0-STQ"/>
+                            <constraint firstAttribute="trailing" secondItem="8vC-xL-06T" secondAttribute="trailing" constant="20" id="div-bn-Gba"/>
                             <constraint firstItem="Ljl-Pl-q2T" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="dpn-Ly-eE7"/>
-                            <constraint firstItem="a2O-G0-GQ9" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="gcM-KV-cUh"/>
-                            <constraint firstItem="8vC-xL-06T" firstAttribute="top" secondItem="bF4-ao-a6f" secondAttribute="bottom" constant="10" id="hND-7e-9Vi"/>
-                            <constraint firstItem="8vC-xL-06T" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="jkT-Yn-FNl"/>
+                            <constraint firstItem="8vC-xL-06T" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="nLe-ec-JfB"/>
                             <constraint firstItem="pR6-yA-upY" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="rG3-Ls-csg"/>
                             <constraint firstItem="fte-Dj-aE8" firstAttribute="top" secondItem="pR6-yA-upY" secondAttribute="bottom" constant="5" id="rg7-XB-q7a"/>
+                            <constraint firstAttribute="trailing" secondItem="FzK-RQ-Tze" secondAttribute="trailing" constant="20" id="ujf-DM-2Ve"/>
+                            <constraint firstItem="bF4-ao-a6f" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="wPL-BM-DaA"/>
                             <constraint firstItem="fte-Dj-aE8" firstAttribute="leading" secondItem="eE5-r8-4j5" secondAttribute="leading" constant="20" id="y4m-RG-1S5"/>
                         </constraints>
                     </view>
@@ -1491,7 +1493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK2-SJ-KUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498" y="1670"/>
+            <point key="canvasLocation" x="1496" y="1610"/>
         </scene>
         <!--添加常用收货信息-->
         <scene sceneID="4gE-Ni-wFs">
@@ -1660,7 +1662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0u-is-K9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="1670"/>
+            <point key="canvasLocation" x="1911" y="1636"/>
         </scene>
         <!--配置常用到货城市-->
         <scene sceneID="VVX-gY-rzh">

@@ -6,7 +6,7 @@
 //  Copyright © 2015年 wsy.Inc. All rights reserved.
 //
 
-#import "AddConfigFahuoViewController.h"
+#import "AddConfigCFahuoViewController.h"
 #import "AFNetworkTool.h"
 #import "QConfig.h"
 #import "MBProgressHUD+HM.h"
@@ -14,7 +14,7 @@
 #import "ConfigFaHuoAddressPickerViewController.h"
 
 
-@interface AddConfigFahuoViewController () <ConfigFaHuoAddressPickerViewControllerDelegate>
+@interface AddConfigCFahuoViewController () <ConfigFaHuoAddressPickerViewControllerDelegate>
 
 @property (nonatomic, strong) ConfigFaHuoAddressPickerViewController *pickerVC;
 
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation AddConfigFahuoViewController
+@implementation AddConfigCFahuoViewController
 
 
 - (ConfigFaHuoAddressPickerViewController *)pickerVC {

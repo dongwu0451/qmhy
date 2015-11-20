@@ -7,14 +7,16 @@
 //
 
 #import "ConfigFaHuoAddressPickerViewController.h"
-#import "AddConfigFahuoViewController.h"
-#import "XMLDictionary.h"
+#import "AddConfigCFahuoViewController.h"
 
 #define PROVINCE_COMPONENT  0
 #define CITY_COMPONENT      1
 #define DISTRICT_COMPONENT  2
 
-@interface ConfigFaHuoAddressPickerViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@interface ConfigFaHuoAddressPickerViewController ()  <UIPickerViewDelegate, UIPickerViewDataSource>
+
+
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property (weak, nonatomic) IBOutlet UIButton *yesBtn;
 
@@ -29,20 +31,13 @@
 
 @implementation ConfigFaHuoAddressPickerViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //    NSString *path =[[NSBundle mainBundle]pathForResource:@"province_data"ofType:@"xml"];
-    //    NSData *data = [[NSData alloc]initWithContentsOfFile:path];
-    //    NSString *xmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    //    NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLString:xmlString];
-    //    NSLog(@"dictionary: %@", xmlDoc);
-    
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *plistPath = [bundle pathForResource:@"area" ofType:@"plist"];
     _areaDic = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    //    _areaDic = xmlDoc;
-    
     NSArray *components = [_areaDic allKeys];
     NSArray *sortedArray = [components sortedArrayUsingComparator: ^(id obj1, id obj2) {
         
@@ -247,6 +242,5 @@
     
     return myView;
 }
-
 
 @end

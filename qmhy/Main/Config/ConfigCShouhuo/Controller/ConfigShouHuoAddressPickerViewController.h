@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol ConfigShouHuoAddressPickerViewControllerDelegate <NSObject>
-@required
+
 - (void)sureBtn:(NSString *)str andProvinceStr:(NSString *)provinceStr andCityStr:(NSString *)cityStr andDistrictStr:(NSString *)districtStr andAddressCode:(NSString *)addressCode; // 把选择的值穿过去的方法
 
 @end

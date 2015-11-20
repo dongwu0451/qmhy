@@ -7,9 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigFaHuoAddressPickerViewController">
             <connections>
-                <outlet property="picker" destination="E7z-g7-egy" id="24z-dx-dv7"/>
+                <outlet property="picker" destination="MfE-AF-oZr" id="o5d-RX-uZV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="yesBtn" destination="qwY-TB-9HH" id="GL1-xX-mGw"/>
+                <outlet property="yesBtn" destination="Q0Q-le-Xu7" id="MDP-Bv-LSC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,57 +17,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择省市区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fev-BG-CSF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请选择省市区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHs-GR-iOC">
                     <rect key="frame" x="8" y="8" width="304" height="21"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="WFd-DJ-PEK"/>
-                        <constraint firstAttribute="width" constant="304" id="gQh-fy-LfM"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7z-g7-egy">
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfE-AF-oZr">
                     <rect key="frame" x="8" y="37" width="304" height="216"/>
                     <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="216" id="AtQ-PC-QVl"/>
-                        <constraint firstAttribute="width" constant="304" id="ZtL-0f-AUd"/>
-                    </constraints>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwY-TB-9HH">
-                    <rect key="frame" x="8" y="261" width="304" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0Q-le-Xu7">
+                    <rect key="frame" x="137" y="269" width="46" height="30"/>
                     <animations/>
-                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="bdr-UG-BI9"/>
-                        <constraint firstAttribute="width" constant="304" id="t34-5f-Lrm"/>
-                    </constraints>
-                    <state key="normal" title="确定">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="yesBtnClick:" destination="-1" eventType="touchUpInside" id="Z6E-82-P0l"/>
-                    </connections>
+                    <state key="normal" title="Button"/>
                 </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="fev-BG-CSF" secondAttribute="trailing" constant="8" id="35S-hd-MJi"/>
-                <constraint firstItem="qwY-TB-9HH" firstAttribute="top" secondItem="E7z-g7-egy" secondAttribute="bottom" constant="8" id="9tV-fV-ZsQ"/>
-                <constraint firstItem="fev-BG-CSF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="I8j-E3-OrJ"/>
-                <constraint firstItem="qwY-TB-9HH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ZkU-1Y-GKu"/>
-                <constraint firstAttribute="trailing" secondItem="qwY-TB-9HH" secondAttribute="trailing" constant="8" id="bfg-bc-vIA"/>
-                <constraint firstAttribute="trailing" secondItem="E7z-g7-egy" secondAttribute="trailing" constant="8" id="h4q-up-zdL"/>
-                <constraint firstItem="E7z-g7-egy" firstAttribute="top" secondItem="fev-BG-CSF" secondAttribute="bottom" constant="8" id="vEq-kK-hT9"/>
-                <constraint firstItem="fev-BG-CSF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="vls-F7-ib6"/>
-                <constraint firstItem="E7z-g7-egy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ye2-89-mEP"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="70" y="325"/>
+            <point key="canvasLocation" x="381" y="342"/>
         </view>
     </objects>
 </document>

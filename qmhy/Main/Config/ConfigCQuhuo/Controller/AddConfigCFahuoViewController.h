@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddConfigFahuoViewController : UIViewController
+@interface AddConfigCFahuoViewController : UIViewController
 
 @end
