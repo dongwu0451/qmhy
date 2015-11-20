@@ -170,7 +170,8 @@
     //    cell.wuLiuNameLabel.text = jsonModelConfigCWuLiu.name;
     // ⑥在创建cell的时候设置自己为代理
     cell.delegate = self;
-    return cell;}
+    return cell;
+}
 
 //行高度 标准高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

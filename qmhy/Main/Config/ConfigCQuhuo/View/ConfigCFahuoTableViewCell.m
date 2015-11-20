@@ -10,14 +10,23 @@
 
 @implementation ConfigCFahuoTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)config:(JSONModelConfigFahuo *)model {
+    self.fahuoNameLabel.text = model.contact;
+    self.fahuoPhoneLabel.text = model.tel;
+    self.fahuoAddressLabel.text = [NSString stringWithFormat:@"%@%@%@", model.Province, model.city, model.area];
+    self.jsonModelConfigFahuo = model;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (IBAction)bianjiBtnClick:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(configCFahuoTableViewCell:didEditJSONModelConfigFahuo:andClickBianJiLikeBtn:)]) {
+        [self.delegate configCFahuoTableViewCell:self didEditJSONModelConfigFahuo:self.jsonModelConfigFahuo andClickBianJiLikeBtn:sender];
+    }
+}
 
-    // Configure the view for the selected state
+- (IBAction)shanchuBtnClick:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(configCFahuoTableViewCell:didRemoveJSONModelConfigFahuo:andClickShanChuLikeBtn:)]) {
+        [self.delegate configCFahuoTableViewCell:self didRemoveJSONModelConfigFahuo:self.jsonModelConfigFahuo andClickShanChuLikeBtn:sender];
+    }
 }
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JSONModelConfigFahuo.h"
 @interface EditConfigCFahuoViewController : UIViewController
+
+@property (nonatomic, strong) JSONModelConfigFahuo *jsonModelConfigFahuo;
 
 @end
