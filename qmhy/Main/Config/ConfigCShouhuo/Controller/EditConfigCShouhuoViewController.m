@@ -67,7 +67,7 @@
     self.province = provinceStr;
     self.city = cityStr;
     self.area = districtStr;
-    self.addressCode = @"110";
+    self.addressCode = addressCode;
 }
 
 

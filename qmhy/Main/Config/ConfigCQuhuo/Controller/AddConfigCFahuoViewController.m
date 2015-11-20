@@ -11,19 +11,21 @@
 #import "QConfig.h"
 #import "MBProgressHUD+HM.h"
 #import "UniformResourceLocator.h"
-#import "ConfigFaHuoAddressPickerViewController.h"
+#import "ConfigShouHuoAddressPickerViewController.h"
+#import "ConfigFHAPViewController.h"
+
+@interface AddConfigCFahuoViewController () <ConfigFHAPViewControllerDelegate>
 
 
-@interface AddConfigCFahuoViewController () <ConfigFaHuoAddressPickerViewControllerDelegate>
 
-@property (nonatomic, strong) ConfigFaHuoAddressPickerViewController *pickerVC;
+@property (nonatomic , strong) ConfigFHAPViewController *pickerVC;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *fahuolianxirenTextField;
 @property (weak, nonatomic) IBOutlet UITextField *shoujihaomaTextField;
 @property (weak, nonatomic) IBOutlet UITextView *suozaidiquTextView;
 @property (weak, nonatomic) IBOutlet UITextView *xiangxidizhiTextView;
 @property (weak, nonatomic) IBOutlet UIButton *yesBtn;
-
 
 @property (nonatomic, copy) NSString *province; // 省
 @property (nonatomic, copy) NSString *city; // 市
@@ -35,14 +37,14 @@
 @implementation AddConfigCFahuoViewController
 
 
-- (ConfigFaHuoAddressPickerViewController *)pickerVC {
+- (ConfigFHAPViewController *)pickerVC {
     if (!_pickerVC) {
-        self.pickerVC = [[ConfigFaHuoAddressPickerViewController alloc] init];
+        self.pickerVC = [[ConfigFHAPViewController alloc] init];
         self.pickerVC.view.frame = CGRectMake(0, 80, [[UIScreen mainScreen]bounds].size.width, [[UIScreen mainScreen]bounds].size.height * 0.7);
         self.pickerVC.delegate = self;
     }
     return _pickerVC;
-
+    
 }
 
 
@@ -55,7 +57,7 @@
 
 // 点击显示UIPickerView
 - (void)showUIPickerView {
-    [self.view addSubview:self.pickerVC.view];
+     [self.view addSubview:self.pickerVC.view];
 }
 
 // 把传回来的值显示到页面上
@@ -64,9 +66,8 @@
     self.province = provinceStr;
     self.city = cityStr;
     self.area = districtStr;
-    self.addressCode = @"110";
+    self.addressCode = addressCode;
 }
-
 
 
 - (IBAction)yesBtnClick:(UIButton *)sender {
@@ -108,7 +109,6 @@
         [MBProgressHUD hideHUDForView:self.view];
         [MBProgressHUD showError:@"添加失败！"];
     }];
-
     
 }
 

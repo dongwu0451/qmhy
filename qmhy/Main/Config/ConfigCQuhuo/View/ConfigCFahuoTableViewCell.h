@@ -15,6 +15,7 @@
 
 - (void)configCFahuoTableViewCell:(ConfigCFahuoTableViewCell *)cell didRemoveJSONModelConfigFahuo:(JSONModelConfigFahuo *)model andClickShanChuLikeBtn:(UIButton *)likeBtn;
 
+- (void)configCFahuoTableViewCell:(ConfigCFahuoTableViewCell *)cell didMoRenJSONModelConfigFahuo:(JSONModelConfigFahuo *)model andClickMoRenLikeBtn:(UIButton *)likeBtn;
 
 @end
 

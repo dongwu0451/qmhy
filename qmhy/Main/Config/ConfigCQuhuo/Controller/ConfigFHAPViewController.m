@@ -1,21 +1,22 @@
 //
-//  ConfigShouHuoAddressPickerViewController.m
+//  ConfigFHAPViewController.m
 //  qmhy
 //
-//  Created by mac on 15/11/19.
+//  Created by mac on 15/11/20.
 //  Copyright © 2015年 wsy.Inc. All rights reserved.
 //
 
-#import "ConfigShouHuoAddressPickerViewController.h"
-#import "AddConfigCShouhuoViewController.h"
+#import "ConfigFHAPViewController.h"
 #import "XMLDictionary.h"
+
 
 #define PROVINCE_COMPONENT  0
 #define CITY_COMPONENT      1
 #define DISTRICT_COMPONENT  2
 
 
-@interface ConfigShouHuoAddressPickerViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface ConfigFHAPViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property (weak, nonatomic) IBOutlet UIButton *yesBtn;
 
@@ -23,13 +24,14 @@
 @property (nonatomic, strong) NSMutableArray *province;
 @property (nonatomic, strong) NSMutableArray *city;
 @property (nonatomic, strong) NSMutableArray *district;
+@property (nonatomic, copy) NSString *selectedProvince;
+
 @property (nonatomic, strong) NSMutableArray *lanlog;
 @property (nonatomic, strong) NSDictionary *xmlDoc;
-@property (nonatomic, copy) NSString *selectedProvince;
 
 @end
 
-@implementation ConfigShouHuoAddressPickerViewController
+@implementation ConfigFHAPViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,65 +40,25 @@
     NSData *data = [[NSData alloc]initWithContentsOfFile:path];
     NSString *xmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     _xmlDoc = [NSDictionary dictionaryWithXMLString:xmlString];
-   
+    
     
     
     [self initprovince];
     [self initCity:0];
     [self initdistrict:_city[0]];
-    //[self initData:_xmlDoc indexTag:0 name:@""];
-    
-//    NSBundle *bundle = [NSBundle mainBundle];
-//    NSString *plistPath = [bundle pathForResource:@"area" ofType:@"plist"];
-//    _areaDic = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    //NSLog(@"_areaDic = %@",_areaDic);
-    //_areaDic = xmlDoc;
-    
-//    NSArray *components = [_areaDic allKeys];
-//    NSArray *sortedArray = [components sortedArrayUsingComparator: ^(id obj1, id obj2) {
-//        
-//        if ([obj1 integerValue] > [obj2 integerValue]) {
-//            return (NSComparisonResult)NSOrderedDescending;
-//        }
-//        
-//        if ([obj1 integerValue] < [obj2 integerValue]) {
-//            return (NSComparisonResult)NSOrderedAscending;
-//        }
-//        return (NSComparisonResult)NSOrderedSame;
-//    }];
-//    
-//    NSMutableArray *provinceTmp = [[NSMutableArray alloc] init];
-//    for (int i=0; i<[sortedArray count]; i++) {
-//        NSString *index = [sortedArray objectAtIndex:i];
-//        NSArray *tmp = [[_areaDic objectForKey: index] allKeys];
-//        [provinceTmp addObject: [tmp objectAtIndex:0]];
-//    }
-//    _province = [[NSArray alloc] initWithArray: provinceTmp];
-//    NSString *index = [sortedArray objectAtIndex:0];
-//    NSString *selected = [_province objectAtIndex:0];
-//    NSDictionary *dic = [NSDictionary dictionaryWithDictionary: [[_areaDic objectForKey:index]objectForKey:selected]];
-//    
-//    NSArray *cityArray = [dic allKeys];
-//    NSDictionary *cityDic = [NSDictionary dictionaryWithDictionary: [dic objectForKey: [cityArray objectAtIndex:0]]];
-//    _city = [[NSArray alloc] initWithArray: [cityDic allKeys]];
-//    
-//    
-    //NSString *selectedCity = [_city objectAtIndex: 0];
-    //_district = [[NSArray alloc] initWithArray: [cityDic objectForKey: selectedCity]];
-    _picker.backgroundColor = [UIColor whiteColor];
+       _picker.backgroundColor = [UIColor whiteColor];
     _picker.dataSource = self;
     _picker.delegate = self;
     _picker.showsSelectionIndicator = YES;
     [_picker selectRow: 0 inComponent: 0 animated: YES];
     _selectedProvince = [_province objectAtIndex: 0];
-//
-     //NSLog(@"_province = %@, CITY = %@ DIC = %@ lan = %@",_province,_city,_district, _lanlog);
 
+
+    
 }
 
 //初始化省份
--(void)initprovince
-{
+-(void)initprovince {
     _province = [[NSMutableArray alloc] init];
     NSArray *keyArr = [_xmlDoc allKeys];
     //取出总的城市列表
@@ -112,8 +74,7 @@
 }
 
 //根据省份初始化市
--(void)initCity:(int)indexTag
-{
+-(void)initCity:(int)indexTag {
     _city = [[NSMutableArray alloc] init];
     NSArray *keyArr = [_xmlDoc allKeys];
     //取出总的城市列表
@@ -153,7 +114,7 @@
         //取市区
         NSDictionary *cityDict = [dict valueForKey:@"city"];
         //当十的个数超过2个时  要对原数据进行拆分
-       if (cityDict.count > 2)
+        if (cityDict.count > 2)
         {
             //遍历元字典
             for (NSDictionary *result in cityDict)
@@ -191,7 +152,7 @@
             if ([[cityDict valueForKey:@"_name"] isEqual:cityName])
             {
                 NSArray *diqu = [cityDict valueForKey:@"district"];
-               for (int x = 0; x<diqu.count; x++)
+                for (int x = 0; x<diqu.count; x++)
                 {
                     NSDictionary *dict2 = diqu[x];
                     if (dict2.count > 2)
@@ -200,7 +161,7 @@
                         {
                             [_district addObject:[result valueForKey:@"_name"]];
                             [_lanlog addObject:[result valueForKey:@"_lanlog"]];
-                           
+                            
                         }
                     }else
                     {
@@ -233,16 +194,15 @@
     else if ([cityStr isEqualToString: districtStr]) {
         districtStr = @"";
     }
-    
+
     NSString *showMsg = [NSString stringWithFormat: @"%@,%@,%@", provinceStr, cityStr, districtStr];
     NSLog(@"%@", showMsg);
-
-    NSLog(@"jingweidu = %@",_lanlog[districtIndex]);
+         NSLog(@"jingweidu = %@",_lanlog[districtIndex]);
     [self.delegate sureBtn:showMsg andProvinceStr:provinceStr andCityStr:cityStr andDistrictStr:districtStr andAddressCode:_lanlog[districtIndex]];
-//    [self.delegate sureBtn:showMsg];
+    //    [self.delegate sureBtn:showMsg];
     
     [self.view removeFromSuperview];
-   
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -282,7 +242,6 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-
     if (component == PROVINCE_COMPONENT)
     {
         [self initCity:(int)row];
@@ -291,7 +250,7 @@
         [_picker selectRow: 0 inComponent: DISTRICT_COMPONENT animated: YES];
         [_picker reloadComponent: CITY_COMPONENT];
         [_picker reloadComponent: DISTRICT_COMPONENT];
-       
+        
         
     }
     else if (component == CITY_COMPONENT) {
@@ -299,7 +258,9 @@
         [_picker selectRow: 0 inComponent: DISTRICT_COMPONENT animated: YES];
         [_picker reloadComponent: DISTRICT_COMPONENT];
     }
-     //NSLog(@"_district = %@",_district);
+    //NSLog(@"_district = %@",_district);
+
+    
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
@@ -341,5 +302,6 @@
     
     return myView;
 }
+
 
 @end

@@ -20,9 +20,7 @@
 #import "QConfig.h"
 #import "JSONModelConfigFahuo.h"
 #import "MBProgressHUD+HM.h"
-#import "EditConfigCFahuoViewController.h"
-
-
+#import "ECCFHViewController.h"
 @interface ConfigCQuhuoTVC () <ConfigCFahuoTableViewCellDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
@@ -40,12 +38,15 @@
 
 @implementation ConfigCQuhuoTVC
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self loadNewData];
+}
 
 //初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadNewData];
+//    [self loadNewData];
 //    //获取绝对路径的
 //    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
 //    //你要操作的路径
@@ -59,10 +60,51 @@
 //    self.quhuoModels = [[QuhuoModel objectArrayWithKeyValuesArray:self.dataS] mutableCopy];
 }
 
+- (void)configCFahuoTableViewCell:(ConfigCFahuoTableViewCell *)cell didMoRenJSONModelConfigFahuo:(JSONModelConfigFahuo *)model andClickMoRenLikeBtn:(UIButton *)likeBtn {
+    NSLog(@"updatetabcommonpickupinfo");
+    [MBProgressHUD showMessage:@"正在删除中..." toView:self.view];
+    NSString *methodName = @"updateTabCommonPickupInfo";
+    NSString *params = @"&proName=%d_%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d_%d";
+    int x_id = [model.x_id intValue];
+    NSLog(@"%d", x_id);
+    int uid = [model.uid intValue];
+    NSString *contant = model.contact;
+    NSString *tel = model.tel;
+    NSString *province = model.Province;
+    NSString *city = model.city;
+    NSString *area = model.area;
+    NSString *addressCode = model.addressCode;
+    NSString *Address = model.Address;
+    NSString *status = model.status;
+    NSString *createby = model.createby;
+    int isOnly = 0;
+    int setType = 0;
+    
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, x_id,uid,contant,tel,province,city,area,addressCode,Address,status,createby,isOnly,setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // 发送请求
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *infoArray = [dic objectForKey:@"rs"];
+        NSString *success = infoArray[0][@"result"];
+        if ([success isEqualToString:@"ok"]) {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"设置默认成功！"];
+            [self loadNewData];
+        } else {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"设置默认失败！"];
+        }
+    } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"设置默认失败！"];
+    }];
 
+}
 
 - (void)configCFahuoTableViewCell:(ConfigCFahuoTableViewCell *)cell didEditJSONModelConfigFahuo:(JSONModelConfigFahuo *)model andClickBianJiLikeBtn:(UIButton *)likeBtn {
-    EditConfigCFahuoViewController *editConfigCFahuoViewController = [[EditConfigCFahuoViewController alloc] init];
+    ECCFHViewController *editConfigCFahuoViewController = [[ECCFHViewController alloc] init];
     editConfigCFahuoViewController.jsonModelConfigFahuo = model;
     [self.navigationController pushViewController:editConfigCFahuoViewController animated:YES];
 }
@@ -217,33 +259,33 @@
 
 
 // 视图将要显示的时候会调用此方法
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:YES];
 //    [self.tableView reloadData];
 //    self.navigationController.toolbarHidden = YES;//隐藏下面toolbar
-}
+//}
 
 
 // 选中行事件处理函数 返回上级界面 选中之后返回MakeOrderTVC中的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate selectedConfigCQuhuoTVC:self didInputReturnQuhuoModel:self.quhuoModels[indexPath.row]];//调用代理 给最开始的下单第一个页面 列表页面
+//    [self.delegate selectedConfigCQuhuoTVC:self didInputReturnQuhuoModel:self.quhuoModels[indexPath.row]];//调用代理 给最开始的下单第一个页面 列表页面
     [self.navigationController popViewControllerAnimated:YES];//关闭
 }
 
 
 // 删除
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //删除数组
-    [self.dataS removeObjectAtIndex:indexPath.row];
-    [self.quhuoModels removeObjectAtIndex:indexPath.row];
-    //取plist
-    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *path=[paths objectAtIndex:0];
-    NSString *filename=[path stringByAppendingPathComponent:@"quhuoModel.plist"];
-    //将删除完的数组写入plist
-    [self.dataS writeToFile:filename atomically:YES];
-    //重新装载
-    [self.tableView reloadData];
+//    //删除数组
+//    [self.dataS removeObjectAtIndex:indexPath.row];
+//    [self.quhuoModels removeObjectAtIndex:indexPath.row];
+//    //取plist
+//    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+//    NSString *path=[paths objectAtIndex:0];
+//    NSString *filename=[path stringByAppendingPathComponent:@"quhuoModel.plist"];
+//    //将删除完的数组写入plist
+//    [self.dataS writeToFile:filename atomically:YES];
+//    //重新装载
+//    [self.tableView reloadData];
     
 }
 

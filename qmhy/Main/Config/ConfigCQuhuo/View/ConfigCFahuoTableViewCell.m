@@ -15,6 +15,11 @@
     self.fahuoPhoneLabel.text = model.tel;
     self.fahuoAddressLabel.text = [NSString stringWithFormat:@"%@%@%@", model.Province, model.city, model.area];
     self.jsonModelConfigFahuo = model;
+    if ([self.jsonModelConfigFahuo.orderid isEqualToString:@"1"]) {
+        [self.morenImage setImage:[UIImage imageNamed:@"btn_c_close"]];
+    } else {
+        [self.morenImage setImage:[UIImage imageNamed:@"btn_c_open"]];
+    }
 }
 
 - (IBAction)bianjiBtnClick:(UIButton *)sender {
@@ -28,5 +33,12 @@
         [self.delegate configCFahuoTableViewCell:self didRemoveJSONModelConfigFahuo:self.jsonModelConfigFahuo andClickShanChuLikeBtn:sender];
     }
 }
+- (IBAction)morenBtnClick:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(configCFahuoTableViewCell:didMoRenJSONModelConfigFahuo:andClickMoRenLikeBtn:)]) {
+        [self.delegate configCFahuoTableViewCell:self didMoRenJSONModelConfigFahuo:self.jsonModelConfigFahuo andClickMoRenLikeBtn:sender];
+    }
+}
+
+
 
 @end

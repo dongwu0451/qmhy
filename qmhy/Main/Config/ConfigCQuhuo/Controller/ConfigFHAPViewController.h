@@ -1,5 +1,5 @@
 //
-//  ConfigFaHuoAddressPickerViewController.h
+//  ConfigFHAPViewController.h
 //  qmhy
 //
 //  Created by mac on 15/11/20.
@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol  ConfigFaHuoAddressPickerViewControllerDelegate<NSObject>
+@protocol ConfigFHAPViewControllerDelegate <NSObject>
 
 - (void)sureBtn:(NSString *)str andProvinceStr:(NSString *)provinceStr andCityStr:(NSString *)cityStr andDistrictStr:(NSString *)districtStr andAddressCode:(NSString *)addressCode; // 把选择的值穿过去的方法
+
 
 @end
 
 
-@interface ConfigFaHuoAddressPickerViewController : UIViewController
+@interface ConfigFHAPViewController : UIViewController
 
-@property (nonatomic, assign)id<ConfigFaHuoAddressPickerViewControllerDelegate>delegate;
+@property (nonatomic, assign)id<ConfigFHAPViewControllerDelegate>delegate;
+
 
 @end

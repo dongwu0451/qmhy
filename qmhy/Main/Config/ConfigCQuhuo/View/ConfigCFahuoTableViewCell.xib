@@ -89,6 +89,9 @@
                         <state key="normal" title="设为默认">
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="morenBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="n6F-il-wCF"/>
+                        </connections>
                     </button>
                 </subviews>
                 <animations/>
