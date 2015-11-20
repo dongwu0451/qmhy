@@ -10,9 +10,13 @@
 
 @implementation JSONModelConfigFahuo
 
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    if([key isEqualToString:@"id"])
-        self.x_id = value;
+//- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+//    if([key isEqualToString:@"id"])
+//        self.x_id = value;
+//}
+
++ (NSDictionary *)replacedKeyFromPropertyName {
+    return @{@"x_id":@"id"};
 }
 
 @end

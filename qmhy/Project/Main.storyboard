@@ -340,14 +340,14 @@
                     <navigationItem key="navigationItem" title="配置常用发货信息" id="4iS-KM-dw0">
                         <barButtonItem key="rightBarButtonItem" title="添加" id="2e9-N7-AXB">
                             <connections>
-                                <action selector="addQuhuoMessage:" destination="r9F-65-RCu" id="C8H-V1-vQs"/>
+                                <segue destination="1ai-hZ-gRI" kind="push" id="7BP-6g-nVq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Eh-aL-xeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="1686"/>
+            <point key="canvasLocation" x="1191" y="1622"/>
         </scene>
         <!--关于-->
         <scene sceneID="FQE-O1-xym">
@@ -867,7 +867,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTp-Am-lgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="1847"/>
+            <point key="canvasLocation" x="751" y="1795"/>
         </scene>
         <!--添加常用物流-->
         <scene sceneID="Ybt-Yf-zkx">
@@ -1328,6 +1328,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKe-Fv-9RE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1490" y="1512"/>
+        </scene>
+        <!--Add Config Fahuo View Controller-->
+        <scene sceneID="VZN-w0-wtE">
+            <objects>
+                <viewController id="1ai-hZ-gRI" customClass="AddConfigFahuoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGO-Yb-ois"/>
+                        <viewControllerLayoutGuide type="bottom" id="oiF-0j-9nW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eE5-r8-4j5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bIX-kO-a6z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eK2-SJ-KUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="2328"/>
         </scene>
         <!--添加常用收货信息-->
         <scene sceneID="4gE-Ni-wFs">

@@ -7,10 +7,10 @@
 //
 
 #import "ConfigCQuhuoTVC.h"
-#import "AddQuhuoVC.h"
+
 #import "QuhuoModel.h"
 #import "MJExtension.h"
-@interface ConfigCQuhuoTVC () <AddQuhuoVCDelegate>
+@interface ConfigCQuhuoTVC ()
 
 @property (strong, nonatomic) NSMutableArray *quhuoModels; // 存对象的数组对象 给单元格用
 @property (strong, nonatomic) NSMutableArray *dataS; //  存字典的数组 PLIST
@@ -46,13 +46,7 @@
 }
 
 
-// 本页面是列表 点击右上角的添加常用取货信息按钮 添加取货信息到MakeOrderTVC 跳转到添加取货页面
-- (IBAction)addQuhuoMessage:(UIBarButtonItem *)sender {
-    //从xib来数据
-    AddQuhuoVC *qhvc = [[AddQuhuoVC alloc] initWithNibName:@"AddQuhuoVC" bundle:nil];
-    qhvc.delegate = self;//********必须要有这句话********  本类实现代理
-    [self.navigationController pushViewController:qhvc animated:YES];//跳转到添加取货页面
-}
+
 
 //初始化
 - (void)viewDidLoad
@@ -71,24 +65,7 @@
     self.quhuoModels = [[QuhuoModel objectArrayWithKeyValuesArray:self.dataS] mutableCopy];
 }
 
-// 代理传值 收到AddQuhuoVC来的数据
-- (void)AddQuhuoVC:(AddQuhuoVC *)hvc didInputReturnQuhuo:(QuhuoModel *)quhuoModel {
-    // 创建一个字典，把要添加的对象转化为字典
-    NSMutableDictionary *dict =[NSMutableDictionary dictionary];
-    dict[@"quhuoName"] =quhuoModel.quhuoName;
-    dict[@"quhuoAddress"] =quhuoModel.quhuoAddress;
-    dict[@"quhuoTelephone"] =quhuoModel.quhuoTelephone;
-    // 获得plist文件路径
-    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *path=[paths objectAtIndex:0];
-    NSString *filename=[path stringByAppendingPathComponent:@"quhuoModel.plist"];
-    // 将字典加入到plist数组中
-    [self.dataS addObject:dict];
-    // 将这个数组写如到plist
-    [self.dataS writeToFile:filename atomically:YES];
-    // 将对象添加到对象数组中
-    [self.quhuoModels addObject:quhuoModel];
-}
+
 
 
 //行数

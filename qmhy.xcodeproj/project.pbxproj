@@ -45,10 +45,13 @@
 		04CAEB3F1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB3D1BFC4C750060979D /* ConfigCShouhuoTableViewCell.m */; };
 		04CAEB401BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */; };
 		04CAEB431BFC4EE30060979D /* JSONModelConfigFahuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */; };
-		04CAEB4C1BFC4F330060979D /* AddQuhuoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB481BFC4F330060979D /* AddQuhuoVC.m */; };
-		04CAEB4D1BFC4F330060979D /* AddQuhuoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */; };
 		04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */; };
 		04CAEB561BFC4FB10060979D /* ConfigCShouhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */; };
+		04D426821BFEA3D500A8D672 /* EditConfigCFahuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D426801BFEA3D500A8D672 /* EditConfigCFahuoViewController.m */; };
+		04D426831BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D426811BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib */; };
+		04D426871BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D426851BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.m */; };
+		04D426881BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D426861BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.xib */; };
+		04D426901BFEA66800A8D672 /* AddConfigFahuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4268F1BFEA66800A8D672 /* AddConfigFahuoViewController.m */; };
 		04E4E8B91BFD5E24003C300D /* AddConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */; };
 		04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8BD1BFD67A5003C300D /* JSONModelConfigCShouhuo.m */; };
 		04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E8C01BFD6E4F003C300D /* EditConfigCShouhuoViewController.m */; };
@@ -267,13 +270,18 @@
 		04CAEB3E1BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCShouhuoTableViewCell.xib; sourceTree = "<group>"; };
 		04CAEB411BFC4EE30060979D /* JSONModelConfigFahuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigFahuo.h; sourceTree = "<group>"; };
 		04CAEB421BFC4EE30060979D /* JSONModelConfigFahuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelConfigFahuo.m; sourceTree = "<group>"; };
-		04CAEB471BFC4F330060979D /* AddQuhuoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuhuoVC.h; sourceTree = "<group>"; };
-		04CAEB481BFC4F330060979D /* AddQuhuoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuhuoVC.m; sourceTree = "<group>"; };
-		04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuhuoVC.xib; sourceTree = "<group>"; };
 		04CAEB4A1BFC4F330060979D /* ConfigCQuhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCQuhuoTVC.h; sourceTree = "<group>"; };
 		04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCQuhuoTVC.m; sourceTree = "<group>"; };
 		04CAEB521BFC4FB10060979D /* ConfigCShouhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCShouhuoTVC.h; sourceTree = "<group>"; };
 		04CAEB531BFC4FB10060979D /* ConfigCShouhuoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCShouhuoTVC.m; sourceTree = "<group>"; };
+		04D4267F1BFEA3D500A8D672 /* EditConfigCFahuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfigCFahuoViewController.h; sourceTree = "<group>"; };
+		04D426801BFEA3D500A8D672 /* EditConfigCFahuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfigCFahuoViewController.m; sourceTree = "<group>"; };
+		04D426811BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditConfigCFahuoViewController.xib; sourceTree = "<group>"; };
+		04D426841BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigQuHuoAddressPickerViewController.h; sourceTree = "<group>"; };
+		04D426851BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigQuHuoAddressPickerViewController.m; sourceTree = "<group>"; };
+		04D426861BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigQuHuoAddressPickerViewController.xib; sourceTree = "<group>"; };
+		04D4268E1BFEA66800A8D672 /* AddConfigFahuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigFahuoViewController.h; sourceTree = "<group>"; };
+		04D4268F1BFEA66800A8D672 /* AddConfigFahuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigFahuoViewController.m; sourceTree = "<group>"; };
 		04E4E8B71BFD5E24003C300D /* AddConfigCShouhuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigCShouhuoViewController.h; sourceTree = "<group>"; };
 		04E4E8B81BFD5E24003C300D /* AddConfigCShouhuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigCShouhuoViewController.m; sourceTree = "<group>"; };
 		04E4E8BC1BFD67A5003C300D /* JSONModelConfigCShouhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelConfigCShouhuo.h; sourceTree = "<group>"; };
@@ -724,11 +732,16 @@
 		04CAEB311BFC4A910060979D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04CAEB471BFC4F330060979D /* AddQuhuoVC.h */,
-				04CAEB481BFC4F330060979D /* AddQuhuoVC.m */,
-				04CAEB491BFC4F330060979D /* AddQuhuoVC.xib */,
 				04CAEB4A1BFC4F330060979D /* ConfigCQuhuoTVC.h */,
 				04CAEB4B1BFC4F330060979D /* ConfigCQuhuoTVC.m */,
+				04D4267F1BFEA3D500A8D672 /* EditConfigCFahuoViewController.h */,
+				04D426801BFEA3D500A8D672 /* EditConfigCFahuoViewController.m */,
+				04D426811BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib */,
+				04D426841BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.h */,
+				04D426851BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.m */,
+				04D426861BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.xib */,
+				04D4268E1BFEA66800A8D672 /* AddConfigFahuoViewController.h */,
+				04D4268F1BFEA66800A8D672 /* AddConfigFahuoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1570,6 +1583,7 @@
 			files = (
 				36ADF26B1BC7AC960045E75C /* tabbed_icon.bundle in Resources */,
 				04E4E8CD1BFD84C6003C300D /* ConfigShouHuoAddressPickerViewController.xib in Resources */,
+				04D426831BFEA3D500A8D672 /* EditConfigCFahuoViewController.xib in Resources */,
 				360EF22A1BC8B1CB00385209 /* MakeOrderTotalCell.xib in Resources */,
 				360EF1E41BC8B18B00385209 /* MakeOrderShouhuoCell.xib in Resources */,
 				04CAEB2E1BFC3DB10060979D /* EditGoodsVC.xib in Resources */,
@@ -1593,9 +1607,9 @@
 				360EF1891BC8AFA900385209 /* userprotocol.gif in Resources */,
 				360EF2311BC8B1E600385209 /* Main.storyboard in Resources */,
 				36ADF3431BC7B62D0045E75C /* LoginVC.xib in Resources */,
+				04D426881BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.xib in Resources */,
 				36ADF3461BC7B62D0045E75C /* RegisterTVC.xib in Resources */,
 				360EF1911BC8AFD200385209 /* help.html in Resources */,
-				04CAEB4D1BFC4F330060979D /* AddQuhuoVC.xib in Resources */,
 				36ADF27F1BC7AF650045E75C /* GesturePassword.bundle in Resources */,
 				36D2E0581BCF26B900DC0149 /* HomeIcons.bundle in Resources */,
 				04E4E8D41BFDC63E003C300D /* area.plist in Resources */,
@@ -1657,7 +1671,6 @@
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
 				360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */,
-				04CAEB4C1BFC4F330060979D /* AddQuhuoVC.m in Sources */,
 				04CAEB3A1BFC4C510060979D /* ConfigCFahuoTableViewCell.m in Sources */,
 				36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */,
 				36ADF3441BC7B62D0045E75C /* LoginVC.m in Sources */,
@@ -1683,6 +1696,7 @@
 				36ADF3141BC7B3540045E75C /* UIImageView+AFNetworking.m in Sources */,
 				360EF2471BC8B58F00385209 /* MJRefreshGifHeader.m in Sources */,
 				360EF1A21BC8B07C00385209 /* NotifyTVC.m in Sources */,
+				04D426821BFEA3D500A8D672 /* EditConfigCFahuoViewController.m in Sources */,
 				360EF1B81BC8B0DC00385209 /* OrderSendQueryContentTVC.m in Sources */,
 				360EF19E1BC8B06B00385209 /* MyTVC.m in Sources */,
 				360EF21C1BC8B1BC00385209 /* CarModel.m in Sources */,
@@ -1733,6 +1747,7 @@
 				360EF16C1BC8AF5D00385209 /* AboutTVC.m in Sources */,
 				36ADF33A1BC7B3EA0045E75C /* MJRefreshBackNormalFooter.m in Sources */,
 				360EF21D1BC8B1BC00385209 /* MakeOrderCarCell.m in Sources */,
+				04D426871BFEA45200A8D672 /* ConfigQuHuoAddressPickerViewController.m in Sources */,
 				360EF1E21BC8B18B00385209 /* ShouhuoModel.m in Sources */,
 				36ADF2FB1BC7B17B0045E75C /* NSObject+MJCoding.m in Sources */,
 				04E4E8C61BFD82CE003C300D /* XMLDictionary.m in Sources */,
@@ -1740,6 +1755,7 @@
 				360EF2491BC8B58F00385209 /* MJRefreshStateHeader.m in Sources */,
 				36ADF2FC1BC7B17B0045E75C /* NSObject+MJKeyValue.m in Sources */,
 				04155D301BF5BF900003254F /* SDWebImageDecoder.m in Sources */,
+				04D426901BFEA66800A8D672 /* AddConfigFahuoViewController.m in Sources */,
 				04CAEB4E1BFC4F330060979D /* ConfigCQuhuoTVC.m in Sources */,
 				36ADF3661BC7B7130045E75C /* JSONModelPushMess.m in Sources */,
 				04CAEB151BFC24710060979D /* ConfigCGoodsTVC.m in Sources */,

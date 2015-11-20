@@ -199,11 +199,11 @@
 // 加数据以后要删除的
 //选中行事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
-//    //触发代理给下单页面
-//    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
-//    //关闭
-//    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
+    //触发代理给下单页面
+    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
+    //关闭
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
