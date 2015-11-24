@@ -17,6 +17,7 @@
 #import "UniformResourceLocator.h"
 #import "MBProgressHUD+HM.h"
 
+#import "HomeVC.h"
 
 @interface LoginVC ()
 
@@ -128,6 +129,9 @@
             QConfig *config = [[QConfig alloc] init];
             config.uid=obj.uid;
             config.username = obj.name;
+            config.password = obj.password;
+            config.mem_id = obj.mem_id;
+            
             [self.delegate LoginVC:self loginOK:nil];//设置回调  向来源触发事件委托
         }
     } fail:^{

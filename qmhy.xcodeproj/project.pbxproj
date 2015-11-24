@@ -31,6 +31,7 @@
 		046BF9791BFEE4BB0070F3AB /* ECCFHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF9771BFEE4BB0070F3AB /* ECCFHViewController.m */; };
 		046BF97A1BFEE4BB0070F3AB /* ECCFHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046BF9781BFEE4BB0070F3AB /* ECCFHViewController.xib */; };
 		046BF9801BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF97F1BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m */; };
+		048385861C02A4D700F060E9 /* ConfigCPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 048385851C02A4D700F060E9 /* ConfigCPasswordVC.m */; };
 		04CAEAFD1BFC237B0060979D /* ADDConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */; };
 		04CAEAFE1BFC237B0060979D /* ConfigCWuliuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF21BFC237B0060979D /* ConfigCWuliuTVC.m */; };
 		04CAEAFF1BFC237B0060979D /* EditConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF41BFC237B0060979D /* EditConfigCWuliuViewController.m */; };
@@ -66,9 +67,7 @@
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
 		2BEB6C021A16062F003C2B91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEB6C011A16062F003C2B91 /* Security.framework */; };
-		360EF14E1BC8AEEE00385209 /* ConfigCPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF14D1BC8AEEE00385209 /* ConfigCPassword.m */; };
 		360EF1511BC8AEF800385209 /* ConfigCommonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1501BC8AEF800385209 /* ConfigCommonTVC.m */; };
-		360EF1571BC8AF0D00385209 /* ConfigCCityTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1561BC8AF0D00385209 /* ConfigCCityTVC.m */; };
 		360EF15D1BC8AF1E00385209 /* ConfigCBankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF15C1BC8AF1E00385209 /* ConfigCBankVC.m */; };
 		360EF1651BC8AF3C00385209 /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1601BC8AF3C00385209 /* HomeIconButton.m */; };
 		360EF1661BC8AF3C00385209 /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1621BC8AF3C00385209 /* HomeNVC.m */; };
@@ -246,6 +245,8 @@
 		046BF9781BFEE4BB0070F3AB /* ECCFHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECCFHViewController.xib; sourceTree = "<group>"; };
 		046BF97E1BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigShouHuoAddressPickerViewController.h; sourceTree = "<group>"; };
 		046BF97F1BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigShouHuoAddressPickerViewController.m; sourceTree = "<group>"; };
+		048385841C02A4D700F060E9 /* ConfigCPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCPasswordVC.h; path = qmhy/Main/Config/ConfigCPassword/ConfigCPasswordVC.h; sourceTree = "<group>"; };
+		048385851C02A4D700F060E9 /* ConfigCPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCPasswordVC.m; path = qmhy/Main/Config/ConfigCPassword/ConfigCPasswordVC.m; sourceTree = "<group>"; };
 		04CAEAEF1BFC237B0060979D /* ADDConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDConfigCWuliuViewController.h; sourceTree = "<group>"; };
 		04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDConfigCWuliuViewController.m; sourceTree = "<group>"; };
 		04CAEAF11BFC237B0060979D /* ConfigCWuliuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCWuliuTVC.h; sourceTree = "<group>"; };
@@ -304,12 +305,8 @@
 		2BBAC1441A13FAB30062B6F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2BBAC1461A13FC180062B6F3 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		2BEB6C011A16062F003C2B91 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		360EF14C1BC8AEEE00385209 /* ConfigCPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCPassword.h; path = qmhy/Main/Config/ConfigCPassword/ConfigCPassword.h; sourceTree = "<group>"; };
-		360EF14D1BC8AEEE00385209 /* ConfigCPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCPassword.m; path = qmhy/Main/Config/ConfigCPassword/ConfigCPassword.m; sourceTree = "<group>"; };
 		360EF14F1BC8AEF800385209 /* ConfigCommonTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCommonTVC.h; path = qmhy/Main/Config/ConfigCommon/ConfigCommonTVC.h; sourceTree = "<group>"; };
 		360EF1501BC8AEF800385209 /* ConfigCommonTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCommonTVC.m; path = qmhy/Main/Config/ConfigCommon/ConfigCommonTVC.m; sourceTree = "<group>"; };
-		360EF1551BC8AF0D00385209 /* ConfigCCityTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCCityTVC.h; path = qmhy/Main/Config/ConfigCCity/ConfigCCityTVC.h; sourceTree = "<group>"; };
-		360EF1561BC8AF0D00385209 /* ConfigCCityTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCCityTVC.m; path = qmhy/Main/Config/ConfigCCity/ConfigCCityTVC.m; sourceTree = "<group>"; };
 		360EF15B1BC8AF1E00385209 /* ConfigCBankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCBankVC.h; path = qmhy/Main/Config/ConfigCBank/ConfigCBankVC.h; sourceTree = "<group>"; };
 		360EF15C1BC8AF1E00385209 /* ConfigCBankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCBankVC.m; path = qmhy/Main/Config/ConfigCBank/ConfigCBankVC.m; sourceTree = "<group>"; };
 		360EF15F1BC8AF3C00385209 /* HomeIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeIconButton.h; path = qmhy/Main/Home/HomeIconButton.h; sourceTree = "<group>"; };
@@ -1460,7 +1457,6 @@
 				36ADF3851BC895AF0045E75C /* ConfigCWuliu */,
 				36ADF3821BC895910045E75C /* ConfigCPassword */,
 				36ADF3811BC895850045E75C /* ConfigCommon */,
-				36ADF37F1BC895410045E75C /* ConfigCCity */,
 				36ADF37D1BC895230045E75C /* ConfigCBank */,
 			);
 			name = Config;
@@ -1475,15 +1471,6 @@
 			name = ConfigCBank;
 			sourceTree = "<group>";
 		};
-		36ADF37F1BC895410045E75C /* ConfigCCity */ = {
-			isa = PBXGroup;
-			children = (
-				360EF1551BC8AF0D00385209 /* ConfigCCityTVC.h */,
-				360EF1561BC8AF0D00385209 /* ConfigCCityTVC.m */,
-			);
-			name = ConfigCCity;
-			sourceTree = "<group>";
-		};
 		36ADF3811BC895850045E75C /* ConfigCommon */ = {
 			isa = PBXGroup;
 			children = (
@@ -1496,8 +1483,8 @@
 		36ADF3821BC895910045E75C /* ConfigCPassword */ = {
 			isa = PBXGroup;
 			children = (
-				360EF14C1BC8AEEE00385209 /* ConfigCPassword.h */,
-				360EF14D1BC8AEEE00385209 /* ConfigCPassword.m */,
+				048385841C02A4D700F060E9 /* ConfigCPasswordVC.h */,
+				048385851C02A4D700F060E9 /* ConfigCPasswordVC.m */,
 			);
 			name = ConfigCPassword;
 			sourceTree = "<group>";
@@ -1554,7 +1541,7 @@
 				ORGANIZATIONNAME = wsy.Inc;
 				TargetAttributes = {
 					2B84AACB1A1219980098E502 = {
-						DevelopmentTeam = NE23FT58F6;
+						DevelopmentTeam = L2KVL6NQGU;
 					};
 				};
 			};
@@ -1716,8 +1703,8 @@
 				360EF1971BC8AFFE00385209 /* OrderGetTVC.m in Sources */,
 				36ADF2831BC7AF650045E75C /* TentacleView.m in Sources */,
 				360EF1CB1BC8B0F700385209 /* OrderSendTVC.m in Sources */,
+				048385861C02A4D700F060E9 /* ConfigCPasswordVC.m in Sources */,
 				360EF1E11BC8B18B00385209 /* ShouhuoData.m in Sources */,
-				360EF14E1BC8AEEE00385209 /* ConfigCPassword.m in Sources */,
 				36ADF3161BC7B3540045E75C /* UIRefreshControl+AFNetworking.m in Sources */,
 				36ADF3121BC7B3540045E75C /* UIAlertView+AFNetworking.m in Sources */,
 				36ADF3111BC7B3540045E75C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1772,7 +1759,6 @@
 				360EF2291BC8B1CB00385209 /* MakeOrderTotalCell.m in Sources */,
 				04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */,
 				360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */,
-				360EF1571BC8AF0D00385209 /* ConfigCCityTVC.m in Sources */,
 				36ADF33B1BC7B3EA0045E75C /* MJRefreshBackStateFooter.m in Sources */,
 				360EF23F1BC8B25100385209 /* NSData+CommonCrypto.m in Sources */,
 				36ADF2A01BC7B0560045E75C /* AFHTTPSessionManager.m in Sources */,
@@ -1859,11 +1845,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "qmhy/Project/qmhy-Prefix.pch";
 				INFOPLIST_FILE = "qmhy/Project/qmhy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = qmhy;
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1876,11 +1864,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "qmhy/Project/qmhy-Prefix.pch";
 				INFOPLIST_FILE = "qmhy/Project/qmhy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = qmhy;
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};

@@ -36,6 +36,10 @@
 //bill_click进去之后里面的右上角按钮回调
 //-(void)noDefinitionPopup:(id)sender;
 //本界面有上角
+
+@property (assign , nonatomic) int asd;
+@property (assign , nonatomic) int qwe;
+
 - (IBAction)bill_click:(UIBarButtonItem *)sender;
 
 @end
@@ -93,7 +97,7 @@
 }
 
 -(void)logSubviews:(NSArray *)subviews tabnum:(int)tabnum{
-    UIView * i;
+    /*UIView * i;
     //设置tabstring
     NSMutableString * tabstring=[NSMutableString stringWithString:@""];
     for(int j=1;j<=tabnum;j++){
@@ -107,7 +111,7 @@
         }else{//当前是终端view
             NSLog(@"%@ %@",tabstring,i);
         }
-    }
+    }*/
 }
 
 //分组数量 基本没用
@@ -166,18 +170,30 @@
 //实现自定义菜单的委托（图标部分）
 -(UIImage *)setIcon{
     static int  i=0;
-    i++;
+    if (i == 12) {
+        i = 0;
+        
+    }
+     i++;
     NSString * s=[NSString stringWithFormat:@"HomeIcons.bundle/%@",self.iconPaths[(i-1)]];
     UIImage * img= [UIImage imageNamed:s];
     UIImage * scaledimg=[UIImage imageWithCGImage:img.CGImage scale:img.scale*2.0 orientation:img.imageOrientation];
     return  scaledimg;
+
 }
 
 //实现自定义菜单的委托（标题部分）
 -(NSString *)setIconTitle{
-    static int i=0;
+
+    static int i = 0;
+#warning i＝ 12 是硬编码 因为现在就12个图 个人感觉有问题。
+    if (i == 12) {
+        i = 0;
+        
+    }
     i++;
     return self.titles[(i-1)];
+    
 }
 
 //实现自定义菜单的委托（点击主界面的菜单按钮）

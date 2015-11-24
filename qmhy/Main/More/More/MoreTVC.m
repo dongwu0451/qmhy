@@ -10,8 +10,11 @@
 #import "HelpVC.h"
 #import "PriceTableVC.h"
 #import "UserProtocolVC.h"
+#import "QConfig.h"
+#import "AppDelegate.h"
+#import "LoginVC.h"
 
-@interface MoreTVC ()
+@interface MoreTVC () <UIAlertViewDelegate>
 //存储plist数组
 @property (nonatomic,strong) NSArray * servicesPlistArray;
 //打电话
@@ -23,6 +26,8 @@
 
 @synthesize webview;//自己增加的webview引用 后台的 没有界面的
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,6 +36,7 @@
     if (s) {
         self.servicesPlistArray=[NSArray arrayWithContentsOfFile:s];
     }
+    [self getStringsdsfgfdsgd];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +83,7 @@
     [cell.textLabel setText:title];
     //判断字符串是否相等
     if([title compare:@"我的邀请码"]==NSOrderedSame)
-        [cell.detailTextLabel setText:@"12345678"];//邀请码写死
+        [cell.detailTextLabel setText:[self getStringsdsfgfdsgd]];//邀请码写死
     else
         [cell.detailTextLabel setText:d[@"detail"]];
     
@@ -94,14 +100,18 @@
         [self showDialog];
     }
     if (i==1){//客服热线
-        NSString *phoneNum=@"4000560013";
-        NSURL *phoneURL=[NSURL URLWithString:[ NSString stringWithFormat:@"tel:%@",phoneNum ]];
-        if (!webview){
-            NSLog(@"jjjjjjj");
-            webview=[[UIWebView alloc] initWithFrame:CGRectZero];
-        }
-        [webview loadRequest:[NSURLRequest requestWithURL:phoneURL]];
-        [[UIApplication sharedApplication] openURL:phoneURL];
+//        NSString *phoneNum=@"4000560013";
+        
+//        NSURL *phoneURL=[NSURL URLWithString:[ NSString stringWithFormat:@"tel:%@",phoneNum ]];
+//        if (!webview){
+//            NSLog(@"jjjjjjj");
+//            webview=[[UIWebView alloc] initWithFrame:CGRectZero];
+//        }
+//        [webview loadRequest:[NSURLRequest requestWithURL:phoneURL]];
+//        [[UIApplication sharedApplication] openURL:phoneURL];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"确定要拨打电话吗？"delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alert.tag = 123434;
+        [alert show];
     }
     if (i==2){//帮助
         [self performSegueWithIdentifier:@"showDetailHelp" sender:nil];// 自带连接线
@@ -121,8 +131,31 @@
     if (i==6){//价格表
         [self performSegueWithIdentifier:@"showDetailPriceTable" sender:nil];// 自带连接线
         NSLog(@"showDetailPriceTable 666");
+    } if (i == 7) {//注销
+        NSString*appDomain = [[NSBundle mainBundle]bundleIdentifier];
+        
+        [[NSUserDefaults standardUserDefaults]removePersistentDomainForName:appDomain];
+        
+        [([UIApplication sharedApplication].delegate) performSelector:@selector(showLoginVC)];
+        
+//        NSUserDefaults *userDefatluts = [NSUserDefaults standardUserDefaults];
+//        NSDictionary *dictionary = [userDefatluts dictionaryRepresentation];
+//        for(NSString* key in [dictionary allKeys]){
+//            [userDefatluts removeObjectForKey:key];
+//            [userDefatluts synchronize];
+//        }
+//        LoginVC *tvc = [[LoginVC alloc] init];
+//        [self presentViewController:tvc animated:YES completion:^{
+//            
+//        }];
+//         [self.delegate LoginVC:self loginOK:nil];//设置回调  向来源触发事件委托
+//        UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//        RootTabBarController * tabVC=[mainsb instantiateInitialViewController];
+//        //    tabVC.selectedIndex=2;
+//        self.window.rootViewController=tabVC;
     }
 }
+
 
 //准备前往下一个界面跳转之前发生的处理
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -156,10 +189,12 @@
     }
 }
 
+
+
 //显示邀请码
 -(void)showDialog
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"您的邀请码是12345678"delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:[@"您的邀请码是:" stringByAppendingString :[self getStringsdsfgfdsgd]]delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -201,14 +236,69 @@
 
 
 //弹出窗口的回调函数 前往appstore更新
-- (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if(alertView.tag==10000) {
         if(buttonIndex==1) {
             NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com"];
             [[UIApplication sharedApplication]openURL:url];
         }
     }
+    
+    if (alertView.tag == 123434) {
+        if (buttonIndex == 1) {
+#warning 这个事测试手机号 到时候得改
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://15546680574"]];
+//            NSLog(@"确定");
+        } else {
+            NSLog(@"取消");
+        }
+    }
+    
+    
 }
+
+/**
+ * zqx是否为正确的 纯数字字符串
+ * @param params
+ * @return
+ */
+- (BOOL)isTrueNums :(NSString*)mobile{
+    NSString *matches = @"^[0-9]*$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",matches];
+    int isMatch = [phoneTest evaluateWithObject:mobile];
+    if (isMatch == 1 && mobile.length == 6) {
+        return 1;
+    }
+    return 0;
+}
+
+/**
+ * zqx根据数字字符串得到对应的字母字符串
+ * @param params 6位0-9数字字符串
+ * @return
+ */
+- (NSString *)getStringsdsfgfdsgd {
+    NSArray *array = @[@"z", @"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i"];
+    NSMutableString *finalString = @"";
+    QConfig *config = [[QConfig alloc] init];
+    NSString *six = [config.mem_id substringFromIndex:config.mem_id.length-6];
+    if ([self isTrueNums:six] == 1) {
+        for (int i = 0; i < six.length; i++) {
+            int hehe = [[six substringWithRange:NSMakeRange(i, 1)] intValue];
+            finalString = [finalString stringByAppendingString:array[hehe]];
+        }
+        
+    }else {
+        NSLog(@"格式粗欧文");
+    }
+//    NSLog(@"%@", finalString);
+    return finalString;
+    
+}
+
+
+
+
+
 
 @end

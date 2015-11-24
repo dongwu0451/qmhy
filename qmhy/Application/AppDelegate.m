@@ -12,13 +12,7 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    
-
-    
-    
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //service更多  wealth我的  home主页  discovery订单
     
     //支付宝思路：共有三个可选的rootVC loginVC、gestureVC、tabbarVC
@@ -34,14 +28,14 @@
     if ([isLogined isEqualToString:@"1"] ) {//登录过了
         //NSLog(@"aaa");
         //NSLog(@"aaa%d",1);
-        //[self showTabbarVC];
+        [self showTabbarVC];
      }else{
         //WidgetsVC是一个库，可以创建很多不同的view，这里指使用
 //        [self showWidgetsLoginVC];
          //config.isLogined=@"1";
-         //[self showLoginVC];//
+         [self showLoginVC];//
     }
-    [self showLoginVC];
+    //[self showLoginVC];
     
     
     //================================显示封面方法================================
@@ -111,13 +105,6 @@
     self.window.rootViewController=loginVC;
 }
 
-//显示密码手势界面
--(void)showGestureVC{
-    GesturePasswordController * passwordC=[[GesturePasswordController alloc]init];
-    passwordC.delegate=self;
-    self.window.rootViewController=passwordC;
-}
-
 //显示tabbar主页界面
 -(void)showTabbarVC{
     UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -132,24 +119,16 @@
      //showGestureVC];
 }
 
-//实现委托verifyOK  验证完手势密码进入tabbarVC
--(void)GesturePasswordController:(GesturePasswordController *)passController verifyOK:(id)nilplaceholder{
-    NSLog(@"验证完手势密码进入tabbarVC");
-    [self showTabbarVC];
-}
-//实现委托resetOK   设置完手势密码进入tabbarVC
--(void)GesturePasswordController:(GesturePasswordController *)passController resetOK:(id)nilplaceholder{
-    NSLog(@"设置完手势密码进入tabbarVC2");
-    [self showTabbarVC];
-}
+
 //==========================================================
 //全局函数 弹出提示框
-+(void)showAlert:(NSString *)str{
++ (void)showAlert:(NSString *)str {
     UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"提醒信息" message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alter show];
 }
+
 //字符串 是否空
-+(BOOL) isBlankString:(NSString *)string {
++ (BOOL) isBlankString:(NSString *)string {
     if (string == nil || string == NULL) {
         return YES;
     }

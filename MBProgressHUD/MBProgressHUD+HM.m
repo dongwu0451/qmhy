@@ -28,7 +28,7 @@
 }
 
 #pragma mark 显示错误信息
-+ (void)showError:(NSString *)error toView:(UIView *)view{
++ (void)showError:(NSString *)error toView:(UIView *)view {
     [self show:error icon:@"error.png" view:view];
 }
 

@@ -26,6 +26,22 @@
     [userDef synchronize];
 }
 
+
+// 获取注册名
+- (NSString *)mem_id {
+    NSString *s;
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    s = [userDef objectForKey:@"mem_id"];
+    return s;
+}
+
+// 设置注册名
+- (void)setMem_id:(NSString *)mem_id {
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    [userDef setObject:mem_id forKey:@"mem_id"];
+    [userDef synchronize];
+}
+
 //获取用户
 - (NSString *)username {
     NSString *s;

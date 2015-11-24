@@ -60,7 +60,7 @@
     if (section==0) {
         return 2;
     }else{
-        return 5;
+        return 4;
     }
 }
 
@@ -107,17 +107,12 @@
         cell.imageView.image=[UIImage imageNamed:@"Wea_wodebaozhang"];
         [cell.textLabel setText:@"配置常用货物"];
         [cell.detailTextLabel setText:@""];
-    }else if (indexPath.section==1 && indexPath.row==2){
-        //1.2
-        cell.imageView.image=[UIImage imageNamed:@"Wea_aixinjuanzeng"];
-        [cell.textLabel setText:@"配置常用到货城市"];
-        [cell.detailTextLabel setText:@""];
-    }else if (indexPath.section==1 && indexPath.row==3){
+    } else if (indexPath.section==1 && indexPath.row==2){
         //1.3
         cell.imageView.image=[UIImage imageNamed:@"Wea_aixinjuanzeng"];
         [cell.textLabel setText:@"配置常用发货信息"]; // 据说改成发货
         [cell.detailTextLabel setText:@""];
-    }else if (indexPath.section==1 && indexPath.row==4){
+    }else if (indexPath.section==1 && indexPath.row==3){
         //1.4
         cell.imageView.image=[UIImage imageNamed:@"Wea_aixinjuanzeng"];
         [cell.textLabel setText:@"配置常用收货信息"];
@@ -149,77 +144,15 @@
         [self performSegueWithIdentifier:@"showConfigCGoods" sender:nil];
         NSLog(@"showConfigCGoods");
     }
-    if (section==1 && row==2){//配置常用到货城市
-        [self performSegueWithIdentifier:@"showConfigCCity" sender:nil];
-        NSLog(@"showConfigCCity");
-    }
-    if (section==1 && row==3){//配置常用取货信息  据说改成发货
+    if (section==1 && row==2){//配置常用取货信息  据说改成发货
         [self performSegueWithIdentifier:@"showConfigCQuhuo" sender:nil];
         NSLog(@"showConfigCQuhuo");
     }
-    if (section==1 && row==4){//配置常用收货信息
+    if (section==1 && row==3){//配置常用收货信息
         [self performSegueWithIdentifier:@"showConfigCShouhuo" sender:nil];
         NSLog(@"showConfigCShouhuo");
     }
 }
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

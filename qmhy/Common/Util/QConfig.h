@@ -12,6 +12,7 @@
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *username; // 用户名
 @property (nonatomic, copy) NSString *password; // 密码
+@property (nonatomic, copy) NSString *mem_id; // 注册名
 
 @property (nonatomic, copy) NSString *isFirst; // 是否是第一次登录
 @property (nonatomic, copy) NSString *isLogined; // 是否是第一次登录
