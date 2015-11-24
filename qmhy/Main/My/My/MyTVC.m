@@ -7,6 +7,7 @@
 //
 
 #import "MyTVC.h"
+#import "QConfig.h"
 
 @interface MyTVC ()
 
@@ -110,8 +111,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if (indexPath.section==0) {//第0个区块，设置用户头像等
         cell.imageView.image=[UIImage imageNamed:@"Wea_avatar"];
-        [cell.textLabel setText:@"王师傅"];
-        [cell.detailTextLabel setText:@""];//"余额0分  积分12分"];
+        QConfig *config = [[QConfig alloc] init];
+        [cell.textLabel setText:config.username];
+        [cell.detailTextLabel setText:config.balance];//"余额0分  积分12分"];
     }
     else if(indexPath.section==1 && indexPath.row==0){//1.0
         cell.imageView.image=[UIImage imageNamed:@"Wea_zhanghuyue"];

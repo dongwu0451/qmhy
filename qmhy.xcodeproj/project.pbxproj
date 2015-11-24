@@ -88,7 +88,6 @@
 		360EF19D1BC8B06B00385209 /* MyNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF19A1BC8B06B00385209 /* MyNVC.m */; };
 		360EF19E1BC8B06B00385209 /* MyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF19C1BC8B06B00385209 /* MyTVC.m */; };
 		360EF1A21BC8B07C00385209 /* NotifyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A11BC8B07C00385209 /* NotifyTVC.m */; };
-		360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A51BC8B08A00385209 /* NotifyContentTVC.m */; };
 		360EF1AA1BC8B09900385209 /* TousuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1A91BC8B09900385209 /* TousuVC.m */; };
 		360EF1AE1BC8B0AA00385209 /* YqTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1AD1BC8B0AA00385209 /* YqTVC.m */; };
 		360EF1B81BC8B0DC00385209 /* OrderSendQueryContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF1B51BC8B0DC00385209 /* OrderSendQueryContentTVC.m */; };
@@ -341,8 +340,6 @@
 		360EF19C1BC8B06B00385209 /* MyTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTVC.m; path = qmhy/Main/My/My/MyTVC.m; sourceTree = "<group>"; };
 		360EF1A01BC8B07C00385209 /* NotifyTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotifyTVC.h; path = qmhy/Main/My/Notify/NotifyTVC.h; sourceTree = "<group>"; };
 		360EF1A11BC8B07C00385209 /* NotifyTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotifyTVC.m; path = qmhy/Main/My/Notify/NotifyTVC.m; sourceTree = "<group>"; };
-		360EF1A41BC8B08A00385209 /* NotifyContentTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotifyContentTVC.h; path = qmhy/Main/My/NotifyContent/NotifyContentTVC.h; sourceTree = "<group>"; };
-		360EF1A51BC8B08A00385209 /* NotifyContentTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotifyContentTVC.m; path = qmhy/Main/My/NotifyContent/NotifyContentTVC.m; sourceTree = "<group>"; };
 		360EF1A81BC8B09900385209 /* TousuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TousuVC.h; path = qmhy/Main/My/Tousu/TousuVC.h; sourceTree = "<group>"; };
 		360EF1A91BC8B09900385209 /* TousuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TousuVC.m; path = qmhy/Main/My/Tousu/TousuVC.m; sourceTree = "<group>"; };
 		360EF1AC1BC8B0AA00385209 /* YqTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YqTVC.h; path = qmhy/Main/My/Yq/YqTVC.h; sourceTree = "<group>"; };
@@ -924,7 +921,6 @@
 			children = (
 				360EF1AB1BC8B0A300385209 /* Yq */,
 				360EF1A71BC8B09200385209 /* Tousu */,
-				360EF1A31BC8B08200385209 /* NotifyContent */,
 				360EF19F1BC8B07400385209 /* Notify */,
 				360EF1981BC8B06200385209 /* My */,
 				360EF1941BC8AFF100385209 /* GoodsGet */,
@@ -959,15 +955,6 @@
 				360EF1A11BC8B07C00385209 /* NotifyTVC.m */,
 			);
 			name = Notify;
-			sourceTree = "<group>";
-		};
-		360EF1A31BC8B08200385209 /* NotifyContent */ = {
-			isa = PBXGroup;
-			children = (
-				360EF1A41BC8B08A00385209 /* NotifyContentTVC.h */,
-				360EF1A51BC8B08A00385209 /* NotifyContentTVC.m */,
-			);
-			name = NotifyContent;
 			sourceTree = "<group>";
 		};
 		360EF1A71BC8B09200385209 /* Tousu */ = {
@@ -1657,7 +1644,6 @@
 				04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */,
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
-				360EF1A61BC8B08A00385209 /* NotifyContentTVC.m in Sources */,
 				04CAEB3A1BFC4C510060979D /* ConfigCFahuoTableViewCell.m in Sources */,
 				046BF9791BFEE4BB0070F3AB /* ECCFHViewController.m in Sources */,
 				046BF9801BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m in Sources */,

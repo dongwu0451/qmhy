@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NotifyTVC : UITableViewController
-@property (strong, nonatomic) IBOutlet UITableView *theTableview;
+
 
 @end

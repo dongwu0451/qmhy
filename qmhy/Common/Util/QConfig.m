@@ -20,12 +20,24 @@
 
 //设置用户id
 - (void)setUid:(NSString *)uid {
-    
     NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
     [userDef setObject:uid forKey:@"uid"];
     [userDef synchronize];
 }
 
+// 余额
+- (NSString *)balance {
+    NSString *s;
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    s = [userDef objectForKey:@"balance"];
+    return s;
+}
+
+- (void)setBalance:(NSString *)balance {
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    [userDef setObject:balance forKey:@"balance"];
+    [userDef synchronize];
+}
 
 // 获取注册名
 - (NSString *)mem_id {
