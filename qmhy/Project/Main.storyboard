@@ -2383,8 +2383,34 @@
                     <view key="view" contentMode="scaleToFill" id="dQf-zj-Y4h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_yunyin" translatesAutoresizingMaskIntoConstraints="NO" id="qDH-hh-YgP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="387"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-pL-Axb">
+                                <rect key="frame" x="0.0" y="451" width="320" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4lY-mk-FEc"/>
+                                </constraints>
+                                <state key="normal" title=" 按住 说话">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="leading" secondItem="vgX-pL-Axb" secondAttribute="leading" id="6Mq-f5-Koh"/>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="trailing" secondItem="vgX-pL-Axb" secondAttribute="trailing" id="AHA-Sa-xGE"/>
+                            <constraint firstItem="vgX-pL-Axb" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" id="IAz-ZJ-Lnh"/>
+                            <constraint firstItem="J7a-XW-Boh" firstAttribute="top" secondItem="vgX-pL-Axb" secondAttribute="bottom" constant="8" symbolic="YES" id="dGk-Km-E2V"/>
+                            <constraint firstItem="vgX-pL-Axb" firstAttribute="top" secondItem="qDH-hh-YgP" secondAttribute="bottom" id="fn1-xu-Ncr"/>
+                            <constraint firstAttribute="trailing" secondItem="qDH-hh-YgP" secondAttribute="trailing" id="rJx-Vp-UK8"/>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" id="wri-Oh-IZk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投诉和建议" id="iJ8-Zo-0eC"/>
                 </viewController>
@@ -3229,6 +3255,7 @@
         <image name="ap_home_top_icon_pay_new.png" width="160" height="104"/>
         <image name="ap_home_top_icon_scan_new.png" width="160" height="104"/>
         <image name="first" width="30" height="30"/>
+        <image name="ic_yunyin" width="1024" height="1024"/>
         <image name="makeorder_goods_unit.png" width="822" height="276"/>
         <image name="splash.jpg" width="320" height="480"/>
     </resources>
