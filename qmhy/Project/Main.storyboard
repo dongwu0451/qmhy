@@ -948,7 +948,7 @@
         <!--货运小秘-->
         <scene sceneID="lw1-UT-eut">
             <objects>
-                <tableViewController id="6xf-Qw-vxL" sceneMemberID="viewController">
+                <tableViewController id="6xf-Qw-vxL" customClass="NotifyHYXMTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bvZ-X9-X0h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -980,7 +980,7 @@
         <!--优惠活动-->
         <scene sceneID="Gog-jY-8Xp">
             <objects>
-                <viewController id="hFr-mM-i9J" sceneMemberID="viewController">
+                <viewController id="hFr-mM-i9J" customClass="NotifyYHHDViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xFJ-Io-REg"/>
                         <viewControllerLayoutGuide type="bottom" id="ra8-j1-VOm"/>
@@ -988,10 +988,26 @@
                     <view key="view" contentMode="scaleToFill" id="juP-YJ-24G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-Th-bxW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ra8-j1-VOm" firstAttribute="top" secondItem="L4B-Th-bxW" secondAttribute="bottom" id="Mhw-Hx-uBV"/>
+                            <constraint firstAttribute="trailing" secondItem="L4B-Th-bxW" secondAttribute="trailing" id="TYR-RF-dYe"/>
+                            <constraint firstItem="L4B-Th-bxW" firstAttribute="leading" secondItem="juP-YJ-24G" secondAttribute="leading" id="Tb8-jI-b4C"/>
+                            <constraint firstItem="L4B-Th-bxW" firstAttribute="top" secondItem="xFJ-Io-REg" secondAttribute="bottom" id="Z8U-I3-den"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="优惠活动" id="3WK-o9-NkC"/>
+                    <connections>
+                        <outlet property="webView" destination="L4B-Th-bxW" id="HnT-DH-T9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkh-dR-fK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1000,7 +1016,7 @@
         <!--物流通知-->
         <scene sceneID="z9J-tu-PYz">
             <objects>
-                <tableViewController id="n50-4e-sEs" sceneMemberID="viewController">
+                <tableViewController id="n50-4e-sEs" customClass="NotifyWLTZTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fcD-zi-2DW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1446,7 +1462,7 @@
         <!--最新通知-->
         <scene sceneID="EIA-rZ-CMY">
             <objects>
-                <viewController id="vtJ-8A-Bt9" sceneMemberID="viewController">
+                <viewController id="vtJ-8A-Bt9" customClass="NotifyZXTZViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CJW-jQ-yBv"/>
                         <viewControllerLayoutGuide type="bottom" id="IdO-0Q-BAp"/>
@@ -1454,10 +1470,26 @@
                     <view key="view" contentMode="scaleToFill" id="rs6-N0-Csn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNS-P4-osc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HNS-P4-osc" secondAttribute="trailing" id="7n4-cl-glp"/>
+                            <constraint firstItem="HNS-P4-osc" firstAttribute="top" secondItem="CJW-jQ-yBv" secondAttribute="bottom" id="Yo8-s4-Yhk"/>
+                            <constraint firstItem="HNS-P4-osc" firstAttribute="leading" secondItem="rs6-N0-Csn" secondAttribute="leading" id="eaN-8u-zhB"/>
+                            <constraint firstItem="IdO-0Q-BAp" firstAttribute="top" secondItem="HNS-P4-osc" secondAttribute="bottom" id="uOA-Hj-h1T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="最新通知" id="Hrd-sY-j1z"/>
+                    <connections>
+                        <outlet property="webView" destination="HNS-P4-osc" id="Pxm-kN-jMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWs-rN-7uD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

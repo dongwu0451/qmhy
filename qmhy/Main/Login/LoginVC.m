@@ -132,6 +132,7 @@
             config.password = obj.password;
             config.mem_id = obj.mem_id;
             config.balance = obj.balance;
+            config.isLogined = @"1";
             [self.delegate LoginVC:self loginOK:nil];//设置回调  向来源触发事件委托
         }
     } fail:^{

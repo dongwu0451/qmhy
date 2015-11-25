@@ -26,12 +26,22 @@
 		04155D3A1BF5BF900003254F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D291BF5BF900003254F /* UIImageView+WebCache.m */; };
 		04155D3B1BF5BF900003254F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */; };
 		04155D3F1BF5C96D0003254F /* UniformResourceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */; };
+		04425F361C0450E700799BBF /* NotifyHYXMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04425F351C0450E700799BBF /* NotifyHYXMTableViewController.m */; };
+		04425F3A1C04517400799BBF /* NotifyHYXMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04425F381C04517400799BBF /* NotifyHYXMTableViewCell.m */; };
+		04425F3B1C04517400799BBF /* NotifyHYXMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04425F391C04517400799BBF /* NotifyHYXMTableViewCell.xib */; };
+		04425F3E1C045B2000799BBF /* JSONModelNotifyHYXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 04425F3D1C045B2000799BBF /* JSONModelNotifyHYXM.m */; };
 		046BF96A1BFEDC580070F3AB /* ConfigFHAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF9681BFEDC580070F3AB /* ConfigFHAPViewController.m */; };
 		046BF96B1BFEDC580070F3AB /* ConfigFHAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046BF9691BFEDC580070F3AB /* ConfigFHAPViewController.xib */; };
 		046BF9791BFEE4BB0070F3AB /* ECCFHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF9771BFEE4BB0070F3AB /* ECCFHViewController.m */; };
 		046BF97A1BFEE4BB0070F3AB /* ECCFHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046BF9781BFEE4BB0070F3AB /* ECCFHViewController.xib */; };
 		046BF9801BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF97F1BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m */; };
 		048385861C02A4D700F060E9 /* ConfigCPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 048385851C02A4D700F060E9 /* ConfigCPasswordVC.m */; };
+		04A326A91C05427900F611EE /* JSONModelNotifyWLTZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A326A81C05427900F611EE /* JSONModelNotifyWLTZ.m */; };
+		04A326AD1C0543BC00F611EE /* NotifyWLTZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A326AB1C0543BC00F611EE /* NotifyWLTZTableViewCell.m */; };
+		04A326AE1C0543BC00F611EE /* NotifyWLTZTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A326AC1C0543BC00F611EE /* NotifyWLTZTableViewCell.xib */; };
+		04A326B11C0543FE00F611EE /* NotifyWLTZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A326B01C0543FE00F611EE /* NotifyWLTZTableViewController.m */; };
+		04A326B41C0561D900F611EE /* NotifyYHHDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A326B31C0561D900F611EE /* NotifyYHHDViewController.m */; };
+		04A326B71C05780300F611EE /* NotifyZXTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A326B61C05780300F611EE /* NotifyZXTZViewController.m */; };
 		04CAEAFD1BFC237B0060979D /* ADDConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */; };
 		04CAEAFE1BFC237B0060979D /* ConfigCWuliuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF21BFC237B0060979D /* ConfigCWuliuTVC.m */; };
 		04CAEAFF1BFC237B0060979D /* EditConfigCWuliuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAEAF41BFC237B0060979D /* EditConfigCWuliuViewController.m */; };
@@ -236,6 +246,13 @@
 		04155D2B1BF5BF900003254F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		04155D3D1BF5C96D0003254F /* UniformResourceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformResourceLocator.h; sourceTree = "<group>"; };
 		04155D3E1BF5C96D0003254F /* UniformResourceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformResourceLocator.m; sourceTree = "<group>"; };
+		04425F341C0450E700799BBF /* NotifyHYXMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyHYXMTableViewController.h; sourceTree = "<group>"; };
+		04425F351C0450E700799BBF /* NotifyHYXMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyHYXMTableViewController.m; sourceTree = "<group>"; };
+		04425F371C04517400799BBF /* NotifyHYXMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyHYXMTableViewCell.h; sourceTree = "<group>"; };
+		04425F381C04517400799BBF /* NotifyHYXMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyHYXMTableViewCell.m; sourceTree = "<group>"; };
+		04425F391C04517400799BBF /* NotifyHYXMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyHYXMTableViewCell.xib; sourceTree = "<group>"; };
+		04425F3C1C045B2000799BBF /* JSONModelNotifyHYXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelNotifyHYXM.h; sourceTree = "<group>"; };
+		04425F3D1C045B2000799BBF /* JSONModelNotifyHYXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelNotifyHYXM.m; sourceTree = "<group>"; };
 		046BF9671BFEDC580070F3AB /* ConfigFHAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigFHAPViewController.h; sourceTree = "<group>"; };
 		046BF9681BFEDC580070F3AB /* ConfigFHAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigFHAPViewController.m; sourceTree = "<group>"; };
 		046BF9691BFEDC580070F3AB /* ConfigFHAPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigFHAPViewController.xib; sourceTree = "<group>"; };
@@ -246,6 +263,17 @@
 		046BF97F1BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigShouHuoAddressPickerViewController.m; sourceTree = "<group>"; };
 		048385841C02A4D700F060E9 /* ConfigCPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigCPasswordVC.h; path = qmhy/Main/Config/ConfigCPassword/ConfigCPasswordVC.h; sourceTree = "<group>"; };
 		048385851C02A4D700F060E9 /* ConfigCPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigCPasswordVC.m; path = qmhy/Main/Config/ConfigCPassword/ConfigCPasswordVC.m; sourceTree = "<group>"; };
+		04A326A71C05427900F611EE /* JSONModelNotifyWLTZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelNotifyWLTZ.h; sourceTree = "<group>"; };
+		04A326A81C05427900F611EE /* JSONModelNotifyWLTZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelNotifyWLTZ.m; sourceTree = "<group>"; };
+		04A326AA1C0543BC00F611EE /* NotifyWLTZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyWLTZTableViewCell.h; sourceTree = "<group>"; };
+		04A326AB1C0543BC00F611EE /* NotifyWLTZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyWLTZTableViewCell.m; sourceTree = "<group>"; };
+		04A326AC1C0543BC00F611EE /* NotifyWLTZTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyWLTZTableViewCell.xib; sourceTree = "<group>"; };
+		04A326AF1C0543FE00F611EE /* NotifyWLTZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyWLTZTableViewController.h; sourceTree = "<group>"; };
+		04A326B01C0543FE00F611EE /* NotifyWLTZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyWLTZTableViewController.m; sourceTree = "<group>"; };
+		04A326B21C0561D900F611EE /* NotifyYHHDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyYHHDViewController.h; sourceTree = "<group>"; };
+		04A326B31C0561D900F611EE /* NotifyYHHDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyYHHDViewController.m; sourceTree = "<group>"; };
+		04A326B51C05780300F611EE /* NotifyZXTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyZXTZViewController.h; sourceTree = "<group>"; };
+		04A326B61C05780300F611EE /* NotifyZXTZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyZXTZViewController.m; sourceTree = "<group>"; };
 		04CAEAEF1BFC237B0060979D /* ADDConfigCWuliuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDConfigCWuliuViewController.h; sourceTree = "<group>"; };
 		04CAEAF01BFC237B0060979D /* ADDConfigCWuliuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDConfigCWuliuViewController.m; sourceTree = "<group>"; };
 		04CAEAF11BFC237B0060979D /* ConfigCWuliuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCWuliuTVC.h; sourceTree = "<group>"; };
@@ -621,6 +649,56 @@
 			path = qmhy/Common/Tool;
 			sourceTree = "<group>";
 		};
+		04425F301C044F9600799BBF /* HuoYunXiaoMi(货运小秘) */ = {
+			isa = PBXGroup;
+			children = (
+				04425F341C0450E700799BBF /* NotifyHYXMTableViewController.h */,
+				04425F351C0450E700799BBF /* NotifyHYXMTableViewController.m */,
+				04425F371C04517400799BBF /* NotifyHYXMTableViewCell.h */,
+				04425F381C04517400799BBF /* NotifyHYXMTableViewCell.m */,
+				04425F391C04517400799BBF /* NotifyHYXMTableViewCell.xib */,
+				04425F3C1C045B2000799BBF /* JSONModelNotifyHYXM.h */,
+				04425F3D1C045B2000799BBF /* JSONModelNotifyHYXM.m */,
+			);
+			name = "HuoYunXiaoMi(货运小秘)";
+			path = qmhy/Main/My/Notify/HuoYunXiaoMi;
+			sourceTree = "<group>";
+		};
+		04425F311C044F9600799BBF /* WuLiuTongZhi(物流通知) */ = {
+			isa = PBXGroup;
+			children = (
+				04A326A71C05427900F611EE /* JSONModelNotifyWLTZ.h */,
+				04A326A81C05427900F611EE /* JSONModelNotifyWLTZ.m */,
+				04A326AA1C0543BC00F611EE /* NotifyWLTZTableViewCell.h */,
+				04A326AB1C0543BC00F611EE /* NotifyWLTZTableViewCell.m */,
+				04A326AC1C0543BC00F611EE /* NotifyWLTZTableViewCell.xib */,
+				04A326AF1C0543FE00F611EE /* NotifyWLTZTableViewController.h */,
+				04A326B01C0543FE00F611EE /* NotifyWLTZTableViewController.m */,
+			);
+			name = "WuLiuTongZhi(物流通知)";
+			path = qmhy/Main/My/Notify/WuLiuTongZhi;
+			sourceTree = "<group>";
+		};
+		04425F321C044F9600799BBF /* YouHuiHuoDong(优惠活动) */ = {
+			isa = PBXGroup;
+			children = (
+				04A326B21C0561D900F611EE /* NotifyYHHDViewController.h */,
+				04A326B31C0561D900F611EE /* NotifyYHHDViewController.m */,
+			);
+			name = "YouHuiHuoDong(优惠活动)";
+			path = qmhy/Main/My/Notify/YouHuiHuoDong;
+			sourceTree = "<group>";
+		};
+		04425F331C044F9600799BBF /* ZuiXinTongZhi(最新通知) */ = {
+			isa = PBXGroup;
+			children = (
+				04A326B51C05780300F611EE /* NotifyZXTZViewController.h */,
+				04A326B61C05780300F611EE /* NotifyZXTZViewController.m */,
+			);
+			name = "ZuiXinTongZhi(最新通知)";
+			path = qmhy/Main/My/Notify/ZuiXinTongZhi;
+			sourceTree = "<group>";
+		};
 		04CAEAEE1BFC237B0060979D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,6 +1029,10 @@
 		360EF19F1BC8B07400385209 /* Notify */ = {
 			isa = PBXGroup;
 			children = (
+				04425F301C044F9600799BBF /* HuoYunXiaoMi(货运小秘) */,
+				04425F311C044F9600799BBF /* WuLiuTongZhi(物流通知) */,
+				04425F321C044F9600799BBF /* YouHuiHuoDong(优惠活动) */,
+				04425F331C044F9600799BBF /* ZuiXinTongZhi(最新通知) */,
 				360EF1A01BC8B07C00385209 /* NotifyTVC.h */,
 				360EF1A11BC8B07C00385209 /* NotifyTVC.m */,
 			);
@@ -1568,11 +1650,13 @@
 				046BF96B1BFEDC580070F3AB /* ConfigFHAPViewController.xib in Resources */,
 				360EF2321BC8B1E600385209 /* qmhy-Info.plist in Resources */,
 				360EF1F21BC8B19600385209 /* MakeOrderQuhuoCell.xib in Resources */,
+				04A326AE1C0543BC00F611EE /* NotifyWLTZTableViewCell.xib in Resources */,
 				36ADF2671BC7AC960045E75C /* Images.xcassets in Resources */,
 				046BF97A1BFEE4BB0070F3AB /* ECCFHViewController.xib in Resources */,
 				360EF1901BC8AFD200385209 /* entlib.gif in Resources */,
 				04CAEB401BFC4C750060979D /* ConfigCShouhuoTableViewCell.xib in Resources */,
 				04CAEB3B1BFC4C510060979D /* ConfigCFahuoTableViewCell.xib in Resources */,
+				04425F3B1C04517400799BBF /* NotifyHYXMTableViewCell.xib in Resources */,
 				36D2E05A1BCF27AA00DC0149 /* Home.bundle in Resources */,
 				360EF18A1BC8AFA900385209 /* userprotocol.html in Resources */,
 				04CAEB1A1BFC24710060979D /* ConfigCGoodsTableViewCell.xib in Resources */,
@@ -1640,11 +1724,14 @@
 				04CAEB181BFC24710060979D /* JSONModelConfigGGoods.m in Sources */,
 				360EF2531BCA321000385209 /* SelectCarVC.m in Sources */,
 				360EF2501BC8DF8200385209 /* QConfig.m in Sources */,
+				04A326B71C05780300F611EE /* NotifyZXTZViewController.m in Sources */,
 				36ADF2F71BC7B17B0045E75C /* MJConst.m in Sources */,
 				04E4E8BE1BFD67A5003C300D /* JSONModelConfigCShouhuo.m in Sources */,
+				04A326AD1C0543BC00F611EE /* NotifyWLTZTableViewCell.m in Sources */,
 				36ADF2FD1BC7B17B0045E75C /* NSObject+MJProperty.m in Sources */,
 				36ADF2A21BC7B0560045E75C /* AFSecurityPolicy.m in Sources */,
 				04CAEB3A1BFC4C510060979D /* ConfigCFahuoTableViewCell.m in Sources */,
+				04A326B11C0543FE00F611EE /* NotifyWLTZTableViewController.m in Sources */,
 				046BF9791BFEE4BB0070F3AB /* ECCFHViewController.m in Sources */,
 				046BF9801BFEF47F0070F3AB /* ConfigShouHuoAddressPickerViewController.m in Sources */,
 				36ADF2B31BC7B0650045E75C /* UIScrollView+MJExtension.m in Sources */,
@@ -1673,6 +1760,7 @@
 				360EF1A21BC8B07C00385209 /* NotifyTVC.m in Sources */,
 				360EF1B81BC8B0DC00385209 /* OrderSendQueryContentTVC.m in Sources */,
 				360EF19E1BC8B06B00385209 /* MyTVC.m in Sources */,
+				04425F3E1C045B2000799BBF /* JSONModelNotifyHYXM.m in Sources */,
 				360EF21C1BC8B1BC00385209 /* CarModel.m in Sources */,
 				36ADF3641BC7B7130045E75C /* JSONModelCommonLogistics.m in Sources */,
 				36ADF3651BC7B7130045E75C /* JSONModelLogin.m in Sources */,
@@ -1699,8 +1787,10 @@
 				04155D2C1BF5BF900003254F /* MKAnnotationView+WebCache.m in Sources */,
 				04155D2E1BF5BF900003254F /* SDImageCache.m in Sources */,
 				36ADF2B51BC7B0650045E75C /* UIView+MJExtension.m in Sources */,
+				04425F3A1C04517400799BBF /* NotifyHYXMTableViewCell.m in Sources */,
 				04CAEB021BFC237B0060979D /* ConfigCWuliuTableViewCell.m in Sources */,
 				360EF2051BC8B1A200385209 /* BigAndSmallGoodsModel.m in Sources */,
+				04A326B41C0561D900F611EE /* NotifyYHHDViewController.m in Sources */,
 				360EF1AE1BC8B0AA00385209 /* YqTVC.m in Sources */,
 				360EF2281BC8B1CB00385209 /* MakeOrderTVC.m in Sources */,
 				36ADF3301BC7B3E10045E75C /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1739,12 +1829,14 @@
 				360EF2271BC8B1CB00385209 /* MakeOrderOKTVC.m in Sources */,
 				04155D081BF5BF8B0003254F /* MBProgressHUD+HM.m in Sources */,
 				360EF17B1BC8AF7E00385209 /* MoreTVC.m in Sources */,
+				04425F361C0450E700799BBF /* NotifyHYXMTableViewController.m in Sources */,
 				360EF18B1BC8AFA900385209 /* UserProtocolVC.m in Sources */,
 				04155D311BF5BF900003254F /* SDWebImageDownloader.m in Sources */,
 				36ADF2B21BC7B0650045E75C /* MJRefreshConst.m in Sources */,
 				360EF2291BC8B1CB00385209 /* MakeOrderTotalCell.m in Sources */,
 				04E4E8C21BFD6E4F003C300D /* EditConfigCShouhuoViewController.m in Sources */,
 				360EF1F31BC8B19600385209 /* QuhuoModel.m in Sources */,
+				04A326A91C05427900F611EE /* JSONModelNotifyWLTZ.m in Sources */,
 				36ADF33B1BC7B3EA0045E75C /* MJRefreshBackStateFooter.m in Sources */,
 				360EF23F1BC8B25100385209 /* NSData+CommonCrypto.m in Sources */,
 				36ADF2A01BC7B0560045E75C /* AFHTTPSessionManager.m in Sources */,
