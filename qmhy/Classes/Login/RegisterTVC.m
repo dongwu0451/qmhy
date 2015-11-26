@@ -33,10 +33,6 @@ static int count = 0;
 
 @implementation RegisterTVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 //单击注册按钮
 - (IBAction)clickReg:(id)sender {
     

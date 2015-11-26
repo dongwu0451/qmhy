@@ -14,17 +14,7 @@
 
 @implementation OrderSendListTVC
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     //维护UINavigationItem
@@ -45,24 +35,13 @@
 }
 
 //返回按钮
--(void)popVC{
+- (void)popVC {
     [self.navigationController popViewControllerAnimated:YES];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-//组数量
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 0;
-}
 
 //行数量
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
 

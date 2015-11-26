@@ -12,7 +12,7 @@
 @interface SinglePageNVC : UINavigationController
 
 @property (nonatomic,retain) NSString * tabbarItemImagePath;
--(void)setTabBarImage;
+- (void)setTabBarImage;
 
 
 @end

@@ -15,28 +15,6 @@
 
 @implementation OrderSendTVC
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    //其实这个完全可以做成static tableview。
-
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 //组数量
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "HomeIconButton.h"//自定义菜单按钮 视图控制器
 
-@interface HomeVC : UIViewController<UITableViewDataSource,UITableViewDelegate,HomeIconButtonDataSource>
+@interface HomeVC : UIViewController<UITableViewDataSource, UITableViewDelegate, HomeIconButtonDataSource>
 
 
 @end

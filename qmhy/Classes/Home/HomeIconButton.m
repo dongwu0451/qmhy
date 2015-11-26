@@ -17,12 +17,7 @@
 
 @end
 
-
-
 @implementation HomeIconButton
-
-
-
 
 // 入口函数 override
 // Only override drawRect: if you perform custom drawing.

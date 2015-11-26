@@ -16,10 +16,7 @@
 
 @interface AddConfigCFahuoViewController () <ConfigFHAPViewControllerDelegate>
 
-
-
 @property (nonatomic , strong) ConfigFHAPViewController *pickerVC;
-
 
 @property (weak, nonatomic) IBOutlet UITextField *fahuolianxirenTextField;
 @property (weak, nonatomic) IBOutlet UITextField *shoujihaomaTextField;

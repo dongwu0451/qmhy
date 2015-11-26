@@ -33,13 +33,6 @@
     return _carModel;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 //点击完成按钮 选择车辆 保存 按钮事件
 - (IBAction)addCarCategory:(UIButton *)sender {

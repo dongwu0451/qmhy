@@ -11,8 +11,7 @@
 @implementation AFNetworkTool
 
 #pragma mark 检测网路状态
-+ (void)netWorkStatus
-{
++ (void)netWorkStatus {
     /**
      AFNetworkReachabilityStatusUnknown          = -1,  // 未知
      AFNetworkReachabilityStatusNotReachable     = 0,   // 无连接
@@ -29,8 +28,7 @@
 }
 
 #pragma mark - JSON方式获取数据
-+ (void)JSONDataWithUrl:(NSString *)url success:(void (^)(id json))success fail:(void (^)())fail;
-{
++ (void)JSONDataWithUrl:(NSString *)url success:(void (^)(id json))success fail:(void (^)())fail; {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     NSDictionary *dict = @{@"format": @"json"};
@@ -48,8 +46,7 @@
 }
 
 #pragma mark - xml方式获取数据
-+ (void)XMLDataWithUrl:(NSString *)urlStr success:(void (^)(id xml))success fail:(void (^)())fail
-{
++ (void)XMLDataWithUrl:(NSString *)urlStr success:(void (^)(id xml))success fail:(void (^)())fail {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     // 返回的数据格式是XML
@@ -72,8 +69,7 @@
 }
 
 #pragma mark - JSON方式post提交数据
-+ (void)postJSONWithUrl:(NSString *)urlStr parameters:(id)parameters success:(void (^)(id responseObject))success fail:(void (^)())fail
-{
++ (void)postJSONWithUrl:(NSString *)urlStr parameters:(id)parameters success:(void (^)(id responseObject))success fail:(void (^)())fail {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     // 设置请求格式
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -95,8 +91,7 @@
 
 
 #pragma mark - Session 下载下载文件
-+ (void)sessionDownloadWithUrl:(NSString *)urlStr success:(void (^)(NSURL *fileURL))success fail:(void (^)())fail
-{
++ (void)sessionDownloadWithUrl:(NSString *)urlStr success:(void (^)(NSURL *fileURL))success fail:(void (^)())fail {
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:config];
 
@@ -134,8 +129,7 @@
 
 
 #pragma mark - 文件上传 自己定义文件名
-+ (void)postUploadWithUrl:(NSString *)urlStr fileUrl:(NSURL *)fileURL fileName:(NSString *)fileName fileType:(NSString *)fileTye success:(void (^)(id responseObject))success fail:(void (^)())fail
-{
++ (void)postUploadWithUrl:(NSString *)urlStr fileUrl:(NSURL *)fileURL fileName:(NSString *)fileName fileType:(NSString *)fileTye success:(void (^)(id responseObject))success fail:(void (^)())fail {
     // 本地上传给服务器时,没有确定的URL,不好用MD5的方式处理
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -167,8 +161,7 @@
 }
 
 #pragma mark - POST上传文件
-+ (void)postUploadWithUrl:(NSString *)urlStr fileUrl:(NSURL *)fileURL success:(void (^)(id responseObject))success fail:(void (^)())fail
-{
++ (void)postUploadWithUrl:(NSString *)urlStr fileUrl:(NSURL *)fileURL success:(void (^)(id responseObject))success fail:(void (^)())fail {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     // AFHTTPResponseSerializer就是正常的HTTP请求响应结果:NSData
     // 当请求的返回数据不是JSON,XML,PList,UIImage之外,使用AFHTTPResponseSerializer

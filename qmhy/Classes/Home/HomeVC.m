@@ -49,8 +49,7 @@
 
 @synthesize webview;//自己增加的webview引用 后台的 没有界面的 为了打电话用
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     //设置分割线,上面有一个分割线，下面的tabbar还要是白色的
@@ -90,13 +89,7 @@
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)logSubviews:(NSArray *)subviews tabnum:(int)tabnum{
+- (void)logSubviews:(NSArray *)subviews tabnum:(int)tabnum {
     /*UIView * i;
     //设置tabstring
     NSMutableString * tabstring=[NSMutableString stringWithString:@""];
@@ -112,11 +105,6 @@
             NSLog(@"%@ %@",tabstring,i);
         }
     }*/
-}
-
-//分组数量 基本没用
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
 }
 
 //行数量
@@ -144,7 +132,7 @@
     //NSLog(@"didSelectRowAtIndexPath:%d",indexPath.row);
     NSInteger row=indexPath.row;
     NSInteger section=indexPath.section;
-    NSLog(@"select :%d  %d",section,row);
+    NSLog(@"select :%ld  %ld",section,row);
 }
 
 //绘制单元格
@@ -168,13 +156,13 @@
 }
 
 //实现自定义菜单的委托（图标部分）
--(UIImage *)setIcon{
+- (UIImage *)setIcon {
     static int  i=0;
     if (i == 12) {
         i = 0;
         
     }
-     i++;
+    i++;
     NSString * s=[NSString stringWithFormat:@"HomeIcons.bundle/%@",self.iconPaths[(i-1)]];
     UIImage * img= [UIImage imageNamed:s];
     UIImage * scaledimg=[UIImage imageWithCGImage:img.CGImage scale:img.scale*2.0 orientation:img.imageOrientation];

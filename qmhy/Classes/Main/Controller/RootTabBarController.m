@@ -17,24 +17,13 @@
 
 @implementation RootTabBarController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // 把它下面的viewcontroller都加载了,强制显示tabbarImage
     UIViewController * i;
     for (i in self.viewControllers) {
         [i viewDidLoad];
-    }}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    }
 }
 
 @end

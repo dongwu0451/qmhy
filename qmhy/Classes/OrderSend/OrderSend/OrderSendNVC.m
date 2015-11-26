@@ -15,18 +15,11 @@
 @implementation OrderSendNVC
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // 设置图片
     self.tabbarItemImagePath=@"tabbed_icon.bundle/fj发件";
-    [self setTabBarImage];}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self setTabBarImage];
 }
-
 
 @end

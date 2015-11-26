@@ -16,8 +16,7 @@
 @implementation HomeNVC
 
 //利用父类完成图标填充
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // 设置图片
     self.tabbarItemImagePath=@"tabbed_icon.bundle/zy主页";
@@ -34,22 +33,5 @@
 //    tabBarController.tabBar.opaque = YES;
     
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -25,22 +25,7 @@
 
 @implementation LoginVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-}
-
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     //判断显示那个view
     if ([self.whichViewToPresent isEqualToString:@"loginView"]) {
         [self showLoginView];
@@ -49,14 +34,8 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 //显示登录界面
--(void)showLoginView{
+- (void)showLoginView {
     ////注册按钮点击事件loginview
     self.view=self.loginView;
     //绑定事件

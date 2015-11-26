@@ -17,17 +17,9 @@
 @implementation UserProtocolVC
 @synthesize webview;//自己增加的webview引用
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     //维护UINavigationItem
@@ -48,13 +40,6 @@
 //点击返回按钮
 -(void)popVC{
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

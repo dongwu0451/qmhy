@@ -50,10 +50,6 @@
     [alert show];
 }
 
-
-
-
-
 - (void)loadNewData {
 
     NSString *methodName = @"getgoods";

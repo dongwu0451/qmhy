@@ -17,10 +17,6 @@
 
 @implementation MakeOrderQuhuoCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
 - (void)setQuhuoModel:(QuhuoModel *)quhuoModel {
     _quhuoModel = quhuoModel;
     self.quhuoName.text = quhuoModel.quhuoName;

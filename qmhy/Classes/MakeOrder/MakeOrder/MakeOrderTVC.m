@@ -53,16 +53,6 @@
     return _goods;
 }
 
-//初始化样式
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 //初始化显示
 - (void)viewDidLoad
 {
@@ -79,19 +69,13 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderCarCell" bundle:nil] forCellReuseIdentifier:@"makeoredercar_main"];
     // 注册先择取货信息的自定义单元格
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderQuhuoCell" bundle:nil] forCellReuseIdentifier:@"makeorederquhuo_main"];
-
+    
 }
 
 //- (void)viewWillAppear:(BOOL)animated {
 //    [super viewWillAppear:YES];
 //    [self.tableView reloadData];
 //}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 //设置分组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -228,7 +212,7 @@
         MakeOrderShouhuoCell *mycell=(MakeOrderShouhuoCell *)cell;
         mycell.shouhuo = self.allShouhuo[indexPath.row - 1];// 将收货联系人模型传递给Cell，cell内部自己配置自己封装
     }
-
+    
     //货物选择
     if (indexPath.section==2 && indexPath.row==0){//2.0
         //cell.imageView.image=[UIImage imageNamed:@"Wea_yuebao"];
@@ -269,7 +253,7 @@
         //mycell.quhuoName.text = self.quhuoModel.quhuoName;
         //mycell.quhuoTelephone.text = self.quhuoModel.quhuoTelephone;
         //mycell.quhuoAddress.text = self.quhuoModel.quhuoAddress;
-
+        
         
     }
     return  cell;
@@ -283,7 +267,7 @@
     UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     if (indexPath.section==1) {//收货联系人，有箭头的
         if (indexPath.row==0) {
-
+            
             ConfigCShouhuoTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDConfigCShouhuoTVC"];
             tvc.delegate = self;//本类处理代理
             [self.navigationController pushViewController:tvc animated:YES];
@@ -303,7 +287,7 @@
             [self.navigationController pushViewController:cvc animated:YES];
         }
     }
-
+    
     if (indexPath.section==4) {//取货联系人，有箭头的
         if (indexPath.row==0) {
             ConfigCQuhuoTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDConfigCQuhuoTVC"];
@@ -313,7 +297,7 @@
             
         }
     }
-
+    
 }
 
 //设置编辑模式方式
