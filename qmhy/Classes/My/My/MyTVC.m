@@ -117,7 +117,7 @@
     }
     else if(indexPath.section==1 && indexPath.row==0){//1.0
         cell.imageView.image=[UIImage imageNamed:@"Wea_zhanghuyue"];
-        [cell.textLabel setText:@"我的取件"];
+        [cell.textLabel setText:@"我的收件"];
         [cell.detailTextLabel setText:@""];//[NSString stringWithFormat:@"%.2f",0.0]];
     }else if(indexPath.section==1 && indexPath.row==1){//1.1
         cell.imageView.image=[UIImage imageNamed:@"Wea_wodeyinhangka"];

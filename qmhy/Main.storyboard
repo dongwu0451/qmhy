@@ -2398,6 +2398,9 @@
                                 <state key="normal" title=" 按住 说话">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tousuBtnClick:" destination="tVD-ui-RhL" eventType="touchUpInside" id="clp-PQ-2zP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -2450,7 +2453,7 @@
             </objects>
             <point key="canvasLocation" x="1862" y="433"/>
         </scene>
-        <!--我的取件-->
+        <!--我的收件-->
         <scene sceneID="mfC-aK-FJo">
             <objects>
                 <tableViewController storyboardIdentifier="SIDOrderGetTVC" id="xgH-6d-JYi" customClass="OrderGetTVC" sceneMemberID="viewController">
@@ -2476,11 +2479,11 @@
                             <outlet property="delegate" destination="xgH-6d-JYi" id="2QO-P5-2W5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我的取件" id="5o0-t8-8yV"/>
+                    <navigationItem key="navigationItem" title="我的收件" id="5o0-t8-8yV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdT-J8-77W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="439"/>
+            <point key="canvasLocation" x="1296" y="433"/>
         </scene>
         <!--我的-->
         <scene sceneID="M6a-m4-AvS">
