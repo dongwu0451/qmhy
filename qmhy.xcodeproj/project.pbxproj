@@ -206,6 +206,8 @@
 		04E447BD1C06A4B400E05811 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447A81C06A4B400E05811 /* UIScrollView+MJExtension.m */; };
 		04E447BE1C06A4B400E05811 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447AA1C06A4B400E05811 /* UIScrollView+MJRefresh.m */; };
 		04E447BF1C06A4B400E05811 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447AC1C06A4B400E05811 /* UIView+MJExtension.m */; };
+		04E447C31C06C1FC00E05811 /* OrderGetXiangQingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447C11C06C1FC00E05811 /* OrderGetXiangQingViewController.m */; };
+		04E447C41C06C1FC00E05811 /* OrderGetXiangQingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E447C21C06C1FC00E05811 /* OrderGetXiangQingViewController.xib */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -575,6 +577,9 @@
 		04E447AA1C06A4B400E05811 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		04E447AB1C06A4B400E05811 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		04E447AC1C06A4B400E05811 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		04E447C01C06C1FC00E05811 /* OrderGetXiangQingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderGetXiangQingViewController.h; sourceTree = "<group>"; };
+		04E447C11C06C1FC00E05811 /* OrderGetXiangQingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderGetXiangQingViewController.m; sourceTree = "<group>"; };
+		04E447C21C06C1FC00E05811 /* OrderGetXiangQingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderGetXiangQingViewController.xib; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1467,6 +1472,9 @@
 			children = (
 				04E447731C06A20F00E05811 /* OrderGetTVC.h */,
 				04E447741C06A20F00E05811 /* OrderGetTVC.m */,
+				04E447C01C06C1FC00E05811 /* OrderGetXiangQingViewController.h */,
+				04E447C11C06C1FC00E05811 /* OrderGetXiangQingViewController.m */,
+				04E447C21C06C1FC00E05811 /* OrderGetXiangQingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1690,6 +1698,7 @@
 				04E4472A1C06949100E05811 /* LoginVC.xib in Resources */,
 				04E4472C1C06949100E05811 /* RegisterTVC.xib in Resources */,
 				04E447BB1C06A4B400E05811 /* MJRefresh.bundle in Resources */,
+				04E447C41C06C1FC00E05811 /* OrderGetXiangQingViewController.xib in Resources */,
 				04E447471C06949100E05811 /* pricetable.html in Resources */,
 				04E4473D1C06949100E05811 /* MakeOrderShouhuoCell.xib in Resources */,
 				04E447421C06949100E05811 /* help.html in Resources */,
@@ -1738,6 +1747,7 @@
 				04E445DA1C06914000E05811 /* NSData+ImageContentType.m in Sources */,
 				04E447BF1C06A4B400E05811 /* UIView+MJExtension.m in Sources */,
 				04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */,
+				04E447C31C06C1FC00E05811 /* OrderGetXiangQingViewController.m in Sources */,
 				04E445C21C06914000E05811 /* NSObject+MJKeyValue.m in Sources */,
 				04E4472B1C06949100E05811 /* RegisterTVC.m in Sources */,
 				04E447B61C06A4B400E05811 /* MJRefreshBackNormalFooter.m in Sources */,

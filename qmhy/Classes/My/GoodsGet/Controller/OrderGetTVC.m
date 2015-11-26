@@ -16,7 +16,7 @@
 #import "MBProgressHUD+HM.h"
 #import "OrderGetTableViewCell.h"
 #import "JSONModelOrderGet.h"
-
+#import "OrderGetXiangQingViewController.h"
 
 @interface OrderGetTVC ()
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
@@ -40,6 +40,7 @@
 
 // 设置刷新
 - (void)setupRefresh {
+    
     // 1.添加刷新空间
     //    UIRefreshControl *control = [[UIRefreshControl alloc] init];
     
@@ -147,7 +148,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    OrderGetXiangQingViewController *vc = [[OrderGetXiangQingViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     NSLog(@"%ld", indexPath.row);
+    
 }
 
 
