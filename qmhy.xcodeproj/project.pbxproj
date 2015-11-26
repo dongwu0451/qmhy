@@ -57,12 +57,6 @@
 		04E445EF1C06914000E05811 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4458A1C06914000E05811 /* UIProgressView+AFNetworking.m */; };
 		04E445F01C06914000E05811 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4458C1C06914000E05811 /* UIRefreshControl+AFNetworking.m */; };
 		04E445F11C06914000E05811 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4458E1C06914000E05811 /* UIWebView+AFNetworking.m */; };
-		04E445F21C06914000E05811 /* JSONModelCommonCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445911C06914000E05811 /* JSONModelCommonCity.m */; };
-		04E445F31C06914000E05811 /* JSONModelCommonGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445931C06914000E05811 /* JSONModelCommonGoods.m */; };
-		04E445F41C06914000E05811 /* JSONModelCommonLogistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445951C06914000E05811 /* JSONModelCommonLogistics.m */; };
-		04E445F51C06914000E05811 /* JSONModelLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445971C06914000E05811 /* JSONModelLogin.m */; };
-		04E445F61C06914000E05811 /* JSONModelPushMess.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445991C06914000E05811 /* JSONModelPushMess.m */; };
-		04E445F71C06914000E05811 /* JSONModelReg.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4459B1C06914000E05811 /* JSONModelReg.m */; };
 		04E445F81C06914000E05811 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 04E4459E1C06914000E05811 /* .gitignore */; };
 		04E445F91C06914000E05811 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445A01C06914000E05811 /* AESCrypt.m */; };
 		04E445FA1C06914000E05811 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E445A21C06914000E05811 /* NSData+Base64.m */; };
@@ -79,7 +73,6 @@
 		04E446101C06938900E05811 /* HomeIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04E4460C1C06938900E05811 /* HomeIcons.bundle */; };
 		04E446111C06938900E05811 /* More.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04E4460D1C06938900E05811 /* More.bundle */; };
 		04E446121C06938900E05811 /* tabbed_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04E4460E1C06938900E05811 /* tabbed_icon.bundle */; };
-		04E446FE1C06949100E05811 /* ConfigCBankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446171C06949000E05811 /* ConfigCBankVC.m */; };
 		04E446FF1C06949100E05811 /* AddGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4461C1C06949000E05811 /* AddGoodsVC.m */; };
 		04E447001C06949100E05811 /* ConfigCGoodsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4461E1C06949000E05811 /* ConfigCGoodsTVC.m */; };
 		04E447011C06949100E05811 /* EditGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446201C06949000E05811 /* EditGoodsVC.m */; };
@@ -87,8 +80,6 @@
 		04E447031C06949100E05811 /* JSONModelConfigGGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446241C06949000E05811 /* JSONModelConfigGGoods.m */; };
 		04E447041C06949100E05811 /* ConfigCGoodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446271C06949000E05811 /* ConfigCGoodsTableViewCell.m */; };
 		04E447051C06949100E05811 /* ConfigCGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446281C06949000E05811 /* ConfigCGoodsTableViewCell.xib */; };
-		04E447061C06949100E05811 /* ConfigCommonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4462B1C06949000E05811 /* ConfigCommonTVC.m */; };
-		04E447071C06949100E05811 /* ConfigCPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4462E1C06949000E05811 /* ConfigCPasswordVC.m */; };
 		04E447081C06949100E05811 /* AddConfigCFahuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446321C06949000E05811 /* AddConfigCFahuoViewController.m */; };
 		04E447091C06949100E05811 /* ConfigCQuhuoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446341C06949000E05811 /* ConfigCQuhuoTVC.m */; };
 		04E4470A1C06949100E05811 /* ConfigFHAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446361C06949000E05811 /* ConfigFHAPViewController.m */; };
@@ -121,11 +112,6 @@
 		04E447251C06949100E05811 /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4466E1C06949100E05811 /* TentacleView.m */; };
 		04E447261C06949100E05811 /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446711C06949100E05811 /* HomeIconButton.m */; };
 		04E447271C06949100E05811 /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446731C06949100E05811 /* HomeNVC.m */; };
-		04E447281C06949100E05811 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446751C06949100E05811 /* HomeVC.m */; };
-		04E447291C06949100E05811 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446781C06949100E05811 /* LoginVC.m */; };
-		04E4472A1C06949100E05811 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446791C06949100E05811 /* LoginVC.xib */; };
-		04E4472B1C06949100E05811 /* RegisterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4467B1C06949100E05811 /* RegisterTVC.m */; };
-		04E4472C1C06949100E05811 /* RegisterTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4467C1C06949100E05811 /* RegisterTVC.xib */; };
 		04E4472D1C06949100E05811 /* MakeOrderOKTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446801C06949100E05811 /* MakeOrderOKTVC.m */; };
 		04E4472E1C06949100E05811 /* MakeOrderTotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446821C06949100E05811 /* MakeOrderTotalCell.m */; };
 		04E4472F1C06949100E05811 /* MakeOrderTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446831C06949100E05811 /* MakeOrderTotalCell.xib */; };
@@ -208,6 +194,15 @@
 		04E447BF1C06A4B400E05811 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447AC1C06A4B400E05811 /* UIView+MJExtension.m */; };
 		04E447C31C06C1FC00E05811 /* OrderGetXiangQingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447C11C06C1FC00E05811 /* OrderGetXiangQingViewController.m */; };
 		04E447C41C06C1FC00E05811 /* OrderGetXiangQingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E447C21C06C1FC00E05811 /* OrderGetXiangQingViewController.xib */; };
+		04E447CB1C06C90A00E05811 /* ConfigCBankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447CA1C06C90A00E05811 /* ConfigCBankVC.m */; };
+		04E447CF1C06C94000E05811 /* ConfigCommonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447CE1C06C94000E05811 /* ConfigCommonTVC.m */; };
+		04E447D31C06C95D00E05811 /* ConfigCPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447D21C06C95D00E05811 /* ConfigCPasswordVC.m */; };
+		04E447D71C06C9BD00E05811 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447D61C06C9BD00E05811 /* HomeVC.m */; };
+		04E447E21C06CA0300E05811 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447DA1C06CA0300E05811 /* LoginVC.m */; };
+		04E447E31C06CA0300E05811 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E447DB1C06CA0300E05811 /* LoginVC.xib */; };
+		04E447E41C06CA0300E05811 /* RegisterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447DD1C06CA0300E05811 /* RegisterTVC.m */; };
+		04E447E51C06CA0300E05811 /* RegisterTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E447DE1C06CA0300E05811 /* RegisterTVC.xib */; };
+		04E447E61C06CA0300E05811 /* JSONModelLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447E11C06CA0300E05811 /* JSONModelLogin.m */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -314,18 +309,6 @@
 		04E4458C1C06914000E05811 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		04E4458D1C06914000E05811 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		04E4458E1C06914000E05811 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		04E445901C06914000E05811 /* JSONModelCommonCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelCommonCity.h; sourceTree = "<group>"; };
-		04E445911C06914000E05811 /* JSONModelCommonCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelCommonCity.m; sourceTree = "<group>"; };
-		04E445921C06914000E05811 /* JSONModelCommonGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelCommonGoods.h; sourceTree = "<group>"; };
-		04E445931C06914000E05811 /* JSONModelCommonGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelCommonGoods.m; sourceTree = "<group>"; };
-		04E445941C06914000E05811 /* JSONModelCommonLogistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelCommonLogistics.h; sourceTree = "<group>"; };
-		04E445951C06914000E05811 /* JSONModelCommonLogistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelCommonLogistics.m; sourceTree = "<group>"; };
-		04E445961C06914000E05811 /* JSONModelLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLogin.h; sourceTree = "<group>"; };
-		04E445971C06914000E05811 /* JSONModelLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelLogin.m; sourceTree = "<group>"; };
-		04E445981C06914000E05811 /* JSONModelPushMess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelPushMess.h; sourceTree = "<group>"; };
-		04E445991C06914000E05811 /* JSONModelPushMess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelPushMess.m; sourceTree = "<group>"; };
-		04E4459A1C06914000E05811 /* JSONModelReg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelReg.h; sourceTree = "<group>"; };
-		04E4459B1C06914000E05811 /* JSONModelReg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelReg.m; sourceTree = "<group>"; };
 		04E4459E1C06914000E05811 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		04E4459F1C06914000E05811 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
 		04E445A01C06914000E05811 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
@@ -351,8 +334,6 @@
 		04E4460D1C06938900E05811 /* More.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = More.bundle; sourceTree = "<group>"; };
 		04E4460E1C06938900E05811 /* tabbed_icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = tabbed_icon.bundle; sourceTree = "<group>"; };
 		04E446131C06944100E05811 /* qmhy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "qmhy-Prefix.pch"; path = "qmhy/qmhy-Prefix.pch"; sourceTree = "<group>"; };
-		04E446161C06949000E05811 /* ConfigCBankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCBankVC.h; sourceTree = "<group>"; };
-		04E446171C06949000E05811 /* ConfigCBankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCBankVC.m; sourceTree = "<group>"; };
 		04E4461B1C06949000E05811 /* AddGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoodsVC.h; sourceTree = "<group>"; };
 		04E4461C1C06949000E05811 /* AddGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoodsVC.m; sourceTree = "<group>"; };
 		04E4461D1C06949000E05811 /* ConfigCGoodsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCGoodsTVC.h; sourceTree = "<group>"; };
@@ -365,10 +346,6 @@
 		04E446261C06949000E05811 /* ConfigCGoodsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCGoodsTableViewCell.h; sourceTree = "<group>"; };
 		04E446271C06949000E05811 /* ConfigCGoodsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCGoodsTableViewCell.m; sourceTree = "<group>"; };
 		04E446281C06949000E05811 /* ConfigCGoodsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigCGoodsTableViewCell.xib; sourceTree = "<group>"; };
-		04E4462A1C06949000E05811 /* ConfigCommonTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCommonTVC.h; sourceTree = "<group>"; };
-		04E4462B1C06949000E05811 /* ConfigCommonTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCommonTVC.m; sourceTree = "<group>"; };
-		04E4462D1C06949000E05811 /* ConfigCPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCPasswordVC.h; sourceTree = "<group>"; };
-		04E4462E1C06949000E05811 /* ConfigCPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCPasswordVC.m; sourceTree = "<group>"; };
 		04E446311C06949000E05811 /* AddConfigCFahuoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConfigCFahuoViewController.h; sourceTree = "<group>"; };
 		04E446321C06949000E05811 /* AddConfigCFahuoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConfigCFahuoViewController.m; sourceTree = "<group>"; };
 		04E446331C06949000E05811 /* ConfigCQuhuoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCQuhuoTVC.h; sourceTree = "<group>"; };
@@ -424,14 +401,6 @@
 		04E446711C06949100E05811 /* HomeIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIconButton.m; sourceTree = "<group>"; };
 		04E446721C06949100E05811 /* HomeNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNVC.h; sourceTree = "<group>"; };
 		04E446731C06949100E05811 /* HomeNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNVC.m; sourceTree = "<group>"; };
-		04E446741C06949100E05811 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
-		04E446751C06949100E05811 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
-		04E446771C06949100E05811 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		04E446781C06949100E05811 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		04E446791C06949100E05811 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
-		04E4467A1C06949100E05811 /* RegisterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTVC.h; sourceTree = "<group>"; };
-		04E4467B1C06949100E05811 /* RegisterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTVC.m; sourceTree = "<group>"; };
-		04E4467C1C06949100E05811 /* RegisterTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterTVC.xib; sourceTree = "<group>"; };
 		04E4467F1C06949100E05811 /* MakeOrderOKTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderOKTVC.h; sourceTree = "<group>"; };
 		04E446801C06949100E05811 /* MakeOrderOKTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderOKTVC.m; sourceTree = "<group>"; };
 		04E446811C06949100E05811 /* MakeOrderTotalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderTotalCell.h; sourceTree = "<group>"; };
@@ -580,6 +549,22 @@
 		04E447C01C06C1FC00E05811 /* OrderGetXiangQingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderGetXiangQingViewController.h; sourceTree = "<group>"; };
 		04E447C11C06C1FC00E05811 /* OrderGetXiangQingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderGetXiangQingViewController.m; sourceTree = "<group>"; };
 		04E447C21C06C1FC00E05811 /* OrderGetXiangQingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderGetXiangQingViewController.xib; sourceTree = "<group>"; };
+		04E447C91C06C90A00E05811 /* ConfigCBankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCBankVC.h; sourceTree = "<group>"; };
+		04E447CA1C06C90A00E05811 /* ConfigCBankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCBankVC.m; sourceTree = "<group>"; };
+		04E447CD1C06C94000E05811 /* ConfigCommonTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCommonTVC.h; sourceTree = "<group>"; };
+		04E447CE1C06C94000E05811 /* ConfigCommonTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCommonTVC.m; sourceTree = "<group>"; };
+		04E447D11C06C95D00E05811 /* ConfigCPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigCPasswordVC.h; sourceTree = "<group>"; };
+		04E447D21C06C95D00E05811 /* ConfigCPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigCPasswordVC.m; sourceTree = "<group>"; };
+		04E447D51C06C9BD00E05811 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		04E447D61C06C9BD00E05811 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		04E447D91C06CA0300E05811 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		04E447DA1C06CA0300E05811 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		04E447DB1C06CA0300E05811 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		04E447DC1C06CA0300E05811 /* RegisterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTVC.h; sourceTree = "<group>"; };
+		04E447DD1C06CA0300E05811 /* RegisterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTVC.m; sourceTree = "<group>"; };
+		04E447DE1C06CA0300E05811 /* RegisterTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterTVC.xib; sourceTree = "<group>"; };
+		04E447E01C06CA0300E05811 /* JSONModelLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLogin.h; sourceTree = "<group>"; };
+		04E447E11C06CA0300E05811 /* JSONModelLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelLogin.m; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -634,7 +619,6 @@
 			children = (
 				04E4476B1C06966800E05811 /* Controller */,
 				04E444FA1C06914000E05811 /* lib */,
-				04E4458F1C06914000E05811 /* Model */,
 				04E4459C1C06914000E05811 /* Tool */,
 			);
 			name = "Main (主要)";
@@ -820,25 +804,6 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		04E4458F1C06914000E05811 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04E445901C06914000E05811 /* JSONModelCommonCity.h */,
-				04E445911C06914000E05811 /* JSONModelCommonCity.m */,
-				04E445921C06914000E05811 /* JSONModelCommonGoods.h */,
-				04E445931C06914000E05811 /* JSONModelCommonGoods.m */,
-				04E445941C06914000E05811 /* JSONModelCommonLogistics.h */,
-				04E445951C06914000E05811 /* JSONModelCommonLogistics.m */,
-				04E445961C06914000E05811 /* JSONModelLogin.h */,
-				04E445971C06914000E05811 /* JSONModelLogin.m */,
-				04E445981C06914000E05811 /* JSONModelPushMess.h */,
-				04E445991C06914000E05811 /* JSONModelPushMess.m */,
-				04E4459A1C06914000E05811 /* JSONModelReg.h */,
-				04E4459B1C06914000E05811 /* JSONModelReg.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		04E4459C1C06914000E05811 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -892,8 +857,7 @@
 		04E446151C06949000E05811 /* ConfigCBank */ = {
 			isa = PBXGroup;
 			children = (
-				04E446161C06949000E05811 /* ConfigCBankVC.h */,
-				04E446171C06949000E05811 /* ConfigCBankVC.m */,
+				04E447C81C06C90A00E05811 /* Controller */,
 			);
 			path = ConfigCBank;
 			sourceTree = "<group>";
@@ -951,8 +915,7 @@
 		04E446291C06949000E05811 /* ConfigCommon */ = {
 			isa = PBXGroup;
 			children = (
-				04E4462A1C06949000E05811 /* ConfigCommonTVC.h */,
-				04E4462B1C06949000E05811 /* ConfigCommonTVC.m */,
+				04E447CC1C06C94000E05811 /* Controller */,
 			);
 			path = ConfigCommon;
 			sourceTree = "<group>";
@@ -960,8 +923,7 @@
 		04E4462C1C06949000E05811 /* ConfigCPassword */ = {
 			isa = PBXGroup;
 			children = (
-				04E4462D1C06949000E05811 /* ConfigCPasswordVC.h */,
-				04E4462E1C06949000E05811 /* ConfigCPasswordVC.m */,
+				04E447D01C06C95D00E05811 /* Controller */,
 			);
 			path = ConfigCPassword;
 			sourceTree = "<group>";
@@ -1120,12 +1082,11 @@
 		04E4466F1C06949100E05811 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04E447D41C06C9BD00E05811 /* Controller */,
 				04E446701C06949100E05811 /* HomeIconButton.h */,
 				04E446711C06949100E05811 /* HomeIconButton.m */,
 				04E446721C06949100E05811 /* HomeNVC.h */,
 				04E446731C06949100E05811 /* HomeNVC.m */,
-				04E446741C06949100E05811 /* HomeVC.h */,
-				04E446751C06949100E05811 /* HomeVC.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1133,12 +1094,8 @@
 		04E446761C06949100E05811 /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
-				04E446771C06949100E05811 /* LoginVC.h */,
-				04E446781C06949100E05811 /* LoginVC.m */,
-				04E446791C06949100E05811 /* LoginVC.xib */,
-				04E4467A1C06949100E05811 /* RegisterTVC.h */,
-				04E4467B1C06949100E05811 /* RegisterTVC.m */,
-				04E4467C1C06949100E05811 /* RegisterTVC.xib */,
+				04E447D81C06CA0300E05811 /* Controller */,
+				04E447DF1C06CA0300E05811 /* Model */,
 			);
 			name = "Login(登录)";
 			path = Login;
@@ -1591,6 +1548,64 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		04E447C81C06C90A00E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447C91C06C90A00E05811 /* ConfigCBankVC.h */,
+				04E447CA1C06C90A00E05811 /* ConfigCBankVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447CC1C06C94000E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447CD1C06C94000E05811 /* ConfigCommonTVC.h */,
+				04E447CE1C06C94000E05811 /* ConfigCommonTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447D01C06C95D00E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447D11C06C95D00E05811 /* ConfigCPasswordVC.h */,
+				04E447D21C06C95D00E05811 /* ConfigCPasswordVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447D41C06C9BD00E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447D51C06C9BD00E05811 /* HomeVC.h */,
+				04E447D61C06C9BD00E05811 /* HomeVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447D81C06CA0300E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447D91C06CA0300E05811 /* LoginVC.h */,
+				04E447DA1C06CA0300E05811 /* LoginVC.m */,
+				04E447DB1C06CA0300E05811 /* LoginVC.xib */,
+				04E447DC1C06CA0300E05811 /* RegisterTVC.h */,
+				04E447DD1C06CA0300E05811 /* RegisterTVC.m */,
+				04E447DE1C06CA0300E05811 /* RegisterTVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447DF1C06CA0300E05811 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E447E01C06CA0300E05811 /* JSONModelLogin.h */,
+				04E447E11C06CA0300E05811 /* JSONModelLogin.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2B84AAC31A1219980098E502 = {
 			isa = PBXGroup;
 			children = (
@@ -1695,8 +1710,6 @@
 			files = (
 				04E447411C06949100E05811 /* entlib.gif in Resources */,
 				04E445BC1C06914000E05811 /* LICENSE in Resources */,
-				04E4472A1C06949100E05811 /* LoginVC.xib in Resources */,
-				04E4472C1C06949100E05811 /* RegisterTVC.xib in Resources */,
 				04E447BB1C06A4B400E05811 /* MJRefresh.bundle in Resources */,
 				04E447C41C06C1FC00E05811 /* OrderGetXiangQingViewController.xib in Resources */,
 				04E447471C06949100E05811 /* pricetable.html in Resources */,
@@ -1729,6 +1742,8 @@
 				04E447191C06949100E05811 /* ConfigCShouhuoTableViewCell.xib in Resources */,
 				04E4460F1C06938900E05811 /* Home.bundle in Resources */,
 				04E447051C06949100E05811 /* ConfigCGoodsTableViewCell.xib in Resources */,
+				04E447E31C06CA0300E05811 /* LoginVC.xib in Resources */,
+				04E447E51C06CA0300E05811 /* RegisterTVC.xib in Resources */,
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				04E4471D1C06949100E05811 /* EditConfigCWuliuViewController.xib in Resources */,
 				04E4473A1C06949100E05811 /* MakeOrderQuhuoCell.xib in Resources */,
@@ -1748,14 +1763,13 @@
 				04E447BF1C06A4B400E05811 /* UIView+MJExtension.m in Sources */,
 				04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */,
 				04E447C31C06C1FC00E05811 /* OrderGetXiangQingViewController.m in Sources */,
+				04E447E41C06CA0300E05811 /* RegisterTVC.m in Sources */,
 				04E445C21C06914000E05811 /* NSObject+MJKeyValue.m in Sources */,
-				04E4472B1C06949100E05811 /* RegisterTVC.m in Sources */,
 				04E447B61C06A4B400E05811 /* MJRefreshBackNormalFooter.m in Sources */,
 				04E447391C06949100E05811 /* MakeOrderQuhuoCell.m in Sources */,
 				04E447661C06949100E05811 /* OrderSendQueryTVC.m in Sources */,
 				04E445D91C06914000E05811 /* MKAnnotationView+WebCache.m in Sources */,
 				04E446011C06914000E05811 /* UniformResourceLocator.m in Sources */,
-				04E447071C06949100E05811 /* ConfigCPasswordVC.m in Sources */,
 				04E447181C06949100E05811 /* ConfigCShouhuoTableViewCell.m in Sources */,
 				04E4472E1C06949100E05811 /* MakeOrderTotalCell.m in Sources */,
 				04E447091C06949100E05811 /* ConfigCQuhuoTVC.m in Sources */,
@@ -1785,9 +1799,7 @@
 				04E447171C06949100E05811 /* JSONModelConfigCShouhuo.m in Sources */,
 				04E445DD1C06914000E05811 /* SDWebImageDecoder.m in Sources */,
 				04E447351C06949100E05811 /* BigAndSmallGoodsModel.m in Sources */,
-				04E447291C06949100E05811 /* LoginVC.m in Sources */,
 				04E447B91C06A4B400E05811 /* MJRefreshNormalHeader.m in Sources */,
-				04E446FE1C06949100E05811 /* ConfigCBankVC.m in Sources */,
 				04E447B31C06A4B400E05811 /* MJRefreshAutoNormalFooter.m in Sources */,
 				04E4470A1C06949100E05811 /* ConfigFHAPViewController.m in Sources */,
 				04E447121C06949100E05811 /* ConfigCShouhuoTVC.m in Sources */,
@@ -1801,10 +1813,12 @@
 				04E4471A1C06949100E05811 /* ADDConfigCWuliuViewController.m in Sources */,
 				04E4471F1C06949100E05811 /* ConfigCWuliuTableViewCell.m in Sources */,
 				04E447651C06949100E05811 /* OrderSendQueryContentTVC.m in Sources */,
+				04E447D31C06C95D00E05811 /* ConfigCPasswordVC.m in Sources */,
 				04E445FC1C06914000E05811 /* NSString+Base64.m in Sources */,
 				04E447531C06949100E05811 /* NotifyHYXMTableViewCell.m in Sources */,
 				04E4477E1C06A20F00E05811 /* OrderGetTableViewCell.m in Sources */,
 				04E447641C06949100E05811 /* OrderSendListTVC.m in Sources */,
+				04E447CB1C06C90A00E05811 /* ConfigCBankVC.m in Sources */,
 				04E447561C06949100E05811 /* NotifyTVC.m in Sources */,
 				04E447481C06949100E05811 /* PriceTableVC.m in Sources */,
 				04E4475A1C06949100E05811 /* NotifyWLTZTableViewController.m in Sources */,
@@ -1818,19 +1832,15 @@
 				04E445B31C06914000E05811 /* AFHTTPSessionManager.m in Sources */,
 				04E447571C06949100E05811 /* JSONModelNotifyWLTZ.m in Sources */,
 				04E445BE1C06914000E05811 /* MJFoundation.m in Sources */,
-				04E445F31C06914000E05811 /* JSONModelCommonGoods.m in Sources */,
 				04E445BD1C06914000E05811 /* MJConst.m in Sources */,
-				04E445F61C06914000E05811 /* JSONModelPushMess.m in Sources */,
 				04E445FF1C06914000E05811 /* Foundation+Log.m in Sources */,
 				04E447081C06949100E05811 /* AddConfigCFahuoViewController.m in Sources */,
 				04E446001C06914000E05811 /* QConfig.m in Sources */,
 				04E447131C06949100E05811 /* ConfigShouHuoAddressPickerViewController.m in Sources */,
-				04E445F41C06914000E05811 /* JSONModelCommonLogistics.m in Sources */,
 				04E444F81C06908C00E05811 /* main.m in Sources */,
 				04E447341C06949100E05811 /* SelectCarVC.m in Sources */,
 				04E447AF1C06A4B400E05811 /* MJRefreshComponent.m in Sources */,
 				04E446FF1C06949100E05811 /* AddGoodsVC.m in Sources */,
-				04E445F21C06914000E05811 /* JSONModelCommonCity.m in Sources */,
 				04E447271C06949100E05811 /* HomeNVC.m in Sources */,
 				04E445E51C06914000E05811 /* UIImage+WebP.m in Sources */,
 				04E445E81C06914000E05811 /* UIView+WebCacheOperation.m in Sources */,
@@ -1845,11 +1855,8 @@
 				04E445E71C06914000E05811 /* UIImageView+WebCache.m in Sources */,
 				04E445E41C06914000E05811 /* UIImage+MultiFormat.m in Sources */,
 				04E447701C06966800E05811 /* RootTabBarController.m in Sources */,
-				04E447281C06949100E05811 /* HomeVC.m in Sources */,
-				04E445F71C06914000E05811 /* JSONModelReg.m in Sources */,
 				04E445FA1C06914000E05811 /* NSData+Base64.m in Sources */,
 				04E445FB1C06914000E05811 /* NSData+CommonCrypto.m in Sources */,
-				04E445F51C06914000E05811 /* JSONModelLogin.m in Sources */,
 				04E445EE1C06914000E05811 /* UIImageView+AFNetworking.m in Sources */,
 				04E447631C06949100E05811 /* OrderSendCommentTVC.m in Sources */,
 				04E447BE1C06A4B400E05811 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1863,6 +1870,7 @@
 				04E447BA1C06A4B400E05811 /* MJRefreshStateHeader.m in Sources */,
 				04E4473E1C06949100E05811 /* ShouhuoData.m in Sources */,
 				04E445EF1C06914000E05811 /* UIProgressView+AFNetworking.m in Sources */,
+				04E447E61C06CA0300E05811 /* JSONModelLogin.m in Sources */,
 				04E447B21C06A4B400E05811 /* MJRefreshAutoGifFooter.m in Sources */,
 				04E445E61C06914000E05811 /* UIImageView+HighlightedWebCache.m in Sources */,
 				04E4472D1C06949100E05811 /* MakeOrderOKTVC.m in Sources */,
@@ -1876,6 +1884,7 @@
 				04E445BF1C06914000E05811 /* MJProperty.m in Sources */,
 				04E447401C06949100E05811 /* AboutTVC.m in Sources */,
 				04E445B81C06914000E05811 /* AFURLResponseSerialization.m in Sources */,
+				04E447CF1C06C94000E05811 /* ConfigCommonTVC.m in Sources */,
 				04E4475D1C06949100E05811 /* TousuVC.m in Sources */,
 				04E445EA1C06914000E05811 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04E445F11C06914000E05811 /* UIWebView+AFNetworking.m in Sources */,
@@ -1885,12 +1894,13 @@
 				04E445DF1C06914000E05811 /* SDWebImageDownloaderOperation.m in Sources */,
 				04E447321C06949100E05811 /* MakeOrderCarCell.m in Sources */,
 				04E445DB1C06914000E05811 /* SDImageCache.m in Sources */,
-				04E447061C06949100E05811 /* ConfigCommonTVC.m in Sources */,
 				04E4475B1C06949100E05811 /* NotifyYHHDViewController.m in Sources */,
 				04E445C31C06914000E05811 /* NSObject+MJProperty.m in Sources */,
+				04E447E21C06CA0300E05811 /* LoginVC.m in Sources */,
 				04E445B21C06914000E05811 /* AFHTTPRequestOperationManager.m in Sources */,
 				04E447621C06949100E05811 /* OrderSendCommentSubmitTVC.m in Sources */,
 				04E447451C06949100E05811 /* MoreTVC.m in Sources */,
+				04E447D71C06C9BD00E05811 /* HomeVC.m in Sources */,
 				04E4474B1C06949100E05811 /* UserProtocolVC.m in Sources */,
 				04E445F91C06914000E05811 /* AESCrypt.m in Sources */,
 				04E4471B1C06949100E05811 /* ConfigCWuliuTVC.m in Sources */,
