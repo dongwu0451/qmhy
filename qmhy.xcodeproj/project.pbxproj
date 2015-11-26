@@ -143,19 +143,6 @@
 		04E447491C06949100E05811 /* userprotocol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04E446B81C06949100E05811 /* userprotocol.gif */; };
 		04E4474A1C06949100E05811 /* userprotocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 04E446B91C06949100E05811 /* userprotocol.html */; };
 		04E4474B1C06949100E05811 /* UserProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446BB1C06949100E05811 /* UserProtocolVC.m */; };
-		04E447501C06949100E05811 /* MyNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446C71C06949100E05811 /* MyNVC.m */; };
-		04E447511C06949100E05811 /* MyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446C91C06949100E05811 /* MyTVC.m */; };
-		04E447521C06949100E05811 /* JSONModelNotifyHYXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446CD1C06949100E05811 /* JSONModelNotifyHYXM.m */; };
-		04E447531C06949100E05811 /* NotifyHYXMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446CF1C06949100E05811 /* NotifyHYXMTableViewCell.m */; };
-		04E447541C06949100E05811 /* NotifyHYXMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446D01C06949100E05811 /* NotifyHYXMTableViewCell.xib */; };
-		04E447551C06949100E05811 /* NotifyHYXMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446D21C06949100E05811 /* NotifyHYXMTableViewController.m */; };
-		04E447561C06949100E05811 /* NotifyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446D41C06949100E05811 /* NotifyTVC.m */; };
-		04E447571C06949100E05811 /* JSONModelNotifyWLTZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446D71C06949100E05811 /* JSONModelNotifyWLTZ.m */; };
-		04E447581C06949100E05811 /* NotifyWLTZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446D91C06949100E05811 /* NotifyWLTZTableViewCell.m */; };
-		04E447591C06949100E05811 /* NotifyWLTZTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446DA1C06949100E05811 /* NotifyWLTZTableViewCell.xib */; };
-		04E4475A1C06949100E05811 /* NotifyWLTZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446DC1C06949100E05811 /* NotifyWLTZTableViewController.m */; };
-		04E4475B1C06949100E05811 /* NotifyYHHDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446DF1C06949100E05811 /* NotifyYHHDViewController.m */; };
-		04E4475C1C06949100E05811 /* NotifyZXTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446E21C06949100E05811 /* NotifyZXTZViewController.m */; };
 		04E4475D1C06949100E05811 /* TousuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446E51C06949100E05811 /* TousuVC.m */; };
 		04E4475E1C06949100E05811 /* YqTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446E81C06949100E05811 /* YqTVC.m */; };
 		04E4475F1C06949100E05811 /* OrderSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446EC1C06949100E05811 /* OrderSendButton.m */; };
@@ -203,6 +190,20 @@
 		04E447E41C06CA0300E05811 /* RegisterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447DD1C06CA0300E05811 /* RegisterTVC.m */; };
 		04E447E51C06CA0300E05811 /* RegisterTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E447DE1C06CA0300E05811 /* RegisterTVC.xib */; };
 		04E447E61C06CA0300E05811 /* JSONModelLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447E11C06CA0300E05811 /* JSONModelLogin.m */; };
+		04E447E91C06CD1D00E05811 /* JSONModelOrderGetXiangQing.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447E81C06CD1D00E05811 /* JSONModelOrderGetXiangQing.m */; };
+		04E447EF1C06CD4500E05811 /* MyNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447EC1C06CD4500E05811 /* MyNVC.m */; };
+		04E447F01C06CD4500E05811 /* MyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447EE1C06CD4500E05811 /* MyTVC.m */; };
+		04E447F41C06CD6C00E05811 /* NotifyTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447F31C06CD6C00E05811 /* NotifyTVC.m */; };
+		04E447FF1C06CDBA00E05811 /* NotifyHYXMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447F71C06CDBA00E05811 /* NotifyHYXMTableViewController.m */; };
+		04E448001C06CDBA00E05811 /* JSONModelNotifyHYXM.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447FA1C06CDBA00E05811 /* JSONModelNotifyHYXM.m */; };
+		04E448011C06CDBA00E05811 /* NotifyHYXMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E447FD1C06CDBA00E05811 /* NotifyHYXMTableViewCell.m */; };
+		04E448021C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E447FE1C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib */; };
+		04E4480D1C06CE3900E05811 /* NotifyWLTZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E448051C06CE3900E05811 /* NotifyWLTZTableViewController.m */; };
+		04E4480E1C06CE3900E05811 /* JSONModelNotifyWLTZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E448081C06CE3900E05811 /* JSONModelNotifyWLTZ.m */; };
+		04E4480F1C06CE3900E05811 /* NotifyWLTZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4480B1C06CE3900E05811 /* NotifyWLTZTableViewCell.m */; };
+		04E448101C06CE3900E05811 /* NotifyWLTZTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4480C1C06CE3900E05811 /* NotifyWLTZTableViewCell.xib */; };
+		04E448141C06CE5900E05811 /* NotifyYHHDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E448131C06CE5900E05811 /* NotifyYHHDViewController.m */; };
+		04E448181C06CE7700E05811 /* NotifyZXTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E448171C06CE7700E05811 /* NotifyZXTZViewController.m */; };
 		2B84AAD01A1219980098E502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AACF1A1219980098E502 /* Foundation.framework */; };
 		2B84AAD41A1219980098E502 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD31A1219980098E502 /* UIKit.framework */; };
 		2BBAC1471A13FC180062B6F3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBAC1461A13FC180062B6F3 /* CoreImage.framework */; };
@@ -452,30 +453,6 @@
 		04E446B91C06949100E05811 /* userprotocol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = userprotocol.html; sourceTree = "<group>"; };
 		04E446BA1C06949100E05811 /* UserProtocolVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProtocolVC.h; sourceTree = "<group>"; };
 		04E446BB1C06949100E05811 /* UserProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProtocolVC.m; sourceTree = "<group>"; };
-		04E446C61C06949100E05811 /* MyNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNVC.h; sourceTree = "<group>"; };
-		04E446C71C06949100E05811 /* MyNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNVC.m; sourceTree = "<group>"; };
-		04E446C81C06949100E05811 /* MyTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTVC.h; sourceTree = "<group>"; };
-		04E446C91C06949100E05811 /* MyTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTVC.m; sourceTree = "<group>"; };
-		04E446CC1C06949100E05811 /* JSONModelNotifyHYXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelNotifyHYXM.h; sourceTree = "<group>"; };
-		04E446CD1C06949100E05811 /* JSONModelNotifyHYXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelNotifyHYXM.m; sourceTree = "<group>"; };
-		04E446CE1C06949100E05811 /* NotifyHYXMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyHYXMTableViewCell.h; sourceTree = "<group>"; };
-		04E446CF1C06949100E05811 /* NotifyHYXMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyHYXMTableViewCell.m; sourceTree = "<group>"; };
-		04E446D01C06949100E05811 /* NotifyHYXMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyHYXMTableViewCell.xib; sourceTree = "<group>"; };
-		04E446D11C06949100E05811 /* NotifyHYXMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyHYXMTableViewController.h; sourceTree = "<group>"; };
-		04E446D21C06949100E05811 /* NotifyHYXMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyHYXMTableViewController.m; sourceTree = "<group>"; };
-		04E446D31C06949100E05811 /* NotifyTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyTVC.h; sourceTree = "<group>"; };
-		04E446D41C06949100E05811 /* NotifyTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyTVC.m; sourceTree = "<group>"; };
-		04E446D61C06949100E05811 /* JSONModelNotifyWLTZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelNotifyWLTZ.h; sourceTree = "<group>"; };
-		04E446D71C06949100E05811 /* JSONModelNotifyWLTZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelNotifyWLTZ.m; sourceTree = "<group>"; };
-		04E446D81C06949100E05811 /* NotifyWLTZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyWLTZTableViewCell.h; sourceTree = "<group>"; };
-		04E446D91C06949100E05811 /* NotifyWLTZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyWLTZTableViewCell.m; sourceTree = "<group>"; };
-		04E446DA1C06949100E05811 /* NotifyWLTZTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyWLTZTableViewCell.xib; sourceTree = "<group>"; };
-		04E446DB1C06949100E05811 /* NotifyWLTZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyWLTZTableViewController.h; sourceTree = "<group>"; };
-		04E446DC1C06949100E05811 /* NotifyWLTZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyWLTZTableViewController.m; sourceTree = "<group>"; };
-		04E446DE1C06949100E05811 /* NotifyYHHDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyYHHDViewController.h; sourceTree = "<group>"; };
-		04E446DF1C06949100E05811 /* NotifyYHHDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyYHHDViewController.m; sourceTree = "<group>"; };
-		04E446E11C06949100E05811 /* NotifyZXTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyZXTZViewController.h; sourceTree = "<group>"; };
-		04E446E21C06949100E05811 /* NotifyZXTZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyZXTZViewController.m; sourceTree = "<group>"; };
 		04E446E41C06949100E05811 /* TousuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TousuVC.h; sourceTree = "<group>"; };
 		04E446E51C06949100E05811 /* TousuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TousuVC.m; sourceTree = "<group>"; };
 		04E446E71C06949100E05811 /* YqTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YqTVC.h; sourceTree = "<group>"; };
@@ -565,6 +542,32 @@
 		04E447DE1C06CA0300E05811 /* RegisterTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterTVC.xib; sourceTree = "<group>"; };
 		04E447E01C06CA0300E05811 /* JSONModelLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLogin.h; sourceTree = "<group>"; };
 		04E447E11C06CA0300E05811 /* JSONModelLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelLogin.m; sourceTree = "<group>"; };
+		04E447E71C06CD1D00E05811 /* JSONModelOrderGetXiangQing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelOrderGetXiangQing.h; sourceTree = "<group>"; };
+		04E447E81C06CD1D00E05811 /* JSONModelOrderGetXiangQing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelOrderGetXiangQing.m; sourceTree = "<group>"; };
+		04E447EB1C06CD4500E05811 /* MyNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNVC.h; sourceTree = "<group>"; };
+		04E447EC1C06CD4500E05811 /* MyNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNVC.m; sourceTree = "<group>"; };
+		04E447ED1C06CD4500E05811 /* MyTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTVC.h; sourceTree = "<group>"; };
+		04E447EE1C06CD4500E05811 /* MyTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTVC.m; sourceTree = "<group>"; };
+		04E447F21C06CD6C00E05811 /* NotifyTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyTVC.h; sourceTree = "<group>"; };
+		04E447F31C06CD6C00E05811 /* NotifyTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyTVC.m; sourceTree = "<group>"; };
+		04E447F61C06CDBA00E05811 /* NotifyHYXMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyHYXMTableViewController.h; sourceTree = "<group>"; };
+		04E447F71C06CDBA00E05811 /* NotifyHYXMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyHYXMTableViewController.m; sourceTree = "<group>"; };
+		04E447F91C06CDBA00E05811 /* JSONModelNotifyHYXM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelNotifyHYXM.h; sourceTree = "<group>"; };
+		04E447FA1C06CDBA00E05811 /* JSONModelNotifyHYXM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelNotifyHYXM.m; sourceTree = "<group>"; };
+		04E447FC1C06CDBA00E05811 /* NotifyHYXMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyHYXMTableViewCell.h; sourceTree = "<group>"; };
+		04E447FD1C06CDBA00E05811 /* NotifyHYXMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyHYXMTableViewCell.m; sourceTree = "<group>"; };
+		04E447FE1C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyHYXMTableViewCell.xib; sourceTree = "<group>"; };
+		04E448041C06CE3900E05811 /* NotifyWLTZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyWLTZTableViewController.h; sourceTree = "<group>"; };
+		04E448051C06CE3900E05811 /* NotifyWLTZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyWLTZTableViewController.m; sourceTree = "<group>"; };
+		04E448071C06CE3900E05811 /* JSONModelNotifyWLTZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelNotifyWLTZ.h; sourceTree = "<group>"; };
+		04E448081C06CE3900E05811 /* JSONModelNotifyWLTZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelNotifyWLTZ.m; sourceTree = "<group>"; };
+		04E4480A1C06CE3900E05811 /* NotifyWLTZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyWLTZTableViewCell.h; sourceTree = "<group>"; };
+		04E4480B1C06CE3900E05811 /* NotifyWLTZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyWLTZTableViewCell.m; sourceTree = "<group>"; };
+		04E4480C1C06CE3900E05811 /* NotifyWLTZTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyWLTZTableViewCell.xib; sourceTree = "<group>"; };
+		04E448121C06CE5900E05811 /* NotifyYHHDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyYHHDViewController.h; sourceTree = "<group>"; };
+		04E448131C06CE5900E05811 /* NotifyYHHDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyYHHDViewController.m; sourceTree = "<group>"; };
+		04E448161C06CE7700E05811 /* NotifyZXTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyZXTZViewController.h; sourceTree = "<group>"; };
+		04E448171C06CE7700E05811 /* NotifyZXTZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyZXTZViewController.m; sourceTree = "<group>"; };
 		2B84AACC1A1219980098E502 /* qmhy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmhy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84AACF1A1219980098E502 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B84AAD11A1219980098E502 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1273,10 +1276,7 @@
 		04E446C51C06949100E05811 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				04E446C61C06949100E05811 /* MyNVC.h */,
-				04E446C71C06949100E05811 /* MyNVC.m */,
-				04E446C81C06949100E05811 /* MyTVC.h */,
-				04E446C91C06949100E05811 /* MyTVC.m */,
+				04E447EA1C06CD4500E05811 /* Controller */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -1284,8 +1284,7 @@
 		04E446CA1C06949100E05811 /* Notify */ = {
 			isa = PBXGroup;
 			children = (
-				04E446D31C06949100E05811 /* NotifyTVC.h */,
-				04E446D41C06949100E05811 /* NotifyTVC.m */,
+				04E447F11C06CD6C00E05811 /* Controller */,
 				04E446CB1C06949100E05811 /* HuoYunXiaoMi */,
 				04E446D51C06949100E05811 /* WuLiuTongZhi */,
 				04E446DD1C06949100E05811 /* YouHuiHuoDong */,
@@ -1297,13 +1296,9 @@
 		04E446CB1C06949100E05811 /* HuoYunXiaoMi */ = {
 			isa = PBXGroup;
 			children = (
-				04E446CC1C06949100E05811 /* JSONModelNotifyHYXM.h */,
-				04E446CD1C06949100E05811 /* JSONModelNotifyHYXM.m */,
-				04E446CE1C06949100E05811 /* NotifyHYXMTableViewCell.h */,
-				04E446CF1C06949100E05811 /* NotifyHYXMTableViewCell.m */,
-				04E446D01C06949100E05811 /* NotifyHYXMTableViewCell.xib */,
-				04E446D11C06949100E05811 /* NotifyHYXMTableViewController.h */,
-				04E446D21C06949100E05811 /* NotifyHYXMTableViewController.m */,
+				04E447F51C06CDBA00E05811 /* Controller */,
+				04E447F81C06CDBA00E05811 /* Model */,
+				04E447FB1C06CDBA00E05811 /* View */,
 			);
 			path = HuoYunXiaoMi;
 			sourceTree = "<group>";
@@ -1311,13 +1306,9 @@
 		04E446D51C06949100E05811 /* WuLiuTongZhi */ = {
 			isa = PBXGroup;
 			children = (
-				04E446D61C06949100E05811 /* JSONModelNotifyWLTZ.h */,
-				04E446D71C06949100E05811 /* JSONModelNotifyWLTZ.m */,
-				04E446D81C06949100E05811 /* NotifyWLTZTableViewCell.h */,
-				04E446D91C06949100E05811 /* NotifyWLTZTableViewCell.m */,
-				04E446DA1C06949100E05811 /* NotifyWLTZTableViewCell.xib */,
-				04E446DB1C06949100E05811 /* NotifyWLTZTableViewController.h */,
-				04E446DC1C06949100E05811 /* NotifyWLTZTableViewController.m */,
+				04E448031C06CE3900E05811 /* Controller */,
+				04E448061C06CE3900E05811 /* Model */,
+				04E448091C06CE3900E05811 /* View */,
 			);
 			path = WuLiuTongZhi;
 			sourceTree = "<group>";
@@ -1325,8 +1316,7 @@
 		04E446DD1C06949100E05811 /* YouHuiHuoDong */ = {
 			isa = PBXGroup;
 			children = (
-				04E446DE1C06949100E05811 /* NotifyYHHDViewController.h */,
-				04E446DF1C06949100E05811 /* NotifyYHHDViewController.m */,
+				04E448111C06CE5900E05811 /* Controller */,
 			);
 			path = YouHuiHuoDong;
 			sourceTree = "<group>";
@@ -1334,8 +1324,7 @@
 		04E446E01C06949100E05811 /* ZuiXinTongZhi */ = {
 			isa = PBXGroup;
 			children = (
-				04E446E11C06949100E05811 /* NotifyZXTZViewController.h */,
-				04E446E21C06949100E05811 /* NotifyZXTZViewController.m */,
+				04E448151C06CE7700E05811 /* Controller */,
 			);
 			path = ZuiXinTongZhi;
 			sourceTree = "<group>";
@@ -1441,6 +1430,8 @@
 			children = (
 				04E447761C06A20F00E05811 /* JSONModelOrderGet.h */,
 				04E447771C06A20F00E05811 /* JSONModelOrderGet.m */,
+				04E447E71C06CD1D00E05811 /* JSONModelOrderGetXiangQing.h */,
+				04E447E81C06CD1D00E05811 /* JSONModelOrderGetXiangQing.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1606,6 +1597,100 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		04E447EA1C06CD4500E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447EB1C06CD4500E05811 /* MyNVC.h */,
+				04E447EC1C06CD4500E05811 /* MyNVC.m */,
+				04E447ED1C06CD4500E05811 /* MyTVC.h */,
+				04E447EE1C06CD4500E05811 /* MyTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447F11C06CD6C00E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447F21C06CD6C00E05811 /* NotifyTVC.h */,
+				04E447F31C06CD6C00E05811 /* NotifyTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447F51C06CDBA00E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E447F61C06CDBA00E05811 /* NotifyHYXMTableViewController.h */,
+				04E447F71C06CDBA00E05811 /* NotifyHYXMTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E447F81C06CDBA00E05811 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E447F91C06CDBA00E05811 /* JSONModelNotifyHYXM.h */,
+				04E447FA1C06CDBA00E05811 /* JSONModelNotifyHYXM.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04E447FB1C06CDBA00E05811 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04E447FC1C06CDBA00E05811 /* NotifyHYXMTableViewCell.h */,
+				04E447FD1C06CDBA00E05811 /* NotifyHYXMTableViewCell.m */,
+				04E447FE1C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04E448031C06CE3900E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E448041C06CE3900E05811 /* NotifyWLTZTableViewController.h */,
+				04E448051C06CE3900E05811 /* NotifyWLTZTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E448061C06CE3900E05811 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E448071C06CE3900E05811 /* JSONModelNotifyWLTZ.h */,
+				04E448081C06CE3900E05811 /* JSONModelNotifyWLTZ.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04E448091C06CE3900E05811 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04E4480A1C06CE3900E05811 /* NotifyWLTZTableViewCell.h */,
+				04E4480B1C06CE3900E05811 /* NotifyWLTZTableViewCell.m */,
+				04E4480C1C06CE3900E05811 /* NotifyWLTZTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04E448111C06CE5900E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E448121C06CE5900E05811 /* NotifyYHHDViewController.h */,
+				04E448131C06CE5900E05811 /* NotifyYHHDViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E448151C06CE7700E05811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E448161C06CE7700E05811 /* NotifyZXTZViewController.h */,
+				04E448171C06CE7700E05811 /* NotifyZXTZViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2B84AAC31A1219980098E502 = {
 			isa = PBXGroup;
 			children = (
@@ -1712,6 +1797,7 @@
 				04E445BC1C06914000E05811 /* LICENSE in Resources */,
 				04E447BB1C06A4B400E05811 /* MJRefresh.bundle in Resources */,
 				04E447C41C06C1FC00E05811 /* OrderGetXiangQingViewController.xib in Resources */,
+				04E448101C06CE3900E05811 /* NotifyWLTZTableViewCell.xib in Resources */,
 				04E447471C06949100E05811 /* pricetable.html in Resources */,
 				04E4473D1C06949100E05811 /* MakeOrderShouhuoCell.xib in Resources */,
 				04E447421C06949100E05811 /* help.html in Resources */,
@@ -1725,6 +1811,7 @@
 				04E4474A1C06949100E05811 /* userprotocol.html in Resources */,
 				04E447461C06949100E05811 /* pricetable.gif in Resources */,
 				04E447491C06949100E05811 /* userprotocol.gif in Resources */,
+				04E448021C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib in Resources */,
 				04E444F21C068F5900E05811 /* Main.storyboard in Resources */,
 				04E447371C06949100E05811 /* MakeOrderGoodsCell.xib in Resources */,
 				04E447161C06949100E05811 /* EditConfigCShouhuoViewController.xib in Resources */,
@@ -1736,8 +1823,6 @@
 				04E446111C06938900E05811 /* More.bundle in Resources */,
 				04E445F81C06914000E05811 /* .gitignore in Resources */,
 				04E447101C06949100E05811 /* ConfigCFahuoTableViewCell.xib in Resources */,
-				04E447541C06949100E05811 /* NotifyHYXMTableViewCell.xib in Resources */,
-				04E447591C06949100E05811 /* NotifyWLTZTableViewCell.xib in Resources */,
 				04E447331C06949100E05811 /* MakeOrderCarCell.xib in Resources */,
 				04E447191C06949100E05811 /* ConfigCShouhuoTableViewCell.xib in Resources */,
 				04E4460F1C06938900E05811 /* Home.bundle in Resources */,
@@ -1759,6 +1844,7 @@
 			files = (
 				04E445B61C06914000E05811 /* AFURLConnectionOperation.m in Sources */,
 				04E445E01C06914000E05811 /* SDWebImageManager.m in Sources */,
+				04E448001C06CDBA00E05811 /* JSONModelNotifyHYXM.m in Sources */,
 				04E445DA1C06914000E05811 /* NSData+ImageContentType.m in Sources */,
 				04E447BF1C06A4B400E05811 /* UIView+MJExtension.m in Sources */,
 				04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */,
@@ -1769,7 +1855,9 @@
 				04E447391C06949100E05811 /* MakeOrderQuhuoCell.m in Sources */,
 				04E447661C06949100E05811 /* OrderSendQueryTVC.m in Sources */,
 				04E445D91C06914000E05811 /* MKAnnotationView+WebCache.m in Sources */,
+				04E447F41C06CD6C00E05811 /* NotifyTVC.m in Sources */,
 				04E446011C06914000E05811 /* UniformResourceLocator.m in Sources */,
+				04E4480F1C06CE3900E05811 /* NotifyWLTZTableViewCell.m in Sources */,
 				04E447181C06949100E05811 /* ConfigCShouhuoTableViewCell.m in Sources */,
 				04E4472E1C06949100E05811 /* MakeOrderTotalCell.m in Sources */,
 				04E447091C06949100E05811 /* ConfigCQuhuoTVC.m in Sources */,
@@ -1778,12 +1866,12 @@
 				04E447441C06949100E05811 /* MoreNVC.m in Sources */,
 				04E4475F1C06949100E05811 /* OrderSendButton.m in Sources */,
 				04E445B41C06914000E05811 /* AFNetworkReachabilityManager.m in Sources */,
+				04E447EF1C06CD4500E05811 /* MyNVC.m in Sources */,
 				04E445B71C06914000E05811 /* AFURLRequestSerialization.m in Sources */,
 				04E447301C06949100E05811 /* MakeOrderTVC.m in Sources */,
 				04E447231C06949100E05811 /* GesturePasswordController.m in Sources */,
 				04E447151C06949100E05811 /* EditConfigCShouhuoViewController.m in Sources */,
 				04E445BB1C06914000E05811 /* MBProgressHUD.m in Sources */,
-				04E447551C06949100E05811 /* NotifyHYXMTableViewController.m in Sources */,
 				04E4471E1C06949100E05811 /* JSONModelConfigCWuLiu.m in Sources */,
 				04E445FD1C06914000E05811 /* README.md in Sources */,
 				04E447251C06949100E05811 /* TentacleView.m in Sources */,
@@ -1815,13 +1903,10 @@
 				04E447651C06949100E05811 /* OrderSendQueryContentTVC.m in Sources */,
 				04E447D31C06C95D00E05811 /* ConfigCPasswordVC.m in Sources */,
 				04E445FC1C06914000E05811 /* NSString+Base64.m in Sources */,
-				04E447531C06949100E05811 /* NotifyHYXMTableViewCell.m in Sources */,
 				04E4477E1C06A20F00E05811 /* OrderGetTableViewCell.m in Sources */,
 				04E447641C06949100E05811 /* OrderSendListTVC.m in Sources */,
 				04E447CB1C06C90A00E05811 /* ConfigCBankVC.m in Sources */,
-				04E447561C06949100E05811 /* NotifyTVC.m in Sources */,
 				04E447481C06949100E05811 /* PriceTableVC.m in Sources */,
-				04E4475A1C06949100E05811 /* NotifyWLTZTableViewController.m in Sources */,
 				04E445EC1C06914000E05811 /* UIAlertView+AFNetworking.m in Sources */,
 				04E445C01C06914000E05811 /* MJType.m in Sources */,
 				04E445F01C06914000E05811 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1830,16 +1915,17 @@
 				04E447B81C06A4B400E05811 /* MJRefreshGifHeader.m in Sources */,
 				04E447221C06949100E05811 /* GesturePasswordButton.m in Sources */,
 				04E445B31C06914000E05811 /* AFHTTPSessionManager.m in Sources */,
-				04E447571C06949100E05811 /* JSONModelNotifyWLTZ.m in Sources */,
 				04E445BE1C06914000E05811 /* MJFoundation.m in Sources */,
 				04E445BD1C06914000E05811 /* MJConst.m in Sources */,
 				04E445FF1C06914000E05811 /* Foundation+Log.m in Sources */,
 				04E447081C06949100E05811 /* AddConfigCFahuoViewController.m in Sources */,
 				04E446001C06914000E05811 /* QConfig.m in Sources */,
+				04E448141C06CE5900E05811 /* NotifyYHHDViewController.m in Sources */,
 				04E447131C06949100E05811 /* ConfigShouHuoAddressPickerViewController.m in Sources */,
 				04E444F81C06908C00E05811 /* main.m in Sources */,
 				04E447341C06949100E05811 /* SelectCarVC.m in Sources */,
 				04E447AF1C06A4B400E05811 /* MJRefreshComponent.m in Sources */,
+				04E4480E1C06CE3900E05811 /* JSONModelNotifyWLTZ.m in Sources */,
 				04E446FF1C06949100E05811 /* AddGoodsVC.m in Sources */,
 				04E447271C06949100E05811 /* HomeNVC.m in Sources */,
 				04E445E51C06914000E05811 /* UIImage+WebP.m in Sources */,
@@ -1850,8 +1936,8 @@
 				04E445ED1C06914000E05811 /* UIButton+AFNetworking.m in Sources */,
 				04E445B11C06914000E05811 /* AFHTTPRequestOperation.m in Sources */,
 				04E447011C06949100E05811 /* EditGoodsVC.m in Sources */,
+				04E447FF1C06CDBA00E05811 /* NotifyHYXMTableViewController.m in Sources */,
 				04E445EB1C06914000E05811 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				04E447501C06949100E05811 /* MyNVC.m in Sources */,
 				04E445E71C06914000E05811 /* UIImageView+WebCache.m in Sources */,
 				04E445E41C06914000E05811 /* UIImage+MultiFormat.m in Sources */,
 				04E447701C06966800E05811 /* RootTabBarController.m in Sources */,
@@ -1861,25 +1947,26 @@
 				04E447631C06949100E05811 /* OrderSendCommentTVC.m in Sources */,
 				04E447BE1C06A4B400E05811 /* UIScrollView+MJRefresh.m in Sources */,
 				04E447111C06949100E05811 /* AddConfigCShouhuoViewController.m in Sources */,
-				04E447511C06949100E05811 /* MyTVC.m in Sources */,
 				04E446021C06914000E05811 /* XMLDictionary.m in Sources */,
 				04E447611C06949100E05811 /* OrderSendTVC.m in Sources */,
 				04E447BC1C06A4B400E05811 /* MJRefreshConst.m in Sources */,
 				04E447711C06966800E05811 /* SinglePageNVC.m in Sources */,
 				04E447B41C06A4B400E05811 /* MJRefreshAutoStateFooter.m in Sources */,
+				04E4480D1C06CE3900E05811 /* NotifyWLTZTableViewController.m in Sources */,
 				04E447BA1C06A4B400E05811 /* MJRefreshStateHeader.m in Sources */,
 				04E4473E1C06949100E05811 /* ShouhuoData.m in Sources */,
+				04E447F01C06CD4500E05811 /* MyTVC.m in Sources */,
 				04E445EF1C06914000E05811 /* UIProgressView+AFNetworking.m in Sources */,
 				04E447E61C06CA0300E05811 /* JSONModelLogin.m in Sources */,
 				04E447B21C06A4B400E05811 /* MJRefreshAutoGifFooter.m in Sources */,
 				04E445E61C06914000E05811 /* UIImageView+HighlightedWebCache.m in Sources */,
 				04E4472D1C06949100E05811 /* MakeOrderOKTVC.m in Sources */,
 				04E4470E1C06949100E05811 /* JSONModelConfigFahuo.m in Sources */,
+				04E447E91C06CD1D00E05811 /* JSONModelOrderGetXiangQing.m in Sources */,
 				04E445DE1C06914000E05811 /* SDWebImageDownloader.m in Sources */,
 				04E447041C06949100E05811 /* ConfigCGoodsTableViewCell.m in Sources */,
 				04E445E21C06914000E05811 /* UIButton+WebCache.m in Sources */,
 				04E445E91C06914000E05811 /* TLTagsControl.m in Sources */,
-				04E447581C06949100E05811 /* NotifyWLTZTableViewCell.m in Sources */,
 				04E447261C06949100E05811 /* HomeIconButton.m in Sources */,
 				04E445BF1C06914000E05811 /* MJProperty.m in Sources */,
 				04E447401C06949100E05811 /* AboutTVC.m in Sources */,
@@ -1890,25 +1977,24 @@
 				04E445F11C06914000E05811 /* UIWebView+AFNetworking.m in Sources */,
 				04E4477C1C06A20F00E05811 /* OrderGetTVC.m in Sources */,
 				04E447361C06949100E05811 /* MakeOrderGoodsCell.m in Sources */,
+				04E448011C06CDBA00E05811 /* NotifyHYXMTableViewCell.m in Sources */,
 				04E445BA1C06914000E05811 /* MBProgressHUD+HM.m in Sources */,
 				04E445DF1C06914000E05811 /* SDWebImageDownloaderOperation.m in Sources */,
 				04E447321C06949100E05811 /* MakeOrderCarCell.m in Sources */,
 				04E445DB1C06914000E05811 /* SDImageCache.m in Sources */,
-				04E4475B1C06949100E05811 /* NotifyYHHDViewController.m in Sources */,
 				04E445C31C06914000E05811 /* NSObject+MJProperty.m in Sources */,
 				04E447E21C06CA0300E05811 /* LoginVC.m in Sources */,
 				04E445B21C06914000E05811 /* AFHTTPRequestOperationManager.m in Sources */,
 				04E447621C06949100E05811 /* OrderSendCommentSubmitTVC.m in Sources */,
 				04E447451C06949100E05811 /* MoreTVC.m in Sources */,
+				04E448181C06CE7700E05811 /* NotifyZXTZViewController.m in Sources */,
 				04E447D71C06C9BD00E05811 /* HomeVC.m in Sources */,
 				04E4474B1C06949100E05811 /* UserProtocolVC.m in Sources */,
 				04E445F91C06914000E05811 /* AESCrypt.m in Sources */,
 				04E4471B1C06949100E05811 /* ConfigCWuliuTVC.m in Sources */,
 				04E445B51C06914000E05811 /* AFSecurityPolicy.m in Sources */,
 				04E447BD1C06A4B400E05811 /* UIScrollView+MJExtension.m in Sources */,
-				04E447521C06949100E05811 /* JSONModelNotifyHYXM.m in Sources */,
 				04E445C51C06914000E05811 /* README.md in Sources */,
-				04E4475C1C06949100E05811 /* NotifyZXTZViewController.m in Sources */,
 				04E445C41C06914000E05811 /* NSString+MJExtension.m in Sources */,
 				04E445E31C06914000E05811 /* UIImage+GIF.m in Sources */,
 				04E447AD1C06A4B400E05811 /* MJRefreshAutoFooter.m in Sources */,
