@@ -13,7 +13,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"%f", 1.23 + 12.3);
     //service更多  wealth我的  home主页  discovery订单
     
     //支付宝思路：共有三个可选的rootVC loginVC、gestureVC、tabbarVC
