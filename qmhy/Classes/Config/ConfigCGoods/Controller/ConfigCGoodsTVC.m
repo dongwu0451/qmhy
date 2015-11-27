@@ -104,9 +104,9 @@
     
     if (buttonIndex == 1) {
         [self removeConfigCHuowu:self.jsonModelConfigGGoods];
-        NSLog(@"确定");
+        
     } else {
-        NSLog(@"取消");
+        
     }
 }
 

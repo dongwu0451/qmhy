@@ -34,12 +34,13 @@
 - (void)loadNewData {
     // 请求参数
     NSString *methodName = @"gettabpushmess";
-    NSString *params = @"&proName=%@_%d_%d_%d";
+    NSString *params = @"&proName=%@_%d_%d";
     QConfig *config = [[QConfig alloc] init];
     NSString *uid = config.uid;
     int type = 1;
     int aid = -1;
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, type, aid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"URL%@", URL);
     // 发送请求
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;

@@ -40,7 +40,6 @@
         title.textAlignment=NSTextAlignmentCenter;
         title.textColor=[UIColor whiteColor];
         self.navigationItem.titleView=title;
-        NSLog(@"setTitle");
     }
 }
 

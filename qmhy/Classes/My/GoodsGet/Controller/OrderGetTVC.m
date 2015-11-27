@@ -74,13 +74,14 @@
     self.pegeEnd += 5;
     // 请求参数
     NSString *methodName = @"getConsigneeorder";
-    NSString *params = @"&proName=%@_%d_%d_%d";
+    NSString *params = @"&proName=%@_%d_%d";
     QConfig *config = [[QConfig alloc] init];
     NSString *uid = config.uid;
     int start = self.pageIndex;
     int end = self.pegeEnd;
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, start, end] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // 发送请求
+    
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -107,12 +108,13 @@
     self.pegeEnd = 5;
     // 请求参数
     NSString *methodName = @"getConsigneeorder";
-    NSString *params = @"&proName=%@_%d_%d_%d";
+    NSString *params = @"&proName=%@_%d_%d";
     QConfig *config = [[QConfig alloc] init];
     NSString *uid = config.uid;
     int start = 1;
     int end = 5;
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, start, end] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@", URL);
     // 发送请求
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
@@ -148,9 +150,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JSONModelOrderGet *jsonModelOrderGet = _dataArray[indexPath.row];
+//    OrderGetTableViewCell *cell = (OrderGetTableViewCell *)[tableView viewWithTag:indexPath.row];
+//    cell.dingdanhaoLabel.text;
+    //    NSLog(@"%@", cell.dingdanhaoLabel.text);
     OrderGetXiangQingViewController *vc = [[OrderGetXiangQingViewController alloc] init];
+    vc.code = jsonModelOrderGet.code;
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
-    NSLog(@"%ld", indexPath.row);
+    NSLog(@"%d", indexPath.row);
     
 }
 

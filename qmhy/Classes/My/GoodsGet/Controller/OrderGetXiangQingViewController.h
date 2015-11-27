@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface OrderGetXiangQingViewController : UIViewController
+@property (nonatomic, copy) NSString *code;
 
 @end

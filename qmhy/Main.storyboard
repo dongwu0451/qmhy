@@ -778,7 +778,7 @@
         <!--我的消息-->
         <scene sceneID="yXx-1O-zJY">
             <objects>
-                <tableViewController id="EWX-PE-6OJ" customClass="NotifyTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="EWX-PE-6OJ" customClass="NotifyTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K1Q-4D-etI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2375,7 +2375,7 @@
         <!--投诉和建议-->
         <scene sceneID="0YP-lp-Ncm">
             <objects>
-                <viewController id="tVD-ui-RhL" customClass="TousuVC" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="tVD-ui-RhL" customClass="TousuVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oID-qe-aeQ"/>
                         <viewControllerLayoutGuide type="bottom" id="J7a-XW-Boh"/>
@@ -2385,15 +2385,20 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_yunyin" translatesAutoresizingMaskIntoConstraints="NO" id="qDH-hh-YgP">
-                                <rect key="frame" x="0.0" y="64" width="320" height="387"/>
+                                <rect key="frame" x="20" y="64" width="280" height="300"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="2KR-yk-huH"/>
+                                    <constraint firstAttribute="height" constant="300" id="gE9-Mq-4uK"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-pL-Axb">
-                                <rect key="frame" x="0.0" y="451" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="372" width="320" height="60"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4lY-mk-FEc"/>
+                                    <constraint firstAttribute="width" constant="320" id="Gwc-Ec-DBk"/>
+                                    <constraint firstAttribute="height" constant="60" id="neb-tQ-enj"/>
                                 </constraints>
                                 <state key="normal" title=" 按住 说话">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2406,13 +2411,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qDH-hh-YgP" firstAttribute="leading" secondItem="vgX-pL-Axb" secondAttribute="leading" id="6Mq-f5-Koh"/>
-                            <constraint firstItem="qDH-hh-YgP" firstAttribute="trailing" secondItem="vgX-pL-Axb" secondAttribute="trailing" id="AHA-Sa-xGE"/>
-                            <constraint firstItem="vgX-pL-Axb" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" id="IAz-ZJ-Lnh"/>
-                            <constraint firstItem="J7a-XW-Boh" firstAttribute="top" secondItem="vgX-pL-Axb" secondAttribute="bottom" constant="8" symbolic="YES" id="dGk-Km-E2V"/>
-                            <constraint firstItem="vgX-pL-Axb" firstAttribute="top" secondItem="qDH-hh-YgP" secondAttribute="bottom" id="fn1-xu-Ncr"/>
-                            <constraint firstAttribute="trailing" secondItem="qDH-hh-YgP" secondAttribute="trailing" id="rJx-Vp-UK8"/>
-                            <constraint firstItem="qDH-hh-YgP" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" id="wri-Oh-IZk"/>
+                            <constraint firstAttribute="trailing" secondItem="qDH-hh-YgP" secondAttribute="trailing" constant="20" id="ADb-aX-AAq"/>
+                            <constraint firstItem="vgX-pL-Axb" firstAttribute="top" secondItem="qDH-hh-YgP" secondAttribute="bottom" constant="8" id="Bax-kh-tKl"/>
+                            <constraint firstItem="vgX-pL-Axb" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" id="LyI-kU-Wza"/>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" id="UTp-Kv-XZV"/>
+                            <constraint firstAttribute="trailing" secondItem="vgX-pL-Axb" secondAttribute="trailing" id="bH6-S0-aw1"/>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" constant="20" id="eK7-Ze-5jM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投诉和建议" id="iJ8-Zo-0eC"/>
@@ -2424,7 +2428,7 @@
         <!--邀请-->
         <scene sceneID="d9Q-Rz-g7s">
             <objects>
-                <tableViewController storyboardIdentifier="SIDYqVC" id="UsG-Y6-QLY" customClass="YqTVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SIDYqVC" hidesBottomBarWhenPushed="YES" id="UsG-Y6-QLY" customClass="YqTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OcY-7r-VRP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2456,7 +2460,7 @@
         <!--我的收件-->
         <scene sceneID="mfC-aK-FJo">
             <objects>
-                <tableViewController storyboardIdentifier="SIDOrderGetTVC" id="xgH-6d-JYi" customClass="OrderGetTVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SIDOrderGetTVC" hidesBottomBarWhenPushed="YES" id="xgH-6d-JYi" customClass="OrderGetTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VL8-U1-73W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

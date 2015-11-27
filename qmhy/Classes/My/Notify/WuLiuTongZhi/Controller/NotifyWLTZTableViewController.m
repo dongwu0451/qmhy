@@ -35,7 +35,7 @@
 - (void)loadNewData {
     // 请求参数
     NSString *methodName = @"gettabpushmess";
-    NSString *params = @"&proName=%@_%d_%d_%d";
+    NSString *params = @"&proName=%@_%d_%d";
     QConfig *config = [[QConfig alloc] init];
     NSString *uid = config.uid;
     int type = 2;
