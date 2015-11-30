@@ -2385,41 +2385,76 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_yunyin" translatesAutoresizingMaskIntoConstraints="NO" id="qDH-hh-YgP">
-                                <rect key="frame" x="20" y="64" width="280" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="2KR-yk-huH"/>
-                                    <constraint firstAttribute="height" constant="300" id="gE9-Mq-4uK"/>
+                                    <constraint firstAttribute="height" constant="504" id="jRk-VS-IWJ"/>
+                                    <constraint firstAttribute="width" constant="320" id="yqa-RS-CjQ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-pL-Axb">
-                                <rect key="frame" x="0.0" y="372" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="479" width="120" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Gwc-Ec-DBk"/>
-                                    <constraint firstAttribute="height" constant="60" id="neb-tQ-enj"/>
+                                    <constraint firstAttribute="width" constant="120" id="1VF-Ca-kIL"/>
+                                    <constraint firstAttribute="height" constant="40" id="5jZ-ff-iVY"/>
                                 </constraints>
-                                <state key="normal" title=" 按住 说话">
+                                <state key="normal" title="开始录音">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tousuBtnClick:" destination="tVD-ui-RhL" eventType="touchUpInside" id="clp-PQ-2zP"/>
+                                    <action selector="recordClick:" destination="tVD-ui-RhL" eventType="touchUpInside" id="k71-jL-7za"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcs-KR-9ht">
+                                <rect key="frame" x="120" y="479" width="200" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Fxh-TC-0va"/>
+                                    <constraint firstAttribute="height" constant="40" id="ggN-Cj-CHf"/>
+                                </constraints>
+                                <state key="normal" title="结束录音发送投诉和建议">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopClick:" destination="tVD-ui-RhL" eventType="touchUpInside" id="HSf-dY-cLC"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w7E-0P-e3K">
+                                <rect key="frame" x="20" y="264" width="280" height="2"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="6IP-yS-vPO"/>
+                                    <constraint firstAttribute="height" constant="2" id="Abx-VY-4S7"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qDH-hh-YgP" secondAttribute="trailing" constant="20" id="ADb-aX-AAq"/>
-                            <constraint firstItem="vgX-pL-Axb" firstAttribute="top" secondItem="qDH-hh-YgP" secondAttribute="bottom" constant="8" id="Bax-kh-tKl"/>
-                            <constraint firstItem="vgX-pL-Axb" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" id="LyI-kU-Wza"/>
-                            <constraint firstItem="qDH-hh-YgP" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" id="UTp-Kv-XZV"/>
-                            <constraint firstAttribute="trailing" secondItem="vgX-pL-Axb" secondAttribute="trailing" id="bH6-S0-aw1"/>
-                            <constraint firstItem="qDH-hh-YgP" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" constant="20" id="eK7-Ze-5jM"/>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" id="4xK-DG-veI"/>
+                            <constraint firstAttribute="trailing" secondItem="Lcs-KR-9ht" secondAttribute="trailing" id="5oP-zL-LAw"/>
+                            <constraint firstAttribute="trailing" secondItem="qDH-hh-YgP" secondAttribute="trailing" id="7Qh-ui-c6i"/>
+                            <constraint firstItem="qDH-hh-YgP" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" id="85w-3J-c3T"/>
+                            <constraint firstAttribute="bottom" secondItem="qDH-hh-YgP" secondAttribute="bottom" id="DFf-gG-En9"/>
+                            <constraint firstAttribute="trailing" secondItem="w7E-0P-e3K" secondAttribute="trailing" constant="20" id="FTK-01-duW"/>
+                            <constraint firstItem="Lcs-KR-9ht" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" constant="415" id="Q8d-Bt-res"/>
+                            <constraint firstAttribute="bottom" secondItem="vgX-pL-Axb" secondAttribute="bottom" constant="49" id="RZc-xb-ElW"/>
+                            <constraint firstItem="w7E-0P-e3K" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" constant="20" id="Z54-1S-ADS"/>
+                            <constraint firstItem="vgX-pL-Axb" firstAttribute="leading" secondItem="dQf-zj-Y4h" secondAttribute="leading" id="eaB-tL-mga"/>
+                            <constraint firstItem="w7E-0P-e3K" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" constant="200" id="enH-gR-prL"/>
+                            <constraint firstAttribute="bottom" secondItem="Lcs-KR-9ht" secondAttribute="bottom" constant="49" id="nka-lq-dGn"/>
+                            <constraint firstItem="vgX-pL-Axb" firstAttribute="top" secondItem="oID-qe-aeQ" secondAttribute="bottom" constant="415" id="yGc-NG-GUp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投诉和建议" id="iJ8-Zo-0eC"/>
+                    <connections>
+                        <outlet property="audioPower" destination="w7E-0P-e3K" id="2Kq-8d-fVJ"/>
+                        <outlet property="record" destination="vgX-pL-Axb" id="vAA-E8-Z2v"/>
+                        <outlet property="stop" destination="Lcs-KR-9ht" id="1QS-32-VNt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2X-N3-sbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
