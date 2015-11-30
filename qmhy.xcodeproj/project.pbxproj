@@ -20,6 +20,10 @@
 		04B1E17B1C083C4A00AFBF90 /* MoreTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E17A1C083C4A00AFBF90 /* MoreTVC.m */; };
 		04B1E17F1C083C5F00AFBF90 /* PriceTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E17E1C083C5F00AFBF90 /* PriceTableVC.m */; };
 		04B1E1831C083C8400AFBF90 /* UserProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1821C083C8400AFBF90 /* UserProtocolVC.m */; };
+		04D1B3AC1C0BED9E00890507 /* JSONModelMyEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */; };
+		04D1B3AF1C0BF34B00890507 /* MyEvaluationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */; };
+		04D1B3B31C0BF37C00890507 /* MyEvaluationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */; };
+		04D1B3B41C0BF37C00890507 /* MyEvaluationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */; };
 		04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E444DC1C068CDD00E05811 /* AppDelegate.m */; };
 		04E444F21C068F5900E05811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EC1C068F5900E05811 /* Main.storyboard */; };
 		04E444F41C068F5900E05811 /* qmhy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EE1C068F5900E05811 /* qmhy-Info.plist */; };
@@ -241,6 +245,13 @@
 		04B1E17E1C083C5F00AFBF90 /* PriceTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceTableVC.m; sourceTree = "<group>"; };
 		04B1E1811C083C8400AFBF90 /* UserProtocolVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProtocolVC.h; sourceTree = "<group>"; };
 		04B1E1821C083C8400AFBF90 /* UserProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProtocolVC.m; sourceTree = "<group>"; };
+		04D1B3AA1C0BED9E00890507 /* JSONModelMyEvaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMyEvaluation.h; sourceTree = "<group>"; };
+		04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMyEvaluation.m; sourceTree = "<group>"; };
+		04D1B3AD1C0BF34B00890507 /* MyEvaluationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationTableViewController.h; sourceTree = "<group>"; };
+		04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationTableViewController.m; sourceTree = "<group>"; };
+		04D1B3B01C0BF37C00890507 /* MyEvaluationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationTableViewCell.h; sourceTree = "<group>"; };
+		04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationTableViewCell.m; sourceTree = "<group>"; };
+		04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationTableViewCell.xib; sourceTree = "<group>"; };
 		04E444DB1C068CDD00E05811 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = qmhy/AppDelegate.h; sourceTree = "<group>"; };
 		04E444DC1C068CDD00E05811 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = qmhy/AppDelegate.m; sourceTree = "<group>"; };
 		04E444EC1C068F5900E05811 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = qmhy/Main.storyboard; sourceTree = "<group>"; };
@@ -704,6 +715,45 @@
 				04B1E1821C083C8400AFBF90 /* UserProtocolVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		04D1B3A61C0BEB6C00890507 /* Evaluation(我的评价) */ = {
+			isa = PBXGroup;
+			children = (
+				04D1B3A71C0BEB9F00890507 /* Controller */,
+				04D1B3A81C0BEB9F00890507 /* Model */,
+				04D1B3A91C0BEB9F00890507 /* View */,
+			);
+			name = "Evaluation(我的评价)";
+			path = Evaluation;
+			sourceTree = "<group>";
+		};
+		04D1B3A71C0BEB9F00890507 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04D1B3AD1C0BF34B00890507 /* MyEvaluationTableViewController.h */,
+				04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04D1B3A81C0BEB9F00890507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04D1B3AA1C0BED9E00890507 /* JSONModelMyEvaluation.h */,
+				04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04D1B3A91C0BEB9F00890507 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04D1B3B01C0BF37C00890507 /* MyEvaluationTableViewCell.h */,
+				04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */,
+				04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		04E444DE1C068EF700E05811 /* Classes */ = {
@@ -1361,6 +1411,7 @@
 		04E446BC1C06949100E05811 /* My(我的) */ = {
 			isa = PBXGroup;
 			children = (
+				04D1B3A61C0BEB6C00890507 /* Evaluation(我的评价) */,
 				04E446BD1C06949100E05811 /* GoodsGet(我的收件) */,
 				04E446C51C06949100E05811 /* My */,
 				04E446CA1C06949100E05811 /* Notify */,
@@ -1929,6 +1980,7 @@
 				04E4470D1C06949100E05811 /* ECCFHViewController.xib in Resources */,
 				04E446111C06938900E05811 /* More.bundle in Resources */,
 				04E445F81C06914000E05811 /* .gitignore in Resources */,
+				04D1B3B41C0BF37C00890507 /* MyEvaluationTableViewCell.xib in Resources */,
 				04E447101C06949100E05811 /* ConfigCFahuoTableViewCell.xib in Resources */,
 				04E447331C06949100E05811 /* MakeOrderCarCell.xib in Resources */,
 				04E447191C06949100E05811 /* ConfigCShouhuoTableViewCell.xib in Resources */,
@@ -1953,7 +2005,9 @@
 				04E445E01C06914000E05811 /* SDWebImageManager.m in Sources */,
 				04E448001C06CDBA00E05811 /* JSONModelNotifyHYXM.m in Sources */,
 				04E445DA1C06914000E05811 /* NSData+ImageContentType.m in Sources */,
+				04D1B3AF1C0BF34B00890507 /* MyEvaluationTableViewController.m in Sources */,
 				04E447BF1C06A4B400E05811 /* UIView+MJExtension.m in Sources */,
+				04D1B3AC1C0BED9E00890507 /* JSONModelMyEvaluation.m in Sources */,
 				04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */,
 				04E447C31C06C1FC00E05811 /* OrderGetXiangQingViewController.m in Sources */,
 				04E447E41C06CA0300E05811 /* RegisterTVC.m in Sources */,
@@ -2034,6 +2088,7 @@
 				04E448141C06CE5900E05811 /* NotifyYHHDViewController.m in Sources */,
 				04E447131C06949100E05811 /* ConfigShouHuoAddressPickerViewController.m in Sources */,
 				04B1E1771C083C3000AFBF90 /* HelpVC.m in Sources */,
+				04D1B3B31C0BF37C00890507 /* MyEvaluationTableViewCell.m in Sources */,
 				04E444F81C06908C00E05811 /* main.m in Sources */,
 				04E447341C06949100E05811 /* SelectCarVC.m in Sources */,
 				04E447AF1C06A4B400E05811 /* MJRefreshComponent.m in Sources */,

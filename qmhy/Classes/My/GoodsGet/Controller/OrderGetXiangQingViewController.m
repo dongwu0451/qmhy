@@ -16,6 +16,7 @@
 #import "MBProgressHUD+HM.h"
 #import "JSONModelOrderGetXiangQing.h"
 #import "OrderDingDanZhuangTaiTableViewController.h"
+#import "MyEvaluationTableViewController.h"
 
 @interface OrderGetXiangQingViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *statusButtton; // 订单状态
@@ -153,7 +154,9 @@
 }
 
 - (IBAction)pingjiaDIngDan:(UIButton *)sender {
-    
+    MyEvaluationTableViewController *vc = [[MyEvaluationTableViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+                                
 }
 
 - (IBAction)dingdanzhuangtaiBtnClick:(UIButton *)sender {
