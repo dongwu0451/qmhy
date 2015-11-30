@@ -26,6 +26,7 @@
 		04D1B3B41C0BF37C00890507 /* MyEvaluationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */; };
 		04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */; };
 		04D1B3B91C0C299100890507 /* MyEvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */; };
+		04D1B3C11C0C422B00890507 /* DXStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3C01C0C422B00890507 /* DXStarRatingView.m */; };
 		04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E444DC1C068CDD00E05811 /* AppDelegate.m */; };
 		04E444F21C068F5900E05811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EC1C068F5900E05811 /* Main.storyboard */; };
 		04E444F41C068F5900E05811 /* qmhy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EE1C068F5900E05811 /* qmhy-Info.plist */; };
@@ -257,6 +258,8 @@
 		04D1B3B51C0C299100890507 /* MyEvaluationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationViewController.h; sourceTree = "<group>"; };
 		04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationViewController.m; sourceTree = "<group>"; };
 		04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationViewController.xib; sourceTree = "<group>"; };
+		04D1B3BF1C0C422B00890507 /* DXStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXStarRatingView.h; sourceTree = "<group>"; };
+		04D1B3C01C0C422B00890507 /* DXStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXStarRatingView.m; sourceTree = "<group>"; };
 		04E444DB1C068CDD00E05811 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = qmhy/AppDelegate.h; sourceTree = "<group>"; };
 		04E444DC1C068CDD00E05811 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = qmhy/AppDelegate.m; sourceTree = "<group>"; };
 		04E444EC1C068F5900E05811 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = qmhy/Main.storyboard; sourceTree = "<group>"; };
@@ -741,6 +744,8 @@
 				04D1B3B51C0C299100890507 /* MyEvaluationViewController.h */,
 				04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */,
 				04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */,
+				04D1B3BF1C0C422B00890507 /* DXStarRatingView.h */,
+				04D1B3C01C0C422B00890507 /* DXStarRatingView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2129,6 +2134,7 @@
 				04E4480D1C06CE3900E05811 /* NotifyWLTZTableViewController.m in Sources */,
 				04E447BA1C06A4B400E05811 /* MJRefreshStateHeader.m in Sources */,
 				04E4473E1C06949100E05811 /* ShouhuoData.m in Sources */,
+				04D1B3C11C0C422B00890507 /* DXStarRatingView.m in Sources */,
 				04B1E1831C083C8400AFBF90 /* UserProtocolVC.m in Sources */,
 				04E447F01C06CD4500E05811 /* MyTVC.m in Sources */,
 				04E445EF1C06914000E05811 /* UIProgressView+AFNetworking.m in Sources */,

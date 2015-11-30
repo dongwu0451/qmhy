@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface MyEvaluationViewController : UIViewController
+@property (nonatomic, copy) NSString *consigneeName;
+@property (nonatomic, copy) NSString *consigneePhone;
+@property (nonatomic, copy) NSString *pickupaddress;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *logisticsname;
+@property (nonatomic, copy) NSString *num;
+@property (nonatomic, copy) NSString *goodsname;
 
 @end

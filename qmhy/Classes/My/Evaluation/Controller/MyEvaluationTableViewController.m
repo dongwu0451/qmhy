@@ -177,6 +177,13 @@
             [MBProgressHUD showError:@"设置成功！"];
             [self loadNewData];
             MyEvaluationViewController *vc = [[MyEvaluationViewController alloc] init];
+            vc.consigneeName = model.consigneename;
+            vc.consigneePhone = model.consigneephone;
+            vc.pickupaddress = model.pickupaddress;
+            vc.city = model.city;
+            vc.logisticsname = model.logisticsname;
+            vc.num = model.num;
+            vc.goodsname = model.goodsname;
             [self.navigationController pushViewController:vc animated:YES];
             
         } else {
