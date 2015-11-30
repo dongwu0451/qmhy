@@ -146,7 +146,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本地开发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmt-3S-uWC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmt-3S-uWC">
                         <rect key="frame" x="80" y="52" width="232" height="20"/>
                         <animations/>
                         <constraints>
@@ -299,6 +299,9 @@
                         <state key="normal" title="     确认订单已收到" image="icon_review">
                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="settabordersignBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ovn-QN-WiC"/>
+                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bid_cargo" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-1O-wVK">
                         <rect key="frame" x="8" y="118" width="20" height="20"/>
@@ -407,6 +410,7 @@
                 <outlet property="logisticsNameLabel" destination="Xmt-3S-uWC" id="kmc-HU-vPd"/>
                 <outlet property="numLabel" destination="cGZ-SP-zah" id="Bxj-fh-myp"/>
                 <outlet property="pickupaddressAndCityLabel" destination="DP1-mA-gk3" id="byR-WK-GpA"/>
+                <outlet property="settabordersignBtn" destination="KEN-dc-Fzt" id="WZL-1R-IZC"/>
                 <outlet property="stimeLabel" destination="g9n-zW-JxG" id="6hj-SH-BWO"/>
                 <outlet property="successnumLabel" destination="woY-ZQ-gA2" id="6ut-XO-cni"/>
             </connections>

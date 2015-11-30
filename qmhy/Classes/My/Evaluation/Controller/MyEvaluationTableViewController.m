@@ -16,8 +16,9 @@
 #import "MBProgressHUD+HM.h"
 #import "MJRefreshFooter.h"
 #import "MJRefresh.h"
+#import "MyEvaluationViewController.h"
 
-@interface MyEvaluationTableViewController ()
+@interface MyEvaluationTableViewController () <MyEvaluationTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
 
@@ -28,6 +29,8 @@
 
 @property (assign, nonatomic) int pageStart; // 启示条
 @property (assign, nonatomic) int pegeEnd;// 结束条
+
+@property (nonatomic, strong) JSONModelMyEvaluation *jsonModelMyEvaluation;
 
 @end
 
@@ -73,11 +76,117 @@
 
 
 - (void)loadNewData {
-    
+    self.pageStart = 1;
+    self.pegeEnd = 5;
+    // 请求参数
+    NSString *methodName = @"getcarMess";
+    NSString *params = @"&proName=%@_%d_%d_%d";
+    QConfig *config = [[QConfig alloc] init];
+    NSString *uid = config.uid;
+    int status = 999;
+    int start = 1;
+    int end = 5;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, status, start, end] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@", URL);
+    // 发送请求
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        _infoArray = [dic objectForKey:@"rs"];//第一次数据
+        _dataArray = [JSONModelMyEvaluation objectArrayWithKeyValuesArray:_infoArray];
+        NSLog(@"%@", _dataArray);
+        // 刷新数据
+        [self.tableView reloadData];
+    } fail:^{
+        
+    }];
+
 }
 
 - (void)loadMoreData {
+    self.pageStart += 5;
+    self.pegeEnd += 5;
+    // 请求参数
+    NSString *methodName = @"getcarMess";
+    NSString *params = @"&proName=%@_%d_%d_%d";
+    QConfig *config = [[QConfig alloc] init];
+    NSString *uid = config.uid;
+    int status = 999;
+    int start = self.pageStart;
+    int end = self.pegeEnd;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, status, start, end] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // 发送请求
+    
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *moreInfoArray = [dic objectForKey:@"rs"];//第一次数据
+        NSLog(@"+++%@", moreInfoArray);
+        if (moreInfoArray != nil) {
+            [_infoArray addObjectsFromArray:moreInfoArray];//叠加的数据
+            _dataArray = [JSONModelMyEvaluation objectArrayWithKeyValuesArray:_infoArray];
+        } else {
+            _isLoadFinished = YES;//当返回数据为空
+        }
+        NSLog(@"%@", _dataArray);
+        // 刷新数据
+        [self.tableView reloadData];
+    } fail:^{
+        
+    }];
 
+}
+
+- (void)myEvaluationTableViewCell:(MyEvaluationTableViewCell *)cell didJSONModelMyEvaluation:(JSONModelMyEvaluation *)model andClickLikeBtn:(UIButton *)likeBtn {
+        self.jsonModelMyEvaluation = model;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"信息提示" message:@"您是否已经接到反馈单据？"delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+}
+
+//根据被点击按钮的索引处理点击事件
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        [self settabordersign:self.jsonModelMyEvaluation];
+        NSLog(@"确定");
+    } else {
+        NSLog(@"取消");
+    }
+}
+
+
+- (void)settabordersign:(JSONModelMyEvaluation *)model  {
+    [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
+    NSString *methodName = @"settabordersign";
+    NSString *params = @"&proName=%d_%@_%d";
+    int uid = [model.uid intValue];
+    NSString *code = model.code;
+    int status = [model.status intValue];
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, status] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // 发送请求
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *infoArray = [dic objectForKey:@"rs"];
+        NSString *success = infoArray[0][@"result"];
+        if ([success isEqualToString:@"ok"]) {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"设置成功！"];
+            [self loadNewData];
+            MyEvaluationViewController *vc = [[MyEvaluationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        } else {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"设置失败！"];
+        }
+    } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"设置失败！"];
+    }];
 }
 
 
@@ -126,6 +235,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"MyEvaluationTableViewCell" owner:nil options:nil] lastObject];
     }
     [cell config:_dataArray[indexPath.row]];
+    cell.delegate = self;
     return cell;
 }
 

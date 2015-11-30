@@ -141,6 +141,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"OrderGetTableViewCell" owner:nil options:nil] lastObject];
     }
     [cell config:_dataArray[indexPath.row]];
+
     return cell;
 }
 
@@ -158,7 +159,7 @@
     vc.code = jsonModelOrderGet.code;
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
-    NSLog(@"%d", indexPath.row);
+    NSLog(@"%ld", indexPath.row);
     
 }
 

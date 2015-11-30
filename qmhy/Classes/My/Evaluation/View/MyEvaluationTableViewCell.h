@@ -12,7 +12,7 @@
 @class MyEvaluationTableViewCell;
 @protocol MyEvaluationTableViewCellDelegate <NSObject>
 
-- (void)myEvaluationTableViewCell:(MyEvaluationTableViewCell *)cell didClickLikeBtn:(UIButton *)likeBtn;
+- (void)myEvaluationTableViewCell:(MyEvaluationTableViewCell *)cell didJSONModelMyEvaluation:(JSONModelMyEvaluation *)model andClickLikeBtn:(UIButton *)likeBtn;
 
 @end
 
@@ -31,6 +31,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *numLabel; // 件数
 @property (weak, nonatomic) IBOutlet UILabel *consigneeNameLabel; // 收货人
 @property (weak, nonatomic) IBOutlet UILabel *consigneePhoneLabel; // 收货人电话
+@property (weak, nonatomic) IBOutlet UIButton *settabordersignBtn;
+
+@property (nonatomic, strong) JSONModelMyEvaluation *jsonModelMyEvaluation;
+
 
 @property (nonatomic, weak) id<MyEvaluationTableViewCellDelegate> delegate;
 

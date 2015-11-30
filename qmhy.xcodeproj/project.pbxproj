@@ -24,6 +24,8 @@
 		04D1B3AF1C0BF34B00890507 /* MyEvaluationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */; };
 		04D1B3B31C0BF37C00890507 /* MyEvaluationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */; };
 		04D1B3B41C0BF37C00890507 /* MyEvaluationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */; };
+		04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */; };
+		04D1B3B91C0C299100890507 /* MyEvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */; };
 		04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E444DC1C068CDD00E05811 /* AppDelegate.m */; };
 		04E444F21C068F5900E05811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EC1C068F5900E05811 /* Main.storyboard */; };
 		04E444F41C068F5900E05811 /* qmhy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EE1C068F5900E05811 /* qmhy-Info.plist */; };
@@ -252,6 +254,9 @@
 		04D1B3B01C0BF37C00890507 /* MyEvaluationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationTableViewCell.h; sourceTree = "<group>"; };
 		04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationTableViewCell.m; sourceTree = "<group>"; };
 		04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationTableViewCell.xib; sourceTree = "<group>"; };
+		04D1B3B51C0C299100890507 /* MyEvaluationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationViewController.h; sourceTree = "<group>"; };
+		04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationViewController.m; sourceTree = "<group>"; };
+		04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationViewController.xib; sourceTree = "<group>"; };
 		04E444DB1C068CDD00E05811 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = qmhy/AppDelegate.h; sourceTree = "<group>"; };
 		04E444DC1C068CDD00E05811 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = qmhy/AppDelegate.m; sourceTree = "<group>"; };
 		04E444EC1C068F5900E05811 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = qmhy/Main.storyboard; sourceTree = "<group>"; };
@@ -733,6 +738,9 @@
 			children = (
 				04D1B3AD1C0BF34B00890507 /* MyEvaluationTableViewController.h */,
 				04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */,
+				04D1B3B51C0C299100890507 /* MyEvaluationViewController.h */,
+				04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */,
+				04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1962,6 +1970,7 @@
 				04E4477F1C06A20F00E05811 /* OrderGetTableViewCell.xib in Resources */,
 				04E447201C06949100E05811 /* ConfigCWuliuTableViewCell.xib in Resources */,
 				04E4460A1C06929600E05811 /* Images.xcassets in Resources */,
+				04D1B3B91C0C299100890507 /* MyEvaluationViewController.xib in Resources */,
 				04E447211C06949100E05811 /* GesturePassword.bundle in Resources */,
 				04E4470B1C06949100E05811 /* ConfigFHAPViewController.xib in Resources */,
 				04E4472F1C06949100E05811 /* MakeOrderTotalCell.xib in Resources */,
@@ -2137,6 +2146,7 @@
 				04E445BF1C06914000E05811 /* MJProperty.m in Sources */,
 				04B1E1731C083C1100AFBF90 /* AboutTVC.m in Sources */,
 				04E445B81C06914000E05811 /* AFURLResponseSerialization.m in Sources */,
+				04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */,
 				04E447CF1C06C94000E05811 /* ConfigCommonTVC.m in Sources */,
 				04E445EA1C06914000E05811 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04E445F11C06914000E05811 /* UIWebView+AFNetworking.m in Sources */,
