@@ -17,6 +17,7 @@
 #import "MJRefreshFooter.h"
 #import "MJRefresh.h"
 #import "MyEvaluationViewController.h"
+#import "MyEvaluationXQTableViewController.h"
 
 @interface MyEvaluationTableViewController () <MyEvaluationTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -41,8 +42,15 @@
     self.pageStart = 1;
     self.pegeEnd = 5;
     [self xxcHeadView];
-    [self setupRefresh];
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 显示当前用户的个人信息
+   [self setupRefresh];
+}
+
 
 // 设置刷新
 - (void)setupRefresh {
@@ -159,7 +167,7 @@
 
 - (void)settabordersign:(JSONModelMyEvaluation *)model  {
     [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
-    NSString *methodName = @"settabordersign";
+    NSString *methodName = @"settabordersign"; // 这个接口确认过12月2号 9:07
     NSString *params = @"&proName=%d_%@_%d";
     int uid = [model.uid intValue];
     NSString *code = model.code;
@@ -184,6 +192,10 @@
             vc.logisticsname = model.logisticsname;
             vc.num = model.num;
             vc.goodsname = model.goodsname;
+            
+            vc.code = model.code;
+            vc.thsjid = model.thsjid;
+            vc.logisticsid = model.logisticsname;
             [self.navigationController pushViewController:vc animated:YES];
             
         } else {
@@ -248,6 +260,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 240;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@", _dataArray[indexPath.row]);
+    MyEvaluationXQTableViewController *tvc = [[MyEvaluationXQTableViewController alloc] init];
+    JSONModelMyEvaluation *model = _dataArray[indexPath.row];
+    tvc.code = model.code;
+    [self.navigationController pushViewController:tvc animated:YES];
+    
+    
 }
 
 @end

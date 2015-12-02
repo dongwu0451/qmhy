@@ -80,6 +80,7 @@
         NSArray *infoArray = [dic objectForKey:@"rs"];
         NSDictionary *nd = [infoArray objectAtIndex:0];
         JSONModelLogin *obj =[JSONModelLogin objectWithKeyValues:nd];
+        NSLog(@"%@", obj);
         //NSString *str = [NSString stringWithFormat:@"今天是%@",[nd objectForKey:@"phone1"]];
         NSLog(@"login:%@", obj.uid);
         NSString *uid=obj.uid;

@@ -46,7 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    [self loadNewData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

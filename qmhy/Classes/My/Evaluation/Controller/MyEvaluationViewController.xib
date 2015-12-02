@@ -14,6 +14,7 @@
                 <outlet property="logisticsnameLabel" destination="wex-ad-TjP" id="M3L-Dp-51b"/>
                 <outlet property="numLabel" destination="Iic-tc-Eda" id="9ne-6c-5z7"/>
                 <outlet property="pickupaddressLabel" destination="g9B-rD-n2B" id="zjZ-eF-Hka"/>
+                <outlet property="pingjiaTextView" destination="Ha5-1B-AK8" id="w0m-aV-LnA"/>
                 <outlet property="starRatingFWTDView" destination="uym-eb-Eev" id="Na1-4X-aEZ"/>
                 <outlet property="starRatingSHSSView" destination="Br9-sM-8yG" id="fgb-3g-IOS"/>
                 <outlet property="starRatingTHRYView" destination="USE-w5-VIj" id="l4h-oS-r8Y"/>
@@ -364,17 +365,6 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入评价..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-1B-AK8">
-                    <rect key="frame" x="8" y="445" width="236" height="30"/>
-                    <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="7PE-S6-DEQ"/>
-                        <constraint firstAttribute="width" constant="236" id="Fnv-9P-gzN"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp6-5p-sfV">
                     <rect key="frame" x="252" y="445" width="60" height="30"/>
                     <animations/>
@@ -390,6 +380,17 @@
                         <action selector="submitEvaluationBtnClick:" destination="-1" eventType="touchUpInside" id="Cs4-lk-DRx"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入评价..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-1B-AK8">
+                    <rect key="frame" x="8" y="445" width="236" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7PE-S6-DEQ"/>
+                        <constraint firstAttribute="width" constant="236" id="Fnv-9P-gzN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

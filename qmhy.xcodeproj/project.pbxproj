@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F743E1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F743D1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m */; };
+		040F74411C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F74401C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m */; };
+		040F74441C0D8FCB00FC4AB9 /* CustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F74431C0D8FCB00FC4AB9 /* CustonCell.m */; };
+		0483FDEC1C0EC41800FB2BBE /* MyEvaluationEVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483FDEA1C0EC41800FB2BBE /* MyEvaluationEVMViewController.m */; };
+		0483FDED1C0EC41800FB2BBE /* MyEvaluationEVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0483FDEB1C0EC41800FB2BBE /* MyEvaluationEVMViewController.xib */; };
+		0483FDF01C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483FDEF1C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.m */; };
+		0483FDF41C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483FDF21C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m */; };
+		0483FDF51C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0483FDF31C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib */; };
+		0483FDF81C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483FDF71C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.m */; };
 		04B1E1551C083B4C00AFBF90 /* OrderSendTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1541C083B4C00AFBF90 /* OrderSendTVC.m */; };
 		04B1E15B1C083B6E00AFBF90 /* OrderSendCommentSubmitTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1581C083B6E00AFBF90 /* OrderSendCommentSubmitTVC.m */; };
 		04B1E15C1C083B6E00AFBF90 /* OrderSendCommentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E15A1C083B6E00AFBF90 /* OrderSendCommentTVC.m */; };
@@ -222,6 +231,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040F743C1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationXQTableViewController.h; sourceTree = "<group>"; };
+		040F743D1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationXQTableViewController.m; sourceTree = "<group>"; };
+		040F743F1C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMyEvaluationXQ.h; sourceTree = "<group>"; };
+		040F74401C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMyEvaluationXQ.m; sourceTree = "<group>"; };
+		040F74421C0D8FCB00FC4AB9 /* CustonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustonCell.h; sourceTree = "<group>"; };
+		040F74431C0D8FCB00FC4AB9 /* CustonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustonCell.m; sourceTree = "<group>"; };
+		0483FDE91C0EC41800FB2BBE /* MyEvaluationEVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationEVMViewController.h; sourceTree = "<group>"; };
+		0483FDEA1C0EC41800FB2BBE /* MyEvaluationEVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationEVMViewController.m; sourceTree = "<group>"; };
+		0483FDEB1C0EC41800FB2BBE /* MyEvaluationEVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationEVMViewController.xib; sourceTree = "<group>"; };
+		0483FDEE1C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationSJXXTableViewController.h; sourceTree = "<group>"; };
+		0483FDEF1C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationSJXXTableViewController.m; sourceTree = "<group>"; };
+		0483FDF11C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationSJXXTableViewCell.h; sourceTree = "<group>"; };
+		0483FDF21C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationSJXXTableViewCell.m; sourceTree = "<group>"; };
+		0483FDF31C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationSJXXTableViewCell.xib; sourceTree = "<group>"; };
+		0483FDF61C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMyEvaluationSJXX.h; sourceTree = "<group>"; };
+		0483FDF71C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMyEvaluationSJXX.m; sourceTree = "<group>"; };
 		04B1E1531C083B4C00AFBF90 /* OrderSendTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendTVC.h; sourceTree = "<group>"; };
 		04B1E1541C083B4C00AFBF90 /* OrderSendTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendTVC.m; sourceTree = "<group>"; };
 		04B1E1571C083B6E00AFBF90 /* OrderSendCommentSubmitTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendCommentSubmitTVC.h; sourceTree = "<group>"; };
@@ -746,6 +771,13 @@
 				04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */,
 				04D1B3BF1C0C422B00890507 /* DXStarRatingView.h */,
 				04D1B3C01C0C422B00890507 /* DXStarRatingView.m */,
+				040F743C1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.h */,
+				040F743D1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m */,
+				0483FDE91C0EC41800FB2BBE /* MyEvaluationEVMViewController.h */,
+				0483FDEA1C0EC41800FB2BBE /* MyEvaluationEVMViewController.m */,
+				0483FDEB1C0EC41800FB2BBE /* MyEvaluationEVMViewController.xib */,
+				0483FDEE1C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.h */,
+				0483FDEF1C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -755,6 +787,10 @@
 			children = (
 				04D1B3AA1C0BED9E00890507 /* JSONModelMyEvaluation.h */,
 				04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */,
+				040F743F1C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.h */,
+				040F74401C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m */,
+				0483FDF61C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.h */,
+				0483FDF71C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -762,9 +798,14 @@
 		04D1B3A91C0BEB9F00890507 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				040F74421C0D8FCB00FC4AB9 /* CustonCell.h */,
+				040F74431C0D8FCB00FC4AB9 /* CustonCell.m */,
 				04D1B3B01C0BF37C00890507 /* MyEvaluationTableViewCell.h */,
 				04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */,
 				04D1B3B21C0BF37C00890507 /* MyEvaluationTableViewCell.xib */,
+				0483FDF11C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.h */,
+				0483FDF21C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m */,
+				0483FDF31C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1972,6 +2013,7 @@
 				04F5081C1C082244009F0ACD /* OrderDingDanZhuangTaiTableViewCell.xib in Resources */,
 				04E4473D1C06949100E05811 /* MakeOrderShouhuoCell.xib in Resources */,
 				04E447421C06949100E05811 /* help.html in Resources */,
+				0483FDED1C0EC41800FB2BBE /* MyEvaluationEVMViewController.xib in Resources */,
 				04E4477F1C06A20F00E05811 /* OrderGetTableViewCell.xib in Resources */,
 				04E447201C06949100E05811 /* ConfigCWuliuTableViewCell.xib in Resources */,
 				04E4460A1C06929600E05811 /* Images.xcassets in Resources */,
@@ -2002,6 +2044,7 @@
 				04E447051C06949100E05811 /* ConfigCGoodsTableViewCell.xib in Resources */,
 				04E447E31C06CA0300E05811 /* LoginVC.xib in Resources */,
 				04E447E51C06CA0300E05811 /* RegisterTVC.xib in Resources */,
+				0483FDF51C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib in Resources */,
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				04E4471D1C06949100E05811 /* EditConfigCWuliuViewController.xib in Resources */,
 				04E4473A1C06949100E05811 /* MakeOrderQuhuoCell.xib in Resources */,
@@ -2039,6 +2082,7 @@
 				04E4472E1C06949100E05811 /* MakeOrderTotalCell.m in Sources */,
 				04E447091C06949100E05811 /* ConfigCQuhuoTVC.m in Sources */,
 				04E4473F1C06949100E05811 /* ShouhuoModel.m in Sources */,
+				0483FDF41C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m in Sources */,
 				04E447B11C06A4B400E05811 /* MJRefreshHeader.m in Sources */,
 				04E447441C06949100E05811 /* MoreNVC.m in Sources */,
 				04E4475F1C06949100E05811 /* OrderSendButton.m in Sources */,
@@ -2061,8 +2105,10 @@
 				04F5081F1C0822D0009F0ACD /* JSONModelOrderDingDanZhuangTai.m in Sources */,
 				04B1E17F1C083C5F00AFBF90 /* PriceTableVC.m in Sources */,
 				04E447381C06949100E05811 /* SelectGoodsVC.m in Sources */,
+				040F74411C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m in Sources */,
 				04E445B91C06914000E05811 /* AFURLSessionManager.m in Sources */,
 				04F508171C082207009F0ACD /* OrderDingDanZhuangTaiTableViewController.m in Sources */,
+				0483FDF81C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.m in Sources */,
 				04E447171C06949100E05811 /* JSONModelConfigCShouhuo.m in Sources */,
 				04E445DD1C06914000E05811 /* SDWebImageDecoder.m in Sources */,
 				04E447351C06949100E05811 /* BigAndSmallGoodsModel.m in Sources */,
@@ -2125,6 +2171,7 @@
 				04E445FA1C06914000E05811 /* NSData+Base64.m in Sources */,
 				04E445FB1C06914000E05811 /* NSData+CommonCrypto.m in Sources */,
 				04E445EE1C06914000E05811 /* UIImageView+AFNetworking.m in Sources */,
+				0483FDEC1C0EC41800FB2BBE /* MyEvaluationEVMViewController.m in Sources */,
 				04E447BE1C06A4B400E05811 /* UIScrollView+MJRefresh.m in Sources */,
 				04E447111C06949100E05811 /* AddConfigCShouhuoViewController.m in Sources */,
 				04E446021C06914000E05811 /* XMLDictionary.m in Sources */,
@@ -2152,9 +2199,11 @@
 				04E445BF1C06914000E05811 /* MJProperty.m in Sources */,
 				04B1E1731C083C1100AFBF90 /* AboutTVC.m in Sources */,
 				04E445B81C06914000E05811 /* AFURLResponseSerialization.m in Sources */,
+				040F74441C0D8FCB00FC4AB9 /* CustonCell.m in Sources */,
 				04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */,
 				04E447CF1C06C94000E05811 /* ConfigCommonTVC.m in Sources */,
 				04E445EA1C06914000E05811 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				0483FDF01C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.m in Sources */,
 				04E445F11C06914000E05811 /* UIWebView+AFNetworking.m in Sources */,
 				04E4477C1C06A20F00E05811 /* OrderGetTVC.m in Sources */,
 				04E447361C06949100E05811 /* MakeOrderGoodsCell.m in Sources */,
@@ -2165,6 +2214,7 @@
 				04E447321C06949100E05811 /* MakeOrderCarCell.m in Sources */,
 				04E445DB1C06914000E05811 /* SDImageCache.m in Sources */,
 				04E445C31C06914000E05811 /* NSObject+MJProperty.m in Sources */,
+				040F743E1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m in Sources */,
 				04E447E21C06CA0300E05811 /* LoginVC.m in Sources */,
 				04E445B21C06914000E05811 /* AFHTTPRequestOperationManager.m in Sources */,
 				04E448181C06CE7700E05811 /* NotifyZXTZViewController.m in Sources */,

@@ -17,4 +17,8 @@
 @property (nonatomic, copy) NSString *num;
 @property (nonatomic, copy) NSString *goodsname;
 
+@property (nonatomic, copy) NSString *code;
+@property (nonatomic, copy) NSString *thsjid;
+@property (nonatomic, copy) NSString *logisticsid;
+
 @end

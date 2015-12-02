@@ -257,16 +257,20 @@
     NSArray *array = @[@"z", @"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i"];
     NSMutableString *finalString = @"";
     QConfig *config = [[QConfig alloc] init];
-    NSString *six = [config.mem_id substringFromIndex:config.mem_id.length-6];
-    if ([self isTrueNums:six] == 1) {
-        for (int i = 0; i < six.length; i++) {
-            int hehe = [[six substringWithRange:NSMakeRange(i, 1)] intValue];
-            finalString = [finalString stringByAppendingString:array[hehe]];
+    if (config.mem_id.length >= 11) {
+        NSString *six = [config.mem_id substringFromIndex:config.mem_id.length-6];
+        if ([self isTrueNums:six] == 1) {
+            for (int i = 0; i < six.length; i++) {
+                int hehe = [[six substringWithRange:NSMakeRange(i, 1)] intValue];
+                finalString = [finalString stringByAppendingString:array[hehe]];
+            }
+        } else {
+            NSLog(@"格式粗欧文");
         }
-        
     } else {
-        NSLog(@"格式粗欧文");
+        finalString = @"abcdef";
     }
+    
     return finalString;
 }
 
