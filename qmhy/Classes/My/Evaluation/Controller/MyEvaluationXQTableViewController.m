@@ -217,7 +217,7 @@
 
 // 删除方法
 - (void)removeHEHE:(JSONModelMyEvaluationXQ *)model  {
-    [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
+    [MBProgressHUD showMessage:@"正在删除中..." toView:self.view];
     NSString *methodName = @"deltaborder";
     NSString *params = @"&proName=%@_%@";
     NSString *uid = model.uid;
@@ -240,7 +240,7 @@
         }
     } fail:^{
         [MBProgressHUD hideHUDForView:self.view];
-        [MBProgressHUD showError:@"添加失败！"];
+        [MBProgressHUD showError:@"删除失败！"];
     }];
 }
 

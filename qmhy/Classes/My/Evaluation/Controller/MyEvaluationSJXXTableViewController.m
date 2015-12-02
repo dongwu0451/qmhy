@@ -31,7 +31,7 @@
     [self xxcHeadView];
     
     // 加载数据
-    [self loadNewData];
+//    [self loadNewData];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
