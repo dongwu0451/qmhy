@@ -146,7 +146,9 @@
     NSString *params = @"&proName=%d_%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d_%d";
     int x_id = [model.x_id intValue];
     NSLog(@"%d", x_id);
-    int uid = [model.uid intValue];
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
+//    int uid = [model.uid intValue];
     NSString *contant = model.contact;
     NSString *tel = model.tel;
     NSString *province = model.Province;

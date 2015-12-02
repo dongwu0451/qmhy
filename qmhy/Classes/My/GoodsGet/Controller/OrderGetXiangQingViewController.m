@@ -162,6 +162,8 @@
 - (IBAction)dingdanzhuangtaiBtnClick:(UIButton *)sender {
     OrderDingDanZhuangTaiTableViewController *tvc = [[OrderDingDanZhuangTaiTableViewController alloc] init];
     tvc.code = self.code;
+    tvc.labelOne = @"查看货物的";
+    tvc.labelTwo = @"各个节点的时间状态";
     [self.navigationController pushViewController:tvc animated:YES];
 }
 

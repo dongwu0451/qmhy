@@ -220,7 +220,9 @@
     [MBProgressHUD showMessage:@"正在删除中..." toView:self.view];
     NSString *methodName = @"deltaborder";
     NSString *params = @"&proName=%@_%@";
-    NSString *uid = model.uid;
+    QConfig *config = [[QConfig alloc] init];
+    NSString *uid = config.uid;
+//    NSString *uid = model.uid;
     NSString *code = model.code;
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // 发送请求

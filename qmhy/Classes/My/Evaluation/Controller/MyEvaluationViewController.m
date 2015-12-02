@@ -124,6 +124,7 @@
     NSString *methodName = @"settabcomment";
     NSString *params = @"&proName=%d_%@_%@_%d_%d_%d_%d_%@_%d_%d_%d_%d_%@";
     QConfig *config = [[QConfig alloc] init];
+    
     int uid = [config.uid intValue];
     NSString *code = self.code;
     NSString *carid = self.thsjid;

@@ -10,5 +10,7 @@
 
 @interface OrderDingDanZhuangTaiTableViewController : UITableViewController
 @property (nonatomic, copy) NSString *code;
+@property (nonatomic, copy) NSString *labelOne;
+@property (nonatomic, copy) NSString *labelTwo;
 
 @end

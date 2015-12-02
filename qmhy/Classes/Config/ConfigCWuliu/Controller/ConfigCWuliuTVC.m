@@ -76,7 +76,9 @@
     [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
         NSString *methodName = @"settabCommonLogistics";
         NSString *params = @"&proName=%d_%@_%d_%d";
-        int uid = [model.uid intValue];
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
+//        int uid = [model.uid intValue];
         NSString *name = model.name;
         int code = [model.code intValue];
         int setType = -1; // -1 为删除

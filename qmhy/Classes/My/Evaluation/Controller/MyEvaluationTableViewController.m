@@ -169,7 +169,9 @@
     [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
     NSString *methodName = @"settabordersign"; // 这个接口确认过12月2号 9:07
     NSString *params = @"&proName=%d_%@_%d";
-    int uid = [model.uid intValue];
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
+//    int uid = [model.uid intValue];
     NSString *code = model.code;
     int status = [model.status intValue];
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, status] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

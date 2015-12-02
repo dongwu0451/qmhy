@@ -28,7 +28,9 @@
     [MBProgressHUD showMessage:@"正在修改中..." toView:self.view];
     NSString *methodName = @"settabCommonLogistics";
     NSString *params = @"&proName=%d_%@_%d_%d";
-    int uid = [self.jsonModelConfigCWuLiu.uid intValue];
+//    int uid = [self.jsonModelConfigCWuLiu.uid intValue];
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
     NSString *name = self.wuliuTextField.text;
     int code = [self.jsonModelConfigCWuLiu.code intValue];
     int setType = 0; // 0 为更新
