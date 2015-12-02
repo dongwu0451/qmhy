@@ -202,6 +202,8 @@
         NSLog(@"查看时间信息");
         MyEvaluationSJXXTableViewController *tvc = [[MyEvaluationSJXXTableViewController alloc] init];
         tvc.code = model.code;
+        tvc.labelOne = @"查看货物的";
+        tvc.labelTwo = @"各个节点的时间状态";
         [self.navigationController pushViewController:tvc animated:YES];
     } else if (sender.tag == 11) {
         NSLog(@"删除");

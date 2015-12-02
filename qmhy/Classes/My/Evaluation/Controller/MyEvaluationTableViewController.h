@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MyEvaluationTableViewController : UITableViewController
+@property (nonatomic, copy) NSString *labelOne;
+@property (nonatomic, copy) NSString *labelTwo;
+
 
 @end

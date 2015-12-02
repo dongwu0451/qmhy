@@ -155,6 +155,8 @@
 
 - (IBAction)pingjiaDIngDan:(UIButton *)sender {
     MyEvaluationTableViewController *vc = [[MyEvaluationTableViewController alloc] init];
+    vc.labelOne = @"评价订单,您的评价是我们";
+    vc.labelTwo = @"前进的动力";
     [self.navigationController pushViewController:vc animated:YES];
                                 
 }

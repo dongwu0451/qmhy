@@ -21,4 +21,5 @@
 @property (nonatomic, copy) NSString *thsjid;
 @property (nonatomic, copy) NSString *logisticsid;
 
+
 @end

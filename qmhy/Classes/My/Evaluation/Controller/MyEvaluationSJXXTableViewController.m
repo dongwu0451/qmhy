@@ -51,20 +51,28 @@
 }
 
 - (void)xxcHeadView {
+    // @"查看货物的"
+    // @"各个节点的时间状态"
     UIView *head =[[UIView alloc ]init];
     head.backgroundColor = [UIColor blueColor];
     head.frame = CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, 100);
     UILabel *labelOne = [[UILabel alloc] init];
-    labelOne.text = @"查看货物的";
+    // @"查看货物的";
+    labelOne.text = self.labelOne;
     labelOne.textColor = [UIColor whiteColor];
-    labelOne.frame = self.oneLabelFrame = CGRectMake([[UIScreen mainScreen]bounds].size.width/2 -38, 20, 100 , 21);
+    //    labelOne.frame = self.oneLabelFrame = CGRectMake([[UIScreen mainScreen]bounds].size.width/2 -38, 20, 100 , 21);
+    labelOne.textAlignment = NSTextAlignmentCenter;
+    labelOne.frame = self.oneLabelFrame = CGRectMake(0, 20, [[UIScreen mainScreen]bounds].size.width , 21);
     [head addSubview:labelOne];
     UILabel *labelTwo = [[UILabel alloc] init];
-    labelTwo.text = @"各个节点的时间状态";
+    // @"各个节点的时间状态";
+    labelTwo.text = self.labelTwo;
     labelTwo.textColor = [UIColor whiteColor];
-    labelTwo.frame = self.twoLabelFrame = CGRectMake([[UIScreen mainScreen]bounds].size.width/2 -77, 50, 154 , 21);
+    labelTwo.textAlignment = NSTextAlignmentCenter;
+    labelTwo.frame = self.twoLabelFrame = CGRectMake(0, 50, [[UIScreen mainScreen]bounds].size.width , 21);
     [head addSubview:labelTwo];
     self.tableView.tableHeaderView = head;
+
 }
 
 - (void)loadNewData {
