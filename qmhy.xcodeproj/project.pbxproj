@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0403FA251C0FEA8200422138 /* OrderDidNotConfirmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA241C0FEA8200422138 /* OrderDidNotConfirmTableViewController.m */; };
-		0403FA291C1005F700422138 /* OrderDidNotConfirmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA271C1005F700422138 /* OrderDidNotConfirmTableViewCell.m */; };
-		0403FA2A1C1005F700422138 /* OrderDidNotConfirmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0403FA281C1005F700422138 /* OrderDidNotConfirmTableViewCell.xib */; };
-		0403FA2D1C1018A600422138 /* JSONModelOrderDidNotConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA2C1C1018A600422138 /* JSONModelOrderDidNotConfirm.m */; };
+		0403FA341C103D4000422138 /* OrderQHZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA331C103D4000422138 /* OrderQHZTableViewController.m */; };
+		0403FA371C103D5900422138 /* JSONModelOrderQHZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA361C103D5900422138 /* JSONModelOrderQHZ.m */; };
+		0403FA3B1C103DB700422138 /* OrderQHZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA391C103DB700422138 /* OrderQHZTableViewCell.m */; };
+		0403FA3C1C103DB700422138 /* OrderQHZTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0403FA3A1C103DB700422138 /* OrderQHZTableViewCell.xib */; };
+		0403FA471C103E3F00422138 /* OrderDidNotConfirmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA3F1C103E3F00422138 /* OrderDidNotConfirmTableViewController.m */; };
+		0403FA481C103E3F00422138 /* JSONModelOrderDidNotConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA421C103E3F00422138 /* JSONModelOrderDidNotConfirm.m */; };
+		0403FA491C103E3F00422138 /* OrderDidNotConfirmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403FA451C103E3F00422138 /* OrderDidNotConfirmTableViewCell.m */; };
+		0403FA4A1C103E3F00422138 /* OrderDidNotConfirmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0403FA461C103E3F00422138 /* OrderDidNotConfirmTableViewCell.xib */; };
 		040F743E1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F743D1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m */; };
 		040F74411C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F74401C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m */; };
 		040F74441C0D8FCB00FC4AB9 /* CustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F74431C0D8FCB00FC4AB9 /* CustonCell.m */; };
@@ -235,13 +239,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0403FA231C0FEA8200422138 /* OrderDidNotConfirmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDidNotConfirmTableViewController.h; sourceTree = "<group>"; };
-		0403FA241C0FEA8200422138 /* OrderDidNotConfirmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDidNotConfirmTableViewController.m; sourceTree = "<group>"; };
-		0403FA261C1005F700422138 /* OrderDidNotConfirmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDidNotConfirmTableViewCell.h; sourceTree = "<group>"; };
-		0403FA271C1005F700422138 /* OrderDidNotConfirmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDidNotConfirmTableViewCell.m; sourceTree = "<group>"; };
-		0403FA281C1005F700422138 /* OrderDidNotConfirmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDidNotConfirmTableViewCell.xib; sourceTree = "<group>"; };
-		0403FA2B1C1018A600422138 /* JSONModelOrderDidNotConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelOrderDidNotConfirm.h; sourceTree = "<group>"; };
-		0403FA2C1C1018A600422138 /* JSONModelOrderDidNotConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelOrderDidNotConfirm.m; sourceTree = "<group>"; };
+		0403FA321C103D4000422138 /* OrderQHZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderQHZTableViewController.h; sourceTree = "<group>"; };
+		0403FA331C103D4000422138 /* OrderQHZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderQHZTableViewController.m; sourceTree = "<group>"; };
+		0403FA351C103D5900422138 /* JSONModelOrderQHZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelOrderQHZ.h; sourceTree = "<group>"; };
+		0403FA361C103D5900422138 /* JSONModelOrderQHZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelOrderQHZ.m; sourceTree = "<group>"; };
+		0403FA381C103DB700422138 /* OrderQHZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderQHZTableViewCell.h; sourceTree = "<group>"; };
+		0403FA391C103DB700422138 /* OrderQHZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderQHZTableViewCell.m; sourceTree = "<group>"; };
+		0403FA3A1C103DB700422138 /* OrderQHZTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderQHZTableViewCell.xib; sourceTree = "<group>"; };
+		0403FA3E1C103E3F00422138 /* OrderDidNotConfirmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDidNotConfirmTableViewController.h; sourceTree = "<group>"; };
+		0403FA3F1C103E3F00422138 /* OrderDidNotConfirmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDidNotConfirmTableViewController.m; sourceTree = "<group>"; };
+		0403FA411C103E3F00422138 /* JSONModelOrderDidNotConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelOrderDidNotConfirm.h; sourceTree = "<group>"; };
+		0403FA421C103E3F00422138 /* JSONModelOrderDidNotConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelOrderDidNotConfirm.m; sourceTree = "<group>"; };
+		0403FA441C103E3F00422138 /* OrderDidNotConfirmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDidNotConfirmTableViewCell.h; sourceTree = "<group>"; };
+		0403FA451C103E3F00422138 /* OrderDidNotConfirmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDidNotConfirmTableViewCell.m; sourceTree = "<group>"; };
+		0403FA461C103E3F00422138 /* OrderDidNotConfirmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDidNotConfirmTableViewCell.xib; sourceTree = "<group>"; };
 		040F743C1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationXQTableViewController.h; sourceTree = "<group>"; };
 		040F743D1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvaluationXQTableViewController.m; sourceTree = "<group>"; };
 		040F743F1C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMyEvaluationXQ.h; sourceTree = "<group>"; };
@@ -661,16 +672,79 @@
 		0403FA221C0FEA3300422138 /* OrderDidNotConfirm(订单未确认／分派提货人) */ = {
 			isa = PBXGroup;
 			children = (
-				0403FA231C0FEA8200422138 /* OrderDidNotConfirmTableViewController.h */,
-				0403FA241C0FEA8200422138 /* OrderDidNotConfirmTableViewController.m */,
-				0403FA261C1005F700422138 /* OrderDidNotConfirmTableViewCell.h */,
-				0403FA271C1005F700422138 /* OrderDidNotConfirmTableViewCell.m */,
-				0403FA281C1005F700422138 /* OrderDidNotConfirmTableViewCell.xib */,
-				0403FA2B1C1018A600422138 /* JSONModelOrderDidNotConfirm.h */,
-				0403FA2C1C1018A600422138 /* JSONModelOrderDidNotConfirm.m */,
+				0403FA3D1C103E3F00422138 /* Controller */,
+				0403FA401C103E3F00422138 /* Model */,
+				0403FA431C103E3F00422138 /* View */,
 			);
 			name = "OrderDidNotConfirm(订单未确认／分派提货人)";
 			path = OrderDidNotConfirm;
+			sourceTree = "<group>";
+		};
+		0403FA2E1C103CE500422138 /* OrderQHZ(取货途中) */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA2F1C103D1800422138 /* Controller */,
+				0403FA301C103D1800422138 /* Model */,
+				0403FA311C103D1800422138 /* View */,
+			);
+			name = "OrderQHZ(取货途中)";
+			path = OrderQHZ;
+			sourceTree = "<group>";
+		};
+		0403FA2F1C103D1800422138 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA321C103D4000422138 /* OrderQHZTableViewController.h */,
+				0403FA331C103D4000422138 /* OrderQHZTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0403FA301C103D1800422138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA351C103D5900422138 /* JSONModelOrderQHZ.h */,
+				0403FA361C103D5900422138 /* JSONModelOrderQHZ.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0403FA311C103D1800422138 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA381C103DB700422138 /* OrderQHZTableViewCell.h */,
+				0403FA391C103DB700422138 /* OrderQHZTableViewCell.m */,
+				0403FA3A1C103DB700422138 /* OrderQHZTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0403FA3D1C103E3F00422138 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA3E1C103E3F00422138 /* OrderDidNotConfirmTableViewController.h */,
+				0403FA3F1C103E3F00422138 /* OrderDidNotConfirmTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0403FA401C103E3F00422138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA411C103E3F00422138 /* JSONModelOrderDidNotConfirm.h */,
+				0403FA421C103E3F00422138 /* JSONModelOrderDidNotConfirm.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0403FA431C103E3F00422138 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0403FA441C103E3F00422138 /* OrderDidNotConfirmTableViewCell.h */,
+				0403FA451C103E3F00422138 /* OrderDidNotConfirmTableViewCell.m */,
+				0403FA461C103E3F00422138 /* OrderDidNotConfirmTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		04B1E1521C083B4C00AFBF90 /* Controller */ = {
@@ -1588,6 +1662,7 @@
 		04E446E91C06949100E05811 /* OrderSend(发件) */ = {
 			isa = PBXGroup;
 			children = (
+				0403FA2E1C103CE500422138 /* OrderQHZ(取货途中) */,
 				0403FA221C0FEA3300422138 /* OrderDidNotConfirm(订单未确认／分派提货人) */,
 				04E446EA1C06949100E05811 /* OrderSend */,
 				04E446F11C06949100E05811 /* OrderSendComment */,
@@ -2053,7 +2128,7 @@
 				04E4474A1C06949100E05811 /* userprotocol.html in Resources */,
 				04E447461C06949100E05811 /* pricetable.gif in Resources */,
 				04E447491C06949100E05811 /* userprotocol.gif in Resources */,
-				0403FA2A1C1005F700422138 /* OrderDidNotConfirmTableViewCell.xib in Resources */,
+				0403FA4A1C103E3F00422138 /* OrderDidNotConfirmTableViewCell.xib in Resources */,
 				04E448021C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib in Resources */,
 				04E444F21C068F5900E05811 /* Main.storyboard in Resources */,
 				04E447371C06949100E05811 /* MakeOrderGoodsCell.xib in Resources */,
@@ -2066,6 +2141,7 @@
 				04E446111C06938900E05811 /* More.bundle in Resources */,
 				04E445F81C06914000E05811 /* .gitignore in Resources */,
 				04D1B3B41C0BF37C00890507 /* MyEvaluationTableViewCell.xib in Resources */,
+				0403FA3C1C103DB700422138 /* OrderQHZTableViewCell.xib in Resources */,
 				04E447101C06949100E05811 /* ConfigCFahuoTableViewCell.xib in Resources */,
 				04E447331C06949100E05811 /* MakeOrderCarCell.xib in Resources */,
 				04E447191C06949100E05811 /* ConfigCShouhuoTableViewCell.xib in Resources */,
@@ -2131,6 +2207,7 @@
 				04E4470F1C06949100E05811 /* ConfigCFahuoTableViewCell.m in Sources */,
 				04E447B71C06A4B400E05811 /* MJRefreshBackStateFooter.m in Sources */,
 				04E447601C06949100E05811 /* OrderSendNVC.m in Sources */,
+				0403FA341C103D4000422138 /* OrderQHZTableViewController.m in Sources */,
 				04F5081F1C0822D0009F0ACD /* JSONModelOrderDingDanZhuangTai.m in Sources */,
 				04B1E17F1C083C5F00AFBF90 /* PriceTableVC.m in Sources */,
 				04E447381C06949100E05811 /* SelectGoodsVC.m in Sources */,
@@ -2166,7 +2243,6 @@
 				04E445FE1C06914000E05811 /* AFNetworkTool.m in Sources */,
 				04E447B81C06A4B400E05811 /* MJRefreshGifHeader.m in Sources */,
 				04E447221C06949100E05811 /* GesturePasswordButton.m in Sources */,
-				0403FA251C0FEA8200422138 /* OrderDidNotConfirmTableViewController.m in Sources */,
 				04E445B31C06914000E05811 /* AFHTTPSessionManager.m in Sources */,
 				04E445BE1C06914000E05811 /* MJFoundation.m in Sources */,
 				04E445BD1C06914000E05811 /* MJConst.m in Sources */,
@@ -2182,6 +2258,7 @@
 				04E444F81C06908C00E05811 /* main.m in Sources */,
 				04E447341C06949100E05811 /* SelectCarVC.m in Sources */,
 				04E447AF1C06A4B400E05811 /* MJRefreshComponent.m in Sources */,
+				0403FA471C103E3F00422138 /* OrderDidNotConfirmTableViewController.m in Sources */,
 				04E4480E1C06CE3900E05811 /* JSONModelNotifyWLTZ.m in Sources */,
 				04B1E15C1C083B6E00AFBF90 /* OrderSendCommentTVC.m in Sources */,
 				04E446FF1C06949100E05811 /* AddGoodsVC.m in Sources */,
@@ -2189,7 +2266,6 @@
 				04E445E51C06914000E05811 /* UIImage+WebP.m in Sources */,
 				04E445E81C06914000E05811 /* UIView+WebCacheOperation.m in Sources */,
 				04E447B51C06A4B400E05811 /* MJRefreshBackGifFooter.m in Sources */,
-				0403FA2D1C1018A600422138 /* JSONModelOrderDidNotConfirm.m in Sources */,
 				04E447001C06949100E05811 /* ConfigCGoodsTVC.m in Sources */,
 				04E445ED1C06914000E05811 /* UIButton+AFNetworking.m in Sources */,
 				04E445B11C06914000E05811 /* AFHTTPRequestOperation.m in Sources */,
@@ -2216,6 +2292,7 @@
 				04B1E1831C083C8400AFBF90 /* UserProtocolVC.m in Sources */,
 				04E447F01C06CD4500E05811 /* MyTVC.m in Sources */,
 				04E445EF1C06914000E05811 /* UIProgressView+AFNetworking.m in Sources */,
+				0403FA371C103D5900422138 /* JSONModelOrderQHZ.m in Sources */,
 				04E447E61C06CA0300E05811 /* JSONModelLogin.m in Sources */,
 				04E447B21C06A4B400E05811 /* MJRefreshAutoGifFooter.m in Sources */,
 				04E445E61C06914000E05811 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -2232,7 +2309,6 @@
 				04E445B81C06914000E05811 /* AFURLResponseSerialization.m in Sources */,
 				040F74441C0D8FCB00FC4AB9 /* CustonCell.m in Sources */,
 				04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */,
-				0403FA291C1005F700422138 /* OrderDidNotConfirmTableViewCell.m in Sources */,
 				04E447CF1C06C94000E05811 /* ConfigCommonTVC.m in Sources */,
 				04E445EA1C06914000E05811 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				0483FDF01C0EC90C00FB2BBE /* MyEvaluationSJXXTableViewController.m in Sources */,
@@ -2245,11 +2321,13 @@
 				04E445DF1C06914000E05811 /* SDWebImageDownloaderOperation.m in Sources */,
 				04E447321C06949100E05811 /* MakeOrderCarCell.m in Sources */,
 				04E445DB1C06914000E05811 /* SDImageCache.m in Sources */,
+				0403FA3B1C103DB700422138 /* OrderQHZTableViewCell.m in Sources */,
 				04E445C31C06914000E05811 /* NSObject+MJProperty.m in Sources */,
 				040F743E1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m in Sources */,
 				04E447E21C06CA0300E05811 /* LoginVC.m in Sources */,
 				04E445B21C06914000E05811 /* AFHTTPRequestOperationManager.m in Sources */,
 				04E448181C06CE7700E05811 /* NotifyZXTZViewController.m in Sources */,
+				0403FA491C103E3F00422138 /* OrderDidNotConfirmTableViewCell.m in Sources */,
 				04E447D71C06C9BD00E05811 /* HomeVC.m in Sources */,
 				04E445F91C06914000E05811 /* AESCrypt.m in Sources */,
 				04E4471B1C06949100E05811 /* ConfigCWuliuTVC.m in Sources */,
@@ -2259,6 +2337,7 @@
 				04E445C51C06914000E05811 /* README.md in Sources */,
 				04E445C41C06914000E05811 /* NSString+MJExtension.m in Sources */,
 				04E445E31C06914000E05811 /* UIImage+GIF.m in Sources */,
+				0403FA481C103E3F00422138 /* JSONModelOrderDidNotConfirm.m in Sources */,
 				04E447AD1C06A4B400E05811 /* MJRefreshAutoFooter.m in Sources */,
 				04E445DC1C06914000E05811 /* SDWebImageCompat.m in Sources */,
 				04F5081B1C082244009F0ACD /* OrderDingDanZhuangTaiTableViewCell.m in Sources */,

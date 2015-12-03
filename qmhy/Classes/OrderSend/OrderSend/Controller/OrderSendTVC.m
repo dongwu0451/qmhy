@@ -156,7 +156,7 @@
     //        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
     //    }
     if (indexPath.section==1 && indexPath.row==0) {
-        // 推出我自己新建立的
+        // 1.订单未确认
         OrderDidNotConfirmTableViewController *tvc = [[OrderDidNotConfirmTableViewController alloc] init];
         tvc.labelOne = @"您提交的订单还没有";
         tvc.labelTwo = @"被客服审核请耐心等待";
@@ -164,12 +164,34 @@
         [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==1) {
-        // 推出我自己新建立的
+        // 2.分派提货人
         OrderDidNotConfirmTableViewController *tvc = [[OrderDidNotConfirmTableViewController alloc] init];
         tvc.labelOne = @"您提交的订单已经被客服审";
         tvc.labelTwo = @"核请耐心等待提货司机取货";
         tvc.status = 20;
         [self.navigationController pushViewController:tvc animated:YES];
+    }
+    if (indexPath.section==1 && indexPath.row==2) {
+        // 3.取货途中
+        // 已经派司机进    行提货请耐心等待
+    }
+    if (indexPath.section==1 && indexPath.row==3) {
+        // 4.已开单
+    }
+    if (indexPath.section==1 && indexPath.row==4) {
+        // 5.已到物流
+    }
+    if (indexPath.section==1 && indexPath.row==5) {
+        // 6.配货物流途中
+    }
+    if (indexPath.section==1 && indexPath.row==6) {
+        // 7.已装车
+    }
+    if (indexPath.section==1 && indexPath.row==7) {
+        // 8.已到达
+    }
+    if (indexPath.section==1 && indexPath.row==8) {
+        // 9.已取货
     }
 }
 
