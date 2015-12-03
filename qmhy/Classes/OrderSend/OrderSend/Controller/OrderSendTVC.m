@@ -8,6 +8,7 @@
 
 #import "OrderSendTVC.h"
 #import "OrderSendListTVC.h"
+#import "OrderDidNotConfirmTableViewController.h"
 
 @interface OrderSendTVC ()
 
@@ -16,12 +17,12 @@
 @implementation OrderSendTVC
 
 //组数量
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
 
 //组内行数量
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section==0) {
         return 1;
     }else{
@@ -30,7 +31,7 @@
 }
 
 //行高度
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section==0) {
         return 94.;
     }else if(indexPath.section==1){
@@ -40,8 +41,8 @@
     }
 }
 
-//组头高度
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+// 组头高度
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section==0) {
         return 16;
     }else{
@@ -49,13 +50,13 @@
     }
 }
 
-//组脚高度
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+// 组脚高度
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0;
 }
 
 //绘制cell 最后几行图标不够
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //有两个id id_fourbuttons id_rightDetail
     
     //判断在哪个section，设置不同cellid
@@ -70,8 +71,9 @@
     if(indexPath.section==1){
         if (indexPath.row==0) {
             cell.imageView.image=[UIImage imageNamed:@"Disc_movie"];
-            [cell.textLabel setText:@"1-订单提交"];
-            [cell.detailTextLabel setText:@"订单提交"];
+            // 把订单提交换成定单未确认
+            [cell.textLabel setText:@"1-定单未确认"];
+            [cell.detailTextLabel setText:@""];
         } else if (indexPath.row==1) {
             cell.imageView.image=[UIImage imageNamed:@"Disc_taxi"];
             [cell.textLabel setText:@"2-分派提货人"];
@@ -113,7 +115,7 @@
 }
 
 //实现自定义菜单 标题的委托
--(NSString *)setIconTitle:(id)button{
+- (NSString *)setIconTitle:(id)button {
     UIButton * but=button;
     switch (but.tag) {
         case 1:
@@ -136,33 +138,49 @@
 
 
 //行选择事件 ：订单提交（未到物流）已开单（未收票据）待评价等四个自定义菜单 直接用StoryBoard连线跳转
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //订单提交（未到物流）已开单（未收票据）待评价等四个自定义菜单 直接用StoryBoard连线跳转
-//    NSInteger row=indexPath.row;
-//    NSInteger section=indexPath.section;
-//    NSLog(@"Wealth didSelectRowAtIndexPath:%d,%d",section,row);
-//    if (section==1 && row==0){//订单提交
-//        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
-//    }
-//    if (section==1 && row==1){//分派提货人
-//        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
-//    }
-//    if (section==1 && row==2){//取货途中
-//        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
-//    }
-//    if (section==1 && row==3){//已开单
-//        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
-//    }
+    //    NSInteger row=indexPath.row;
+    //    NSInteger section=indexPath.section;
+    //    NSLog(@"Wealth didSelectRowAtIndexPath:%d,%d",section,row);
+    //    if (section==1 && row==0){//订单提交
+    //        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
+    //    }
+    //    if (section==1 && row==1){//分派提货人
+    //        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
+    //    }
+    //    if (section==1 && row==2){//取货途中
+    //        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
+    //    }
+    //    if (section==1 && row==3){//已开单
+    //        [self performSegueWithIdentifier:@"showGoodsSend" sender:nil];
+    //    }
+    if (indexPath.section==1 && indexPath.row==0) {
+        // 推出我自己新建立的
+        OrderDidNotConfirmTableViewController *tvc = [[OrderDidNotConfirmTableViewController alloc] init];
+        tvc.labelOne = @"您提交的订单还没有";
+        tvc.labelTwo = @"被客服审核请耐心等待";
+        tvc.status = 10;
+        [self.navigationController pushViewController:tvc animated:YES];
+    }
+    if (indexPath.section==1 && indexPath.row==1) {
+        // 推出我自己新建立的
+        OrderDidNotConfirmTableViewController *tvc = [[OrderDidNotConfirmTableViewController alloc] init];
+        tvc.labelOne = @"您提交的订单已经被客服审";
+        tvc.labelTwo = @"核请耐心等待提货司机取货";
+        tvc.status = 20;
+        [self.navigationController pushViewController:tvc animated:YES];
+    }
 }
 
 //准备跳转之前的事件
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSIndexPath *indexPath = [self.theTableview indexPathForSelectedRow];
     NSInteger row=indexPath.row;
     NSInteger section=indexPath.section;
     
-    NSLog(@"row=====:%d",indexPath.row);
+    NSLog(@"row=====:%ld",indexPath.row);
     if([segue.identifier isEqualToString:@"showGoodsSend1"]){
         OrderSendListTVC *tvc= segue.destinationViewController;
         tvc.hidesBottomBarWhenPushed = YES;//隐藏底部导航栏
@@ -179,13 +197,13 @@
         tvc.hidesBottomBarWhenPushed = YES;//隐藏底部导航栏
         //tvc.navigationItem.title=@"a";
         //tvc.newtitle=@"SSSS";
-//        if (section==0 && row==0)
-//            tvc.newtitle=@"订单提交（未到物流）";
-//        if (section==0 && row==1)
-//            tvc.newtitle=@"已开单（未收票据）";
-        
-        if (section==1 && row==0)
-            tvc.newtitle=@"订单提交";
+        //        if (section==0 && row==0)
+        //            tvc.newtitle=@"订单提交（未到物流）";
+        //        if (section==0 && row==1)
+        //            tvc.newtitle=@"已开单（未收票据）";
+        // 把订单提交换成定单未确认
+        //        if (section==1 && row==0)
+        //            tvc.newtitle=@"定单未确认";
         if (section==1 && row==1)
             tvc.newtitle=@"分派提货人";
         if (section==1 && row==2)

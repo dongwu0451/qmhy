@@ -551,9 +551,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <segue destination="y8z-RX-vci" kind="push" identifier="showGoodsSend" id="tgv-8e-1ES"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -741,7 +738,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-6q-8LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420" y="1279"/>
+            <point key="canvasLocation" x="-565" y="1248"/>
         </scene>
         <!--提交评价-->
         <scene sceneID="05U-VW-6Gl">
@@ -778,7 +775,7 @@
         <!--我的消息-->
         <scene sceneID="yXx-1O-zJY">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="EWX-PE-6OJ" customClass="NotifyTVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SIDNotifyTVC" hidesBottomBarWhenPushed="YES" id="EWX-PE-6OJ" customClass="NotifyTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K1Q-4D-etI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3338,6 +3335,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sxD-eB-vfO"/>
-        <segue reference="tgv-8e-1ES"/>
+        <segue reference="s1y-GA-gzr"/>
     </inferredMetricsTieBreakers>
 </document>

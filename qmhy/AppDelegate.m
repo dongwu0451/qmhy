@@ -13,6 +13,31 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+//
+//    NSDateFormatter*df = [[NSDateFormatter alloc]init];//格式化
+//    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//    NSString* s1 = [df stringFromDate:today];
+    
+    
+//    NSDateFormatter*df = [[NSDateFormatter alloc]init];//格式化
+//    [df setDateFormat:@"yyyyMMddHHmmss"];
+//    [df setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"zh_CN"] ];
+//    NSDate*date =[[NSDate alloc]init];
+//    date =[df dateFromString:@"2015-12-03 09:07:09"];
+//    NSLog(@"%@", date);
+//    NSString *str = [NSString stringWithFormat:@"%@",date];
+//    NSLog(@"%@", str);
+    
+    
+    NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"zh_CN"] ];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSDate *date =[dateFormat dateFromString:@"2015-12-03 09:07:09"];
+    
+    NSLog(@"%@", date);
     //service更多  wealth我的  home主页  discovery订单
     
     //支付宝思路：共有三个可选的rootVC loginVC、gestureVC、tabbarVC
