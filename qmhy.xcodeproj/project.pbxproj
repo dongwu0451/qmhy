@@ -44,6 +44,8 @@
 		04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */; };
 		04D1B3B91C0C299100890507 /* MyEvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */; };
 		04D1B3C11C0C422B00890507 /* DXStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3C01C0C422B00890507 /* DXStarRatingView.m */; };
+		04E3E6181C11354A00014EDB /* OrderQHZEwmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E6161C11354A00014EDB /* OrderQHZEwmViewController.m */; };
+		04E3E6191C11354A00014EDB /* OrderQHZEwmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E3E6171C11354A00014EDB /* OrderQHZEwmViewController.xib */; };
 		04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E444DC1C068CDD00E05811 /* AppDelegate.m */; };
 		04E444F21C068F5900E05811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EC1C068F5900E05811 /* Main.storyboard */; };
 		04E444F41C068F5900E05811 /* qmhy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E444EE1C068F5900E05811 /* qmhy-Info.plist */; };
@@ -307,6 +309,9 @@
 		04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationViewController.xib; sourceTree = "<group>"; };
 		04D1B3BF1C0C422B00890507 /* DXStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXStarRatingView.h; sourceTree = "<group>"; };
 		04D1B3C01C0C422B00890507 /* DXStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXStarRatingView.m; sourceTree = "<group>"; };
+		04E3E6151C11354A00014EDB /* OrderQHZEwmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderQHZEwmViewController.h; sourceTree = "<group>"; };
+		04E3E6161C11354A00014EDB /* OrderQHZEwmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderQHZEwmViewController.m; sourceTree = "<group>"; };
+		04E3E6171C11354A00014EDB /* OrderQHZEwmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderQHZEwmViewController.xib; sourceTree = "<group>"; };
 		04E444DB1C068CDD00E05811 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = qmhy/AppDelegate.h; sourceTree = "<group>"; };
 		04E444DC1C068CDD00E05811 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = qmhy/AppDelegate.m; sourceTree = "<group>"; };
 		04E444EC1C068F5900E05811 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = qmhy/Main.storyboard; sourceTree = "<group>"; };
@@ -696,6 +701,9 @@
 			children = (
 				0403FA321C103D4000422138 /* OrderQHZTableViewController.h */,
 				0403FA331C103D4000422138 /* OrderQHZTableViewController.m */,
+				04E3E6151C11354A00014EDB /* OrderQHZEwmViewController.h */,
+				04E3E6161C11354A00014EDB /* OrderQHZEwmViewController.m */,
+				04E3E6171C11354A00014EDB /* OrderQHZEwmViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2152,6 +2160,7 @@
 				0483FDF51C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib in Resources */,
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				04E4471D1C06949100E05811 /* EditConfigCWuliuViewController.xib in Resources */,
+				04E3E6191C11354A00014EDB /* OrderQHZEwmViewController.xib in Resources */,
 				04E4473A1C06949100E05811 /* MakeOrderQuhuoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2332,6 +2341,7 @@
 				04E445F91C06914000E05811 /* AESCrypt.m in Sources */,
 				04E4471B1C06949100E05811 /* ConfigCWuliuTVC.m in Sources */,
 				04E445B51C06914000E05811 /* AFSecurityPolicy.m in Sources */,
+				04E3E6181C11354A00014EDB /* OrderQHZEwmViewController.m in Sources */,
 				04B1E17B1C083C4A00AFBF90 /* MoreTVC.m in Sources */,
 				04E447BD1C06A4B400E05811 /* UIScrollView+MJExtension.m in Sources */,
 				04E445C51C06914000E05811 /* README.md in Sources */,

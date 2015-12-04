@@ -9,6 +9,7 @@
 #import "OrderSendTVC.h"
 #import "OrderSendListTVC.h"
 #import "OrderDidNotConfirmTableViewController.h"
+#import "OrderQHZTableViewController.h"
 
 @interface OrderSendTVC ()
 
@@ -173,7 +174,13 @@
     }
     if (indexPath.section==1 && indexPath.row==2) {
         // 3.取货途中
-        // 已经派司机进    行提货请耐心等待
+        OrderQHZTableViewController *tvc = [[OrderQHZTableViewController alloc] init];
+        tvc.labelOne = @"已经派司机进";
+        tvc.labelTwo = @"行提货请耐心等待";
+        tvc.status = 25;
+        [self.navigationController pushViewController:tvc animated:YES];
+        
+     
     }
     if (indexPath.section==1 && indexPath.row==3) {
         // 4.已开单
