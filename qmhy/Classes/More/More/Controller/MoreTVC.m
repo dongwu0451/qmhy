@@ -268,7 +268,7 @@
             NSLog(@"格式粗欧文");
         }
     } else {
-        finalString = @"abcdef";
+        finalString = @"无";
     }
     
     return finalString;

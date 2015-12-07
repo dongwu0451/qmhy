@@ -96,15 +96,22 @@
     } else {
         self.consigneePhoneLabel.text = model.consigneephone;
     }
-
+    
+    
+    
+    self.code = model.code;
+    self.carphone = model.carphone;
 }
 
 - (IBAction)kfPhoneBtnClick:(UIButton *)sender {
+    NSLog(@"123");
     if ([self.delegate respondsToSelector:@selector(orderQHZTableViewCell:didClickLikeKfPhoneBtn:AndCarphone:)]) {
         [self.delegate orderQHZTableViewCell:self didClickLikeKfPhoneBtn:sender AndCarphone:self.carphone];
+        
     }
 }
 - (IBAction)ewmBtnClick:(UIButton *)sender {
+    NSLog(@"123456783");
     if ([self.delegate respondsToSelector:@selector(orderQHZTableViewCell:didClickLikeEwmBtn:AndCode:)]) {
         [self.delegate orderQHZTableViewCell:self didClickLikeEwmBtn:sender AndCode:self.code];
     }

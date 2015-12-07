@@ -179,8 +179,6 @@
         tvc.labelTwo = @"行提货请耐心等待";
         tvc.status = 25;
         [self.navigationController pushViewController:tvc animated:YES];
-        
-     
     }
     if (indexPath.section==1 && indexPath.row==3) {
         // 4.已开单

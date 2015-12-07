@@ -17,7 +17,8 @@
 #import "MJRefreshFooter.h"
 #import "MJRefresh.h"
 #import "OrderQHZEwmViewController.h"
-
+#import "MyEvaluationXQTableViewController.h"
+#import "JSONModelOrderDidNotConfirm.h"
 
 @interface OrderQHZTableViewController () <OrderQHZTableViewCellDelegate>
 @property (nonatomic, assign) CGRect oneLabelFrame;
@@ -124,7 +125,6 @@
     } fail:^{
         
     }];
-    
 }
 
 - (void)loadMoreData {
@@ -164,12 +164,14 @@
 
 - (void)orderQHZTableViewCell:(OrderQHZTableViewCell *)cell didClickLikeEwmBtn:(UIButton *)likeBtn AndCode:(NSString *)code {
     OrderQHZEwmViewController *vc= [[OrderQHZEwmViewController alloc] init];
+    NSLog(@"%@", code);
     vc.code = code;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 
 - (void)orderQHZTableViewCell:(OrderQHZTableViewCell *)cell didClickLikeKfPhoneBtn:(UIButton *)likeBtn AndCarphone:(NSString *)carphone {
+    NSLog(@"+++++++++++++%@", carphone);
     NSString *str = [NSString stringWithFormat:@"tel://%@", carphone];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
@@ -191,7 +193,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"OrderQHZTableViewCell" owner:nil options:nil] lastObject];
     }
     [cell config:_dataArray[indexPath.row]];
-    
+    cell.delegate = self;
     return cell;
 }
 
@@ -201,11 +203,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@", _dataArray[indexPath.row]);
-    //    MyEvaluationXQTableViewController *tvc = [[MyEvaluationXQTableViewController alloc] init];
-    //    JSONModelOrderDidNotConfirm *model = _dataArray[indexPath.row];
-    //    tvc.code = model.code;
-    //    tvc.hidesBottomBarWhenPushed = YES;
-    //    [self.navigationController pushViewController:tvc animated:YES];
+        MyEvaluationXQTableViewController *tvc = [[MyEvaluationXQTableViewController alloc] init];
+        JSONModelOrderDidNotConfirm *model = _dataArray[indexPath.row];
+        tvc.code = model.code;
+        tvc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:tvc animated:YES];
     
     
 }
