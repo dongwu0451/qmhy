@@ -10,6 +10,7 @@
 #import "OrderSendListTVC.h"
 #import "OrderDidNotConfirmTableViewController.h"
 #import "OrderQHZTableViewController.h"
+#import "OrderDLWTableViewController.h"
 
 @interface OrderSendTVC ()
 
@@ -181,22 +182,52 @@
         [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==3) {
-        // 4.已开单
+        // 4.已开单    物流已经开单    正在装车中...
+        OrderQHZTableViewController *tvc = [[OrderQHZTableViewController alloc] init];
+        tvc.labelOne = @"物流已经开单";
+        tvc.labelTwo = @"正在装车中...";
+        tvc.status = 30;
+        [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==4) {
-        // 5.已到物流
+        // 5.已到物流     货物已经送达   物流正在开票...
+        OrderQHZTableViewController *tvc = [[OrderQHZTableViewController alloc] init];
+        tvc.labelOne = @"货物已经送达";
+        tvc.labelTwo = @"物流正在开票...";
+        tvc.status = 40;
+        [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==5) {
         // 6.配货物流途中
+        OrderDLWTableViewController *tvc = [[OrderDLWTableViewController alloc] init];
+        tvc.labelOne = @"司机已经提完";
+        tvc.labelTwo = @"货正在送往物流";
+        tvc.status = 45;
+        [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==6) {
         // 7.已装车
+        OrderDLWTableViewController *tvc = [[OrderDLWTableViewController alloc] init];
+        tvc.labelOne = @"货物已经装车";
+        tvc.labelTwo = @"正在送往目的地...";
+        tvc.status = 50;
+        [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==7) {
         // 8.已到达
+        OrderDLWTableViewController *tvc = [[OrderDLWTableViewController alloc] init];
+        tvc.labelOne = @"物流已经送达";
+        tvc.labelTwo = @"正在派送途中...";
+        tvc.status = 60;
+        [self.navigationController pushViewController:tvc animated:YES];
     }
     if (indexPath.section==1 && indexPath.row==8) {
         // 9.已取货
+        OrderDLWTableViewController *tvc = [[OrderDLWTableViewController alloc] init];
+        tvc.labelOne = @"您已签收货物，感谢您使";
+        tvc.labelTwo = @"用全民货运，欢饮再次光临";
+        tvc.status = 80;
+        [self.navigationController pushViewController:tvc animated:YES];
     }
 }
 
