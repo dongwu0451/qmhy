@@ -30,8 +30,4 @@
 
 
 
-
-
-+ (NSMutableArray *)allBigAndSmallGoodsFakeData;
-
 @end

@@ -150,6 +150,7 @@
         MakeOrderFahuoCell *myCell = (MakeOrderFahuoCell *)cell;
         QConfig *c = [[QConfig alloc] init];
         myCell.fahuorenLabel.text = c.username;
+        NSLog(@"%@",c.phone2);
         myCell.fhrdianhuaLabel.text = c.phone2;
         myCell.fhrdizhiLabel.text = @"";
     }
