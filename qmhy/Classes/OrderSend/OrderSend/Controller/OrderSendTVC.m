@@ -60,7 +60,6 @@
 //绘制cell 最后几行图标不够
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //有两个id id_fourbuttons id_rightDetail
-    
     //判断在哪个section，设置不同cellid
     NSString *cellid;;
     if (indexPath.section==0) {
@@ -111,9 +110,7 @@
         }
         
     }
-    
     return cell;
-    
 }
 
 //实现自定义菜单 标题的委托

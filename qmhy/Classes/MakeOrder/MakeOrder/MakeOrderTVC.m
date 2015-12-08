@@ -60,15 +60,15 @@
     //在TableView向数据源请求数据之前使用-registerNib:forCellReuseIdentifier:方法为@“MY_CELL_ID”注册过nib的话，就可以省下每次判断并初始化cell的代码，要是在重用队列里没有可用的cell的话，runtime将自动帮我们生成并初始化一个可用的cell。
     
     // 注册统计栏的自定义单元格
-    [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderTotalCell" bundle:nil] forCellReuseIdentifier:@"makeorder_top"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderTotalCell" bundle:nil] forCellReuseIdentifier:@"makeorder_top"];
     // 注册选择收货信息的自定义单元格
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderShouhuoCell" bundle:nil] forCellReuseIdentifier:@"makeoredershouhuo_main"];
     // 注册选择货物信息的自定义单元格
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderGoodsCell" bundle:nil] forCellReuseIdentifier:@"makeoredergoods_main"];
     // 注册选择车辆信息的自定义单元格
-    [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderCarCell" bundle:nil] forCellReuseIdentifier:@"makeoredercar_main"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderCarCell" bundle:nil] forCellReuseIdentifier:@"makeoredercar_main"];
     // 注册先择取货信息的自定义单元格
-    [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderQuhuoCell" bundle:nil] forCellReuseIdentifier:@"makeorederquhuo_main"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderQuhuoCell" bundle:nil] forCellReuseIdentifier:@"makeorederquhuo_main"];
     
 }
 
@@ -84,21 +84,23 @@
 
 //设置高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0){//第一组 统计栏
-        return 82.;
-    }else{                    //其他组
-        if (indexPath.row==0)  //其他组第一行
-            return 38.;
-        else                   //其他组 其他行
-            return 68.;
-    }
+//    if (indexPath.section==0){//第一组 统计栏
+//        return 82.;
+//    }else{                    //其他组
+//        if (indexPath.row==0)  //其他组第一行
+//            return 38.;
+//        else                   //其他组 其他行
+//            return 68.;
+//    }
+    
+    return 68.;
 }
 
 //设置各组行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section==0)//第1组 统计
     {
-        return 1;
+        return self.allShouhuo.count + 1;
     }
     else if(section==1)//第2组 收货人（批量）
     {
@@ -108,20 +110,20 @@
     {
         return _goods.count + 1;
     }
-    else if(section==3)//第4组 车辆
-    {
-        if (NULL==_carModel)
-            return 1;
-        else
-            return 2;
-    }
-    else if(section==4)//第5组 取货人
-    {
-        if (NULL==_quhuoModel)
-            return 1;
-        else
-            return 2;
-    }
+//    else if(section==3)//第4组 车辆
+//    {
+//        if (NULL==_carModel)
+//            return 1;
+//        else
+//            return 2;
+//    }
+//    else if(section==4)//第5组 取货人
+//    {
+//        if (NULL==_quhuoModel)
+//            return 1;
+//        else
+//            return 2;
+//    }
     else
     {
         return 1;
@@ -165,7 +167,13 @@
     //判断在哪个section，设置不同cellid
     NSString *cellid;//cellid在前文注册过
     if (indexPath.section==0) {
-        cellid = @"makeorder_top";
+        if (indexPath.row==0) {
+            cellid = @"makeoreder_detail";//右箭头单元格
+        }
+        else {
+            cellid = @"makeoredershouhuo_main";
+            
+        }
     }
     if (indexPath.section==1) {
         if (indexPath.row==0) {
@@ -184,25 +192,45 @@
             cellid = @"makeoredergoods_main";
         }
     }
+    
     if (indexPath.section==3) {
-        if (indexPath.row==0) {
-            cellid = @"makeoreder_detail";//右箭头单元格
-        }
-        else {
-            cellid = @"makeoredercar_main";
-        }
+        cellid = @"makeoreder_detail";//右箭头单元格
     }
     if (indexPath.section==4) {
-        if (indexPath.row==0) {
-            cellid = @"makeoreder_detail";//右箭头单元格
-        }
-        else {
-            cellid = @"makeorederquhuo_main";
-        }
+        cellid = @"makeoreder_detail";//右箭头单元格
     }
+    
+//    if (indexPath.section==3) {
+//        if (indexPath.row==0) {
+//            cellid = @"makeoreder_detail";//右箭头单元格
+//        }
+//        else {
+//            cellid = @"makeoredercar_main";
+//        }
+//    }
+//    if (indexPath.section==4) {
+//        if (indexPath.row==0) {
+//            cellid = @"makeoreder_detail";//右箭头单元格
+//        }
+//        else {
+//            cellid = @"makeorederquhuo_main";
+//        }
+//    }
+    
     
     //收货联系人
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+    if(indexPath.section==0 && indexPath.row==0){//1.0
+        //cell.imageView.image=[UIImage imageNamed:@"Wea_zhanghuyue"];
+        [cell.textLabel setText:@"收货人"];
+        [cell.detailTextLabel setText:@"请选择收货人"];
+    }else if(indexPath.section==1 && indexPath.row > 0) {//收货联系人
+        cell = (MakeOrderShouhuoCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
+        MakeOrderShouhuoCell *mycell=(MakeOrderShouhuoCell *)cell;
+        mycell.shouhuo = self.allShouhuo[indexPath.row - 1];// 将收货联系人模型传递给Cell，cell内部自己配置自己封装
+    }
+    
+    //收货联系人
     if(indexPath.section==1 && indexPath.row==0){//1.0
         //cell.imageView.image=[UIImage imageNamed:@"Wea_zhanghuyue"];
         [cell.textLabel setText:@"收货人"];
@@ -227,35 +255,45 @@
         MakeOrderGoodsCell *myCell = (MakeOrderGoodsCell *)cell;
         myCell.goods = _goods[indexPath.row - 1]; // 将商品模型传递给Cell，cell内部自己配置 自己封装
     }
-    
-    //车辆
     if (indexPath.section==3 && indexPath.row==0){//3.0
+                //cell.imageView.image=[UIImage imageNamed:@"Wea_wodebaozhang"];
+                [cell.textLabel setText:@"aaaa"];
+                [cell.detailTextLabel setText:@"请vvv车辆"];
+            }
+    if (indexPath.section==4 && indexPath.row==0){//3.0
         //cell.imageView.image=[UIImage imageNamed:@"Wea_wodebaozhang"];
-        [cell.textLabel setText:@"车辆"];
-        [cell.detailTextLabel setText:@"请选择车辆"];
-    }else if(indexPath.section==3 && indexPath.row ==1){
-        cell = (MakeOrderCarCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
-        MakeOrderCarCell *mycell = (MakeOrderCarCell *)cell;
-        mycell.carModel=self.carModel;
-        //mycell.carBox.text = self.carModel.carCategory;
+        [cell.textLabel setText:@"aaaa"];
+        [cell.detailTextLabel setText:@""];
     }
     
-    //取货人
-    if (indexPath.section==4 && indexPath.row==0){//4.0
-        //cell.imageView.image=[UIImage imageNamed:@"Wea_wodebaozhang"];
-        [cell.textLabel setText:@"取货人"];
-        [cell.detailTextLabel setText:@"请选择取货人"];
-    }else if(indexPath.section==4 && indexPath.row ==1){
-        cell = (MakeOrderQuhuoCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
-        MakeOrderQuhuoCell *mycell = (MakeOrderQuhuoCell *)cell;
-        mycell.quhuoModel=self.quhuoModel;// 将取货模型传递给Cell，cell内部自己配置 自己封装
-        //NSLog(@"-------------------%@", self.quhuoModel.quhuoName);
-        //mycell.quhuoName.text = self.quhuoModel.quhuoName;
-        //mycell.quhuoTelephone.text = self.quhuoModel.quhuoTelephone;
-        //mycell.quhuoAddress.text = self.quhuoModel.quhuoAddress;
-        
-        
-    }
+//    //车辆
+//    if (indexPath.section==3 && indexPath.row==0){//3.0
+//        //cell.imageView.image=[UIImage imageNamed:@"Wea_wodebaozhang"];
+//        [cell.textLabel setText:@"车辆"];
+//        [cell.detailTextLabel setText:@"请选择车辆"];
+//    }else if(indexPath.section==3 && indexPath.row ==1){
+//        cell = (MakeOrderCarCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
+//        MakeOrderCarCell *mycell = (MakeOrderCarCell *)cell;
+//        mycell.carModel=self.carModel;
+//        //mycell.carBox.text = self.carModel.carCategory;
+//    }
+//    
+//    //取货人
+//    if (indexPath.section==4 && indexPath.row==0){//4.0
+//        //cell.imageView.image=[UIImage imageNamed:@"Wea_wodebaozhang"];
+//        [cell.textLabel setText:@"取货人"];
+//        [cell.detailTextLabel setText:@"请选择取货人"];
+//    }else if(indexPath.section==4 && indexPath.row ==1){
+//        cell = (MakeOrderQuhuoCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
+//        MakeOrderQuhuoCell *mycell = (MakeOrderQuhuoCell *)cell;
+//        mycell.quhuoModel=self.quhuoModel;// 将取货模型传递给Cell，cell内部自己配置 自己封装
+//        //NSLog(@"-------------------%@", self.quhuoModel.quhuoName);
+//        //mycell.quhuoName.text = self.quhuoModel.quhuoName;
+//        //mycell.quhuoTelephone.text = self.quhuoModel.quhuoTelephone;
+//        //mycell.quhuoAddress.text = self.quhuoModel.quhuoAddress;
+//        
+//        
+//    }
     return  cell;
 }
 
@@ -280,23 +318,23 @@
             [self.navigationController pushViewController:tvc animated:YES];
         }
     }
-    if (indexPath.section==3) {//车辆，有箭头的
-        if (indexPath.row==0) {
-            SelectCarVC *cvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDSelectCarVC"];
-            cvc.delegate = self;//本类处理代理
-            [self.navigationController pushViewController:cvc animated:YES];
-        }
-    }
-    
-    if (indexPath.section==4) {//取货联系人，有箭头的
-        if (indexPath.row==0) {
-            ConfigCQuhuoTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDConfigCQuhuoTVC"];
-            tvc.delegate = self;//本类处理代理
-            [self.navigationController pushViewController:tvc animated:YES];
-            
-            
-        }
-    }
+//    if (indexPath.section==3) {//车辆，有箭头的
+//        if (indexPath.row==0) {
+//            SelectCarVC *cvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDSelectCarVC"];
+//            cvc.delegate = self;//本类处理代理
+//            [self.navigationController pushViewController:cvc animated:YES];
+//        }
+//    }
+//    
+//    if (indexPath.section==4) {//取货联系人，有箭头的
+//        if (indexPath.row==0) {
+//            ConfigCQuhuoTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDConfigCQuhuoTVC"];
+//            tvc.delegate = self;//本类处理代理
+//            [self.navigationController pushViewController:tvc animated:YES];
+//            
+//            
+//        }
+//    }
     
 }
 
