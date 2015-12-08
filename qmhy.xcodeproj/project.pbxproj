@@ -163,17 +163,10 @@
 		04E447251C06949100E05811 /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4466E1C06949100E05811 /* TentacleView.m */; };
 		04E447261C06949100E05811 /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446711C06949100E05811 /* HomeIconButton.m */; };
 		04E447271C06949100E05811 /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446731C06949100E05811 /* HomeNVC.m */; };
-		04E447311C06949100E05811 /* CarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446881C06949100E05811 /* CarModel.m */; };
-		04E447321C06949100E05811 /* MakeOrderCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4468A1C06949100E05811 /* MakeOrderCarCell.m */; };
-		04E447331C06949100E05811 /* MakeOrderCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4468B1C06949100E05811 /* MakeOrderCarCell.xib */; };
-		04E447341C06949100E05811 /* SelectCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4468D1C06949100E05811 /* SelectCarVC.m */; };
 		04E447351C06949100E05811 /* BigAndSmallGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446901C06949100E05811 /* BigAndSmallGoodsModel.m */; };
 		04E447361C06949100E05811 /* MakeOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446921C06949100E05811 /* MakeOrderGoodsCell.m */; };
 		04E447371C06949100E05811 /* MakeOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446931C06949100E05811 /* MakeOrderGoodsCell.xib */; };
 		04E447381C06949100E05811 /* SelectGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446951C06949100E05811 /* SelectGoodsVC.m */; };
-		04E447391C06949100E05811 /* MakeOrderQuhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446981C06949100E05811 /* MakeOrderQuhuoCell.m */; };
-		04E4473A1C06949100E05811 /* MakeOrderQuhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446991C06949100E05811 /* MakeOrderQuhuoCell.xib */; };
-		04E4473B1C06949100E05811 /* QuhuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4469B1C06949100E05811 /* QuhuoModel.m */; };
 		04E4473C1C06949100E05811 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4469E1C06949100E05811 /* MakeOrderShouhuoCell.m */; };
 		04E4473D1C06949100E05811 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4469F1C06949100E05811 /* MakeOrderShouhuoCell.xib */; };
 		04E447411C06949100E05811 /* entlib.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04E446A91C06949100E05811 /* entlib.gif */; };
@@ -529,13 +522,6 @@
 		04E446711C06949100E05811 /* HomeIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIconButton.m; sourceTree = "<group>"; };
 		04E446721C06949100E05811 /* HomeNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNVC.h; sourceTree = "<group>"; };
 		04E446731C06949100E05811 /* HomeNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNVC.m; sourceTree = "<group>"; };
-		04E446871C06949100E05811 /* CarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarModel.h; sourceTree = "<group>"; };
-		04E446881C06949100E05811 /* CarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarModel.m; sourceTree = "<group>"; };
-		04E446891C06949100E05811 /* MakeOrderCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderCarCell.h; sourceTree = "<group>"; };
-		04E4468A1C06949100E05811 /* MakeOrderCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderCarCell.m; sourceTree = "<group>"; };
-		04E4468B1C06949100E05811 /* MakeOrderCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderCarCell.xib; sourceTree = "<group>"; };
-		04E4468C1C06949100E05811 /* SelectCarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarVC.h; sourceTree = "<group>"; };
-		04E4468D1C06949100E05811 /* SelectCarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarVC.m; sourceTree = "<group>"; };
 		04E4468F1C06949100E05811 /* BigAndSmallGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigAndSmallGoodsModel.h; sourceTree = "<group>"; };
 		04E446901C06949100E05811 /* BigAndSmallGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigAndSmallGoodsModel.m; sourceTree = "<group>"; };
 		04E446911C06949100E05811 /* MakeOrderGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderGoodsCell.h; sourceTree = "<group>"; };
@@ -543,11 +529,6 @@
 		04E446931C06949100E05811 /* MakeOrderGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderGoodsCell.xib; sourceTree = "<group>"; };
 		04E446941C06949100E05811 /* SelectGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGoodsVC.h; sourceTree = "<group>"; };
 		04E446951C06949100E05811 /* SelectGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGoodsVC.m; sourceTree = "<group>"; };
-		04E446971C06949100E05811 /* MakeOrderQuhuoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderQuhuoCell.h; sourceTree = "<group>"; };
-		04E446981C06949100E05811 /* MakeOrderQuhuoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderQuhuoCell.m; sourceTree = "<group>"; };
-		04E446991C06949100E05811 /* MakeOrderQuhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderQuhuoCell.xib; sourceTree = "<group>"; };
-		04E4469A1C06949100E05811 /* QuhuoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuhuoModel.h; sourceTree = "<group>"; };
-		04E4469B1C06949100E05811 /* QuhuoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuhuoModel.m; sourceTree = "<group>"; };
 		04E4469D1C06949100E05811 /* MakeOrderShouhuoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderShouhuoCell.h; sourceTree = "<group>"; };
 		04E4469E1C06949100E05811 /* MakeOrderShouhuoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderShouhuoCell.m; sourceTree = "<group>"; };
 		04E4469F1C06949100E05811 /* MakeOrderShouhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderShouhuoCell.xib; sourceTree = "<group>"; };
@@ -1515,9 +1496,7 @@
 			isa = PBXGroup;
 			children = (
 				04E4467E1C06949100E05811 /* MakeOrder(下单) */,
-				04E446861C06949100E05811 /* MakeOrderCar */,
 				04E4468E1C06949100E05811 /* MakeOrderGoods */,
-				04E446961C06949100E05811 /* MakeOrderQuhuo */,
 				04E4469C1C06949100E05811 /* MakeOrderShouhuo */,
 			);
 			path = MakeOrder;
@@ -1533,20 +1512,6 @@
 			path = MakeOrder;
 			sourceTree = "<group>";
 		};
-		04E446861C06949100E05811 /* MakeOrderCar */ = {
-			isa = PBXGroup;
-			children = (
-				04E446871C06949100E05811 /* CarModel.h */,
-				04E446881C06949100E05811 /* CarModel.m */,
-				04E446891C06949100E05811 /* MakeOrderCarCell.h */,
-				04E4468A1C06949100E05811 /* MakeOrderCarCell.m */,
-				04E4468B1C06949100E05811 /* MakeOrderCarCell.xib */,
-				04E4468C1C06949100E05811 /* SelectCarVC.h */,
-				04E4468D1C06949100E05811 /* SelectCarVC.m */,
-			);
-			path = MakeOrderCar;
-			sourceTree = "<group>";
-		};
 		04E4468E1C06949100E05811 /* MakeOrderGoods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1559,18 +1524,6 @@
 				04E446951C06949100E05811 /* SelectGoodsVC.m */,
 			);
 			path = MakeOrderGoods;
-			sourceTree = "<group>";
-		};
-		04E446961C06949100E05811 /* MakeOrderQuhuo */ = {
-			isa = PBXGroup;
-			children = (
-				04E446971C06949100E05811 /* MakeOrderQuhuoCell.h */,
-				04E446981C06949100E05811 /* MakeOrderQuhuoCell.m */,
-				04E446991C06949100E05811 /* MakeOrderQuhuoCell.xib */,
-				04E4469A1C06949100E05811 /* QuhuoModel.h */,
-				04E4469B1C06949100E05811 /* QuhuoModel.m */,
-			);
-			path = MakeOrderQuhuo;
 			sourceTree = "<group>";
 		};
 		04E4469C1C06949100E05811 /* MakeOrderShouhuo */ = {
@@ -2227,7 +2180,6 @@
 				04D1B3B41C0BF37C00890507 /* MyEvaluationTableViewCell.xib in Resources */,
 				0403FA3C1C103DB700422138 /* OrderQHZTableViewCell.xib in Resources */,
 				04E447101C06949100E05811 /* ConfigCFahuoTableViewCell.xib in Resources */,
-				04E447331C06949100E05811 /* MakeOrderCarCell.xib in Resources */,
 				04E447191C06949100E05811 /* ConfigCShouhuoTableViewCell.xib in Resources */,
 				04E4460F1C06938900E05811 /* Home.bundle in Resources */,
 				04E447051C06949100E05811 /* ConfigCGoodsTableViewCell.xib in Resources */,
@@ -2238,7 +2190,6 @@
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				04E4471D1C06949100E05811 /* EditConfigCWuliuViewController.xib in Resources */,
 				04E3E6191C11354A00014EDB /* OrderQHZEwmViewController.xib in Resources */,
-				04E4473A1C06949100E05811 /* MakeOrderQuhuoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2262,7 +2213,6 @@
 				04B1E1671C083B9A00AFBF90 /* OrderSendQueryTVC.m in Sources */,
 				04E445C21C06914000E05811 /* NSObject+MJKeyValue.m in Sources */,
 				04E447B61C06A4B400E05811 /* MJRefreshBackNormalFooter.m in Sources */,
-				04E447391C06949100E05811 /* MakeOrderQuhuoCell.m in Sources */,
 				04B1E1601C083B8200AFBF90 /* OrderSendListTVC.m in Sources */,
 				04E445D91C06914000E05811 /* MKAnnotationView+WebCache.m in Sources */,
 				04E447F41C06CD6C00E05811 /* NotifyTVC.m in Sources */,
@@ -2307,12 +2257,10 @@
 				04E4470A1C06949100E05811 /* ConfigFHAPViewController.m in Sources */,
 				04E447121C06949100E05811 /* ConfigCShouhuoTVC.m in Sources */,
 				04E447241C06949100E05811 /* GesturePasswordView.m in Sources */,
-				04E4473B1C06949100E05811 /* QuhuoModel.m in Sources */,
 				04E3E0741C1680540023D440 /* MakeOrderBzCell.m in Sources */,
 				04E447031C06949100E05811 /* JSONModelConfigGGoods.m in Sources */,
 				04E445C11C06914000E05811 /* NSObject+MJCoding.m in Sources */,
 				04E3E0731C1680540023D440 /* MakeOrderTVC.m in Sources */,
-				04E447311C06949100E05811 /* CarModel.m in Sources */,
 				04B1E1661C083B9A00AFBF90 /* OrderSendQueryContentTVC.m in Sources */,
 				04E4477D1C06A20F00E05811 /* JSONModelOrderGet.m in Sources */,
 				04E4473C1C06949100E05811 /* MakeOrderShouhuoCell.m in Sources */,
@@ -2343,7 +2291,6 @@
 				04B1E1771C083C3000AFBF90 /* HelpVC.m in Sources */,
 				04D1B3B31C0BF37C00890507 /* MyEvaluationTableViewCell.m in Sources */,
 				04E444F81C06908C00E05811 /* main.m in Sources */,
-				04E447341C06949100E05811 /* SelectCarVC.m in Sources */,
 				04E447AF1C06A4B400E05811 /* MJRefreshComponent.m in Sources */,
 				0403FA471C103E3F00422138 /* OrderDidNotConfirmTableViewController.m in Sources */,
 				04E4480E1C06CE3900E05811 /* JSONModelNotifyWLTZ.m in Sources */,
@@ -2405,7 +2352,6 @@
 				04B1E16F1C083BE100AFBF90 /* YqTVC.m in Sources */,
 				04E445BA1C06914000E05811 /* MBProgressHUD+HM.m in Sources */,
 				04E445DF1C06914000E05811 /* SDWebImageDownloaderOperation.m in Sources */,
-				04E447321C06949100E05811 /* MakeOrderCarCell.m in Sources */,
 				04E445DB1C06914000E05811 /* SDImageCache.m in Sources */,
 				04E3E0781C1680540023D440 /* MakeOrderTotalCell.m in Sources */,
 				0403FA3B1C103DB700422138 /* OrderQHZTableViewCell.m in Sources */,

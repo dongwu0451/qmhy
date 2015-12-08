@@ -26,13 +26,10 @@
 #import "SelectGoodsVC.h"
 #import "MakeOrderGoodsCell.h"
 #import "ConfigCQuhuoTVC.h"
-#import "MakeOrderQuhuoCell.h"
-#import "SelectCarVC.h"
-#import "CarModel.h"
-#import "MakeOrderCarCell.h"
+
 
 // 要实现四个页面的代理委托
-@interface MakeOrderTVC () <ConfigCShouhuoTVCDelegate, AddSelectGoodsVCDelegate, ConfigCQuhuoTVCDelegate, ConfigCarVCDelegate>
+@interface MakeOrderTVC () <ConfigCShouhuoTVCDelegate, AddSelectGoodsVCDelegate>
 
 
 
@@ -40,8 +37,8 @@
 
 
 @property (strong, nonatomic) NSMutableArray *goods;//货物类（批量）
-@property (strong, nonatomic) QuhuoModel *quhuoModel;//取货类
-@property (strong, nonatomic) CarModel *carModel;//车辆类
+
+
 
 @end
 
@@ -280,18 +277,6 @@
 
 //===========================  接收各个页面给的代理请求 start ========================================
 
-//接收选择车辆页面的代理请求 选择车辆 完成按钮触发代理
-- (void)ConfigCarVC:(SelectCarVC *)configVc didPassCar:(CarModel *)carModel {
-    self.carModel = carModel;
-    [self.tableView reloadData];//重新装数据
-}
-
-//接收配置常用取货人列表页面给的代理请求
-- (void)selectedConfigCQuhuoTVC:(ConfigCQuhuoTVC *)hvc didInputReturnQuhuoModel:(QuhuoModel *)quhuoModel {
-    NSLog(@"%@", quhuoModel.quhuoName);
-    self.quhuoModel = quhuoModel;
-    [self.tableView reloadData];
-}
 
 
 //接收添加货物页面给的代理请求
