@@ -25,6 +25,19 @@
     [userDef synchronize];
 }
 
+- (NSString *)phone2 {
+    NSString *s;
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    s = [userDef objectForKey:@"phone2"];
+    return s;
+}
+
+- (void)setPhone2:(NSString *)phone2 {
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    [userDef setObject:phone2 forKey:@"phone2"];
+    [userDef synchronize];
+}
+
 // 余额
 - (NSString *)balance {
     NSString *s;

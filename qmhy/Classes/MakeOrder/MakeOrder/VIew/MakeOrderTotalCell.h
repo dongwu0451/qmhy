@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MakeOrderTotalCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *lbl_shouhuoren;//发货人
 @property (strong, nonatomic) IBOutlet UILabel *lbl_allcount;//总件数
 @property (strong, nonatomic) IBOutlet UILabel *lbl_daishoukuan;//代收款
 

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConfigCShouhuoTVC.h"
 
 @interface MakeOrderTVC : UITableViewController
 

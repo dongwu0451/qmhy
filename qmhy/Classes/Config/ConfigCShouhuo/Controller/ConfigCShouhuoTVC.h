@@ -7,19 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ShouhuoModel.h"
 
+#import "JSONModelConfigCShouhuo.h"
 
 @class ConfigCShouhuoTVC;
 
-//定义代理协议
 @protocol ConfigCShouhuoTVCDelegate <NSObject>
-- (void)selectedConfigCShouhuoTVC:(ConfigCShouhuoTVC *)hvc didInputReturnShouhuo:(ShouhuoModel *)shouhuo;
+
+- (void)selectedConfigCShouhuoTVC:(ConfigCShouhuoTVC *)hvc didInputReturnJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)shouhuo;
+
 @end
 
 
 @interface ConfigCShouhuoTVC : UITableViewController
-//- (IBAction)addShouhuo:(id)sender; 2015/08/29 注释说不要弹出框
-//声明代理
+
 @property (weak, nonatomic) id<ConfigCShouhuoTVCDelegate> delegate;
+
 @end

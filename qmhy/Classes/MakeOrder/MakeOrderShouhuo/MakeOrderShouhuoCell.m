@@ -11,13 +11,11 @@
 
 @implementation MakeOrderShouhuoCell
 
-- (void)setShouhuo:(ShouhuoModel *)shouhuo {
+- (void)setShouhuo:(JSONModelConfigCShouhuo *)shouhuo {
     _shouhuo = shouhuo;
-//    NSString* string1;
-//    string1= [NSString stringWithFormat:@"%@%@%@%@", shouhuo.consigneeName, @"(",shouhuo.area,@")" ];
-    self.mainTitle.text = shouhuo.consigneeName;
-    self.subTitle.text = shouhuo.mobilePhoneNumber;
-    self.detailedContent.text = shouhuo.detailedAddress;
+    self.mainTitle.text = shouhuo.contact;
+    self.subTitle.text = shouhuo.tel;
+    self.detailedContent.text = [NSString stringWithFormat:@"%@%@%@", shouhuo.Province, shouhuo.city, shouhuo.area];
 }
 
 @end

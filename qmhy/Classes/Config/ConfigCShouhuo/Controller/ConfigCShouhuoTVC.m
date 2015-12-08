@@ -18,40 +18,14 @@
 #import "MBProgressHUD+HM.h"
 #import "EditConfigCShouhuoViewController.h"
 
-
-#import "ShouhuoModel.h"
-#import "ShouhuoData.h"
-
-
-
 @interface ConfigCShouhuoTVC () <ConfigCShouhuoTableViewCellDelegate, UIAlertViewDelegate>
-@property (nonatomic, strong) NSMutableArray *infoArray;//第一次数据
-@property (strong, nonatomic) NSMutableArray *dataArray; // 数据数组
-
+@property (nonatomic, strong) NSMutableArray *infoArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 @property (nonatomic, strong) JSONModelConfigCShouhuo *jsonModelConfigCShouhuo;
-
-
-
-//所有收货联系人
-@property (strong, nonatomic) NSMutableArray *allShouhuo;  // 加数据以后要删除的
-//选中的收货联系人
-@property (strong, nonatomic) ShouhuoModel *selectedShouhuo;  // 加数据以后要删除的
-
-
-
 
 @end
 
 @implementation ConfigCShouhuoTVC
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    ShouhuoModel *h = self.allShouhuo[0];
-    NSLog(@"ConfigCShouhuoTVC viewDidLoad %@",h.consigneeName);
-}
-
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -62,7 +36,7 @@
     EditConfigCShouhuoViewController *editConfigCShouhuoViewController = [[EditConfigCShouhuoViewController alloc] init];
     editConfigCShouhuoViewController.jsonModelConfigCShouhuo = model;
     [self.navigationController pushViewController:editConfigCShouhuoViewController animated:YES];
-
+    
 }
 
 - (void)configCShouhuoTableViewCell:(ConfigCShouhuoTableViewCell *)cell didRemoveJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)model andClickShanChuLikeBtn:(UIButton *)likeBtn {
@@ -72,29 +46,24 @@
 }
 
 - (void)loadNewData {
-    // 请求参数
     NSString *methodName = @"gettabcommonconsigneeinfo";
     NSString *params = @"&proName=%@_%d";
     QConfig *config = [[QConfig alloc] init];
     NSString *uid = config.uid;
     int isOnly = 0;
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, isOnly] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    // 发送请求
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-        _infoArray = [dic objectForKey:@"rs"];//第一次数据
+        _infoArray = [dic objectForKey:@"rs"];
         _dataArray = [JSONModelConfigCShouhuo objectArrayWithKeyValuesArray:_infoArray];
-        NSLog(@"%@", _dataArray);
-        // 刷新数据
         [self.tableView reloadData];
     } fail:^{
         
     }];
 }
 
-// 删除方法
 - (void)removeConfigCShouhuo:(JSONModelConfigCShouhuo *)model  {
     [MBProgressHUD showMessage:@"正在删除中..." toView:self.view];
     NSString *methodName = @"updatetabcommonconsigneeinfo";
@@ -103,7 +72,6 @@
     NSLog(@"%d", x_id);
     QConfig *config = [[QConfig alloc] init];
     int uid = [config.uid intValue];
-//    int uid = [model.uid intValue];
     NSString *contant = model.contact;
     NSString *tel = model.tel;
     NSString *province = model.Province;
@@ -115,9 +83,7 @@
     NSString *createby = model.createby;
     int isOnly = 1;
     int setType = -1;
-    
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, x_id,uid,contant,tel,province,city,area,addressCode,Address,status,createby,isOnly,setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    // 发送请求
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -138,94 +104,37 @@
     }];
 }
 
-//根据被点击按钮的索引处理点击事件
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
     if (buttonIndex == 1) {
         [self removeConfigCShouhuo:self.jsonModelConfigCShouhuo];
-        NSLog(@"确定");
     } else {
-        NSLog(@"取消");
+        
     }
 }
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 1. 可重用标识符
     static NSString *ID = @"ConfigCShouhuoTableViewCell";
-    // 2. tableView查询可重用Cell
     ConfigCShouhuoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    // 3. 如果没有可重用cell
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"ConfigCShouhuoTableViewCell" owner:nil options:nil] lastObject];
     }
-    //获取模型
     [cell config:_dataArray[indexPath.row]];
-    //    JSONModelConfigCWuLiu *jsonModelConfigCWuLiu = _dataArray[indexPath.row];
-    //    cell.wuLiuNameLabel.text = jsonModelConfigCWuLiu.name;
-    // ⑥在创建cell的时候设置自己为代理
     cell.delegate = self;
     return cell;
 }
 
-//行高度 标准高度
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 125;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 加数据以后要删除的
-//选中行事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ConfigCShouhuoTVC didSelectRowAtIndexPath%@",self.allShouhuo[indexPath.row]);
-    //触发代理给下单页面
-    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnShouhuo:self.allShouhuo[indexPath.row]];
-    //关闭
+    [self.delegate selectedConfigCShouhuoTVC:self didInputReturnJSONModelConfigCShouhuo:self.dataArray[indexPath.row]];
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
-
- // 加数据以后要删除的
-//初始化 所有收货联系人
-- (NSMutableArray *)allShouhuo
-{
-    if (!_allShouhuo) {
-        ShouhuoData *ah = [[ShouhuoData alloc] init];
-        NSLog(@"ConfigCShouhuoTVC allShouhuoData %@",ah.allShouhuo);
-        _allShouhuo = ah.allShouhuo;
-    }
-    return _allShouhuo;
-}
-
-
-
-
-
 
 
 

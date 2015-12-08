@@ -1,3 +1,4 @@
+
 //
 //  main.m
 //  qmhy
@@ -6,15 +7,14 @@
 //  Copyright (c) 2014年 wsy.Inc. All rights reserved.
 //
 
-// 123123是故事风格
+
 
 
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

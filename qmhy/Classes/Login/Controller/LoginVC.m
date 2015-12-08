@@ -113,6 +113,7 @@
             config.mem_id = obj.mem_id;
             config.balance = obj.balance;
             config.isLogined = @"1";
+            config.phone2 = obj.phone2;
             [self.delegate LoginVC:self loginOK:nil];//设置回调  向来源触发事件委托
         }
     } fail:^{

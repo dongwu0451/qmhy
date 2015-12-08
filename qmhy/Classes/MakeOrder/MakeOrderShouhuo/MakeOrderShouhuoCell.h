@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ShouhuoModel.h"
+
+#import "JSONModelConfigCShouhuo.h"
 
 @interface MakeOrderShouhuoCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *UIImage;
 @property (strong, nonatomic) IBOutlet UILabel *mainTitle;
 @property (strong, nonatomic) IBOutlet UILabel *subTitle;
 @property (strong, nonatomic) IBOutlet UILabel *detailedContent;
-@property (strong, nonatomic) IBOutlet UILabel *huowuMessage;
 
-@property (nonatomic, strong) ShouhuoModel *shouhuo;
+@property (nonatomic, strong) JSONModelConfigCShouhuo *shouhuo;
 
 @end
