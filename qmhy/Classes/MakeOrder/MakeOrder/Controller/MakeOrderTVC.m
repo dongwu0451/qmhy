@@ -289,6 +289,7 @@
     }
     if (indexPath.section == 4) {
         MakeOrderJSDZViewController *vc = [[MakeOrderJSDZViewController alloc] init];
+        vc.daishoukuan = self.daishoukuan;
         [self.navigationController pushViewController:vc animated:YES];
         
     }

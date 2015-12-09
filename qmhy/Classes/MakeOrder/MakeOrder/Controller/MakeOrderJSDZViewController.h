@@ -16,6 +16,8 @@
 
 
 @interface MakeOrderJSDZViewController : UIViewController
+@property (nonatomic, copy) NSString *daishoukuan;
+
 
 @property (nonatomic, assign)id<MakeOrderJSDZViewControllerDelegate>delegate;
 
