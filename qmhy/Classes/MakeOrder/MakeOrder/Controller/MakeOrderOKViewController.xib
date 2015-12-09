@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeOrderOKViewController">
+            <connections>
+                <outlet property="smailNameTextField" destination="11Z-1B-UpA" id="H2J-GK-vpx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物流:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-7w-Juv">
+                    <rect key="frame" x="8" y="74" width="39" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2yw-pu-Cek"/>
+                        <constraint firstAttribute="width" constant="39" id="fNv-XC-GYZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入物流名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11Z-1B-UpA">
+                    <rect key="frame" x="55" y="70" width="257" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="257" id="OB8-RZ-lDV"/>
+                        <constraint firstAttribute="height" constant="30" id="ZiF-yO-B7i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="常用物流信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-yZ-gmo">
+                    <rect key="frame" x="8" y="108" width="78" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="IEC-vR-WnO"/>
+                        <constraint firstAttribute="width" constant="78" id="Vio-qh-da1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUH-DI-Lwz">
+                    <rect key="frame" x="8" y="180" width="100" height="100"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="F9b-OO-jk9"/>
+                        <constraint firstAttribute="height" constant="100" id="lBL-HQ-wKi"/>
+                    </constraints>
+                    <connections>
+                        <action selector="shangchuanzhaopianBtnClick:" destination="-1" eventType="touchUpInside" id="Jpo-b4-Jjn"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请点击加号上传货物照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh7-eR-vOC">
+                    <rect key="frame" x="116" y="219" width="196" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2UR-Ye-Vsc"/>
+                        <constraint firstAttribute="width" constant="196" id="gZM-9i-BpI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6q-gB-DtX">
+                    <rect key="frame" x="8" y="288" width="304" height="40"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.3263983964694912" green="1" blue="0.17669073655638834" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="304" id="dRw-SS-TUS"/>
+                        <constraint firstAttribute="height" constant="40" id="vm1-pO-Sql"/>
+                    </constraints>
+                    <state key="normal" title="提交订单">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tijiaodingdanBtnClick:" destination="-1" eventType="touchUpInside" id="zWo-ZM-TbQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="p6q-gB-DtX" firstAttribute="top" secondItem="YUH-DI-Lwz" secondAttribute="bottom" constant="8" id="3dd-ZF-AEC"/>
+                <constraint firstItem="p6q-gB-DtX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="AaS-8v-gmd"/>
+                <constraint firstItem="11Z-1B-UpA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="CeE-3M-TL8"/>
+                <constraint firstItem="Mc8-yZ-gmo" firstAttribute="top" secondItem="11Z-1B-UpA" secondAttribute="bottom" constant="8" id="DOP-BU-lOE"/>
+                <constraint firstAttribute="trailing" secondItem="dh7-eR-vOC" secondAttribute="trailing" constant="8" id="F6s-O7-OdN"/>
+                <constraint firstItem="YUH-DI-Lwz" firstAttribute="top" secondItem="Mc8-yZ-gmo" secondAttribute="bottom" constant="52" id="HR4-mx-MXq"/>
+                <constraint firstAttribute="trailing" secondItem="11Z-1B-UpA" secondAttribute="trailing" constant="8" id="LJf-RK-yHh"/>
+                <constraint firstItem="dh7-eR-vOC" firstAttribute="top" secondItem="11Z-1B-UpA" secondAttribute="bottom" constant="119" id="LdW-Pe-hI0"/>
+                <constraint firstItem="Mc8-yZ-gmo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="MUM-mm-9Nf"/>
+                <constraint firstAttribute="trailing" secondItem="p6q-gB-DtX" secondAttribute="trailing" constant="8" id="Odj-fo-1ob"/>
+                <constraint firstItem="11Z-1B-UpA" firstAttribute="leading" secondItem="gHh-7w-Juv" secondAttribute="trailing" constant="8" id="Vnr-ZR-E8W"/>
+                <constraint firstItem="YUH-DI-Lwz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="bez-do-vLD"/>
+                <constraint firstItem="gHh-7w-Juv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="nB3-sf-0mT"/>
+                <constraint firstItem="gHh-7w-Juv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="tvz-ej-WaM"/>
+                <constraint firstItem="dh7-eR-vOC" firstAttribute="leading" secondItem="YUH-DI-Lwz" secondAttribute="trailing" constant="8" id="wjM-RA-Ckg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="448" y="396"/>
+        </view>
+    </objects>
+</document>

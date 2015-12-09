@@ -50,7 +50,8 @@
 		04D1B3C11C0C422B00890507 /* DXStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3C01C0C422B00890507 /* DXStarRatingView.m */; };
 		04D492131C17B11400ACD102 /* MakeOrderJSDZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D492111C17B11400ACD102 /* MakeOrderJSDZViewController.m */; };
 		04D492141C17B11400ACD102 /* MakeOrderJSDZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D492121C17B11400ACD102 /* MakeOrderJSDZViewController.xib */; };
-		04E3E0721C1680540023D440 /* MakeOrderOKTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E0651C1680540023D440 /* MakeOrderOKTVC.m */; };
+		04D4921B1C1822F400ACD102 /* MakeOrderOKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D492191C1822F400ACD102 /* MakeOrderOKViewController.m */; };
+		04D4921C1C1822F400ACD102 /* MakeOrderOKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D4921A1C1822F400ACD102 /* MakeOrderOKViewController.xib */; };
 		04E3E0731C1680540023D440 /* MakeOrderTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E0671C1680540023D440 /* MakeOrderTVC.m */; };
 		04E3E0741C1680540023D440 /* MakeOrderBzCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E06A1C1680540023D440 /* MakeOrderBzCell.m */; };
 		04E3E0751C1680540023D440 /* MakeOrderBzCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E3E06B1C1680540023D440 /* MakeOrderBzCell.xib */; };
@@ -320,8 +321,9 @@
 		04D492101C17B11400ACD102 /* MakeOrderJSDZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderJSDZViewController.h; sourceTree = "<group>"; };
 		04D492111C17B11400ACD102 /* MakeOrderJSDZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderJSDZViewController.m; sourceTree = "<group>"; };
 		04D492121C17B11400ACD102 /* MakeOrderJSDZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderJSDZViewController.xib; sourceTree = "<group>"; };
-		04E3E0641C1680540023D440 /* MakeOrderOKTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderOKTVC.h; sourceTree = "<group>"; };
-		04E3E0651C1680540023D440 /* MakeOrderOKTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderOKTVC.m; sourceTree = "<group>"; };
+		04D492181C1822F400ACD102 /* MakeOrderOKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderOKViewController.h; sourceTree = "<group>"; };
+		04D492191C1822F400ACD102 /* MakeOrderOKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderOKViewController.m; sourceTree = "<group>"; };
+		04D4921A1C1822F400ACD102 /* MakeOrderOKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderOKViewController.xib; sourceTree = "<group>"; };
 		04E3E0661C1680540023D440 /* MakeOrderTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderTVC.h; sourceTree = "<group>"; };
 		04E3E0671C1680540023D440 /* MakeOrderTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderTVC.m; sourceTree = "<group>"; };
 		04E3E0691C1680540023D440 /* MakeOrderBzCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderBzCell.h; sourceTree = "<group>"; };
@@ -961,13 +963,14 @@
 		04E3E0631C1680540023D440 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04E3E0641C1680540023D440 /* MakeOrderOKTVC.h */,
-				04E3E0651C1680540023D440 /* MakeOrderOKTVC.m */,
 				04E3E0661C1680540023D440 /* MakeOrderTVC.h */,
 				04E3E0671C1680540023D440 /* MakeOrderTVC.m */,
 				04D492101C17B11400ACD102 /* MakeOrderJSDZViewController.h */,
 				04D492111C17B11400ACD102 /* MakeOrderJSDZViewController.m */,
 				04D492121C17B11400ACD102 /* MakeOrderJSDZViewController.xib */,
+				04D492181C1822F400ACD102 /* MakeOrderOKViewController.h */,
+				04D492191C1822F400ACD102 /* MakeOrderOKViewController.m */,
+				04D4921A1C1822F400ACD102 /* MakeOrderOKViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2199,6 +2202,7 @@
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				04E4471D1C06949100E05811 /* EditConfigCWuliuViewController.xib in Resources */,
 				04E3E6191C11354A00014EDB /* OrderQHZEwmViewController.xib in Resources */,
+				04D4921C1C1822F400ACD102 /* MakeOrderOKViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2229,6 +2233,7 @@
 				04E4480F1C06CE3900E05811 /* NotifyWLTZTableViewCell.m in Sources */,
 				04B1E1551C083B4C00AFBF90 /* OrderSendTVC.m in Sources */,
 				04E447181C06949100E05811 /* ConfigCShouhuoTableViewCell.m in Sources */,
+				04D4921B1C1822F400ACD102 /* MakeOrderOKViewController.m in Sources */,
 				04E447091C06949100E05811 /* ConfigCQuhuoTVC.m in Sources */,
 				0483FDF41C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m in Sources */,
 				04E447B11C06A4B400E05811 /* MJRefreshHeader.m in Sources */,
@@ -2242,7 +2247,6 @@
 				04E445BB1C06914000E05811 /* MBProgressHUD.m in Sources */,
 				04E4471E1C06949100E05811 /* JSONModelConfigCWuLiu.m in Sources */,
 				04E445FD1C06914000E05811 /* README.md in Sources */,
-				04E3E0721C1680540023D440 /* MakeOrderOKTVC.m in Sources */,
 				04E447251C06949100E05811 /* TentacleView.m in Sources */,
 				04E4471C1C06949100E05811 /* EditConfigCWuliuViewController.m in Sources */,
 				04E447AE1C06A4B400E05811 /* MJRefreshBackFooter.m in Sources */,

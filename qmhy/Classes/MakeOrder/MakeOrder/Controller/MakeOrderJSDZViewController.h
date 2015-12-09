@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MakeOrderJSDZViewController;
 @protocol MakeOrderJSDZViewControllerDelegate <NSObject>
 
-- (void)asd;
+-(void)makeOrderJSDZViewController:(MakeOrderJSDZViewController *)bvc didInputReturnMessage:(NSString *)msg;
 
 @end
 

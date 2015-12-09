@@ -18,7 +18,7 @@
 #import "MakeOrderBzCell.h"
 #import "JSONModelConfigCShouhuo.h"
 #import "MakeOrderJSDZViewController.h"
-#import "MakeOrderOKTVC.h"
+#import "MakeOrderOKViewController.h"
 
 //===========================  这下面都是以前的import可能会删除 ========================================
 
@@ -43,7 +43,7 @@
 @property (copy, nonatomic) NSString *beizhu;
 @property (copy, nonatomic) NSString *zongjianshu;
 @property (copy, nonatomic) NSString *daishoukuan;
-
+@property (copy, nonatomic) NSString *goodstype;
 
 @end
 
@@ -73,8 +73,9 @@
     [self.tableView reloadData];
 }
 
-- (void)asd {
-    
+- (void)makeOrderJSDZViewController:(MakeOrderJSDZViewController *)bvc didInputReturnMessage:(NSString *)msg {
+    self.goodstype = msg;
+    NSLog(@"%@", self.goodstype);
 }
 
 - (IBAction)xiayibuBtn:(UIBarButtonItem *)sender {
@@ -83,7 +84,7 @@
         return;
     } else {
         NSLog(@"%@",self.beizhu);
-        MakeOrderOKTVC *tvc = [[MakeOrderOKTVC alloc] init];
+        MakeOrderOKViewController *tvc = [[MakeOrderOKViewController alloc] init];
         [self.navigationController pushViewController:tvc animated:YES];
     }
     
@@ -94,6 +95,7 @@
     [super viewDidLoad];
     self.daishoukuan = @"0.00";
     self.zongjianshu = @"0";
+    self.goodstype = @"0";
     // 注册统计栏的自定义单元格  改为统计信息
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderTotalCell" bundle:nil] forCellReuseIdentifier:@"makeorder_top"];
     // 注册统计栏的自定义单元格  改为发货人
@@ -290,6 +292,7 @@
     if (indexPath.section == 4) {
         MakeOrderJSDZViewController *vc = [[MakeOrderJSDZViewController alloc] init];
         vc.daishoukuan = self.daishoukuan;
+        vc.delegate = self;
         [self.navigationController pushViewController:vc animated:YES];
         
     }
@@ -324,7 +327,9 @@
 }
 
 
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 
 @end

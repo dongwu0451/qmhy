@@ -17,6 +17,8 @@
 @interface MakeOrderJSDZViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *staticBtn;
 
+@property (copy, nonatomic) NSString *heheda;
+
 @end
 
 @implementation MakeOrderJSDZViewController
@@ -53,6 +55,7 @@
 
 
 - (void)viewDidLoad {
+    self.heheda = @"a";
     [MBProgressHUD showMessage:@"正在加载中..." toView:self.view];
     QConfig *c = [[QConfig alloc] init];
     NSString *soapMessage =
@@ -91,6 +94,9 @@
         NSDictionary *dic =  [self dictionaryWithJsonString:subString];
         
         NSLog(@"dicdicdicdicdic%@",dic);
+        NSString *a12311 = dic[@"result"];
+        self.heheda = a12311;
+        
         NSString *a111 = dic[@"message"];
         NSLog(@"a111a111a111a111%@", a111);
         //        NSDictionary *dic = [self JsonToDict:response];
@@ -130,10 +136,20 @@
 - (IBAction)staticBtnClick:(UIButton *)sender {
     NSLog(@"呵呵");
 }
+
 - (IBAction)bukaitongBtnClick:(UIButton *)sender {
-    NSLog(@"不开通");
+    [self.delegate makeOrderJSDZViewController:self didInputReturnMessage:@"0"];
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 - (IBAction)kaitongBtnClick:(UIButton *)sender {
+    if (![self.heheda isEqualToString:@"1"]) {
+        [MBProgressHUD showError:@"请注意红色信息"];
+    } else {
+        [self.delegate makeOrderJSDZViewController:self didInputReturnMessage:@"1"];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     NSLog(@"开通");
 }
 
