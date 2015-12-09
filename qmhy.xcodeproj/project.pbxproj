@@ -48,6 +48,8 @@
 		04D1B3B81C0C299100890507 /* MyEvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B61C0C299100890507 /* MyEvaluationViewController.m */; };
 		04D1B3B91C0C299100890507 /* MyEvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */; };
 		04D1B3C11C0C422B00890507 /* DXStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3C01C0C422B00890507 /* DXStarRatingView.m */; };
+		04D492131C17B11400ACD102 /* MakeOrderJSDZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D492111C17B11400ACD102 /* MakeOrderJSDZViewController.m */; };
+		04D492141C17B11400ACD102 /* MakeOrderJSDZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D492121C17B11400ACD102 /* MakeOrderJSDZViewController.xib */; };
 		04E3E0721C1680540023D440 /* MakeOrderOKTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E0651C1680540023D440 /* MakeOrderOKTVC.m */; };
 		04E3E0731C1680540023D440 /* MakeOrderTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E0671C1680540023D440 /* MakeOrderTVC.m */; };
 		04E3E0741C1680540023D440 /* MakeOrderBzCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3E06A1C1680540023D440 /* MakeOrderBzCell.m */; };
@@ -315,6 +317,9 @@
 		04D1B3B71C0C299100890507 /* MyEvaluationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEvaluationViewController.xib; sourceTree = "<group>"; };
 		04D1B3BF1C0C422B00890507 /* DXStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXStarRatingView.h; sourceTree = "<group>"; };
 		04D1B3C01C0C422B00890507 /* DXStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXStarRatingView.m; sourceTree = "<group>"; };
+		04D492101C17B11400ACD102 /* MakeOrderJSDZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderJSDZViewController.h; sourceTree = "<group>"; };
+		04D492111C17B11400ACD102 /* MakeOrderJSDZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderJSDZViewController.m; sourceTree = "<group>"; };
+		04D492121C17B11400ACD102 /* MakeOrderJSDZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderJSDZViewController.xib; sourceTree = "<group>"; };
 		04E3E0641C1680540023D440 /* MakeOrderOKTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderOKTVC.h; sourceTree = "<group>"; };
 		04E3E0651C1680540023D440 /* MakeOrderOKTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderOKTVC.m; sourceTree = "<group>"; };
 		04E3E0661C1680540023D440 /* MakeOrderTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderTVC.h; sourceTree = "<group>"; };
@@ -960,6 +965,9 @@
 				04E3E0651C1680540023D440 /* MakeOrderOKTVC.m */,
 				04E3E0661C1680540023D440 /* MakeOrderTVC.h */,
 				04E3E0671C1680540023D440 /* MakeOrderTVC.m */,
+				04D492101C17B11400ACD102 /* MakeOrderJSDZViewController.h */,
+				04D492111C17B11400ACD102 /* MakeOrderJSDZViewController.m */,
+				04D492121C17B11400ACD102 /* MakeOrderJSDZViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2166,6 +2174,7 @@
 				0403FA4A1C103E3F00422138 /* OrderDidNotConfirmTableViewCell.xib in Resources */,
 				04E448021C06CDBA00E05811 /* NotifyHYXMTableViewCell.xib in Resources */,
 				04E444F21C068F5900E05811 /* Main.storyboard in Resources */,
+				04D492141C17B11400ACD102 /* MakeOrderJSDZViewController.xib in Resources */,
 				04E447371C06949100E05811 /* MakeOrderGoodsCell.xib in Resources */,
 				04E447161C06949100E05811 /* EditConfigCShouhuoViewController.xib in Resources */,
 				04E446121C06938900E05811 /* tabbed_icon.bundle in Resources */,
@@ -2365,6 +2374,7 @@
 				04E447D71C06C9BD00E05811 /* HomeVC.m in Sources */,
 				04E445F91C06914000E05811 /* AESCrypt.m in Sources */,
 				04E4471B1C06949100E05811 /* ConfigCWuliuTVC.m in Sources */,
+				04D492131C17B11400ACD102 /* MakeOrderJSDZViewController.m in Sources */,
 				04E445B51C06914000E05811 /* AFSecurityPolicy.m in Sources */,
 				04E3E6181C11354A00014EDB /* OrderQHZEwmViewController.m in Sources */,
 				04B1E17B1C083C4A00AFBF90 /* MoreTVC.m in Sources */,

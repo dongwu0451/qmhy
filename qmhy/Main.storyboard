@@ -2782,7 +2782,7 @@
                     <navigationItem key="navigationItem" title="我要下单" id="rYT-YT-EhS">
                         <barButtonItem key="rightBarButtonItem" title="下一步" id="ChN-zW-nWH">
                             <connections>
-                                <segue destination="ih2-HP-6xh" kind="push" id="lpJ-Bz-M26"/>
+                                <action selector="xiayibuBtn:" destination="eAj-6m-c2s" id="cuX-9H-Nwq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2802,7 +2802,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="makeorder_ok_detail" textLabel="Hrj-Hu-voq" detailTextLabel="pof-oI-0re" style="IBUITableViewCellStyleSubtitle" id="drq-Ix-lpJ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="drq-Ix-lpJ" id="mNA-Pm-Fxz">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -2830,7 +2830,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="makeorder_ok_wuliu" rowHeight="50" id="B8T-81-Qbk">
-                                <rect key="frame" x="0.0" y="130" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B8T-81-Qbk" id="zFr-D3-BVR">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
@@ -2855,7 +2855,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="makeorder_ok_beizhu" rowHeight="50" id="2M4-ha-aJi">
-                                <rect key="frame" x="0.0" y="180" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="116" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2M4-ha-aJi" id="bMs-RF-6pv">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
@@ -2880,7 +2880,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="makeorder_ok_photo" rowHeight="220" id="pqi-Ni-BAl">
-                                <rect key="frame" x="0.0" y="230" width="320" height="220"/>
+                                <rect key="frame" x="0.0" y="166" width="320" height="220"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pqi-Ni-BAl" id="CcE-6n-Wem">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>

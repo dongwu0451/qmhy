@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSString *bigProtectionMoney; //大件货物保护费
 @property (strong, nonatomic) NSString *bigDeliveryCharges; // 大物件送货费
 @property (strong, nonatomic) NSString *bigCollectionCharges; // 大物件代收费
+@property (strong, nonatomic) NSString *bigNumber;
 
 @property (strong, nonatomic) NSString *smailGoodsName; // 小件货物名称
 @property (strong, nonatomic) NSString *smailNumber; // 小件件数

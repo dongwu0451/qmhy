@@ -17,6 +17,8 @@
 #import "MakeOrderFahuoCell.h"
 #import "MakeOrderBzCell.h"
 #import "JSONModelConfigCShouhuo.h"
+#import "MakeOrderJSDZViewController.h"
+#import "MakeOrderOKTVC.h"
 
 //===========================  这下面都是以前的import可能会删除 ========================================
 
@@ -28,8 +30,8 @@
 #import "ConfigCQuhuoTVC.h"
 
 
-// 要实现四个页面的代理委托
-@interface MakeOrderTVC () <ConfigCShouhuoTVCDelegate, AddSelectGoodsVCDelegate>
+// 要实现二个页面的代理委托
+@interface MakeOrderTVC () <ConfigCShouhuoTVCDelegate, AddSelectGoodsVCDelegate, MakeOrderJSDZViewControllerDelegate, UITextFieldDelegate>
 
 
 
@@ -38,15 +40,60 @@
 
 @property (strong, nonatomic) NSMutableArray *goods;//货物类（批量）
 
+@property (copy, nonatomic) NSString *beizhu;
+@property (copy, nonatomic) NSString *zongjianshu;
+@property (copy, nonatomic) NSString *daishoukuan;
 
 
 @end
 
 @implementation MakeOrderTVC
 
+// 初始化
+- (NSMutableArray *)goods {
+    if (!_goods) {
+        _goods = [NSMutableArray array];
+    }
+    return _goods;
+}
+
+- (void)addGoodsVC:(SelectGoodsVC *)addVc saveReturnGoods:(BigAndSmallGoodsModel *)goods {
+    NSLog(@"addGoodsVC-----------------");
+    self.daishoukuan = [NSString stringWithFormat:@"%.2f",[self.daishoukuan floatValue] + [goods.bigCollectionCharges floatValue] + [goods.smailCollectionCharges floatValue]];
+    self.zongjianshu = [NSString stringWithFormat:@"%d",[self.zongjianshu intValue] + [goods.bigNumber intValue] + [goods.smailNumber intValue]];
+//    NSString *stringFloat = [NSString stringWithFormat:@"%f",intString];
+    [self.goods addObject:goods];
+    
+    [self.tableView reloadData];
+}
+
+// 接收配置常用收货人列表页面给的代理请求
+- (void)selectedConfigCShouhuoTVC:(ConfigCShouhuoTVC *)hvc didInputReturnJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)shouhuo {
+    self.shouhuoren = shouhuo;
+    [self.tableView reloadData];
+}
+
+- (void)asd {
+    
+}
+
+- (IBAction)xiayibuBtn:(UIBarButtonItem *)sender {
+    if (self.beizhu.length == 0) {
+        NSLog(@"++++++%@",self.beizhu);
+        return;
+    } else {
+        NSLog(@"%@",self.beizhu);
+        MakeOrderOKTVC *tvc = [[MakeOrderOKTVC alloc] init];
+        [self.navigationController pushViewController:tvc animated:YES];
+    }
+    
+}
+
 //初始化显示
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.daishoukuan = @"0.00";
+    self.zongjianshu = @"0";
     // 注册统计栏的自定义单元格  改为统计信息
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderTotalCell" bundle:nil] forCellReuseIdentifier:@"makeorder_top"];
     // 注册统计栏的自定义单元格  改为发货人
@@ -80,12 +127,12 @@
     }
     else if(section==2) { //第2组 收货人（批量）  改为 收货人
         
-            if (NULL==_shouhuoren)
-                return 1;
-            else
-                return 2;
+        if (NULL==_shouhuoren)
+            return 1;
+        else
+            return 2;
         
-
+        
     } else if(section==3) { //第3组 货物（批量）  改为 货物
         return _goods.count + 1;
     } else {  //改为 即时到帐和备注
@@ -138,7 +185,8 @@
             cell = [[MakeOrderTotalCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
         }
         MakeOrderTotalCell *myCell = (MakeOrderTotalCell *)cell;
-        myCell.lbl_allcount.text =@"01";
+        myCell.lbl_allcount.text = self.zongjianshu;
+        myCell.lbl_daishoukuan.text = self.daishoukuan;
     }
     
     //备注
@@ -195,9 +243,17 @@
             cell = [[MakeOrderBzCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
         }
         MakeOrderBzCell *myCell = (MakeOrderBzCell *)cell;
+        [myCell.beizhuTextField addTarget:self action:@selector(textFieldDidChangeAction:) forControlEvents:UIControlEventEditingChanged];
+        myCell.beizhuTextField.text = self.beizhu;
     }
     
     return  cell;
+}
+
+- (void)textFieldDidChangeAction:(UITextField *)textField {
+    NSLog(@"%@", textField);
+    self.beizhu = textField.text;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -231,61 +287,43 @@
             [self.navigationController pushViewController:tvc animated:YES];
         }
     }
+    if (indexPath.section == 4) {
+        MakeOrderJSDZViewController *vc = [[MakeOrderJSDZViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }
+    
     
 }
 
 //设置编辑模式方式
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // 做判断
-//    if ( indexPath.section == 1 && indexPath.row > 0) return YES;//收货联系人可以删除
-//    if ( indexPath.section == 2 && indexPath.row > 0) return YES;//货物可以删除
+    //    if ( indexPath.section == 1 && indexPath.row > 0) return YES;//收货联系人可以删除
+    //    if ( indexPath.section == 2 && indexPath.row > 0) return YES;//货物可以删除
     return NO;
 }
 
 // 设置相应编辑模式下的对应操作
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // 判断在收获人单元格内，且编辑样式为删除时
-//    if (editingStyle  == UITableViewCellEditingStyleDelete){
-//        if (indexPath.section == 1 && indexPath.row > 0) {
-//            // 删除收货人，刷新表格
-//            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-//        }
-//        if (indexPath.section == 2 && indexPath.row > 0) {
-//            // 删除货物，刷新表格
-//            [self.goods removeObject:self.goods[indexPath.row - 1]];
-//            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-//        }
-//    }
+    
+    
+    //    // 判断在收获人单元格内，且编辑样式为删除时
+    //    if (editingStyle  == UITableViewCellEditingStyleDelete){
+    //        if (indexPath.section == 1 && indexPath.row > 0) {
+    //            // 删除收货人，刷新表格
+    //            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    //        }
+    //        if (indexPath.section == 2 && indexPath.row > 0) {
+    //            // 删除货物，刷新表格
+    //            [self.goods removeObject:self.goods[indexPath.row - 1]];
+    //            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    //        }
+    //    }
 }
 
 
-//接收配置常用收货人列表页面给的代理请求
-- (void)selectedConfigCShouhuoTVC:(ConfigCShouhuoTVC *)hvc didInputReturnJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)shouhuo {
-    self.shouhuoren = shouhuo;
-    [self.tableView reloadData];
-}
-
-//===========================  这下面都是以前假数要删除的 ========================================
 
 
-//假数据：货物
-- (NSMutableArray *)goods {
-    if (!_goods) {
-        _goods = [NSMutableArray array];
-    }
-    return _goods;
-}
-
-//===========================  接收各个页面给的代理请求 start ========================================
-
-
-
-//接收添加货物页面给的代理请求
-- (void)addGoodsVC:(SelectGoodsVC *)addVc saveReturnGoods:(BigAndSmallGoodsModel *)goods {
-    NSLog(@"addGoodsVC-----------------");
-    [self.goods addObject:goods];
-    [self.tableView reloadData];
-}
-//===========================  接收各个页面给的代理请求 end ========================================
 
 @end

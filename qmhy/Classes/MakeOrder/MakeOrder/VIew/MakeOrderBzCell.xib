@@ -46,6 +46,9 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="beizhuTextField" destination="P5h-aL-uDd" id="bs9-s5-kaG"/>
+            </connections>
             <point key="canvasLocation" x="273" y="45"/>
         </tableViewCell>
     </objects>

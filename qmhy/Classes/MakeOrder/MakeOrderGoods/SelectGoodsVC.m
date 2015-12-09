@@ -158,6 +158,7 @@
     _goods.bigCollectionCharges = _bigCollectionChargesTextField.text;
     _goods.bigCategory = @"大件";
     _goods.bigReceipt = _bigReceiptSwitch.on;
+    _goods.bigNumber = @"1";
     
     
     if ([self.delegate respondsToSelector:@selector(addGoodsVC:saveReturnGoods:)]) {

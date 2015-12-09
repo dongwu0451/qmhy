@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MakeOrderBzCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *beizhuTextField;
 
 @end
