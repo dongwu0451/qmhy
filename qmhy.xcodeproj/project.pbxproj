@@ -41,6 +41,9 @@
 		04B1E17B1C083C4A00AFBF90 /* MoreTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E17A1C083C4A00AFBF90 /* MoreTVC.m */; };
 		04B1E17F1C083C5F00AFBF90 /* PriceTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E17E1C083C5F00AFBF90 /* PriceTableVC.m */; };
 		04B1E1831C083C8400AFBF90 /* UserProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1821C083C8400AFBF90 /* UserProtocolVC.m */; };
+		04BB77D81C19189200DE47A8 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB77D61C19189200DE47A8 /* MakeOrderShouhuoCell.m */; };
+		04BB77D91C19189200DE47A8 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB77D71C19189200DE47A8 /* MakeOrderShouhuoCell.xib */; };
+		04BB77DD1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB77DC1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m */; };
 		04D1B3AC1C0BED9E00890507 /* JSONModelMyEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */; };
 		04D1B3AF1C0BF34B00890507 /* MyEvaluationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */; };
 		04D1B3B31C0BF37C00890507 /* MyEvaluationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */; };
@@ -170,8 +173,6 @@
 		04E447361C06949100E05811 /* MakeOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446921C06949100E05811 /* MakeOrderGoodsCell.m */; };
 		04E447371C06949100E05811 /* MakeOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446931C06949100E05811 /* MakeOrderGoodsCell.xib */; };
 		04E447381C06949100E05811 /* SelectGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446951C06949100E05811 /* SelectGoodsVC.m */; };
-		04E4473C1C06949100E05811 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4469E1C06949100E05811 /* MakeOrderShouhuoCell.m */; };
-		04E4473D1C06949100E05811 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E4469F1C06949100E05811 /* MakeOrderShouhuoCell.xib */; };
 		04E447411C06949100E05811 /* entlib.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04E446A91C06949100E05811 /* entlib.gif */; };
 		04E447421C06949100E05811 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 04E446AA1C06949100E05811 /* help.html */; };
 		04E447441C06949100E05811 /* MoreNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446AF1C06949100E05811 /* MoreNVC.m */; };
@@ -306,6 +307,11 @@
 		04B1E17E1C083C5F00AFBF90 /* PriceTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceTableVC.m; sourceTree = "<group>"; };
 		04B1E1811C083C8400AFBF90 /* UserProtocolVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProtocolVC.h; sourceTree = "<group>"; };
 		04B1E1821C083C8400AFBF90 /* UserProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProtocolVC.m; sourceTree = "<group>"; };
+		04BB77D51C19189200DE47A8 /* MakeOrderShouhuoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderShouhuoCell.h; sourceTree = "<group>"; };
+		04BB77D61C19189200DE47A8 /* MakeOrderShouhuoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderShouhuoCell.m; sourceTree = "<group>"; };
+		04BB77D71C19189200DE47A8 /* MakeOrderShouhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderShouhuoCell.xib; sourceTree = "<group>"; };
+		04BB77DB1C193BCE00DE47A8 /* JSONModelMakeOrderOK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMakeOrderOK.h; sourceTree = "<group>"; };
+		04BB77DC1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMakeOrderOK.m; sourceTree = "<group>"; };
 		04D1B3AA1C0BED9E00890507 /* JSONModelMyEvaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMyEvaluation.h; sourceTree = "<group>"; };
 		04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMyEvaluation.m; sourceTree = "<group>"; };
 		04D1B3AD1C0BF34B00890507 /* MyEvaluationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationTableViewController.h; sourceTree = "<group>"; };
@@ -536,9 +542,6 @@
 		04E446931C06949100E05811 /* MakeOrderGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderGoodsCell.xib; sourceTree = "<group>"; };
 		04E446941C06949100E05811 /* SelectGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGoodsVC.h; sourceTree = "<group>"; };
 		04E446951C06949100E05811 /* SelectGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGoodsVC.m; sourceTree = "<group>"; };
-		04E4469D1C06949100E05811 /* MakeOrderShouhuoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderShouhuoCell.h; sourceTree = "<group>"; };
-		04E4469E1C06949100E05811 /* MakeOrderShouhuoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeOrderShouhuoCell.m; sourceTree = "<group>"; };
-		04E4469F1C06949100E05811 /* MakeOrderShouhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderShouhuoCell.xib; sourceTree = "<group>"; };
 		04E446A91C06949100E05811 /* entlib.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = entlib.gif; sourceTree = "<group>"; };
 		04E446AA1C06949100E05811 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		04E446AE1C06949100E05811 /* MoreNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreNVC.h; sourceTree = "<group>"; };
@@ -900,6 +903,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		04BB77DA1C193BAF00DE47A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04BB77DB1C193BCE00DE47A8 /* JSONModelMakeOrderOK.h */,
+				04BB77DC1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04D1B3A61C0BEB6C00890507 /* Evaluation(我的评价) */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,6 +999,9 @@
 				04E3E06F1C1680540023D440 /* MakeOrderTotalCell.h */,
 				04E3E0701C1680540023D440 /* MakeOrderTotalCell.m */,
 				04E3E0711C1680540023D440 /* MakeOrderTotalCell.xib */,
+				04BB77D51C19189200DE47A8 /* MakeOrderShouhuoCell.h */,
+				04BB77D61C19189200DE47A8 /* MakeOrderShouhuoCell.m */,
+				04BB77D71C19189200DE47A8 /* MakeOrderShouhuoCell.xib */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -1508,7 +1523,6 @@
 			children = (
 				04E4467E1C06949100E05811 /* MakeOrder(下单) */,
 				04E4468E1C06949100E05811 /* MakeOrderGoods */,
-				04E4469C1C06949100E05811 /* MakeOrderShouhuo */,
 			);
 			path = MakeOrder;
 			sourceTree = "<group>";
@@ -1516,6 +1530,7 @@
 		04E4467E1C06949100E05811 /* MakeOrder(下单) */ = {
 			isa = PBXGroup;
 			children = (
+				04BB77DA1C193BAF00DE47A8 /* Model */,
 				04E3E0631C1680540023D440 /* Controller */,
 				04E3E0681C1680540023D440 /* VIew */,
 			);
@@ -1535,16 +1550,6 @@
 				04E446951C06949100E05811 /* SelectGoodsVC.m */,
 			);
 			path = MakeOrderGoods;
-			sourceTree = "<group>";
-		};
-		04E4469C1C06949100E05811 /* MakeOrderShouhuo */ = {
-			isa = PBXGroup;
-			children = (
-				04E4469D1C06949100E05811 /* MakeOrderShouhuoCell.h */,
-				04E4469E1C06949100E05811 /* MakeOrderShouhuoCell.m */,
-				04E4469F1C06949100E05811 /* MakeOrderShouhuoCell.xib */,
-			);
-			path = MakeOrderShouhuo;
 			sourceTree = "<group>";
 		};
 		04E446A41C06949100E05811 /* More */ = {
@@ -2161,7 +2166,6 @@
 				04E448101C06CE3900E05811 /* NotifyWLTZTableViewCell.xib in Resources */,
 				04E447471C06949100E05811 /* pricetable.html in Resources */,
 				04F5081C1C082244009F0ACD /* OrderDingDanZhuangTaiTableViewCell.xib in Resources */,
-				04E4473D1C06949100E05811 /* MakeOrderShouhuoCell.xib in Resources */,
 				04E447421C06949100E05811 /* help.html in Resources */,
 				0483FDED1C0EC41800FB2BBE /* MyEvaluationEVMViewController.xib in Resources */,
 				04E4477F1C06A20F00E05811 /* OrderGetTableViewCell.xib in Resources */,
@@ -2201,6 +2205,7 @@
 				0483FDF51C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib in Resources */,
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				04E4471D1C06949100E05811 /* EditConfigCWuliuViewController.xib in Resources */,
+				04BB77D91C19189200DE47A8 /* MakeOrderShouhuoCell.xib in Resources */,
 				04E3E6191C11354A00014EDB /* OrderQHZEwmViewController.xib in Resources */,
 				04D4921C1C1822F400ACD102 /* MakeOrderOKViewController.xib in Resources */,
 			);
@@ -2259,6 +2264,7 @@
 				04B1E17F1C083C5F00AFBF90 /* PriceTableVC.m in Sources */,
 				04E447381C06949100E05811 /* SelectGoodsVC.m in Sources */,
 				040F74411C0D87AB00FC4AB9 /* JSONModelMyEvaluationXQ.m in Sources */,
+				04BB77D81C19189200DE47A8 /* MakeOrderShouhuoCell.m in Sources */,
 				04E445B91C06914000E05811 /* AFURLSessionManager.m in Sources */,
 				04F508171C082207009F0ACD /* OrderDingDanZhuangTaiTableViewController.m in Sources */,
 				0483FDF81C0ECE3300FB2BBE /* JSONModelMyEvaluationSJXX.m in Sources */,
@@ -2276,7 +2282,6 @@
 				04E3E0731C1680540023D440 /* MakeOrderTVC.m in Sources */,
 				04B1E1661C083B9A00AFBF90 /* OrderSendQueryContentTVC.m in Sources */,
 				04E4477D1C06A20F00E05811 /* JSONModelOrderGet.m in Sources */,
-				04E4473C1C06949100E05811 /* MakeOrderShouhuoCell.m in Sources */,
 				04E4471A1C06949100E05811 /* ADDConfigCWuliuViewController.m in Sources */,
 				04E4471F1C06949100E05811 /* ConfigCWuliuTableViewCell.m in Sources */,
 				04E447D31C06C95D00E05811 /* ConfigCPasswordVC.m in Sources */,
@@ -2293,6 +2298,7 @@
 				04E447221C06949100E05811 /* GesturePasswordButton.m in Sources */,
 				04E445B31C06914000E05811 /* AFHTTPSessionManager.m in Sources */,
 				04E445BE1C06914000E05811 /* MJFoundation.m in Sources */,
+				04BB77DD1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m in Sources */,
 				04E445BD1C06914000E05811 /* MJConst.m in Sources */,
 				04E445FF1C06914000E05811 /* Foundation+Log.m in Sources */,
 				04E447081C06949100E05811 /* AddConfigCFahuoViewController.m in Sources */,

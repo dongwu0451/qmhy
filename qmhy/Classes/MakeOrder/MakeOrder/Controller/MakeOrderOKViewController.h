@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModelConfigCShouhuo.h"
+#import "JSONModelConfigFahuo.h"
 
 @interface MakeOrderOKViewController : UIViewController
+@property (nonatomic, copy) NSString *beizhu;
+@property (copy, nonatomic) NSString *zongjianshu;
+@property (copy, nonatomic) NSString *daishoukuan;
+@property (copy, nonatomic) NSString *goodstype;
+@property (nonatomic, strong) JSONModelConfigCShouhuo *shouhuoren;
 
+@property (strong, nonatomic) NSArray *goods;
+
+@property (nonatomic, strong) JSONModelConfigFahuo *jsonModelConfigFahuo;
 @end

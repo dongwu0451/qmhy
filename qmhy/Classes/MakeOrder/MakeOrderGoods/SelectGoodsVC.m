@@ -146,6 +146,7 @@
 - (IBAction)saveBigGoods:(UIButton *)sender {
     
     if (!_bigLongTextField.text.length || !_bigWideTextField.text.length || !_bigHighTextField.text.length || !_bigHeavyTextField.text.length || !_bigProtectionMoneyTextField.text.length || !_bigDeliveryChargesTextField.text.length || !_bigCollectionChargesTextField.text.length) {
+        [AppDelegate showAlert:@"请输入完整信息"];
         return;
     }
     _goods = [[BigAndSmallGoodsModel alloc] init];
@@ -157,7 +158,13 @@
     _goods.bigDeliveryCharges = _bigDeliveryChargesTextField.text;
     _goods.bigCollectionCharges = _bigCollectionChargesTextField.text;
     _goods.bigCategory = @"大件";
-    _goods.bigReceipt = _bigReceiptSwitch.on;
+    if (_bigReceiptSwitch.on == YES) {
+        _goods.bigReceipt = @"1";
+    } else {
+        _goods.bigReceipt = @"0";
+    }
+    
+    //    _goods.bigReceipt = _bigReceiptSwitch.on;
     _goods.bigNumber = @"1";
     
     
@@ -179,7 +186,7 @@
         !_smailValuationFeeTextField.text.length ||
         !_smailDeliveryChargesTextField.text.length ||
         !_smailCollectionChargesTextField.text.length) {
-        [AppDelegate showAlert:@"请选择货物名称"];
+        [AppDelegate showAlert:@"请输入完整信息"];
         return;
     }
     
@@ -187,7 +194,12 @@
     _goods = [[BigAndSmallGoodsModel alloc] init];
     _goods.smailGoodsName = _smailNameTextField.text;
     _goods.smailNumber = _smailNumberTextField.text;
-    _goods.smailReceipt = _smailReceiptSwitch.on;
+    //    _goods.smailReceipt = _smailReceiptSwitch.on;
+    if (_smailReceiptSwitch.on == YES) {
+        _goods.smailReceipt = @"1";
+    } else {
+        _goods.smailReceipt = @"0";
+    }
     _goods.smailValuationFee = _smailValuationFeeTextField.text;
     _goods.smailDeliveryCharges = _smailDeliveryChargesTextField.text;
     _goods.smailCollectionCharges = _smailCollectionChargesTextField.text;

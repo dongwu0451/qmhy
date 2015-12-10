@@ -15,7 +15,8 @@
 @property (strong, nonatomic) NSString *bigWide; // 大物件宽度
 @property (strong, nonatomic) NSString *bigHigh; // 大物件高度
 @property (strong, nonatomic) NSString *bigHeavy; // 打物件重量
-@property (assign, nonatomic) BOOL bigReceipt; // 大物件件是否回执
+//@property (assign, nonatomic) BOOL bigReceipt; // 大物件件是否回执
+@property (strong, nonatomic) NSString *bigReceipt; // 大物件件是否回执   1是 0不是
 @property (strong, nonatomic) NSString *bigProtectionMoney; //大件货物保护费
 @property (strong, nonatomic) NSString *bigDeliveryCharges; // 大物件送货费
 @property (strong, nonatomic) NSString *bigCollectionCharges; // 大物件代收费
@@ -23,7 +24,8 @@
 
 @property (strong, nonatomic) NSString *smailGoodsName; // 小件货物名称
 @property (strong, nonatomic) NSString *smailNumber; // 小件件数
-@property (assign, nonatomic) BOOL smailReceipt; // 小件是否回执
+//@property (assign, nonatomic) BOOL smailReceipt; // 小件是否回执
+@property (strong, nonatomic) NSString *smailReceipt; // 小件是否回执 1是 0不是
 @property (strong, nonatomic) NSString *smailValuationFee; // 小件保价费
 @property (strong, nonatomic) NSString *smailDeliveryCharges; // 小件送货费
 @property (strong, nonatomic) NSString *smailCollectionCharges; // 小件代收费

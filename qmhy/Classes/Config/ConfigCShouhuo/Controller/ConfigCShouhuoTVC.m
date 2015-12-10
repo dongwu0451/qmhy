@@ -24,7 +24,7 @@
 @property (nonatomic, strong) JSONModelConfigCShouhuo *jsonModelConfigCShouhuo;
 
 @end
-
+    
 @implementation ConfigCShouhuoTVC
 
 - (void)viewWillAppear:(BOOL)animated {

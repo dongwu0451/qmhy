@@ -20,6 +20,18 @@
 #import "MakeOrderJSDZViewController.h"
 #import "MakeOrderOKViewController.h"
 
+#import "MJExtension.h"
+#import "ConfigCFahuoTableViewCell.h"
+#import "UniformResourceLocator.h"
+#import "AFNetworkTool.h"
+#import "MJExtension.h"
+#import "MJRefreshFooter.h"
+#import "MJRefresh.h"
+#import "QConfig.h"
+#import "JSONModelConfigFahuo.h"
+#import "MBProgressHUD+HM.h"
+#import "ECCFHViewController.h"
+
 //===========================  这下面都是以前的import可能会删除 ========================================
 
 #import "ConfigCShouhuoTVC.h"
@@ -44,6 +56,11 @@
 @property (copy, nonatomic) NSString *zongjianshu;
 @property (copy, nonatomic) NSString *daishoukuan;
 @property (copy, nonatomic) NSString *goodstype;
+
+
+@property (nonatomic, strong) NSMutableArray *infoArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (nonatomic, strong) JSONModelConfigFahuo *jsonModelConfigFahuo;
 
 @end
 
@@ -70,6 +87,7 @@
 // 接收配置常用收货人列表页面给的代理请求
 - (void)selectedConfigCShouhuoTVC:(ConfigCShouhuoTVC *)hvc didInputReturnJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)shouhuo {
     self.shouhuoren = shouhuo;
+    
     [self.tableView reloadData];
 }
 
@@ -79,20 +97,83 @@
 }
 
 - (IBAction)xiayibuBtn:(UIBarButtonItem *)sender {
-    if (self.beizhu.length == 0) {
-        NSLog(@"++++++%@",self.beizhu);
+ 
+    if (self.dataArray.count == 0) {
+        NSLog(@"1");
         return;
-    } else {
-        NSLog(@"%@",self.beizhu);
-        MakeOrderOKViewController *tvc = [[MakeOrderOKViewController alloc] init];
-        [self.navigationController pushViewController:tvc animated:YES];
     }
-    
+    if (self.shouhuoren.x_id.length == 0) {
+        NSLog(@"2");
+        return;
+    }
+    if (self.goods.count == 0) {
+        NSLog(@"3");
+        return;
+    }
+    if (self.beizhu.length == 0) {
+        NSLog(@"4");
+        return;
+    }
+    NSLog(@"%@",self.beizhu);
+    MakeOrderOKViewController *vc = [[MakeOrderOKViewController alloc] init];
+    vc.beizhu =  self.beizhu;
+    vc.zongjianshu = self.zongjianshu;
+    vc.daishoukuan = self.daishoukuan;
+    vc.goodstype = self.goodstype;
+    vc.shouhuoren = self.shouhuoren;
+    vc.goods = self.goods;
+    vc.jsonModelConfigFahuo = self.jsonModelConfigFahuo;
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
+
+
+- (void)sdgsdg {
+    for (int i = 0; i < self.dataArray.count; i++) {
+        JSONModelConfigFahuo *a = self.dataArray[i];
+        if ([a.orderid isEqualToString:@"0"]) {
+            self.jsonModelConfigFahuo = a;
+        }
+    }
+}
+
+
+- (void)loadNewData {
+    [MBProgressHUD showMessage:@"请等待..." toView:self.view];
+    // 请求参数
+    NSString *methodName = @"getTabCommonPickupInfo";
+    NSString *params = @"&proName=%@_%d";
+    QConfig *config = [[QConfig alloc] init];
+    NSString *uid = config.uid;
+    int isOnly = 0;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, isOnly] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        _infoArray = [dic objectForKey:@"rs"];//第一次数据
+        _dataArray = [JSONModelConfigFahuo objectArrayWithKeyValuesArray:_infoArray];
+        if (_dataArray.count > 0) {
+            [self sdgsdg];
+        }
+        
+//        NSLog(@"%@", _dataArray);
+        
+//        JSONModelConfigFahuo *a = _dataArray[0];
+//        NSLog(@"%@", a.contact);
+        [MBProgressHUD hideHUDForView:self.view];
+        [self.tableView reloadData];
+    } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
+    }];
+}
+
 
 //初始化显示
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadNewData];
+//    [self sdgsdg];
     self.daishoukuan = @"0.00";
     self.zongjianshu = @"0";
     self.goodstype = @"0";
@@ -111,6 +192,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    
     [self.tableView reloadData];
 }
 
@@ -198,11 +280,30 @@
             cell = [[MakeOrderFahuoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
         }
         MakeOrderFahuoCell *myCell = (MakeOrderFahuoCell *)cell;
-        QConfig *c = [[QConfig alloc] init];
-        myCell.fahuorenLabel.text = c.username;
-        NSLog(@"%@",c.phone2);
-        myCell.fhrdianhuaLabel.text = c.phone2;
-        myCell.fhrdizhiLabel.text = @"";
+        
+        if (self.dataArray > 0) {
+            myCell.fahuorenLabel.text = self.jsonModelConfigFahuo.contact;
+            //        NSLog(@"%@",c.phone2);
+            myCell.fhrdianhuaLabel.text = self.jsonModelConfigFahuo.tel;
+            if (self.jsonModelConfigFahuo.Province.length == 0) {
+                self.jsonModelConfigFahuo.Province = @"";
+            }
+            if (self.jsonModelConfigFahuo.city == 0) {
+                self.jsonModelConfigFahuo.city = @"";
+            }
+            if (self.jsonModelConfigFahuo.area.length == 0) {
+                self.jsonModelConfigFahuo.area = @"";
+            }
+            myCell.fhrdizhiLabel.text = [NSString stringWithFormat:@"%@%@%@", self.jsonModelConfigFahuo.Province, self.jsonModelConfigFahuo.city, self.jsonModelConfigFahuo.area];
+            //        myCell.fahuorenLabel.text = c.username;
+            //        NSLog(@"%@",c.phone2);
+            //        myCell.fhrdianhuaLabel.text = c.phone2;
+            //        myCell.fhrdizhiLabel.text = @"";
+        } else {
+            myCell.fahuorenLabel.text = @"请到常用配置中设置";
+        }
+        
+       
     }
     
     //收货人
