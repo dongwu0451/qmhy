@@ -232,10 +232,24 @@
 
 - (void)addgoodslist {
     NSString *methodName = @"addgoodslist";
-    NSString *params = @"&proName=%d";
+    NSString *params = @"&proName=%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d";
     QConfig *config = [[QConfig alloc] init];
     int uid = [config.uid intValue];
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *code = @"";
+    NSString *name = @"";
+    NSString *type = @"";
+    NSString *longs = @"";
+    NSString *width = @"";
+    NSString *height = @"";
+    NSString *weight = @"";
+    NSString *count = @"";
+    NSString *ishuizhi = @"";
+    NSString *insurance = @"";
+    NSString *sendgoods = @"";
+    NSString *collectionprice = @"";
+    NSString *volume = @"";
+    int sumnum = 0;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
