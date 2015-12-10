@@ -47,7 +47,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-
+        
     }
     return self;
 }
@@ -128,7 +128,7 @@
         UIImageView *imageView = (UIImageView*)[self viewWithTag:counter];
         imageView.image = (counter<=_stars)?starImageOn:starImageOff;
     }
-
+    
 }
 
 #define kQuarterStarDivident 20.0
@@ -177,7 +177,7 @@
 - (void)performCallBackWithStarValue
 {
     if (_callBackAction) {
-       [_target performSelectorOnMainThread:_callBackAction withObject:@(_stars) waitUntilDone:YES];
+        [_target performSelectorOnMainThread:_callBackAction withObject:@(_stars) waitUntilDone:YES];
     }
     if (_callBackBlock) {
         _callBackBlock(@(_stars));

@@ -264,10 +264,32 @@
 
 - (void)addorderlist {
     NSString *methodName = @"addorderlist";
-    NSString *params = @"&proName=%d";
+    NSString *params = @"&proName=%d_%@_%@_%@_%@_%@_%@_%d_%@_%@_%f_%f_%f_%@_%@_%@_%@_%@_%d_%@_%@_%@";
     QConfig *config = [[QConfig alloc] init];
     int uid = [config.uid intValue];
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *code = @"";
+    NSString *consigneeName = @"";
+    NSString *consigneePhone = @"";
+    NSString *logisticsName = @"";
+    NSString *city = @"";
+    NSString *goodsName = @"";
+    int num = 0;
+    NSString *standard = @"";
+    NSString *goodDescribe = @"";
+    float freightPrice = 1.2;
+    float collectionPrice = 1.2;
+    float logisticsPrice = 1.2;
+    NSString *pickupContact = @"";
+    NSString *pickupAddress = @"";
+    NSString *pickupPhone = @"";
+    NSString *remark = @"";
+    NSString *image = @"";
+    int status = 0;
+    NSString *startpoint = @"";
+    NSString *endpoint = @"";
+    NSString *goodtype = @"";
+    
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
         NSError *error = nil;
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
