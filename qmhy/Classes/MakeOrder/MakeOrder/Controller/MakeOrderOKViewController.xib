@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeOrderOKViewController">
             <connections>
+                <outlet property="shanchuzhaopian" destination="YUH-DI-Lwz" id="HoH-gg-FaB"/>
                 <outlet property="smailNameTextField" destination="11Z-1B-UpA" id="H2J-GK-vpx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -18,12 +18,13 @@
 #import "JSONModelMakeOrderOK.h"
 #import "BigAndSmallGoodsModel.h"
 
-@interface MakeOrderOKViewController () <TLTagsControlDelegate>
+@interface MakeOrderOKViewController () <TLTagsControlDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate>
 //TLTags控件
 @property (strong, nonatomic) TLTagsControl *smailEveCargoScrollView;
 @property (strong, nonatomic) NSMutableArray *allTags;
 
 @property (weak, nonatomic) IBOutlet UITextField *smailNameTextField;
+@property (weak, nonatomic) IBOutlet UIButton *shanchuzhaopian;
 
 @end
 
@@ -159,13 +160,112 @@
         
     }];
 }
+
 - (IBAction)shangchuanzhaopianBtnClick:(UIButton *)sender {
-    NSLog(@"123");
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择图片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"相册", nil];
+    [sheet showInView:self.view.window];
+}
+
+#pragma mark - actionSheet的代理
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    // 设置代理
+    imagePicker.delegate = self;
+    // 允许编辑
+    imagePicker.allowsEditing = YES;
+    if (buttonIndex == 0) { // 拍照
+        // 如果用户第一次选择 NO  以后的用户主动打开 所以如果是NO 就直接返回
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            return;
+        }
+        // 设置图片来源
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+    }
+    if (buttonIndex == 1) { // 相册
+        // 如果用户第一次选择 NO  以后的用户主动打开 所以如果是NO 就直接返回
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            return;
+        }
+        // 设置图片来源
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    if (buttonIndex == 2) { // 取消
+        return;
+    }
+    // 显示控制器
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    // 销毁控制器
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    // 获得图片
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [self.shanchuzhaopian setImage:image forState:UIControlStateNormal];
+    
+    
+//    [self upLoadImage];
+    // 隐藏模态窗口
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //    [self updateUserHeadPic];
+    
+    //        NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+    //        ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset) {
+    //            ALAssetRepresentation *representation = [myasset defaultRepresentation];
+    //            NSString *fileName = [representation filename];
+    //            _headImageName = fileName;
+    //
+    //            XXCLog(@"headImageName----------%@", self.headImageName);
+    //            NSLog(@"fileName : %@",fileName);
+    //        };
+    //
+    //        ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+    //        [assetslibrary assetForURL:imageURL resultBlock:resultblock failureBlock:nil];
 }
 
 - (IBAction)tijiaodingdanBtnClick:(UIButton *)sender {
     NSLog(@"12341");
 }
+
+
+- (void)addgoodslist {
+    NSString *methodName = @"addgoodslist";
+    NSString *params = @"&proName=%d";
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *array = [dic objectForKey:@"rs"];
+#warning 呵呵
+
+    } fail:^{
+        
+    }];
+}
+
+- (void)addorderlist {
+    NSString *methodName = @"addorderlist";
+    NSString *params = @"&proName=%d";
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *array = [dic objectForKey:@"rs"];
+#warning 呵呵
+        
+    } fail:^{
+        
+    }];
+}
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
