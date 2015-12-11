@@ -26,11 +26,56 @@
 @property (weak, nonatomic) IBOutlet UITextField *smailNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *shanchuzhaopian;
 
+// addgoodslist and addorderlist
+@property (nonatomic, copy) NSString *addgoodslistAndAddorderlist_uid; // 0 用户id
+@property (nonatomic, copy) NSString *addgoodslistAndAddorderlist_code; // 1 订单发货码
+
+// addgoodslist
+@property (nonatomic, copy) NSString *addgoodslist_name; // 2
+@property (nonatomic, copy) NSString *addgoodslist_type; // 3
+@property (nonatomic, copy) NSString *addgoodslist_longs; // 4
+@property (nonatomic, copy) NSString *addgoodslist_width; // 5
+@property (nonatomic, copy) NSString *addgoodslist_height; // 6
+@property (nonatomic, copy) NSString *addgoodslist_weight; // 7
+@property (nonatomic, copy) NSString *addgoodslist_count; // 8
+@property (nonatomic, copy) NSString *addgoodslist_ishuizhi; // 9
+@property (nonatomic, copy) NSString *addgoodslist_insurance; // 10
+@property (nonatomic, copy) NSString *addgoodslist_sendgoods; // 11
+@property (nonatomic, copy) NSString *addgoodslist_collectionprice; // 12
+@property (nonatomic, copy) NSString *addgoodslist_volume; // 13
+@property (nonatomic, copy) NSString *addgoodslist_sumnum; // 14
+
+
+// addorderlist
+@property (nonatomic, copy) NSString *addorderlist_consigneeName; // 2 收货人姓名
+@property (nonatomic, copy) NSString *addorderlist_consigneePhone; // 3 收货人电话
+@property (nonatomic, copy) NSString *addorderlist_logisticsName; // 4 物流名称
+@property (nonatomic, copy) NSString *addorderlist_city; // 5 城市
+@property (nonatomic, copy) NSString *addorderlist_goodsName; // 6 货物名称
+@property (nonatomic, copy) NSString *addorderlist_num; // 7 件数
+@property (nonatomic, copy) NSString *addorderlist_standard; // 8 规格
+@property (nonatomic, copy) NSString *addorderlist_goodDescribe; // 9 货物描述
+@property (nonatomic, copy) NSString *addorderlist_freightPrice; // 10 短途运费
+@property (nonatomic, copy) NSString *addorderlist_collectionPrice; // 11 代收款
+@property (nonatomic, copy) NSString *addorderlist_logisticsPrice; // 12 理想物流运费价格
+@property (nonatomic, copy) NSString *addorderlist_pickupContact; // 13 取货联系人
+@property (nonatomic, copy) NSString *addorderlist_pickupAddress; // 14 取货地址
+@property (nonatomic, copy) NSString *addorderlist_pickupPhone; // 15 取货联系人电话
+@property (nonatomic, copy) NSString *addorderlist_remark; // 16 备注
+@property (nonatomic, copy) NSString *addorderlist_image; // 17 图片
+@property (nonatomic, copy) NSString *addorderlist_status; // 18 状态口 10-－－90
+@property (nonatomic, copy) NSString *addorderlist_startpoint; // 19 起始点经纬度
+@property (nonatomic, copy) NSString *addorderlist_endpoint; // 20 结束点经纬度
+@property (nonatomic, copy) NSString *addorderlist_goodtype; // 21
+
 @end
 
 @implementation MakeOrderOKViewController
 
 -(void)viewDidLoad {
+    QConfig *config = [[QConfig alloc] init];
+    _addgoodslistAndAddorderlist_uid = config.uid;
+    _addorderlist_goodsName = @"";
     
     NSLog(@"总件数:=======================================");
     NSLog(@"zongjianshu---%@", self.zongjianshu);
@@ -97,9 +142,31 @@
         NSLog(@"goods%d-smailCollectionCharges---%@", i, a.smailCollectionCharges);
         NSLog(@"goods%d-smailCategory---%@", i, a.smailCategory);
         NSLog(@"=======================================");
+        
+        
+        
+        
+        // addorderlist 货物名 addorderlist_goodsName 6
+       
+        if ([a.bigCategory isEqualToString:@"大件"]){
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:a.bigCategory];
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@"货物"];
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:a.bigNumber];
+        }
+        else{
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString: [self newStr:a.smailGoodsName]];
+        }
+        if (i < self.goods.count - 1) {
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@","];
+        }
     }
-
     
+    // addorderlist 收货人姓名 addorderlist_consigneeName 2
+    _addorderlist_consigneeName = [self newStr:self.shouhuoren.contact];
+    
+    // addorderlist 收货人电话 addorderlist_consigneePhone 3
+    _addorderlist_consigneePhone = [self newStr:self.shouhuoren.tel];
+
     NSLog(@"即时到账:=======================================");
     NSLog(@"goodstype---%@", self.goodstype);
     
@@ -107,7 +174,114 @@
     NSLog(@"备注:=======================================");
     NSLog(@"beizhu---%@", self.beizhu);
     
+    [self addgoodslist];
+    [self addorderlist];
 }
+
+- (void)addgoodslist {
+    [self hehehecode];
+    NSLog(@"%@", self.addgoodslistAndAddorderlist_code);
+    //    NSString *methodName = @"addgoodslist";
+    //    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
+    //    NSString *uid = config.uid;
+    //    NSString *code = @"";
+    //    NSString *name = @"";
+    //    NSString *type = @"";
+    //    NSString *longs = @"";
+    //    NSString *width = @"";
+    //    NSString *height = @"";
+    //    NSString *weight = @"";
+    //    NSString *count = @"";
+    //    NSString *ishuizhi = @"";
+    //    NSString *insurance = @"";
+    //    NSString *sendgoods = @"";
+    //    NSString *collectionprice = @"";
+    //    NSString *volume = @"";
+    //    NSString *sumnum = 0;
+    //    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+    //        NSError *error = nil;
+    //        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    //        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+    //        NSArray *array = [dic objectForKey:@"rs"];
+    //#warning 呵呵
+    //
+    //    } fail:^{
+    //
+    //    }];
+}
+
+- (void)addorderlist {
+    NSLog(@"%@", self.addgoodslistAndAddorderlist_code);
+    NSLog(@"%@", self.addorderlist_goodsName);
+    NSLog(@"%@", self.addorderlist_consigneeName);
+    //    NSString *methodName = @"addorderlist";
+    //    NSString *params = @"&proName=%d_%@_%@_%@_%@_%@_%@_%d_%@_%@_%f_%f_%f_%@_%@_%@_%@_%@_%d_%@_%@_%@";
+    //    NSString *uid = config.uid;
+    //    NSString *code = @"";
+    //    NSString *consigneeName = @"";
+    //    NSString *consigneePhone = @"";
+    //    NSString *logisticsName = @"";
+    //    NSString *city = @"";
+    //    NSString *goodsName = @"";
+    //    NSString *num = 0;
+    //    NSString *standard = @"";
+    //    NSString *goodDescribe = @"";
+    //    NSString *freightPrice = 1.2;
+    //    NSString *collectionPrice = 1.2;
+    //    NSString *logisticsPrice = 1.2;
+    //    NSString *pickupContact = @"";
+    //    NSString *pickupAddress = @"";
+    //    NSString *pickupPhone = @"";
+    //    NSString *remark = @"";
+    //    NSString *image = @"";
+    //    NSString *status = 0;
+    //    NSString *startpoint = @"";
+    //    NSString *endpoint = @"";
+    //    NSString *goodtype = @"";
+    //
+    //    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+    //        NSError *error = nil;
+    //        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    //        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+    //        NSArray *array = [dic objectForKey:@"rs"];
+    //#warning 呵呵
+    //        
+    //    } fail:^{
+    //        
+    //    }];
+}
+- (void)hehehecode {
+    // uid = uid
+    // code = 月 时 分 日 秒
+    // cindex = 00-99的随机数
+    QConfig *c = [[QConfig alloc] init];
+    NSString *asd = c.uid;
+    NSDate *senddate = [NSDate date];
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat: @"MMHHmmddss"];
+    NSString *locationString = [dateformatter stringFromDate:senddate];
+    NSLog(@"locationString:%@",locationString);
+    //1、获取一个随机整数范围在：[0,100)包括0，不包括100
+    // int x = arc4random() % 100;
+    int x = (arc4random() % 80 ) + 11;
+    NSString *str = [NSString stringWithFormat:@"%d", x];
+    NSString *asdasd = [NSString stringWithFormat:@"%@%@%@", asd, locationString, str];
+//    NSLog(@"%@", asdasd);
+    self.addgoodslistAndAddorderlist_code = asdasd;
+}
+
+
+
+- (NSString *)newStr:(NSString *)str {
+    if (str.length <= 0) {
+        return @" ";
+    } else {
+        return str;
+    }
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -122,6 +296,7 @@
         }
     }
 }
+
 // 初始化标签
 - (void)setupSmall {
     CGRect frame = CGRectMake(8, 130, 300, 40);
@@ -202,27 +377,10 @@
     // 销毁控制器
     [picker dismissViewControllerAnimated:YES completion:nil];
     // 获得图片
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIImage *image = info[UIImagePickerControllerEditedImage];
     [self.shanchuzhaopian setImage:image forState:UIControlStateNormal];
-    
-    
-//    [self upLoadImage];
     // 隐藏模态窗口
     [self dismissViewControllerAnimated:YES completion:nil];
-    //    [self updateUserHeadPic];
-    
-    //        NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
-    //        ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset) {
-    //            ALAssetRepresentation *representation = [myasset defaultRepresentation];
-    //            NSString *fileName = [representation filename];
-    //            _headImageName = fileName;
-    //
-    //            XXCLog(@"headImageName----------%@", self.headImageName);
-    //            NSLog(@"fileName : %@",fileName);
-    //        };
-    //
-    //        ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
-    //        [assetslibrary assetForURL:imageURL resultBlock:resultblock failureBlock:nil];
 }
 
 - (IBAction)tijiaodingdanBtnClick:(UIButton *)sender {
@@ -230,77 +388,7 @@
 }
 
 
-- (void)addgoodslist {
-    NSString *methodName = @"addgoodslist";
-    NSString *params = @"&proName=%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d";
-    QConfig *config = [[QConfig alloc] init];
-    int uid = [config.uid intValue];
-    NSString *code = @"";
-    NSString *name = @"";
-    NSString *type = @"";
-    NSString *longs = @"";
-    NSString *width = @"";
-    NSString *height = @"";
-    NSString *weight = @"";
-    NSString *count = @"";
-    NSString *ishuizhi = @"";
-    NSString *insurance = @"";
-    NSString *sendgoods = @"";
-    NSString *collectionprice = @"";
-    NSString *volume = @"";
-    int sumnum = 0;
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-        NSError *error = nil;
-        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-        NSArray *array = [dic objectForKey:@"rs"];
-#warning 呵呵
 
-    } fail:^{
-        
-    }];
-}
-
-- (void)addorderlist {
-    NSString *methodName = @"addorderlist";
-    NSString *params = @"&proName=%d_%@_%@_%@_%@_%@_%@_%d_%@_%@_%f_%f_%f_%@_%@_%@_%@_%@_%d_%@_%@_%@";
-    QConfig *config = [[QConfig alloc] init];
-    int uid = [config.uid intValue];
-    NSString *code = @"";
-    NSString *consigneeName = @"";
-    NSString *consigneePhone = @"";
-    NSString *logisticsName = @"";
-    NSString *city = @"";
-    NSString *goodsName = @"";
-    int num = 0;
-    NSString *standard = @"";
-    NSString *goodDescribe = @"";
-    float freightPrice = 1.2;
-    float collectionPrice = 1.2;
-    float logisticsPrice = 1.2;
-    NSString *pickupContact = @"";
-    NSString *pickupAddress = @"";
-    NSString *pickupPhone = @"";
-    NSString *remark = @"";
-    NSString *image = @"";
-    int status = 0;
-    NSString *startpoint = @"";
-    NSString *endpoint = @"";
-    NSString *goodtype = @"";
-    
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-        NSError *error = nil;
-        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-        NSArray *array = [dic objectForKey:@"rs"];
-#warning 呵呵
-        
-    } fail:^{
-        
-    }];
-}
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

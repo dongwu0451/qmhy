@@ -13,6 +13,25 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    QConfig *c = [[QConfig alloc] init];
+//    NSString *asd = c.uid;
+//    NSDate *senddate = [NSDate date];
+//    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+//    [dateformatter setDateFormat: @"MMHHmmddss"];
+//    NSString *locationString = [dateformatter stringFromDate:senddate];
+//    NSLog(@"locationString:%@",locationString);
+//    //1、获取一个随机整数范围在：[0,100)包括0，不包括100
+//    // int x = arc4random() % 100;
+//    int x = (arc4random() % 80 ) + 11;
+//    NSString *str = [NSString stringWithFormat:@"%d", x];
+//    NSString *asdasd = [NSString stringWithFormat:@"%@%@%@", asd, locationString, str];
+//    NSLog(@"%@", asdasd);
+    
+    
+    
+//    int x = (arc4random() % 80 ) + 11;
+//    NSString *str = [NSString stringWithFormat:@"%d", x];
+//    NSLog(@"%@", str);
     
 //    NSLog(@"%f", 1.23);
     //service更多  wealth我的  home主页  discovery订单
