@@ -23,7 +23,7 @@
 @property (strong, nonatomic) TLTagsControl *smailEveCargoScrollView;
 @property (strong, nonatomic) NSMutableArray *allTags;
 
-@property (weak, nonatomic) IBOutlet UITextField *smailNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *smailNameTextField;  // 物流名称 textfield 4 物流名称 ps:这个参数就是这个页面上的输入框的值
 @property (weak, nonatomic) IBOutlet UIButton *shanchuzhaopian;
 
 // addgoodslist and addorderlist
@@ -49,7 +49,6 @@
 // addorderlist
 @property (nonatomic, copy) NSString *addorderlist_consigneeName; // 2 收货人姓名
 @property (nonatomic, copy) NSString *addorderlist_consigneePhone; // 3 收货人电话
-@property (nonatomic, copy) NSString *addorderlist_logisticsName; // 4 物流名称
 @property (nonatomic, copy) NSString *addorderlist_city; // 5 城市
 @property (nonatomic, copy) NSString *addorderlist_goodsName; // 6 货物名称
 @property (nonatomic, copy) NSString *addorderlist_num; // 7 件数
@@ -122,39 +121,36 @@
     NSLog(@"货物:=======================================");
     NSLog(@"goods---%@", self.goods);
     for (int i = 0; i < self.goods.count; i++) {
-        BigAndSmallGoodsModel *a = self.goods[i];
-        NSLog(@"goods%d-bigCategory---%@", i, a.bigCategory);
-        NSLog(@"goods%d-bigName---%@", i, a.bigName);
-        NSLog(@"goods%d-bigLong---%@", i, a.bigLong);
-        NSLog(@"goods%d-bigWide---%@", i, a.bigWide);
-        NSLog(@"goods%d-bigHigh---%@", i, a.bigHigh);
-        NSLog(@"goods%d-bigHeavy---%@", i, a.bigHeavy);
-        NSLog(@"goods%d-bigReceipt---%@", i, a.bigReceipt);
-        NSLog(@"goods%d-bigProtectionMoney---%@", i, a.bigProtectionMoney);
-        NSLog(@"goods%d-bigDeliveryCharges---%@", i, a.bigDeliveryCharges);
-        NSLog(@"goods%d-bigCollectionCharges---%@", i, a.bigCollectionCharges);
-        NSLog(@"goods%d-bigNumber---%@", i, a.bigNumber);
-        NSLog(@"goods%d-smailGoodsName---%@", i, a.smailGoodsName);
-        NSLog(@"goods%d-smailNumber---%@", i, a.smailNumber);
-        NSLog(@"goods%d-smailReceipt---%@", i, a.smailReceipt);
-        NSLog(@"goods%d-smailValuationFee---%@", i, a.smailValuationFee);
-        NSLog(@"goods%d-smailDeliveryCharges---%@", i, a.smailDeliveryCharges);
-        NSLog(@"goods%d-smailCollectionCharges---%@", i, a.smailCollectionCharges);
-        NSLog(@"goods%d-smailCategory---%@", i, a.smailCategory);
+        BigAndSmallGoodsModel *bigAndSmallGoodsModel = self.goods[i];
+        NSLog(@"goods%d-bigCategory---%@", i, bigAndSmallGoodsModel.bigCategory);
+        NSLog(@"goods%d-bigName---%@", i, bigAndSmallGoodsModel.bigName);
+        NSLog(@"goods%d-bigLong---%@", i, bigAndSmallGoodsModel.bigLong);
+        NSLog(@"goods%d-bigWide---%@", i, bigAndSmallGoodsModel.bigWide);
+        NSLog(@"goods%d-bigHigh---%@", i, bigAndSmallGoodsModel.bigHigh);
+        NSLog(@"goods%d-bigHeavy---%@", i, bigAndSmallGoodsModel.bigHeavy);
+        NSLog(@"goods%d-bigReceipt---%@", i, bigAndSmallGoodsModel.bigReceipt);
+        NSLog(@"goods%d-bigProtectionMoney---%@", i, bigAndSmallGoodsModel.bigProtectionMoney);
+        NSLog(@"goods%d-bigDeliveryCharges---%@", i, bigAndSmallGoodsModel.bigDeliveryCharges);
+        NSLog(@"goods%d-bigCollectionCharges---%@", i, bigAndSmallGoodsModel.bigCollectionCharges);
+        NSLog(@"goods%d-bigNumber---%@", i, bigAndSmallGoodsModel.bigNumber);
+        NSLog(@"goods%d-smailGoodsName---%@", i, bigAndSmallGoodsModel.smailGoodsName);
+        NSLog(@"goods%d-smailNumber---%@", i, bigAndSmallGoodsModel.smailNumber);
+        NSLog(@"goods%d-smailReceipt---%@", i, bigAndSmallGoodsModel.smailReceipt);
+        NSLog(@"goods%d-smailValuationFee---%@", i, bigAndSmallGoodsModel.smailValuationFee);
+        NSLog(@"goods%d-smailDeliveryCharges---%@", i, bigAndSmallGoodsModel.smailDeliveryCharges);
+        NSLog(@"goods%d-smailCollectionCharges---%@", i, bigAndSmallGoodsModel.smailCollectionCharges);
+        NSLog(@"goods%d-smailCategory---%@", i, bigAndSmallGoodsModel.smailCategory);
         NSLog(@"=======================================");
-        
-        
-        
         
         // addorderlist 货物名 addorderlist_goodsName 6
        
-        if ([a.bigCategory isEqualToString:@"大件"]){
-            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:a.bigCategory];
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]){
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.bigCategory];
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@"货物"];
-            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:a.bigNumber];
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.bigNumber];
         }
         else{
-            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString: [self newStr:a.smailGoodsName]];
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString: [self newStr:bigAndSmallGoodsModel.smailGoodsName]];
         }
         if (i < self.goods.count - 1) {
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@","];
@@ -167,6 +163,13 @@
     // addorderlist 收货人电话 addorderlist_consigneePhone 3
     _addorderlist_consigneePhone = [self newStr:self.shouhuoren.tel];
 
+    // addorderlist 城市 addorderlist_city 5
+//    [self newStr:self.shouhuoren.Province];
+//    [self newStr:self.shouhuoren.city];
+//    [self newStr:self.shouhuoren.area];
+//    [self newStr:self.shouhuoren.Address];
+     _addorderlist_city = [NSString stringWithFormat:@"%@-%@-%@-%@", [self newStr:self.shouhuoren.Province], [self newStr:self.shouhuoren.city], [self newStr:self.shouhuoren.area], [self newStr:self.shouhuoren.Address]];
+    
     NSLog(@"即时到账:=======================================");
     NSLog(@"goodstype---%@", self.goodstype);
     
@@ -175,30 +178,46 @@
     NSLog(@"beizhu---%@", self.beizhu);
     
     [self addgoodslist];
-    [self addorderlist];
+
 }
 
 - (void)addgoodslist {
     [self hehehecode];
-    NSLog(@"%@", self.addgoodslistAndAddorderlist_code);
-    //    NSString *methodName = @"addgoodslist";
-    //    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
-    //    NSString *uid = config.uid;
-    //    NSString *code = @"";
-    //    NSString *name = @"";
-    //    NSString *type = @"";
-    //    NSString *longs = @"";
-    //    NSString *width = @"";
-    //    NSString *height = @"";
-    //    NSString *weight = @"";
-    //    NSString *count = @"";
-    //    NSString *ishuizhi = @"";
-    //    NSString *insurance = @"";
-    //    NSString *sendgoods = @"";
-    //    NSString *collectionprice = @"";
-    //    NSString *volume = @"";
-    //    NSString *sumnum = 0;
-    //    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"A-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
+    NSLog(@"A-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
+    NSLog(@"addgoodslist_name---%@", self.addgoodslist_name);
+    NSLog(@"addgoodslist_type---%@", self.addgoodslist_type);
+    NSLog(@"addgoodslist_longs---%@", self.addgoodslist_longs);
+    NSLog(@"addgoodslist_width---%@", self.addgoodslist_width);
+    NSLog(@"addgoodslist_height---%@", self.addgoodslist_height);
+    NSLog(@"addgoodslist_weight---%@", self.addgoodslist_weight);
+    NSLog(@"addgoodslist_count---%@", self.addgoodslist_count);
+    NSLog(@"addgoodslist_ishuizhi---%@", self.addgoodslist_ishuizhi);
+    NSLog(@"addgoodslist_insurance---%@", self.addgoodslist_insurance);
+    NSLog(@"addgoodslist_sendgoods---%@", self.addgoodslist_sendgoods);
+    NSLog(@"addgoodslist_collectionprice---%@", self.addgoodslist_collectionprice);
+    NSLog(@"addgoodslist_volume---%@", self.addgoodslist_volume);
+    NSLog(@"addgoodslist_sumnum---%@", self.addgoodslist_sumnum);
+    
+    NSString *methodName = @"addgoodslist";
+    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
+    NSString *uid = self.addgoodslistAndAddorderlist_uid;
+    NSString *code = self.addgoodslistAndAddorderlist_code;
+    NSString *name = self.addgoodslist_name;
+    NSString *type = self.addgoodslist_type;
+    NSString *longs = self.addgoodslist_longs;
+    NSString *width = self.addgoodslist_width;
+    NSString *height = self.addgoodslist_height;
+    NSString *weight = self.addgoodslist_weight;
+    NSString *count = self.addgoodslist_count;
+    NSString *ishuizhi = self.addgoodslist_ishuizhi;
+    NSString *insurance = self.addgoodslist_insurance;
+    NSString *sendgoods = self.addgoodslist_sendgoods;
+    NSString *collectionprice = self.addgoodslist_collectionprice;
+    NSString *volume = self.addgoodslist_volume;
+    NSString *sumnum = self.addgoodslist_sumnum;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"A-%@", URL);
     //    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
     //        NSError *error = nil;
     //        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -209,38 +228,60 @@
     //    } fail:^{
     //
     //    }];
+    [self addorderlist];
 }
 
 - (void)addorderlist {
-    NSLog(@"%@", self.addgoodslistAndAddorderlist_code);
-    NSLog(@"%@", self.addorderlist_goodsName);
-    NSLog(@"%@", self.addorderlist_consigneeName);
-    //    NSString *methodName = @"addorderlist";
-    //    NSString *params = @"&proName=%d_%@_%@_%@_%@_%@_%@_%d_%@_%@_%f_%f_%f_%@_%@_%@_%@_%@_%d_%@_%@_%@";
-    //    NSString *uid = config.uid;
-    //    NSString *code = @"";
-    //    NSString *consigneeName = @"";
-    //    NSString *consigneePhone = @"";
-    //    NSString *logisticsName = @"";
-    //    NSString *city = @"";
-    //    NSString *goodsName = @"";
-    //    NSString *num = 0;
-    //    NSString *standard = @"";
-    //    NSString *goodDescribe = @"";
-    //    NSString *freightPrice = 1.2;
-    //    NSString *collectionPrice = 1.2;
-    //    NSString *logisticsPrice = 1.2;
-    //    NSString *pickupContact = @"";
-    //    NSString *pickupAddress = @"";
-    //    NSString *pickupPhone = @"";
-    //    NSString *remark = @"";
-    //    NSString *image = @"";
-    //    NSString *status = 0;
-    //    NSString *startpoint = @"";
-    //    NSString *endpoint = @"";
-    //    NSString *goodtype = @"";
-    //
-    //    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"B-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
+    NSLog(@"B-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
+    NSLog(@"addorderlist_consigneeName---%@", self.addorderlist_consigneeName);
+    NSLog(@"addorderlist_consigneePhone---%@", self.addorderlist_consigneePhone);
+    NSLog(@"smailNameTextField.text---%@", self.smailNameTextField.text);
+    NSLog(@"addorderlist_city---%@", self.addorderlist_city);
+    NSLog(@"addorderlist_goodsName---%@", self.addorderlist_goodsName);
+    NSLog(@"addorderlist_num---%@", self.addorderlist_num);
+    NSLog(@"addorderlist_standard---%@", self.addorderlist_standard);
+    NSLog(@"addorderlist_goodDescribe---%@", self.addorderlist_goodDescribe);
+    NSLog(@"addorderlist_freightPrice---%@", self.addorderlist_freightPrice);
+    NSLog(@"addorderlist_collectionPrice---%@", self.addorderlist_collectionPrice);
+    NSLog(@"addorderlist_logisticsPrice---%@", self.addorderlist_logisticsPrice);
+    NSLog(@"addorderlist_pickupContact---%@", self.addorderlist_pickupContact);
+    NSLog(@"addorderlist_pickupAddress---%@", self.addorderlist_pickupAddress);
+    NSLog(@"addorderlist_pickupPhone---%@", self.addorderlist_pickupPhone);
+    NSLog(@"addorderlist_remark---%@", self.addorderlist_remark);
+    NSLog(@"addorderlist_image---%@", self.addorderlist_image);
+    NSLog(@"addorderlist_status---%@", self.addorderlist_status);
+    NSLog(@"addorderlist_startpoint---%@", self.addorderlist_startpoint);
+    NSLog(@"addorderlist_endpoint---%@", self.addorderlist_endpoint);
+    NSLog(@"addorderlist_goodtype---%@", self.addorderlist_goodtype);
+
+    NSString *methodName = @"addorderlist";
+    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
+    NSString *uid = self.addgoodslistAndAddorderlist_uid;
+    NSString *code = self.addgoodslistAndAddorderlist_code;
+    NSString *consigneeName = self.addorderlist_consigneeName;
+    NSString *consigneePhone = self.addorderlist_consigneePhone;
+    NSString *logisticsName = self.smailNameTextField.text;
+    NSString *city = self.addorderlist_city;
+    NSString *goodsName = self.addorderlist_goodsName;
+    NSString *num = self.addorderlist_num;
+    NSString *standard = self.addorderlist_standard;
+    NSString *goodDescribe = self.addorderlist_goodDescribe;
+    NSString *freightPrice = self.addorderlist_freightPrice;
+    NSString *collectionPrice = self.addorderlist_collectionPrice;
+    NSString *logisticsPrice = self.addorderlist_logisticsPrice;
+    NSString *pickupContact = self.addorderlist_pickupContact;
+    NSString *pickupAddress = self.addorderlist_pickupAddress;
+    NSString *pickupPhone = self.addorderlist_pickupPhone;
+    NSString *remark = self.addorderlist_remark;
+    NSString *image = self.addorderlist_image;
+    NSString *status = self.addorderlist_status;
+    NSString *startpoint = self.addorderlist_startpoint;
+    NSString *endpoint = self.addorderlist_endpoint;
+    NSString *goodtype = self.addorderlist_goodtype;
+    
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"B-%@", URL);
     //    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
     //        NSError *error = nil;
     //        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -276,7 +317,7 @@
 
 - (NSString *)newStr:(NSString *)str {
     if (str.length <= 0) {
-        return @" ";
+        return @"";
     } else {
         return str;
     }
