@@ -39,9 +39,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *bigHighTextField; // 大件货物高度文本框
 @property (strong, nonatomic) IBOutlet UITextField *bigHeavyTextField; // 大件货物重量文本框
 @property (strong, nonatomic) IBOutlet UISwitch *bigReceiptSwitch; // 大件货物是否回执
-@property (strong, nonatomic) IBOutlet UITextField *bigProtectionMoneyTextField; // 大件货物保护费文本框
+@property (strong, nonatomic) IBOutlet UITextField *bigProtectionMoneyTextField; // 大件货物保价费文本框
 @property (strong, nonatomic) IBOutlet UITextField *bigDeliveryChargesTextField; // 大件货物送货费文本框
-@property (strong, nonatomic) IBOutlet UITextField *bigCollectionChargesTextField; // 大件货物代收费文本框
+@property (strong, nonatomic) IBOutlet UITextField *bigCollectionChargesTextField; // 大件货物代收款文本框
 //小件货物
 @property (strong, nonatomic) IBOutlet UIView *smailCargoView;
 @property (weak, nonatomic) IBOutlet UITextField *smailNameTextField; // 小件货物名称
@@ -50,7 +50,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *smailReceiptSwitch;
 @property (weak, nonatomic) IBOutlet UITextField *smailValuationFeeTextField; // 小件货物保价费
 @property (weak, nonatomic) IBOutlet UITextField *smailDeliveryChargesTextField; // 小件货物送货费
-@property (weak, nonatomic) IBOutlet UITextField *smailCollectionChargesTextField; // 小件货物代收费
+@property (weak, nonatomic) IBOutlet UITextField *smailCollectionChargesTextField; // 小件货物代收款
+
 
 // 右边上面的按钮
 @property (strong, nonatomic) UIBarButtonItem *rightBarButtonItem;

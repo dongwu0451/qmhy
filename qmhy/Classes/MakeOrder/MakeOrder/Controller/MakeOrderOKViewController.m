@@ -51,18 +51,17 @@
 @property (nonatomic, copy) NSString *addorderlist_consigneePhone; // 3 收货人电话
 @property (nonatomic, copy) NSString *addorderlist_city; // 5 城市
 @property (nonatomic, copy) NSString *addorderlist_goodsName; // 6 货物名称
-@property (nonatomic, copy) NSString *addorderlist_num; // 7 件数
-@property (nonatomic, copy) NSString *addorderlist_standard; // 8 规格
-@property (nonatomic, copy) NSString *addorderlist_goodDescribe; // 9 货物描述
-@property (nonatomic, copy) NSString *addorderlist_freightPrice; // 10 短途运费
+//@property (nonatomic, copy) NSString *addorderlist_standard; // 8 规格 写死的值，箱货
+//@property (nonatomic, copy) NSString *addorderlist_goodDescribe; // 9 货物描述 写死的无
+@property (nonatomic, copy) NSString *addorderlist_freightPrice; // 10 短途运费 对，所有货物的送货费的总和
 @property (nonatomic, copy) NSString *addorderlist_collectionPrice; // 11 代收款
-@property (nonatomic, copy) NSString *addorderlist_logisticsPrice; // 12 理想物流运费价格
+//@property (nonatomic, copy) NSString *addorderlist_logisticsPrice; // 12 理想物流运费价格 传的话 传0 ，没传就算了 不知道啊 文档上写的又这个 就写死 0吧
 @property (nonatomic, copy) NSString *addorderlist_pickupContact; // 13 取货联系人
 @property (nonatomic, copy) NSString *addorderlist_pickupAddress; // 14 取货地址
 @property (nonatomic, copy) NSString *addorderlist_pickupPhone; // 15 取货联系人电话
 @property (nonatomic, copy) NSString *addorderlist_remark; // 16 备注
 @property (nonatomic, copy) NSString *addorderlist_image; // 17 图片
-@property (nonatomic, copy) NSString *addorderlist_status; // 18 状态口 10-－－90
+//@property (nonatomic, copy) NSString *addorderlist_status; // 18 状态口 10-－－90
 @property (nonatomic, copy) NSString *addorderlist_startpoint; // 19 起始点经纬度
 @property (nonatomic, copy) NSString *addorderlist_endpoint; // 20 结束点经纬度
 @property (nonatomic, copy) NSString *addorderlist_goodtype; // 21
@@ -75,7 +74,9 @@
     QConfig *config = [[QConfig alloc] init];
     _addgoodslistAndAddorderlist_uid = config.uid;
     _addorderlist_goodsName = @"";
-    
+    _addorderlist_freightPrice = @"0.00";
+    _addorderlist_collectionPrice = @"0.00";
+    _addgoodslist_name = @"";
     NSLog(@"总件数:=======================================");
     NSLog(@"zongjianshu---%@", self.zongjianshu);
     
@@ -143,18 +144,52 @@
         NSLog(@"=======================================");
         
         // addorderlist 货物名 addorderlist_goodsName 6
-       
         if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]){
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.bigCategory];
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@"货物"];
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.bigNumber];
-        }
-        else{
+        } else {
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString: [self newStr:bigAndSmallGoodsModel.smailGoodsName]];
+            if (self.goods.count > 1) {
+                _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.smailNumber];
+            }
+            
         }
         if (i < self.goods.count - 1) {
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@","];
         }
+        
+        //  addorderlist 短途运费 addorderlist_freightPrice 10 ps:送货费总和
+        if (bigAndSmallGoodsModel.bigDeliveryCharges.length == 0) {
+            bigAndSmallGoodsModel.bigDeliveryCharges = @"0";
+        }
+        if (bigAndSmallGoodsModel.smailDeliveryCharges.length == 0) {
+            bigAndSmallGoodsModel.smailDeliveryCharges = @"0";
+        }
+        _addorderlist_freightPrice =  [NSString stringWithFormat:@"%f", [_addorderlist_freightPrice floatValue] + [bigAndSmallGoodsModel.bigDeliveryCharges floatValue] + [bigAndSmallGoodsModel.smailDeliveryCharges floatValue]];
+        
+        
+        //  addorderlist 短途运费 addorderlist_collectionPrice 11
+        if (bigAndSmallGoodsModel.bigCollectionCharges.length == 0) {
+            bigAndSmallGoodsModel.bigCollectionCharges = @"0";
+        }
+        if (bigAndSmallGoodsModel.smailCollectionCharges.length == 0) {
+            bigAndSmallGoodsModel.smailCollectionCharges = @"0";
+        }
+        _addorderlist_collectionPrice =  [NSString stringWithFormat:@"%f", [_addorderlist_collectionPrice floatValue] + [bigAndSmallGoodsModel.bigCollectionCharges floatValue] + [bigAndSmallGoodsModel.smailCollectionCharges floatValue]];
+        
+        
+        //        // addgoodslist addgoodslist_name 2
+        //        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+        //            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:@"大件货物"];
+        //        } else {
+        //            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailGoodsName]];
+        //        }
+        //        if (i < self.goods.count - 1) {
+        //            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:@"-"];
+        //        }
+        
+        
     }
     
     // addorderlist 收货人姓名 addorderlist_consigneeName 2
@@ -162,13 +197,32 @@
     
     // addorderlist 收货人电话 addorderlist_consigneePhone 3
     _addorderlist_consigneePhone = [self newStr:self.shouhuoren.tel];
-
+    
     // addorderlist 城市 addorderlist_city 5
-//    [self newStr:self.shouhuoren.Province];
-//    [self newStr:self.shouhuoren.city];
-//    [self newStr:self.shouhuoren.area];
-//    [self newStr:self.shouhuoren.Address];
-     _addorderlist_city = [NSString stringWithFormat:@"%@-%@-%@-%@", [self newStr:self.shouhuoren.Province], [self newStr:self.shouhuoren.city], [self newStr:self.shouhuoren.area], [self newStr:self.shouhuoren.Address]];
+    //    [self newStr:self.shouhuoren.Province];
+    //    [self newStr:self.shouhuoren.city];
+    //    [self newStr:self.shouhuoren.area];
+    //    [self newStr:self.shouhuoren.Address];
+    _addorderlist_city = [NSString stringWithFormat:@"%@-%@-%@-%@", [self newStr:self.shouhuoren.Province], [self newStr:self.shouhuoren.city], [self newStr:self.shouhuoren.area], [self newStr:self.shouhuoren.Address]];
+    
+    // addorderlist 取货联系人 _addorderlist_pickupContact 13  取货联系人是发货人
+    _addorderlist_pickupContact = [self newStr:self.jsonModelConfigFahuo.contact];
+    
+    // addorderlist addorderlist_pickupAddress 14 取货地址
+    _addorderlist_pickupAddress = [NSString stringWithFormat:@"%@-%@-%@-%@", [self newStr:self.jsonModelConfigFahuo.Province], [self newStr:self.jsonModelConfigFahuo.city], [self newStr:self.jsonModelConfigFahuo.area], [self newStr:self.jsonModelConfigFahuo.Address]];
+    // addorderlist addorderlist_pickupPhone 15 取货联系人电话
+    _addorderlist_pickupPhone = [self newStr:self.jsonModelConfigFahuo.tel];
+    
+    
+    // addorderlist addorderlist_remark 16 备注
+    _addorderlist_remark = [self newStr:self.beizhu];
+    
+    // addorderlist addorderlist_startpoint 19 startpoint 都说了是 起点 当然是发货人啊，endpoint是收货人
+    _addorderlist_startpoint = [self newStr:self.jsonModelConfigFahuo.addressCode];
+    // addorderlist addorderlist_endpoint 20
+    _addorderlist_endpoint = [self newStr:self.shouhuoren.addressCode];
+    
+    _addorderlist_goodtype = [self newStr:  self.goodstype];
     
     NSLog(@"即时到账:=======================================");
     NSLog(@"goodstype---%@", self.goodstype);
@@ -178,10 +232,65 @@
     NSLog(@"beizhu---%@", self.beizhu);
     
     [self addgoodslist];
+    
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self loadNewData];
+    // 每次显示移除之前添加的标签
+    static int i = 0;
+    for (id smailEveCargoScrollView in self.view.subviews) {
+        if ([smailEveCargoScrollView isMemberOfClass:[TLTagsControl class]]) {
+            i++;
+            NSLog(@"sum:%d----%@", i, smailEveCargoScrollView);
+            [smailEveCargoScrollView removeFromSuperview];
+        }
+    }
+}
+
+- (void)loadNewData {
+    NSString *methodName = @"getlogistics";
+    NSString *params = @"&proName=%d";
+    QConfig *config = [[QConfig alloc] init];
+    int uid = [config.uid intValue];
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *array = [dic objectForKey:@"rs"];
+        _allTags = [JSONModelMakeOrderOK objectArrayWithKeyValuesArray:array];
+        // 2. 设置并添加标签(多次运行会多次添加)
+        [self setupSmall];//初始化标签
+    } fail:^{
+        
+    }];
+}
+
+// 初始化标签
+- (void)setupSmall {
+    CGRect frame = CGRectMake(8, 130, 300, 40);
+    //    NSLog(@"bb:%@", [_allTags[0] valueForKeyPath:@"uid"]);
+    _smailEveCargoScrollView = [[TLTagsControl alloc] initWithFrame:frame andTags:[self.allTags valueForKeyPath:@"name"] withTagsControlMode:TLTagsControlModeList];
+    UIColor *redBackgroundColor = [UIColor colorWithRed:233.0/255.0 green:70.0/255.0 blue:78.0/255.0 alpha:1];
+    UIColor *whiteTextColor = [UIColor whiteColor];
+    _smailEveCargoScrollView.tagsBackgroundColor = redBackgroundColor;
+    _smailEveCargoScrollView.tagsTextColor = whiteTextColor;
+    [_smailEveCargoScrollView reloadTagSubviews];
+    _smailEveCargoScrollView.tapDelegate = self;
+    [self.view addSubview:_smailEveCargoScrollView];
+    _smailEveCargoScrollView.showsHorizontalScrollIndicator = NO;
+}
+
+- (void)tagsControl:(TLTagsControl *)tagsControl tappedAtIndex:(NSInteger)index {
+    self.smailNameTextField.text = tagsControl.tags[index];
+    NSLog(@"Tag \"%@\" was tapped", tagsControl.tags[index]);
 }
 
 - (void)addgoodslist {
+    
+    // 模拟
     [self hehehecode];
     NSLog(@"A-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
     NSLog(@"A-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
@@ -232,6 +341,10 @@
 }
 
 - (void)addorderlist {
+    // 模拟
+    
+    NSString *addorderlist_freightPrice = [NSString stringWithFormat:@"%.2f", [_addorderlist_freightPrice floatValue]];
+    NSString *addorderlist_collectionPrice = [NSString stringWithFormat:@"%.2f", [_addorderlist_collectionPrice floatValue]];
     NSLog(@"B-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
     NSLog(@"B-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
     NSLog(@"addorderlist_consigneeName---%@", self.addorderlist_consigneeName);
@@ -239,22 +352,22 @@
     NSLog(@"smailNameTextField.text---%@", self.smailNameTextField.text);
     NSLog(@"addorderlist_city---%@", self.addorderlist_city);
     NSLog(@"addorderlist_goodsName---%@", self.addorderlist_goodsName);
-    NSLog(@"addorderlist_num---%@", self.addorderlist_num);
-    NSLog(@"addorderlist_standard---%@", self.addorderlist_standard);
-    NSLog(@"addorderlist_goodDescribe---%@", self.addorderlist_goodDescribe);
+    NSLog(@"addorderlist_num---%@", self.zongjianshu);
+    NSLog(@"addorderlist_standard---%@", @"箱货");
+    NSLog(@"addorderlist_goodDescribe---%@", @"无");
     NSLog(@"addorderlist_freightPrice---%@", self.addorderlist_freightPrice);
     NSLog(@"addorderlist_collectionPrice---%@", self.addorderlist_collectionPrice);
-    NSLog(@"addorderlist_logisticsPrice---%@", self.addorderlist_logisticsPrice);
+    NSLog(@"addorderlist_logisticsPrice---%@", @"0");
     NSLog(@"addorderlist_pickupContact---%@", self.addorderlist_pickupContact);
     NSLog(@"addorderlist_pickupAddress---%@", self.addorderlist_pickupAddress);
     NSLog(@"addorderlist_pickupPhone---%@", self.addorderlist_pickupPhone);
     NSLog(@"addorderlist_remark---%@", self.addorderlist_remark);
     NSLog(@"addorderlist_image---%@", self.addorderlist_image);
-    NSLog(@"addorderlist_status---%@", self.addorderlist_status);
+    NSLog(@"addorderlist_status---%@", @"10");
     NSLog(@"addorderlist_startpoint---%@", self.addorderlist_startpoint);
     NSLog(@"addorderlist_endpoint---%@", self.addorderlist_endpoint);
     NSLog(@"addorderlist_goodtype---%@", self.addorderlist_goodtype);
-
+    
     NSString *methodName = @"addorderlist";
     NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
     NSString *uid = self.addgoodslistAndAddorderlist_uid;
@@ -264,18 +377,18 @@
     NSString *logisticsName = self.smailNameTextField.text;
     NSString *city = self.addorderlist_city;
     NSString *goodsName = self.addorderlist_goodsName;
-    NSString *num = self.addorderlist_num;
-    NSString *standard = self.addorderlist_standard;
-    NSString *goodDescribe = self.addorderlist_goodDescribe;
-    NSString *freightPrice = self.addorderlist_freightPrice;
-    NSString *collectionPrice = self.addorderlist_collectionPrice;
-    NSString *logisticsPrice = self.addorderlist_logisticsPrice;
+    NSString *num = self.zongjianshu;
+    NSString *standard = @"箱货";
+    NSString *goodDescribe = @"无";
+    NSString *freightPrice = addorderlist_freightPrice;
+    NSString *collectionPrice = addorderlist_collectionPrice;
+    NSString *logisticsPrice = @"0";
     NSString *pickupContact = self.addorderlist_pickupContact;
     NSString *pickupAddress = self.addorderlist_pickupAddress;
     NSString *pickupPhone = self.addorderlist_pickupPhone;
     NSString *remark = self.addorderlist_remark;
     NSString *image = self.addorderlist_image;
-    NSString *status = self.addorderlist_status;
+    NSString *status = @"10";
     NSString *startpoint = self.addorderlist_startpoint;
     NSString *endpoint = self.addorderlist_endpoint;
     NSString *goodtype = self.addorderlist_goodtype;
@@ -288,11 +401,13 @@
     //        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
     //        NSArray *array = [dic objectForKey:@"rs"];
     //#warning 呵呵
-    //        
+    //
     //    } fail:^{
-    //        
+    //
     //    }];
 }
+
+
 - (void)hehehecode {
     // uid = uid
     // code = 月 时 分 日 秒
@@ -309,7 +424,7 @@
     int x = (arc4random() % 80 ) + 11;
     NSString *str = [NSString stringWithFormat:@"%d", x];
     NSString *asdasd = [NSString stringWithFormat:@"%@%@%@", asd, locationString, str];
-//    NSLog(@"%@", asdasd);
+    //    NSLog(@"%@", asdasd);
     self.addgoodslistAndAddorderlist_code = asdasd;
 }
 
@@ -323,59 +438,6 @@
     }
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [self loadNewData];
-    // 每次显示移除之前添加的标签
-    static int i = 0;
-    for (id smailEveCargoScrollView in self.view.subviews) {
-        if ([smailEveCargoScrollView isMemberOfClass:[TLTagsControl class]]) {
-            i++;
-            NSLog(@"sum:%d----%@", i, smailEveCargoScrollView);
-            [smailEveCargoScrollView removeFromSuperview];
-        }
-    }
-}
-
-// 初始化标签
-- (void)setupSmall {
-    CGRect frame = CGRectMake(8, 130, 300, 40);
-//    NSLog(@"bb:%@", [_allTags[0] valueForKeyPath:@"uid"]);
-    _smailEveCargoScrollView = [[TLTagsControl alloc] initWithFrame:frame andTags:[self.allTags valueForKeyPath:@"name"] withTagsControlMode:TLTagsControlModeList];
-    UIColor *redBackgroundColor = [UIColor colorWithRed:233.0/255.0 green:70.0/255.0 blue:78.0/255.0 alpha:1];
-    UIColor *whiteTextColor = [UIColor whiteColor];
-    _smailEveCargoScrollView.tagsBackgroundColor = redBackgroundColor;
-    _smailEveCargoScrollView.tagsTextColor = whiteTextColor;
-    [_smailEveCargoScrollView reloadTagSubviews];
-    _smailEveCargoScrollView.tapDelegate = self;
-    [self.view addSubview:_smailEveCargoScrollView];
-    _smailEveCargoScrollView.showsHorizontalScrollIndicator = NO;
-}
-
-- (void)tagsControl:(TLTagsControl *)tagsControl tappedAtIndex:(NSInteger)index {
-    self.smailNameTextField.text = tagsControl.tags[index];
-    NSLog(@"Tag \"%@\" was tapped", tagsControl.tags[index]);
-}
-
-- (void)loadNewData {
-    NSString *methodName = @"getlogistics";
-    NSString *params = @"&proName=%d";
-    QConfig *config = [[QConfig alloc] init];
-    int uid = [config.uid intValue];
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-        NSError *error = nil;
-        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-        NSArray *array = [dic objectForKey:@"rs"];
-        _allTags = [JSONModelMakeOrderOK objectArrayWithKeyValuesArray:array];
-        // 2. 设置并添加标签(多次运行会多次添加)
-        [self setupSmall];//初始化标签
-    } fail:^{
-        
-    }];
-}
 
 - (IBAction)shangchuanzhaopianBtnClick:(UIButton *)sender {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择图片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"相册", nil];
@@ -420,17 +482,72 @@
     // 获得图片
     UIImage *image = info[UIImagePickerControllerEditedImage];
     [self.shanchuzhaopian setImage:image forState:UIControlStateNormal];
+    self.shanchuzhaopian.imageView.image = image;
     // 隐藏模态窗口
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)tijiaodingdanBtnClick:(UIButton *)sender {
-    NSLog(@"12341");
+
+// 上传图片方法
+- (void)upLoadImage {
+    if (self.shanchuzhaopian.imageView.image == nil) {
+        return;
+    }
+    [MBProgressHUD showMessage:@"正在更换头像..." toView:self.view];
+    // 1.创建一个管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    // 1.1.设置请求格式
+    mgr.requestSerializer = [AFJSONRequestSerializer serializer];
+    // 1.2.设置返回格式
+    mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
+    // 2.请求地址
+    NSString *url = @"";
+    [mgr POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSData *fileData = UIImageJPEGRepresentation(self.shanchuzhaopian.imageView.image, 1.0);
+        //        NSData *fileData = UIImagePNGRepresentation(self.headImageView.image);
+        // FileURL:需要上传的文件的具体数据 name:服务器那边接收文件用的参数名 fileName:(告诉服务器所上传的文件名) mimeType:所上传的文件类型
+        [formData appendPartWithFileData:fileData name:@"myfile" fileName:[self qmhySetImageName] mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSString *result = [dic[@"result"] stringValue];
+        if ([result isEqualToString:@"1"]) {
+            NSLog(@"上传成功");
+        } else {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"更换头像失败" toView:self.view];
+            NSLog(@"failure上传失败");
+        }
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"更换头像失败" toView:self.view];
+        NSLog(@"failure上传失败");
+    }];
+}
+
+// 设置图片名
+- (NSString *)qmhySetImageName {
+    //    XXCConfig *config = [[XXCConfig alloc] init];
+    //    NSString *uid = config.uid;
+    //    NSDate *senddate=[NSDate date];
+    //    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    //    [dateformatter setDateFormat:@"YYYYMMdd_HHmmss"];
+    //    NSString *locationString=[dateformatter stringFromDate:senddate];
+    //    NSString *str1 = @"USER%@%@%@%@";
+    //    NSString *str2 = @"_JPEG_";
+    //    NSString *str3 = @"_.jpg";
+    //    NSString *imageName = [NSString stringWithFormat:str1, uid, str2, locationString, str3];
+    //    _headImageName = imageName;
+    //    //    NSLog(@"locationString:%@",imageName);
+    //    return imageName;
+    return @"";
 }
 
 
-
-
+- (IBAction)tijiaodingdanBtnClick:(UIButton *)sender {
+    NSLog(@"12341");
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];

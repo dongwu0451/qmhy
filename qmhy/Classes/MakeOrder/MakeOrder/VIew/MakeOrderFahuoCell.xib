@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,7 +16,6 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发货人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ0-Ob-YOB">
                         <rect key="frame" x="46" y="2" width="266" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="K4G-1B-2mB"/>
                             <constraint firstAttribute="width" constant="266" id="uTi-xE-hXu"/>
@@ -27,7 +26,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOO-KI-6CJ">
                         <rect key="frame" x="46" y="27" width="266" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="266" id="M55-sv-29D"/>
                             <constraint firstAttribute="height" constant="20" id="j6b-M9-ZBO"/>
@@ -38,7 +36,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml8-gZ-hS2">
                         <rect key="frame" x="46" y="52" width="266" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="wCy-uM-uhG"/>
                             <constraint firstAttribute="width" constant="266" id="y8F-fH-F27"/>
@@ -49,14 +46,12 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_order_pickup" translatesAutoresizingMaskIntoConstraints="NO" id="RcQ-er-v94">
                         <rect key="frame" x="8" y="13" width="30" height="44"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="6A8-rj-NIj"/>
                             <constraint firstAttribute="width" constant="30" id="l5c-CH-adE"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="BOO-KI-6CJ" firstAttribute="top" secondItem="yJ0-Ob-YOB" secondAttribute="bottom" constant="5" id="2hv-QL-DxJ"/>
                     <constraint firstItem="Ml8-gZ-hS2" firstAttribute="top" secondItem="BOO-KI-6CJ" secondAttribute="bottom" constant="5" id="8Pw-u2-9dX"/>
@@ -72,7 +67,6 @@
                     <constraint firstItem="BOO-KI-6CJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="46" id="rDW-DM-nHB"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="fahuorenLabel" destination="yJ0-Ob-YOB" id="xYK-yM-9NG"/>
                 <outlet property="fhrdianhuaLabel" destination="BOO-KI-6CJ" id="oyX-b7-Ugx"/>

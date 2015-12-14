@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -19,7 +19,6 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总件数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H70-Q5-h2c">
                                 <rect key="frame" x="50" y="8" width="51" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="bDQ-wB-H6U"/>
                                     <constraint firstAttribute="height" constant="21" id="v0p-3a-eap"/>
@@ -30,7 +29,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-bD-qfS">
                                 <rect key="frame" x="8" y="37" width="134" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="kvr-V5-dYT"/>
                                     <constraint firstAttribute="height" constant="21" id="piv-lN-J1p"/>
@@ -40,7 +38,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <constraints>
                             <constraint firstItem="EWf-bD-qfS" firstAttribute="top" secondItem="H70-Q5-h2c" secondAttribute="bottom" constant="8" id="307-4E-yTp"/>
                             <constraint firstItem="H70-Q5-h2c" firstAttribute="top" secondItem="C2l-zd-dRF" secondAttribute="top" constant="8" id="6wb-lz-xJ5"/>
@@ -57,7 +54,6 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="代收款" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d68-m7-L2q">
                                 <rect key="frame" x="50" y="8" width="51" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="Qac-6r-SKg"/>
                                     <constraint firstAttribute="height" constant="21" id="zfH-tE-afG"/>
@@ -68,7 +64,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-JI-yYg">
                                 <rect key="frame" x="8" y="37" width="134" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="R2D-dg-Neu"/>
                                     <constraint firstAttribute="height" constant="21" id="awl-HV-OIr"/>
@@ -78,7 +73,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <constraints>
                             <constraint firstItem="d68-m7-L2q" firstAttribute="top" secondItem="wJR-Cs-O0Y" secondAttribute="top" constant="8" id="LVg-S1-zgZ"/>
                             <constraint firstAttribute="height" constant="80" id="T4c-OL-1JK"/>
@@ -92,7 +86,6 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABO-5J-F5t" userLabel="分割线">
                         <rect key="frame" x="161" y="0.0" width="1" height="70"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="C0u-Ee-gxO"/>
@@ -100,7 +93,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="ABO-5J-F5t" firstAttribute="leading" secondItem="C2l-zd-dRF" secondAttribute="trailing" constant="11" id="CKi-wI-x9i"/>
                     <constraint firstAttribute="trailing" secondItem="wJR-Cs-O0Y" secondAttribute="trailing" id="CdU-6z-J5n"/>
@@ -111,7 +103,6 @@
                     <constraint firstItem="ABO-5J-F5t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xNx-fP-Byf"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="lbl_allcount" destination="EWf-bD-qfS" id="cZh-hh-3oj"/>
                 <outlet property="lbl_daishoukuan" destination="m6z-JI-yYg" id="0Ns-xW-wGJ"/>

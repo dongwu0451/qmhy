@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,7 +16,6 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOn-cU-1tR">
                         <rect key="frame" x="8" y="12" width="34" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="6CF-UB-GEN"/>
                             <constraint firstAttribute="width" constant="34" id="d1W-6K-qik"/>
@@ -27,7 +26,6 @@
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="选填,可填写您的特殊要求" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P5h-aL-uDd">
                         <rect key="frame" x="50" y="7" width="262" height="30"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="3gU-PE-4Oz"/>
                             <constraint firstAttribute="width" constant="262" id="rWc-CZ-mpD"/>
@@ -36,7 +34,6 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="P5h-aL-uDd" secondAttribute="trailing" constant="8" id="7No-Wd-e7L"/>
                     <constraint firstItem="P5h-aL-uDd" firstAttribute="leading" secondItem="MOn-cU-1tR" secondAttribute="trailing" constant="8" id="Atx-Ya-UHT"/>
@@ -45,7 +42,6 @@
                     <constraint firstItem="P5h-aL-uDd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="w5G-zn-LyA"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="beizhuTextField" destination="P5h-aL-uDd" id="bs9-s5-kaG"/>
             </connections>

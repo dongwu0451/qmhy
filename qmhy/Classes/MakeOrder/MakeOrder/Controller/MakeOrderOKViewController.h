@@ -12,7 +12,7 @@
 
 @interface MakeOrderOKViewController : UIViewController
 @property (nonatomic, copy) NSString *beizhu;
-@property (copy, nonatomic) NSString *zongjianshu;
+@property (copy, nonatomic) NSString *zongjianshu; // 7 件数
 @property (copy, nonatomic) NSString *daishoukuan;
 @property (copy, nonatomic) NSString *goodstype;
 @property (nonatomic, strong) JSONModelConfigCShouhuo *shouhuoren;
