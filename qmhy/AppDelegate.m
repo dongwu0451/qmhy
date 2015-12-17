@@ -199,7 +199,7 @@
     [APService setupWithOption:launchOptions];
     
     [APService setTags:nil alias:config.mem_id callbackSelector:@selector(asdasdd) object:nil];
-//    [a]
+
     return YES;
 }
 
