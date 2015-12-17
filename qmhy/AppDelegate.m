@@ -9,40 +9,131 @@
 
 #import "AppDelegate.h"
 #import "XMLDictionary.h"
+#import "APService.h"
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+////腾讯开放平台（对应QQ和QQ空间）SDK头文件
+//#import <TencentOpenAPI/TencentOAuth.h>
+//#import <TencentOpenAPI/QQApiInterface.h>
+
+
+//微信SDK头文件
+#import "WXApi.h"
+
+//新浪微博SDK头文件
+//#import "WeiboSDK.h"
+//新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
+
+//人人SDK头文件
+//#import <RennSDK/RennSDK.h>
+
+//GooglePlus SDK头文件
+//#import <GooglePlus/GooglePlus.h>
+//GooglePlus SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
+
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    QConfig *c = [[QConfig alloc] init];
-//    NSString *asd = c.uid;
-//    NSDate *senddate = [NSDate date];
-//    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
-//    [dateformatter setDateFormat: @"MMHHmmddss"];
-//    NSString *locationString = [dateformatter stringFromDate:senddate];
-//    NSLog(@"locationString:%@",locationString);
-//    //1、获取一个随机整数范围在：[0,100)包括0，不包括100
-//    // int x = arc4random() % 100;
-//    int x = (arc4random() % 80 ) + 11;
-//    NSString *str = [NSString stringWithFormat:@"%d", x];
-//    NSString *asdasd = [NSString stringWithFormat:@"%@%@%@", asd, locationString, str];
-//    NSLog(@"%@", asdasd);
     
-    
-    
-//    int x = (arc4random() % 80 ) + 11;
-//    NSString *str = [NSString stringWithFormat:@"%d", x];
-//    NSLog(@"%@", str);
-    
-//    NSLog(@"%f", 1.23);
-    //service更多  wealth我的  home主页  discovery订单
+    /**
+     *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
+     *  在将生成的AppKey传入到此方法中。
+     *  方法中的第二个第三个参数为需要连接社交平台SDK时触发，
+     *  在此事件中写入连接代码。第四个参数则为配置本地社交平台时触发，根据返回的平台类型来配置平台信息。
+     *  如果您使用的时服务端托管平台信息时，第二、四项参数可以传入nil，第三项参数则根据服务端托管平台来决定要连接的社交SDK。
+     */
+    [ShareSDK registerApp:@"iosv1101"
+     
+          activePlatforms:@[
+                            //                            @(SSDKPlatformTypeSinaWeibo),
+                            @(SSDKPlatformTypeMail),
+                            @(SSDKPlatformTypeSMS),
+                            //                            @(SSDKPlatformTypeCopy),
+                            @(SSDKPlatformTypeWechat),
+                            @(SSDKPlatformTypeQQ),
+                            //                            @(SSDKPlatformTypeRenren),
+                            //                            @(SSDKPlatformTypeGooglePlus)]
+                            ]
+                 onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                 break;
+                 //             case SSDKPlatformTypeSinaWeibo:
+                 //                 [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                 //                 break;
+                 //             case SSDKPlatformTypeRenren:
+                 //                 [ShareSDKConnector connectRenren:[RennClient class]];
+                 //                 break;
+                 //             case SSDKPlatformTypeGooglePlus:
+                 //                 [ShareSDKConnector connectGooglePlus:[GPPSignIn class]
+                 //                                           shareClass:[GPPShare class]];
+                 //                 break;
+             default:
+                 break;
+         }
+     }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         
+         switch (platformType)
+         {
+                 //             case SSDKPlatformTypeSinaWeibo:
+                 //                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                 //                 [appInfo SSDKSetupSinaWeiboByAppKey:@"568898243"
+                 //                                           appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+                 //                                         redirectUri:@"http://www.sharesdk.cn"
+                 //                                            authType:SSDKAuthTypeBoth];
+                 //                 break;
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:@"wx45b931c1ba45fde2"
+                                       appSecret:@"78a596bfc1c91f16eec2eb9619a946c5"];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [appInfo SSDKSetupQQByAppId:@"1104764562"
+                                      appKey:@"LOB9jxnrg8iIJZSD"
+                                    authType:SSDKAuthTypeBoth];
+                 break;
+                 //             case SSDKPlatformTypeRenren:
+                 //                 [appInfo        SSDKSetupRenRenByAppId:@"226427"
+                 //                                                 appKey:@"fc5b8aed373c4c27a05b712acba0f8c3"
+                 //                                              secretKey:@"f29df781abdd4f49beca5a2194676ca4"
+                 //                                               authType:SSDKAuthTypeBoth];
+                 //                 break;
+                 //             case SSDKPlatformTypeGooglePlus:
+                 //                 [appInfo SSDKSetupGooglePlusByClientID:@"232554794995.apps.googleusercontent.com"
+                 //                                           clientSecret:@"PEdFgtrMw97aCvf0joQj7EMk"
+                 //                                            redirectUri:@"http://localhost"
+                 //                                               authType:SSDKAuthTypeBoth];
+                 //                 break;
+             default:
+                 break;
+         }
+     }];    //service更多  wealth我的  home主页  discovery订单
     
     //支付宝思路：共有三个可选的rootVC loginVC、gestureVC、tabbarVC
     /*先判断是否已登陆.
      Q1:nsuserdefaults是否已登录？
-        Q1true:显示gestureVC。设置完手势密码。显示tabbarVC
-        Q1false：显示loginVC。loginVC输入正确了，再显示gestureVC。再显示tabbarVC
+     Q1true:显示gestureVC。设置完手势密码。显示tabbarVC
+     Q1false：显示loginVC。loginVC输入正确了，再显示gestureVC。再显示tabbarVC
      */
     QConfig *config=[[QConfig alloc] init];
+    NSLog(@"%@", config.uid);
+    NSLog(@"%@", config.username);
+    NSLog(@"%@", config.mem_id);
     NSString *isLogined=config.isLogined;
     //读取用户信息
     //BOOL isLogined=[[NSUserDefaults standardUserDefaults] boolForKey:@"key_isLogined"];
@@ -50,11 +141,11 @@
         //NSLog(@"aaa");
         //NSLog(@"aaa%d",1);
         [self showTabbarVC];
-     }else{
+    }else{
         //WidgetsVC是一个库，可以创建很多不同的view，这里指使用
-//        [self showWidgetsLoginVC];
-         //config.isLogined=@"1";
-         [self showLoginVC];//
+        //        [self showWidgetsLoginVC];
+        //config.isLogined=@"1";
+        [self showLoginVC];//
     }
     //[self showLoginVC];
     
@@ -74,9 +165,68 @@
     [self.window addSubview:self.splashViewController.view];
     //让splashimage显示2s，让用户看一眼得了。
     [self performSelector:@selector(splashAnimate:) withObject:@0.0 afterDelay:2.0];
-    return YES; 
+    
+    
+    
+    // Required
+    #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+        if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+            //categories
+            [APService
+             registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                 UIUserNotificationTypeSound |
+                                                 UIUserNotificationTypeAlert)
+             categories:nil];
+        } else {
+            //categories nil
+            [APService
+             registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                 
+                                                 
+                                                 UIRemoteNotificationTypeSound |
+                                                 UIRemoteNotificationTypeAlert)
+#else
+             //categories nil
+             categories:nil];
+            [APService
+             registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                 UIRemoteNotificationTypeSound |
+                                                 UIRemoteNotificationTypeAlert)
+#endif
+             // Required
+             categories:nil];
+        }
+    [APService setupWithOption:launchOptions];
+    
+    [APService setTags:nil alias:config.mem_id callbackSelector:@selector(asdasdd) object:nil];
+//    [a]
+    return YES;
 }
 
+- (void)asdasdd {
+    NSLog(@"asdsadas");
+}
+
+//- (void)tagsAliasCallback:(int)iResCode
+//                    tags:(NSSet*)tags
+//                   alias:(NSString*)alias
+//{
+//    NSLog(@"rescode: %d, \ntags: %@, \nalias: %@\n", iResCode, tags , alias);
+//}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Required
+    [APService registerDeviceToken:deviceToken];
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // Required
+    [APService handleRemoteNotification:userInfo];
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // IOS 7 Support Required
+    [APService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
 //显示封面动画
 - (void) splashAnimate:(NSNumber *)alpha {
     //只能用UIViewAnimationOptionCurveEaseInOut和ViewAnimationOptionTransitionNone两种效果
@@ -97,7 +247,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -125,14 +275,14 @@
 - (void)showTabbarVC {
     UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     RootTabBarController * tabVC=[mainsb instantiateInitialViewController];
-//    tabVC.selectedIndex=2;
+    //    tabVC.selectedIndex=2;
     self.window.rootViewController=tabVC;
 }
 //==========================================================
 //实现委托loginOK    收到登录界面的事件委托
 - (void)LoginVC:(LoginVC *)loginVC loginOK:(id)nilplaceholder {
     [self showTabbarVC];
-     //showGestureVC];
+    //showGestureVC];
 }
 
 

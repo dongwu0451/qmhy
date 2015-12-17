@@ -501,7 +501,7 @@
     // 1.2.设置返回格式
     mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
     // 2.请求地址
-    NSString *url = @"";
+    NSString *url = @"http://139.129.26.164:8080/adminapp/WebAppController/uploadfile.html";
     [mgr POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSData *fileData = UIImageJPEGRepresentation(self.shanchuzhaopian.imageView.image, 1.0);
         //        NSData *fileData = UIImagePNGRepresentation(self.headImageView.image);
@@ -528,20 +528,18 @@
 
 // 设置图片名
 - (NSString *)qmhySetImageName {
-    //    XXCConfig *config = [[XXCConfig alloc] init];
-    //    NSString *uid = config.uid;
-    //    NSDate *senddate=[NSDate date];
-    //    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
-    //    [dateformatter setDateFormat:@"YYYYMMdd_HHmmss"];
-    //    NSString *locationString=[dateformatter stringFromDate:senddate];
-    //    NSString *str1 = @"USER%@%@%@%@";
-    //    NSString *str2 = @"_JPEG_";
-    //    NSString *str3 = @"_.jpg";
-    //    NSString *imageName = [NSString stringWithFormat:str1, uid, str2, locationString, str3];
-    //    _headImageName = imageName;
-    //    //    NSLog(@"locationString:%@",imageName);
-    //    return imageName;
-    return @"";
+    QConfig *config1 = [[QConfig alloc] init];
+    NSString *uid = config1.uid;
+    NSDate *senddate=[NSDate date];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"YYYYMMddHHmmss"];
+    NSString *locationString=[dateformatter stringFromDate:senddate];
+    NSString *str1 = @"%@%@%@%@";
+    NSString *str2 = @"JPEG";
+    NSString *str3 = @".jpg";
+    NSString *imageName = [NSString stringWithFormat:str1, uid, str2, locationString, str3];
+    NSLog(@"locationString:%@",imageName);
+    return imageName;
 }
 
 

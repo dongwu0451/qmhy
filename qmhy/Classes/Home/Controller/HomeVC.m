@@ -18,7 +18,10 @@
 #import "AFNetworkTool.h"//httppost类
 #import "MJExtension.h"//JSON与模型转换类
 
-@interface HomeVC ()
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+
+@interface HomeVC () <UIAlertViewDelegate>
 
 //左上角图片
 @property (weak, nonatomic) IBOutlet UIButton *topleftImageButton;
@@ -59,19 +62,19 @@
     [self.view insertSubview:spliter atIndex:0];
     
     /*
-    // 设置左上角的按钮图片
-    NSString * imagePath=@"Home.bundle/ap_home_top_icon_scan_new";
-    NSString * highlightImagePath=[NSString stringWithFormat:@"%@_highlight",imagePath];
-    [self.topleftImageButton setImage:[UIImage imageNamed:imagePath]  forState:UIControlStateNormal];
-    [self.topleftImageButton setImage:[UIImage imageNamed:highlightImagePath]  forState:UIControlStateHighlighted];
-    
-    
-    // 设置右上角的按钮图片
-    imagePath=@"Home.bundle/ap_home_top_icon_pay_new";
-    highlightImagePath=[NSString stringWithFormat:@"%@_highlight",imagePath];
-    [self.toprightImageButton setImage:[UIImage imageNamed:imagePath]  forState:UIControlStateNormal];
-    [self.toprightImageButton setImage:[UIImage imageNamed:highlightImagePath]  forState:UIControlStateHighlighted];
-    */
+     // 设置左上角的按钮图片
+     NSString * imagePath=@"Home.bundle/ap_home_top_icon_scan_new";
+     NSString * highlightImagePath=[NSString stringWithFormat:@"%@_highlight",imagePath];
+     [self.topleftImageButton setImage:[UIImage imageNamed:imagePath]  forState:UIControlStateNormal];
+     [self.topleftImageButton setImage:[UIImage imageNamed:highlightImagePath]  forState:UIControlStateHighlighted];
+     
+     
+     // 设置右上角的按钮图片
+     imagePath=@"Home.bundle/ap_home_top_icon_pay_new";
+     highlightImagePath=[NSString stringWithFormat:@"%@_highlight",imagePath];
+     [self.toprightImageButton setImage:[UIImage imageNamed:imagePath]  forState:UIControlStateNormal];
+     [self.toprightImageButton setImage:[UIImage imageNamed:highlightImagePath]  forState:UIControlStateHighlighted];
+     */
     
     //加载plist文件 将该文件内容key value分别送给titles  iconPaths
     NSString * s=[[NSBundle mainBundle] pathForResource:@"HomeIcons.bundle/HomeIcons" ofType:@"plist"];
@@ -91,20 +94,20 @@
 
 - (void)logSubviews:(NSArray *)subviews tabnum:(int)tabnum {
     /*UIView * i;
-    //设置tabstring
-    NSMutableString * tabstring=[NSMutableString stringWithString:@""];
-    for(int j=1;j<=tabnum;j++){
-        [tabstring appendFormat:@"+"];
-    }
-    //递归遍历
-    for (i in subviews) {
-        if (i.subviews.count>0) {//还有subviews
-            NSLog(@"%@Have %d subvies.%@ ",tabstring,i.subviews.count,i);
-            [self logSubviews:i.subviews tabnum:(tabnum+1)];
-        }else{//当前是终端view
-            NSLog(@"%@ %@",tabstring,i);
-        }
-    }*/
+     //设置tabstring
+     NSMutableString * tabstring=[NSMutableString stringWithString:@""];
+     for(int j=1;j<=tabnum;j++){
+     [tabstring appendFormat:@"+"];
+     }
+     //递归遍历
+     for (i in subviews) {
+     if (i.subviews.count>0) {//还有subviews
+     NSLog(@"%@Have %d subvies.%@ ",tabstring,i.subviews.count,i);
+     [self logSubviews:i.subviews tabnum:(tabnum+1)];
+     }else{//当前是终端view
+     NSLog(@"%@ %@",tabstring,i);
+     }
+     }*/
 }
 
 //行数量
@@ -167,12 +170,12 @@
     UIImage * img= [UIImage imageNamed:s];
     UIImage * scaledimg=[UIImage imageWithCGImage:img.CGImage scale:img.scale*2.0 orientation:img.imageOrientation];
     return  scaledimg;
-
+    
 }
 
 //实现自定义菜单的委托（标题部分）
 -(NSString *)setIconTitle{
-
+    
     static int i = 0;
 #warning i＝ 12 是硬编码 因为现在就12个图 个人感觉有问题。
     if (i == 12) {
@@ -187,6 +190,51 @@
 //实现自定义菜单的委托（点击主界面的菜单按钮）
 -(void)onClicked:(NSString*)str{
     UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    //
+    if ([str isEqualToString:@"分享"]) {
+        NSLog(@"分享");
+        //1、创建分享参数
+        NSArray* imageArray = @[[UIImage imageNamed:@"fengxiangASD"]];
+        if (imageArray) {
+            NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+            [shareParams SSDKSetupShareParamsByText:@"我最近在使用全民发货软件，非常值得推荐，大家快来使用！。。。 " images:imageArray url:[NSURL URLWithString:@"http://www.ydb56.com"] title:@"全民发货" type:SSDKContentTypeAuto];
+            //2、分享（可以弹出我们的分享菜单和编辑界面）
+            [ShareSDK showShareActionSheet:nil //要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的按钮对象或者自己创建小的view 对象，iPhone可以传nil不会影响
+                                     items:nil
+                               shareParams:shareParams
+                       onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+                           
+                           switch (state) {
+                               case SSDKResponseStateSuccess:
+                               {
+                                   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享成功"
+                                                                                       message:nil
+                                                                                      delegate:nil
+                                                                             cancelButtonTitle:@"确定"
+                                                                             otherButtonTitles:nil];
+                                   [alertView show];
+                                   break;
+                               }
+                               case SSDKResponseStateFail:
+                               {
+                                   
+                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"分享失败(如果是邮件,请先登录邮箱)"
+                                                         message:nil
+//                                                                                   message:[NSString stringWithFormat:@"%@",error]
+                                                                                  delegate:nil
+                                                                         cancelButtonTitle:@"OK"
+                                                                         otherButtonTitles:nil, nil];
+                                   [alert show];
+                                   break;
+                               }
+                               default:
+                                   break;
+                           }
+                           
+                       }];
+        }
+    }
     
     //我要下单
     if([str isEqualToString:@"我要下单"]){//我要下单 showMakeOrder 自带连接线
@@ -214,8 +262,8 @@
     //配置
     if([str isEqualToString:@"配置"]){//消息菜单  不自带连接线
         /*UIAlertView * alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"111消息功能未实现" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil];
-        [alert show];*/
-//        [self performSegueWithIdentifier:@"showHomeNotify" sender:nil];
+         [alert show];*/
+        //        [self performSegueWithIdentifier:@"showHomeNotify" sender:nil];
         
         
         //UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -265,13 +313,13 @@
     
     //订单跟踪
     if([str isEqualToString:@"订单跟踪"]){//订单跟踪
-//        GoodsGetTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDGoodsGetTVC"];
-//        [self.navigationController pushViewController:tvc animated:YES];
+        //        GoodsGetTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDGoodsGetTVC"];
+        //        [self.navigationController pushViewController:tvc animated:YES];
         
         NSLog(@"订单跟踪");
         //RootTabBarController * tabVC=[mainsb instantiateInitialViewController];
         //tabVC.selectedIndex=2;
-//        self.window.rootViewController=tabVC;
+        //        self.window.rootViewController=tabVC;
         //[self.delegate HomeVC:self clickOK:nil];//设置回调  向来源触发事件委托
         
         //直接调转到tabbar的第二个  先找到父类
@@ -286,42 +334,42 @@
 - (IBAction)bill_click:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"showMakeOrder" sender:nil];//下单 提交订单功能  自带连接线
     /*
-    self.billVC=[[UIViewController alloc]init];
-    self.billVC.view=[[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.billVC.view.backgroundColor=[UIColor whiteColor];//前面的页面设置背景为黑色了，到这也是黑色？
-    UILabel * label=[[UILabel alloc]initWithFrame:self.billVC.view.bounds];
-    label.text=@"账单页面是用代码生成的，详见biil_click";
-    [self.billVC.view addSubview:label];
-    
-    //维护UINavigationItem
-    //左
-    self.billVC.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"<" style:UIBarButtonItemStylePlain target:self action:@selector(popVC)];
-    self.billVC.navigationItem.leftBarButtonItem.tintColor=[UIColor whiteColor];
-    //中，高23pt，白色
-    //self.billVC.title=@"账单"; //字体较小
-    UIButton * but=[[UIButton alloc]init];
-    but.tintColor=[UIColor whiteColor];
-    [but setTitle:@"账单" forState:UIControlStateNormal];
-    but.titleLabel.font= [UIFont systemFontOfSize: 23];
-    
-    self.billVC.navigationItem.titleView=but;
-    //右
-    self.billVC.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"HomeIcons.bundle/bill_history.png"] style:UIBarButtonItemStylePlain target:self action:@selector(noDefinitionPopup:)];
-    self.billVC.navigationItem.rightBarButtonItem.tintColor=[UIColor whiteColor];
-    [self.navigationController pushViewController:self.billVC animated:YES];
-    */
+     self.billVC=[[UIViewController alloc]init];
+     self.billVC.view=[[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+     self.billVC.view.backgroundColor=[UIColor whiteColor];//前面的页面设置背景为黑色了，到这也是黑色？
+     UILabel * label=[[UILabel alloc]initWithFrame:self.billVC.view.bounds];
+     label.text=@"账单页面是用代码生成的，详见biil_click";
+     [self.billVC.view addSubview:label];
+     
+     //维护UINavigationItem
+     //左
+     self.billVC.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"<" style:UIBarButtonItemStylePlain target:self action:@selector(popVC)];
+     self.billVC.navigationItem.leftBarButtonItem.tintColor=[UIColor whiteColor];
+     //中，高23pt，白色
+     //self.billVC.title=@"账单"; //字体较小
+     UIButton * but=[[UIButton alloc]init];
+     but.tintColor=[UIColor whiteColor];
+     [but setTitle:@"账单" forState:UIControlStateNormal];
+     but.titleLabel.font= [UIFont systemFontOfSize: 23];
+     
+     self.billVC.navigationItem.titleView=but;
+     //右
+     self.billVC.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"HomeIcons.bundle/bill_history.png"] style:UIBarButtonItemStylePlain target:self action:@selector(noDefinitionPopup:)];
+     self.billVC.navigationItem.rightBarButtonItem.tintColor=[UIColor whiteColor];
+     [self.navigationController pushViewController:self.billVC animated:YES];
+     */
 }
 
 /*
--(void)noDefinitionPopup:(id)sender{
-    UIAlertView * alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"此功能未实现" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil];
-    [alert show];
-}
-
--(void)popVC{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-*/
+ -(void)noDefinitionPopup:(id)sender{
+ UIAlertView * alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"此功能未实现" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+ [alert show];
+ }
+ 
+ -(void)popVC{
+ [self.navigationController popViewControllerAnimated:YES];
+ }
+ */
 
 
 @end
