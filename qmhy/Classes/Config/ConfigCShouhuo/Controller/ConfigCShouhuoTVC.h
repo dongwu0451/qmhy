@@ -22,5 +22,6 @@
 @interface ConfigCShouhuoTVC : UITableViewController
 
 @property (weak, nonatomic) id<ConfigCShouhuoTVCDelegate> delegate;
+@property (copy, nonatomic) NSString *zhuangtaiye;// 1为下单 2为常用配置
 
 @end

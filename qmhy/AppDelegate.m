@@ -42,6 +42,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //    application
+    //    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
+    
+    //    [[UIApplication sharedApplication] applicationIconBadgeNumber];
     
     /**
      *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
@@ -150,56 +156,42 @@
     //[self showLoginVC];
     
     
-    //================================显示封面方法================================
-    //刚进入的时候还没有view呢！
-    [self.window addSubview:self.window.rootViewController.view];
-    //设置splashVC，显示splashVC.view。不使用其他splashVC的功能
-    self.splashViewController=[[UIViewController alloc]init];
-    NSString * splashImageName=@"splash.jpg";//位于resources目录
-    if(self.window.bounds.size.height>480){
-        splashImageName=@"splashR4.jpg";
-    }
-    //设置封面页面的背景图片
-    self.splashViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:splashImageName]];
-    //把splashVC添加进去
-    [self.window addSubview:self.splashViewController.view];
-    //让splashimage显示2s，让用户看一眼得了。
-    [self performSelector:@selector(splashAnimate:) withObject:@0.0 afterDelay:2.0];
+    
     
     
     
     // Required
-    #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
-        if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-            //categories
-            [APService
-             registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
-                                                 UIUserNotificationTypeSound |
-                                                 UIUserNotificationTypeAlert)
-             categories:nil];
-        } else {
-            //categories nil
-            [APService
-             registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                 
-                                                 
-                                                 UIRemoteNotificationTypeSound |
-                                                 UIRemoteNotificationTypeAlert)
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //categories
+        [APService
+         registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                             UIUserNotificationTypeSound |
+                                             UIUserNotificationTypeAlert)
+         categories:nil];
+    } else {
+        //categories nil
+        [APService
+         registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                             
+                                             
+                                             UIRemoteNotificationTypeSound |
+                                             UIRemoteNotificationTypeAlert)
 #else
-             //categories nil
-             categories:nil];
-            [APService
-             registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                 UIRemoteNotificationTypeSound |
-                                                 UIRemoteNotificationTypeAlert)
+         //categories nil
+         categories:nil];
+        [APService
+         registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                             UIRemoteNotificationTypeSound |
+                                             UIRemoteNotificationTypeAlert)
 #endif
-             // Required
-             categories:nil];
-        }
+         // Required
+         categories:nil];
+    }
     [APService setupWithOption:launchOptions];
     
     [APService setTags:nil alias:config.mem_id callbackSelector:@selector(asdasdd) object:nil];
-
+    
     return YES;
 }
 
@@ -218,15 +210,26 @@
     // Required
     [APService registerDeviceToken:deviceToken];
 }
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // 取得 APNs 标准信息内容
+    NSDictionary *aps = [userInfo valueForKey:@"aps"];
+    NSString *content = [aps valueForKey:@"alert"]; //推送显示的内容
+    NSInteger badge = [[aps valueForKey:@"badge"] integerValue]; //badge数量
+    NSString *sound = [aps valueForKey:@"sound"]; //播放的声音
+    // 取得Extras字段内容
+    NSString *customizeField1 = [userInfo valueForKey:@"customizeExtras"]; //服务端中Extras字段，key是自己定义的
+    NSLog(@"content =[%@], badge=[%d], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
     // Required
     [APService handleRemoteNotification:userInfo];
 }
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     // IOS 7 Support Required
     [APService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
+
 //显示封面动画
 - (void) splashAnimate:(NSNumber *)alpha {
     //只能用UIViewAnimationOptionCurveEaseInOut和ViewAnimationOptionTransitionNone两种效果
@@ -268,7 +271,7 @@
     LoginVC * loginVC=[[LoginVC alloc]initWithNibName:@"LoginVC" bundle:[NSBundle mainBundle]];
     loginVC.delegate=self;
     loginVC.whichViewToPresent=@"loginView";
-    self.window.rootViewController=loginVC;
+    self.window.rootViewController = loginVC;
 }
 
 //显示tabbar主页界面
@@ -287,13 +290,13 @@
 
 
 //==========================================================
-//全局函数 弹出提示框
+// 全局函数 弹出提示框
 + (void)showAlert:(NSString *)str {
     UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"提醒信息" message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alter show];
 }
 
-//字符串 是否空
+// 字符串 是否空
 + (BOOL) isBlankString:(NSString *)string {
     if (string == nil || string == NULL) {
         return YES;

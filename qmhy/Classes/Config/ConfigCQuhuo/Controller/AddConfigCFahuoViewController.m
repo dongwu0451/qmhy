@@ -13,6 +13,7 @@
 #import "UniformResourceLocator.h"
 #import "ConfigShouHuoAddressPickerViewController.h"
 #import "ConfigFHAPViewController.h"
+#import "MakeOrderTVC.h"
 
 @interface AddConfigCFahuoViewController () <ConfigFHAPViewControllerDelegate>
 
@@ -47,6 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"1231231---------------%@", self.zhuangtaiye);
     UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showUIPickerView)];
     [tapGesturRecognizer setNumberOfTapsRequired:1];
     [self.suozaidiquTextView addGestureRecognizer:tapGesturRecognizer];
@@ -70,10 +72,10 @@
 - (IBAction)yesBtnClick:(UIButton *)sender {
     [MBProgressHUD showMessage:@"正在添加中..." toView:self.view];
     NSString *methodName = @"updateTabCommonPickupInfo";
-    NSString *params = @"&proName=%d_%d_%@_%@_%@_%@_%@_%@_%@_%@_%@_%d_%d";
-    int x_id = 0;
+    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
+    NSString  *x_id = @"0";
     QConfig *config = [[QConfig alloc] init];
-    int uid = [config.uid intValue];
+    NSString *uid = config.uid;
     NSString *contant = self.fahuolianxirenTextField.text;
     NSString *tel = self.shoujihaomaTextField.text;
     NSString *province = self.province;
@@ -83,8 +85,8 @@
     NSString *Address = self.xiangxidizhiTextView.text;
     NSString *status = @"N";
     NSString *createby = config.username;
-    int isOnly = 1;
-    int setType = 1;
+    NSString *isOnly = @"1";
+    NSString *setType = @"1";
     
     NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName,x_id,uid,contant,tel,province,city,area,addressCode,Address,status,createby,isOnly,setType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // 发送请求
@@ -95,9 +97,23 @@
         NSArray *infoArray = [dic objectForKey:@"rs"];
         NSString *success = infoArray[0][@"result"];
         if ([success isEqualToString:@"ok"]) {
+            NSDictionary *dict =[[NSDictionary alloc] initWithObjectsAndKeys:x_id, @"x_id",uid,@"uid",contant,@"contant",tel,@"tel",province,@"province",city,@"city",area,@"area",addressCode,@"addressCode",Address,@"Address",status,@"status",createby,@"createby",isOnly,@"isOnly",setType,@"setType",nil];
+            //创建通知
+            NSNotification *notification =[NSNotification notificationWithName:@"TZFahuoTVC" object:nil userInfo:dict];
+            [[NSNotificationCenter defaultCenter] postNotification:notification];
             [MBProgressHUD hideHUDForView:self.view];
             [MBProgressHUD showError:@"添加成功！"];
-            [self.navigationController popViewControllerAnimated:YES];
+            
+            if ([self.zhuangtaiye isEqualToString:@"1"]) {
+                for (UIViewController *temp in self.navigationController.viewControllers) {
+                    if ([temp isKindOfClass:[MakeOrderTVC class]]) {
+                        [self.navigationController popToViewController:temp animated:YES];
+                    }
+                }
+            } else if ([self.zhuangtaiye isEqualToString:@"2"]) {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+            
         } else {
             [MBProgressHUD hideHUDForView:self.view];
             [MBProgressHUD showError:@"添加失败！"];

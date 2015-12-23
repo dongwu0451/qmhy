@@ -7,6 +7,8 @@
 //
 
 #import "ConfigCommonTVC.h"
+#import "ConfigCQuhuoTVC.h"
+#import "ConfigCShouhuoTVC.h"
 
 @interface ConfigCommonTVC ()
 
@@ -124,6 +126,19 @@
     if (section==1 && row==3) {//配置常用收货信息
         [self performSegueWithIdentifier:@"showConfigCShouhuo" sender:nil];
         NSLog(@"showConfigCShouhuo");
+    }
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    id destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass:[ConfigCQuhuoTVC class]]) {
+        ConfigCQuhuoTVC *updateVC = destVC;
+        updateVC.zhuangtaiye = @"2";
+    }
+    if ([destVC isKindOfClass:[ConfigCShouhuoTVC class]]) {
+        ConfigCQuhuoTVC *updateVC = destVC;
+        updateVC.zhuangtaiye = @"2";
     }
 }
 

@@ -38,6 +38,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.pageStart = 1;
     self.pegeEnd = 5;
     [self xxcHeadView];

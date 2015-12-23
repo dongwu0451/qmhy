@@ -70,13 +70,26 @@
 
 @implementation MakeOrderOKViewController
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     QConfig *config = [[QConfig alloc] init];
     _addgoodslistAndAddorderlist_uid = config.uid;
     _addorderlist_goodsName = @"";
     _addorderlist_freightPrice = @"0.00";
     _addorderlist_collectionPrice = @"0.00";
     _addgoodslist_name = @"";
+    _addgoodslist_type = @"";
+    _addgoodslist_longs = @"";
+    _addgoodslist_width = @"";
+    _addgoodslist_height = @"";
+    _addgoodslist_weight = @"";
+    _addgoodslist_count = @"";
+    _addgoodslist_ishuizhi = @"";
+    _addgoodslist_insurance = @"";
+    _addgoodslist_sendgoods = @"";
+    _addgoodslist_collectionprice = @"";
+    _addgoodslist_volume = @"";
+    _addgoodslist_sumnum = @"";
+    
     NSLog(@"总件数:=======================================");
     NSLog(@"zongjianshu---%@", self.zongjianshu);
     
@@ -150,10 +163,7 @@
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.bigNumber];
         } else {
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString: [self newStr:bigAndSmallGoodsModel.smailGoodsName]];
-            if (self.goods.count > 1) {
-                _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.smailNumber];
-            }
-            
+            _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:bigAndSmallGoodsModel.smailNumber];
         }
         if (i < self.goods.count - 1) {
             _addorderlist_goodsName = [_addorderlist_goodsName stringByAppendingString:@","];
@@ -179,17 +189,124 @@
         _addorderlist_collectionPrice =  [NSString stringWithFormat:@"%f", [_addorderlist_collectionPrice floatValue] + [bigAndSmallGoodsModel.bigCollectionCharges floatValue] + [bigAndSmallGoodsModel.smailCollectionCharges floatValue]];
         
         
-        //        // addgoodslist addgoodslist_name 2
-        //        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
-        //            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:@"大件货物"];
-        //        } else {
-        //            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailGoodsName]];
-        //        }
-        //        if (i < self.goods.count - 1) {
-        //            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:@"-"];
-        //        }
+        // addgoodslist addgoodslist_name 2
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:@"大件货物"];
+        } else {
+            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailGoodsName]];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_name = [_addgoodslist_name stringByAppendingString:@"-"];
+        }
+        
+        // addgoodslist  addgoodslist_type 3 0为小件，1为大件 多件以"-"分隔
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_type = [_addgoodslist_type stringByAppendingString:@"1"];
+        } else {
+            _addgoodslist_type = [_addgoodslist_type stringByAppendingString:@"0"];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_type = [_addgoodslist_type stringByAppendingString:@"-"];
+        }
+        
+        // addgoodslist  addgoodslist_longs addgoodslist_width addgoodslist_height addgoodslist_weight 4 5 6 7
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_longs = [_addgoodslist_longs stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigLong]];
+            _addgoodslist_width = [_addgoodslist_width stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigWide]];
+            _addgoodslist_height = [_addgoodslist_height stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigHigh]];
+            _addgoodslist_weight = [_addgoodslist_weight stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigHeavy]];
+            if (i < self.goods.count - 1) {
+                _addgoodslist_longs = [_addgoodslist_longs stringByAppendingString:@"-"];
+                _addgoodslist_width = [_addgoodslist_width stringByAppendingString:@"-"];
+                _addgoodslist_height = [_addgoodslist_height stringByAppendingString:@"-"];
+                _addgoodslist_weight = [_addgoodslist_weight stringByAppendingString:@"-"];
+            }
+        }
+        else{
+            
+        }
         
         
+        // addgoodslist addgoodslist_count 8
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_count = [_addgoodslist_count stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigNumber]];
+        } else {
+            _addgoodslist_count = [_addgoodslist_count stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailNumber]];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_count = [_addgoodslist_count stringByAppendingString:@"-"];
+        }
+        
+        // addgoodslist _addgoodslist_ishuizhi 9
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_ishuizhi = [_addgoodslist_ishuizhi stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigReceipt]];
+        } else {
+            _addgoodslist_ishuizhi = [_addgoodslist_ishuizhi stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailReceipt]];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_ishuizhi = [_addgoodslist_ishuizhi stringByAppendingString:@"-"];
+        }
+        
+        // addgoodslist_insurance 保价费
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_insurance = [_addgoodslist_insurance stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigProtectionMoney]];
+        } else {
+            _addgoodslist_insurance = [_addgoodslist_insurance stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailValuationFee]];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_insurance = [_addgoodslist_insurance stringByAppendingString:@"-"];
+        }
+        
+        
+        // addgoodslist_sendgoods 送货费
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_sendgoods = [_addgoodslist_sendgoods stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigDeliveryCharges]];
+        } else {
+            _addgoodslist_sendgoods = [_addgoodslist_sendgoods stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailDeliveryCharges]];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_sendgoods = [_addgoodslist_sendgoods stringByAppendingString:@"-"];
+        }
+        
+        // addgoodslist_collectionprice 代收费
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            _addgoodslist_collectionprice = [_addgoodslist_collectionprice stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigCollectionCharges]];
+        } else {
+            _addgoodslist_collectionprice = [_addgoodslist_collectionprice stringByAppendingString:[self newStr:bigAndSmallGoodsModel.smailCollectionCharges]];
+        }
+        if (i < self.goods.count - 1) {
+            _addgoodslist_collectionprice = [_addgoodslist_collectionprice stringByAppendingString:@"-"];
+        }
+        
+        // addgoodslist_volume 体积
+        //        _addgoodslist_longs = [_addgoodslist_longs stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigLong]];
+        //        _addgoodslist_width = [_addgoodslist_width stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigWide]];
+        //        _addgoodslist_height = [_addgoodslist_height stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigHigh]];
+        //        _addgoodslist_weight = [_addgoodslist_weight stringByAppendingString:[self newStr:bigAndSmallGoodsModel.bigHeavy]];
+        
+        
+        if ([bigAndSmallGoodsModel.bigCategory isEqualToString:@"大件"]) {
+            
+            if (bigAndSmallGoodsModel.bigLong.length <= 0) {
+                bigAndSmallGoodsModel.bigLong = @"0";
+            }
+            if (bigAndSmallGoodsModel.bigWide.length <= 0) {
+                bigAndSmallGoodsModel.bigWide = @"0";
+            }
+            if (bigAndSmallGoodsModel.bigHigh.length <= 0) {
+                bigAndSmallGoodsModel.bigHigh = @"0";
+            }
+            double asda = [[self newStr:bigAndSmallGoodsModel.bigLong] doubleValue] * [[self newStr:bigAndSmallGoodsModel.bigWide] doubleValue] *[[self newStr:bigAndSmallGoodsModel.bigHigh] doubleValue];
+            NSString *asdd = [NSString stringWithFormat:@"%lf", asda];
+            _addgoodslist_volume = [_addgoodslist_volume stringByAppendingString:asdd] ;
+            
+            if (i < self.goods.count - 1) {
+                _addgoodslist_volume = [_addgoodslist_volume stringByAppendingString:@"-"];
+            }
+        }
+        
+        // addgoodslist_sumnum 货物数量
+        _addgoodslist_sumnum = [self newStr:self.zongjianshu];
     }
     
     // addorderlist 收货人姓名 addorderlist_consigneeName 2
@@ -231,7 +348,7 @@
     NSLog(@"备注:=======================================");
     NSLog(@"beizhu---%@", self.beizhu);
     
-    [self addgoodslist];
+    //    [self addgoodslist];
     
 }
 
@@ -288,126 +405,6 @@
     NSLog(@"Tag \"%@\" was tapped", tagsControl.tags[index]);
 }
 
-- (void)addgoodslist {
-    
-    // 模拟
-    [self hehehecode];
-    NSLog(@"A-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
-    NSLog(@"A-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
-    NSLog(@"addgoodslist_name---%@", self.addgoodslist_name);
-    NSLog(@"addgoodslist_type---%@", self.addgoodslist_type);
-    NSLog(@"addgoodslist_longs---%@", self.addgoodslist_longs);
-    NSLog(@"addgoodslist_width---%@", self.addgoodslist_width);
-    NSLog(@"addgoodslist_height---%@", self.addgoodslist_height);
-    NSLog(@"addgoodslist_weight---%@", self.addgoodslist_weight);
-    NSLog(@"addgoodslist_count---%@", self.addgoodslist_count);
-    NSLog(@"addgoodslist_ishuizhi---%@", self.addgoodslist_ishuizhi);
-    NSLog(@"addgoodslist_insurance---%@", self.addgoodslist_insurance);
-    NSLog(@"addgoodslist_sendgoods---%@", self.addgoodslist_sendgoods);
-    NSLog(@"addgoodslist_collectionprice---%@", self.addgoodslist_collectionprice);
-    NSLog(@"addgoodslist_volume---%@", self.addgoodslist_volume);
-    NSLog(@"addgoodslist_sumnum---%@", self.addgoodslist_sumnum);
-    
-    NSString *methodName = @"addgoodslist";
-    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
-    NSString *uid = self.addgoodslistAndAddorderlist_uid;
-    NSString *code = self.addgoodslistAndAddorderlist_code;
-    NSString *name = self.addgoodslist_name;
-    NSString *type = self.addgoodslist_type;
-    NSString *longs = self.addgoodslist_longs;
-    NSString *width = self.addgoodslist_width;
-    NSString *height = self.addgoodslist_height;
-    NSString *weight = self.addgoodslist_weight;
-    NSString *count = self.addgoodslist_count;
-    NSString *ishuizhi = self.addgoodslist_ishuizhi;
-    NSString *insurance = self.addgoodslist_insurance;
-    NSString *sendgoods = self.addgoodslist_sendgoods;
-    NSString *collectionprice = self.addgoodslist_collectionprice;
-    NSString *volume = self.addgoodslist_volume;
-    NSString *sumnum = self.addgoodslist_sumnum;
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"A-%@", URL);
-    //    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-    //        NSError *error = nil;
-    //        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-    //        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-    //        NSArray *array = [dic objectForKey:@"rs"];
-    //#warning 呵呵
-    //
-    //    } fail:^{
-    //
-    //    }];
-    [self addorderlist];
-}
-
-- (void)addorderlist {
-    // 模拟
-    
-    NSString *addorderlist_freightPrice = [NSString stringWithFormat:@"%.2f", [_addorderlist_freightPrice floatValue]];
-    NSString *addorderlist_collectionPrice = [NSString stringWithFormat:@"%.2f", [_addorderlist_collectionPrice floatValue]];
-    NSLog(@"B-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
-    NSLog(@"B-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
-    NSLog(@"addorderlist_consigneeName---%@", self.addorderlist_consigneeName);
-    NSLog(@"addorderlist_consigneePhone---%@", self.addorderlist_consigneePhone);
-    NSLog(@"smailNameTextField.text---%@", self.smailNameTextField.text);
-    NSLog(@"addorderlist_city---%@", self.addorderlist_city);
-    NSLog(@"addorderlist_goodsName---%@", self.addorderlist_goodsName);
-    NSLog(@"addorderlist_num---%@", self.zongjianshu);
-    NSLog(@"addorderlist_standard---%@", @"箱货");
-    NSLog(@"addorderlist_goodDescribe---%@", @"无");
-    NSLog(@"addorderlist_freightPrice---%@", self.addorderlist_freightPrice);
-    NSLog(@"addorderlist_collectionPrice---%@", self.addorderlist_collectionPrice);
-    NSLog(@"addorderlist_logisticsPrice---%@", @"0");
-    NSLog(@"addorderlist_pickupContact---%@", self.addorderlist_pickupContact);
-    NSLog(@"addorderlist_pickupAddress---%@", self.addorderlist_pickupAddress);
-    NSLog(@"addorderlist_pickupPhone---%@", self.addorderlist_pickupPhone);
-    NSLog(@"addorderlist_remark---%@", self.addorderlist_remark);
-    NSLog(@"addorderlist_image---%@", self.addorderlist_image);
-    NSLog(@"addorderlist_status---%@", @"10");
-    NSLog(@"addorderlist_startpoint---%@", self.addorderlist_startpoint);
-    NSLog(@"addorderlist_endpoint---%@", self.addorderlist_endpoint);
-    NSLog(@"addorderlist_goodtype---%@", self.addorderlist_goodtype);
-    
-    NSString *methodName = @"addorderlist";
-    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
-    NSString *uid = self.addgoodslistAndAddorderlist_uid;
-    NSString *code = self.addgoodslistAndAddorderlist_code;
-    NSString *consigneeName = self.addorderlist_consigneeName;
-    NSString *consigneePhone = self.addorderlist_consigneePhone;
-    NSString *logisticsName = self.smailNameTextField.text;
-    NSString *city = self.addorderlist_city;
-    NSString *goodsName = self.addorderlist_goodsName;
-    NSString *num = self.zongjianshu;
-    NSString *standard = @"箱货";
-    NSString *goodDescribe = @"无";
-    NSString *freightPrice = addorderlist_freightPrice;
-    NSString *collectionPrice = addorderlist_collectionPrice;
-    NSString *logisticsPrice = @"0";
-    NSString *pickupContact = self.addorderlist_pickupContact;
-    NSString *pickupAddress = self.addorderlist_pickupAddress;
-    NSString *pickupPhone = self.addorderlist_pickupPhone;
-    NSString *remark = self.addorderlist_remark;
-    NSString *image = self.addorderlist_image;
-    NSString *status = @"10";
-    NSString *startpoint = self.addorderlist_startpoint;
-    NSString *endpoint = self.addorderlist_endpoint;
-    NSString *goodtype = self.addorderlist_goodtype;
-    
-    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"B-%@", URL);
-    //    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
-    //        NSError *error = nil;
-    //        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-    //        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-    //        NSArray *array = [dic objectForKey:@"rs"];
-    //#warning 呵呵
-    //
-    //    } fail:^{
-    //
-    //    }];
-}
-
-
 - (void)hehehecode {
     // uid = uid
     // code = 月 时 分 日 秒
@@ -428,8 +425,6 @@
     self.addgoodslistAndAddorderlist_code = asdasd;
 }
 
-
-
 - (NSString *)newStr:(NSString *)str {
     if (str.length <= 0) {
         return @"";
@@ -437,7 +432,6 @@
         return str;
     }
 }
-
 
 - (IBAction)shangchuanzhaopianBtnClick:(UIButton *)sender {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择图片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"相册", nil];
@@ -486,7 +480,6 @@
     // 隐藏模态窗口
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 // 上传图片方法
 - (void)upLoadImage {
@@ -544,7 +537,131 @@
 
 
 - (IBAction)tijiaodingdanBtnClick:(UIButton *)sender {
-    NSLog(@"12341");
+    [self hehehecode];
+    [MBProgressHUD showMessage:@"正在下单..." toView:self.view];
+    NSLog(@"A-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
+    NSLog(@"A-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
+    NSLog(@"addgoodslist_name---%@", self.addgoodslist_name);
+    NSLog(@"addgoodslist_type---%@", self.addgoodslist_type);
+    NSLog(@"addgoodslist_longs---%@", self.addgoodslist_longs);
+    NSLog(@"addgoodslist_width---%@", self.addgoodslist_width);
+    NSLog(@"addgoodslist_height---%@", self.addgoodslist_height);
+    NSLog(@"addgoodslist_weight---%@", self.addgoodslist_weight);
+    NSLog(@"addgoodslist_count---%@", self.addgoodslist_count);
+    NSLog(@"addgoodslist_ishuizhi---%@", self.addgoodslist_ishuizhi);
+    NSLog(@"addgoodslist_insurance---%@", self.addgoodslist_insurance);
+    NSLog(@"addgoodslist_sendgoods---%@", self.addgoodslist_sendgoods);
+    NSLog(@"addgoodslist_collectionprice---%@", self.addgoodslist_collectionprice);
+    NSLog(@"addgoodslist_volume---%@", self.addgoodslist_volume);
+    NSLog(@"addgoodslist_sumnum---%@", self.addgoodslist_sumnum);
+    
+    NSString *methodName = @"addgoodslist";
+    NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
+    NSString *uid = self.addgoodslistAndAddorderlist_uid;
+    NSString *code = self.addgoodslistAndAddorderlist_code;
+    NSString *name = self.addgoodslist_name;
+    NSString *type = self.addgoodslist_type;
+    NSString *longs = self.addgoodslist_longs;
+    NSString *width = self.addgoodslist_width;
+    NSString *height = self.addgoodslist_height;
+    NSString *weight = self.addgoodslist_weight;
+    NSString *count = self.addgoodslist_count;
+    NSString *ishuizhi = self.addgoodslist_ishuizhi;
+    NSString *insurance = self.addgoodslist_insurance;
+    NSString *sendgoods = self.addgoodslist_sendgoods;
+    NSString *collectionprice = self.addgoodslist_collectionprice;
+    NSString *volume = self.addgoodslist_volume;
+    NSString *sumnum = self.addgoodslist_sumnum;
+    NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, name, type, longs, width, height, weight, count, ishuizhi, insurance, sendgoods, collectionprice, volume, sumnum] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"A-%@", URL);
+    [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+        NSError *error = nil;
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        NSArray *array = [dic objectForKey:@"rs"];
+        if ([array[0][@"a"] isEqualToString:@"ok"]) {
+            NSLog(@"123");
+            NSString *addorderlist_freightPrice = [NSString stringWithFormat:@"%.2f", [_addorderlist_freightPrice floatValue]];
+            NSString *addorderlist_collectionPrice = [NSString stringWithFormat:@"%.2f", [_addorderlist_collectionPrice floatValue]];
+            NSLog(@"B-addgoodslistAndAddorderlist_uid---%@", self.addgoodslistAndAddorderlist_uid);
+            NSLog(@"B-addgoodslistAndAddorderlist_code---%@", self.addgoodslistAndAddorderlist_code);
+            NSLog(@"addorderlist_consigneeName---%@", self.addorderlist_consigneeName);
+            NSLog(@"addorderlist_consigneePhone---%@", self.addorderlist_consigneePhone);
+            NSLog(@"smailNameTextField.text---%@", self.smailNameTextField.text);
+            NSLog(@"addorderlist_city---%@", self.addorderlist_city);
+            NSLog(@"addorderlist_goodsName---%@", self.addorderlist_goodsName);
+            NSLog(@"addorderlist_num---%@", self.zongjianshu);
+            NSLog(@"addorderlist_standard---%@", @"箱货");
+            NSLog(@"addorderlist_goodDescribe---%@", @"无");
+            NSLog(@"addorderlist_freightPrice---%@", self.addorderlist_freightPrice);
+            NSLog(@"addorderlist_collectionPrice---%@", self.addorderlist_collectionPrice);
+            NSLog(@"addorderlist_logisticsPrice---%@", @"0");
+            NSLog(@"addorderlist_pickupContact---%@", self.addorderlist_pickupContact);
+            NSLog(@"addorderlist_pickupAddress---%@", self.addorderlist_pickupAddress);
+            NSLog(@"addorderlist_pickupPhone---%@", self.addorderlist_pickupPhone);
+            NSLog(@"addorderlist_remark---%@", self.addorderlist_remark);
+            NSLog(@"addorderlist_image---%@", self.addorderlist_image);
+            NSLog(@"addorderlist_status---%@", @"10");
+            NSLog(@"addorderlist_startpoint---%@", self.addorderlist_startpoint);
+            NSLog(@"addorderlist_endpoint---%@", self.addorderlist_endpoint);
+            NSLog(@"addorderlist_goodtype---%@", self.addorderlist_goodtype);
+            
+            NSString *methodName = @"addorderlist";
+            NSString *params = @"&proName=%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@_%@";
+            NSString *uid = self.addgoodslistAndAddorderlist_uid;
+            NSString *code = self.addgoodslistAndAddorderlist_code;
+            NSString *consigneeName = self.addorderlist_consigneeName;
+            NSString *consigneePhone = self.addorderlist_consigneePhone;
+            NSString *logisticsName = self.smailNameTextField.text;
+            NSString *city = self.addorderlist_city;
+            NSString *goodsName = self.addorderlist_goodsName;
+            NSString *num = self.zongjianshu;
+            NSString *standard = @"箱货";
+            NSString *goodDescribe = @"无";
+            NSString *freightPrice = addorderlist_freightPrice;
+            NSString *collectionPrice = addorderlist_collectionPrice;
+            NSString *logisticsPrice = @"0";
+            NSString *pickupContact = self.addorderlist_pickupContact;
+            NSString *pickupAddress = self.addorderlist_pickupAddress;
+            NSString *pickupPhone = self.addorderlist_pickupPhone;
+            NSString *remark = self.addorderlist_remark;
+            NSString *image = @"无";
+            NSString *status = @"10";
+            NSString *startpoint = self.addorderlist_startpoint;
+            NSString *endpoint = self.addorderlist_endpoint;
+            NSString *goodtype = self.addorderlist_goodtype;
+            
+            NSString *URL = [[NSString stringWithFormat:[UniformResourceLocatorURL stringByAppendingString:params], methodName, uid, code, consigneeName, consigneePhone, logisticsName, city, goodsName, num, standard, goodDescribe, freightPrice, collectionPrice, logisticsPrice, pickupContact, pickupAddress, pickupPhone, remark, image, status, startpoint, endpoint, goodtype] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSLog(@"B-%@", URL);
+            [AFNetworkTool postJSONWithUrl:URL parameters:nil success:^(id responseObject) {
+                NSError *error = nil;
+                NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+                NSArray *array = [dic objectForKey:@"rs"];
+                NSLog(@"%@", array);
+                if ([array[0][@"a"] isEqualToString:@"ok"]) {
+                    [MBProgressHUD hideHUDForView:self.view];
+                    [MBProgressHUD showError:@"下单成功" toView:self.view];
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+                }
+            } fail:^{
+                [MBProgressHUD hideHUDForView:self.view];
+                [MBProgressHUD showError:@"下单失败" toView:self.view];
+            }];
+            
+            
+            
+        } else {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showError:@"下单失败" toView:self.view];
+            return ;
+        }
+        
+    } fail:^{
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"下单失败" toView:self.view];
+    }];
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

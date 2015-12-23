@@ -31,6 +31,7 @@
 #import "JSONModelConfigFahuo.h"
 #import "MBProgressHUD+HM.h"
 #import "ECCFHViewController.h"
+#import "AddConfigCFahuoViewController.h"
 
 //===========================  这下面都是以前的import可能会删除 ========================================
 
@@ -43,7 +44,7 @@
 
 
 // 要实现二个页面的代理委托
-@interface MakeOrderTVC () <ConfigCShouhuoTVCDelegate, AddSelectGoodsVCDelegate, MakeOrderJSDZViewControllerDelegate, UITextFieldDelegate>
+@interface MakeOrderTVC () <ConfigCQuhuoTVCDelegate ,ConfigCShouhuoTVCDelegate, AddSelectGoodsVCDelegate, MakeOrderJSDZViewControllerDelegate, UITextFieldDelegate>
 
 
 
@@ -62,6 +63,7 @@
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @property (nonatomic, strong) JSONModelConfigFahuo *jsonModelConfigFahuo;
 
+
 @end
 
 @implementation MakeOrderTVC
@@ -74,22 +76,104 @@
     return _goods;
 }
 
+- (JSONModelConfigFahuo *)jsonModelConfigFahuo {
+    if (!_jsonModelConfigFahuo) {
+        _jsonModelConfigFahuo = [[JSONModelConfigFahuo alloc]init];
+    }
+    return _jsonModelConfigFahuo;
+}
+
+- (JSONModelConfigCShouhuo *)shouhuoren {
+    if (!_shouhuoren) {
+        _shouhuoren = [[JSONModelConfigCShouhuo alloc] init];
+    }
+    return _shouhuoren;
+}
+
+- (void)TZFahuoTVC:(NSNotification *)text {
+    NSLog(@"TZ%@",text.userInfo[@"x_id"]);
+    NSLog(@"TZ%@",text.userInfo[@"uid"]);
+    NSLog(@"TZ%@",text.userInfo[@"contant"]);
+    NSLog(@"TZ%@",text.userInfo[@"tel"]);
+    NSLog(@"TZ%@",text.userInfo[@"province"]);
+    NSLog(@"TZ%@",text.userInfo[@"city"]);
+    NSLog(@"TZ%@",text.userInfo[@"area"]);
+    NSLog(@"TZ%@",text.userInfo[@"addressCode"]);
+    NSLog(@"TZ%@",text.userInfo[@"Address"]);
+    NSLog(@"TZ%@",text.userInfo[@"status"]);
+    NSLog(@"TZ%@",text.userInfo[@"createby"]);
+    NSLog(@"TZ%@",text.userInfo[@"isOnly"]);
+    NSLog(@"TZ%@",text.userInfo[@"setType"]);
+    self.jsonModelConfigFahuo.x_id = text.userInfo[@"x_id"];
+    self.jsonModelConfigFahuo.uid = text.userInfo[@"uid"];
+    self.jsonModelConfigFahuo.contact = text.userInfo[@"contant"];
+    self.jsonModelConfigFahuo.tel = text.userInfo[@"tel"];
+    self.jsonModelConfigFahuo.Province = text.userInfo[@"province"];
+    self.jsonModelConfigFahuo.city = text.userInfo[@"city"];
+    self.jsonModelConfigFahuo.area = text.userInfo[@"area"];
+    self.jsonModelConfigFahuo.addressCode = text.userInfo[@"addressCode"];
+    self.jsonModelConfigFahuo.Address = text.userInfo[@"Address"];
+    self.jsonModelConfigFahuo.status = text.userInfo[@"status"];
+    self.jsonModelConfigFahuo.orderid = @"";
+    self.jsonModelConfigFahuo.createtime = @"";
+    self.jsonModelConfigFahuo.createby = text.userInfo[@"createby"];
+    [self.tableView reloadData];
+    NSLog(@"－－－－－接收到通知------");
+}
+
+- (void)TZShouhuoTVC:(NSNotification *)text {
+    NSLog(@"123");
+    NSLog(@"TZS%@",text.userInfo[@"x_id"]);
+    NSLog(@"TZS%@",text.userInfo[@"uid"]);
+    NSLog(@"TZS%@",text.userInfo[@"contant"]);
+    NSLog(@"TZS%@",text.userInfo[@"tel"]);
+    NSLog(@"TZS%@",text.userInfo[@"province"]);
+    NSLog(@"TZS%@",text.userInfo[@"city"]);
+    NSLog(@"TZS%@",text.userInfo[@"area"]);
+    NSLog(@"TZS%@",text.userInfo[@"addressCode"]);
+    NSLog(@"TZS%@",text.userInfo[@"Address"]);
+    NSLog(@"TZS%@",text.userInfo[@"status"]);
+    NSLog(@"TZS%@",text.userInfo[@"createby"]);
+    NSLog(@"TZS%@",text.userInfo[@"isOnly"]);
+    NSLog(@"TZS%@",text.userInfo[@"setType"]);
+    self.shouhuoren.x_id = text.userInfo[@"x_id"];
+    self.shouhuoren.uid = text.userInfo[@"uid"];
+    self.shouhuoren.contact = text.userInfo[@"contant"];
+    self.shouhuoren.tel = text.userInfo[@"tel"];
+    self.shouhuoren.Province = text.userInfo[@"province"];
+    self.shouhuoren.city = text.userInfo[@"city"];
+    self.shouhuoren.area = text.userInfo[@"area"];
+    self.shouhuoren.addressCode = text.userInfo[@"addressCode"];
+    self.shouhuoren.Address = text.userInfo[@"Address"];
+    self.shouhuoren.status = text.userInfo[@"status"];
+    self.shouhuoren.orderid = @"";
+    self.shouhuoren.createtime = @"";
+    self.shouhuoren.createby = text.userInfo[@"createby"];
+    [self.tableView reloadData];
+    NSLog(@"－－－－－接收到通知------");
+}
+
 - (void)addGoodsVC:(SelectGoodsVC *)addVc saveReturnGoods:(BigAndSmallGoodsModel *)goods {
     NSLog(@"addGoodsVC-----------------");
     self.daishoukuan = [NSString stringWithFormat:@"%.2f",[self.daishoukuan floatValue] + [goods.bigCollectionCharges floatValue] + [goods.smailCollectionCharges floatValue]];
     self.zongjianshu = [NSString stringWithFormat:@"%d",[self.zongjianshu intValue] + [goods.bigNumber intValue] + [goods.smailNumber intValue]];
-//    NSString *stringFloat = [NSString stringWithFormat:@"%f",intString];
+    //    NSString *stringFloat = [NSString stringWithFormat:@"%f",intString];
     [self.goods addObject:goods];
-    
     [self.tableView reloadData];
 }
 
 // 接收配置常用收货人列表页面给的代理请求
 - (void)selectedConfigCShouhuoTVC:(ConfigCShouhuoTVC *)hvc didInputReturnJSONModelConfigCShouhuo:(JSONModelConfigCShouhuo *)shouhuo {
     self.shouhuoren = shouhuo;
-    
     [self.tableView reloadData];
 }
+
+- (void)selectedConfigCQuhuoTVC:(ConfigCQuhuoTVC *)hvc didInputReturnJSONModelConfigFahuo:(JSONModelConfigFahuo *)fahuo {
+    NSLog(@"%@", fahuo);
+    self.jsonModelConfigFahuo = fahuo;
+    [self.tableView reloadData];
+}
+
 
 - (void)makeOrderJSDZViewController:(MakeOrderJSDZViewController *)bvc didInputReturnMessage:(NSString *)msg {
     self.goodstype = msg;
@@ -97,7 +181,7 @@
 }
 
 - (IBAction)xiayibuBtn:(UIBarButtonItem *)sender {
- 
+    
     if (self.dataArray.count == 0) {
         NSLog(@"1");
         return;
@@ -126,8 +210,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-
-
 - (void)sdgsdg {
     for (int i = 0; i < self.dataArray.count; i++) {
         JSONModelConfigFahuo *a = self.dataArray[i];
@@ -136,7 +218,6 @@
         }
     }
 }
-
 
 - (void)loadNewData {
     [MBProgressHUD showMessage:@"请等待..." toView:self.view];
@@ -157,10 +238,10 @@
             [self sdgsdg];
         }
         
-//        NSLog(@"%@", _dataArray);
+        //        NSLog(@"%@", _dataArray);
         
-//        JSONModelConfigFahuo *a = _dataArray[0];
-//        NSLog(@"%@", a.contact);
+        //        JSONModelConfigFahuo *a = _dataArray[0];
+        //        NSLog(@"%@", a.contact);
         [MBProgressHUD hideHUDForView:self.view];
         [self.tableView reloadData];
     } fail:^{
@@ -172,8 +253,16 @@
 //初始化显示
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //    self.jsonModelConfigFahuo.uid = @" ";
+    //    self.shouhuoren.uid = @" ";
     [self loadNewData];
-//    [self sdgsdg];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    //    [self sdgsdg];
+    
+    //注册通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(TZFahuoTVC:) name:@"TZFahuoTVC" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(TZShouhuoTVC:) name:@"TZShouhuoTVC" object:nil];
     self.daishoukuan = @"0.00";
     self.zongjianshu = @"0";
     self.goodstype = @"0";
@@ -190,6 +279,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MakeOrderBzCell" bundle:nil] forCellReuseIdentifier:@"makeoreder_bz"];
 }
 
+
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
@@ -202,22 +293,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    if (section==0) { //第1组 统计 改为 统计信息
-        return 1;
-    }
-    else if (section==1) { //第1组 统计 改为 发货人
-        return 1;
-    }
-    else if(section==2) { //第2组 收货人（批量）  改为 收货人
-        
-        if (NULL==_shouhuoren)
+    if (section == 0) { //第1组 统计 改为 统计信息
+        return 2;
+    } else if (section == 1) { //第1组 统计 改为 发货人
+        if (_jsonModelConfigFahuo.uid.length <= 0) {
             return 1;
-        else
+        } else {
             return 2;
-        
-        
-    } else if(section==3) { //第3组 货物（批量）  改为 货物
+        }
+    } else if (section == 2) { //第2组 收货人（批量）  改为 收货人
+        if (_shouhuoren.uid.length <= 0) {
+            return 1;
+        } else {
+            return 2;
+        }
+    } else if (section == 3) { //第3组 货物（批量）  改为 货物
         return _goods.count + 1;
     } else {  //改为 即时到帐和备注
         return 1;
@@ -225,28 +315,36 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //判断在哪个section，设置不同cellid
-    NSString *cellid;//cellid在前文注册过
+    // 判断在哪个section，设置不同cellid
+    NSString *cellid; // cellid在前文注册过
     if (indexPath.section==0) {
-        cellid = @"makeorder_top";
+        if (indexPath.row == 0) {
+            cellid = @"makeoreder_detail";
+        } else {
+            cellid = @"makeorder_top";
+        }
     }
+    
     if (indexPath.section==1) {
-        cellid = @"makeorder_fahuo";
+        if (indexPath.row == 0) {
+            cellid = @"makeoreder_detail";
+        } else {
+            cellid = @"makeorder_fahuo";
+        }
     }
+    
     if (indexPath.section==2) {
         if (indexPath.row==0) {
             cellid = @"makeoreder_detail";//右箭头单元格
-        }
-        else {
+        } else {
             cellid = @"makeoredershouhuo_main";
-            
         }
     }
+    
     if (indexPath.section==3) {
         if (indexPath.row==0) {
             cellid = @"makeoreder_detail";//右箭头单元格
-        }
-        else {
+        } else {
             cellid = @"makeoredergoods_main";
         }
     }
@@ -254,16 +352,17 @@
     if (indexPath.section==4) {//即时到账
         cellid = @"makeoreder_detail";//右箭头单元格
     }
+    
     if (indexPath.section==5) {//备注
         cellid = @"makeoreder_bz";//右箭头单元格
     }
     
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
-    
-    
     //统计信息
-    if (indexPath.section==0 && indexPath.row==0) {//1.0
+    if (indexPath.section == 0 && indexPath.row == 0) {//1.0
+        [cell.textLabel setText:@"统计"];
+        [cell.detailTextLabel setText:@""];
+    } else if (indexPath.section == 0 && indexPath.row > 0) {
         cell = (MakeOrderTotalCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
         if (!cell) {//这行好像没有用了
             cell = [[MakeOrderTotalCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
@@ -273,17 +372,18 @@
         myCell.lbl_daishoukuan.text = self.daishoukuan;
     }
     
-    //备注
-    if (indexPath.section==1 && indexPath.row==0) {//1.0 备注
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        [cell.textLabel setText:@"发货人"];
+        [cell.detailTextLabel setText:@"请选择发货人"];
+    } else if (indexPath.section==1 && indexPath.row > 0) {
         cell = (MakeOrderFahuoCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
         if (!cell) {//这行好像没有用了
             cell = [[MakeOrderFahuoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
         }
         MakeOrderFahuoCell *myCell = (MakeOrderFahuoCell *)cell;
-        
         if (self.dataArray > 0) {
             myCell.fahuorenLabel.text = self.jsonModelConfigFahuo.contact;
-            //        NSLog(@"%@",c.phone2);
             myCell.fhrdianhuaLabel.text = self.jsonModelConfigFahuo.tel;
             if (self.jsonModelConfigFahuo.Province.length == 0) {
                 self.jsonModelConfigFahuo.Province = @"";
@@ -302,8 +402,6 @@
         } else {
             myCell.fahuorenLabel.text = @"请到常用配置中设置";
         }
-        
-       
     }
     
     //收货人
@@ -313,6 +411,9 @@
         [cell.detailTextLabel setText:@"请选择收货人"];
     } else if (indexPath.section==2 && indexPath.row > 0) {//收货联系人
         cell = (MakeOrderShouhuoCell *)[tableView dequeueReusableCellWithIdentifier:cellid];
+        if (!cell) {//这行好像没有用了
+            cell = [[MakeOrderShouhuoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+        }
         MakeOrderShouhuoCell *mycell=(MakeOrderShouhuoCell *)cell;
         mycell.shouhuo = self.shouhuoren;
     }
@@ -349,40 +450,43 @@
         [myCell.beizhuTextField addTarget:self action:@selector(textFieldDidChangeAction:) forControlEvents:UIControlEventEditingChanged];
         myCell.beizhuTextField.text = self.beizhu;
     }
-    
     return  cell;
 }
 
 - (void)textFieldDidChangeAction:(UITextField *)textField {
-    NSLog(@"%@", textField);
     self.beizhu = textField.text;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section==0) {
+    
+    if (indexPath.row==0) {
+        return 40;
+    } else {
         return 70;
     }
-    else if (indexPath.section==1) {
-        return 70;
-    }else {
-        if (indexPath.row==0) {
-            return 40;
-        } else {
-            return 70;
-        }
-    }
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard * mainsb =[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    if (indexPath.section==1) {//收货联系人，有箭头的
+        if (indexPath.row==0) {
+            ConfigCQuhuoTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDConfigCQuhuoTVC"];
+            tvc.delegate = self;//本类处理代理
+            tvc.zhuangtaiye = @"1";
+            [self.navigationController pushViewController:tvc animated:YES];
+        }
+    }
+    
     if (indexPath.section==2) {//收货联系人，有箭头的
         if (indexPath.row==0) {
             ConfigCShouhuoTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDConfigCShouhuoTVC"];
             tvc.delegate = self;//本类处理代理
+            tvc.zhuangtaiye = @"1";
             [self.navigationController pushViewController:tvc animated:YES];
         }
     }
+    
     if (indexPath.section==3) {//货物，有箭头的
         if (indexPath.row==0) {
             SelectGoodsVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDSelectGoodsVC"];
@@ -390,6 +494,7 @@
             [self.navigationController pushViewController:tvc animated:YES];
         }
     }
+    
     if (indexPath.section == 4) {
         MakeOrderJSDZViewController *vc = [[MakeOrderJSDZViewController alloc] init];
         vc.daishoukuan = self.daishoukuan;
@@ -398,14 +503,15 @@
         
     }
     
-    
 }
 
 //设置编辑模式方式
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // 做判断
     //    if ( indexPath.section == 1 && indexPath.row > 0) return YES;//收货联系人可以删除
-    //    if ( indexPath.section == 2 && indexPath.row > 0) return YES;//货物可以删除
+    if (indexPath.section == 3 && indexPath.row > 0) {
+        return YES;//货物可以删除
+    }
     return NO;
 }
 
@@ -413,20 +519,19 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    //    // 判断在收获人单元格内，且编辑样式为删除时
-    //    if (editingStyle  == UITableViewCellEditingStyleDelete){
-    //        if (indexPath.section == 1 && indexPath.row > 0) {
-    //            // 删除收货人，刷新表格
-    //            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-    //        }
-    //        if (indexPath.section == 2 && indexPath.row > 0) {
-    //            // 删除货物，刷新表格
-    //            [self.goods removeObject:self.goods[indexPath.row - 1]];
-    //            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-    //        }
-    //    }
+    // 判断在收获人单元格内，且编辑样式为删除时
+    if (editingStyle  == UITableViewCellEditingStyleDelete){
+        //            if (indexPath.section == 1 && indexPath.row > 0) {
+        //                // 删除收货人，刷新表格
+        //                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        //            }
+        if (indexPath.section == 3 && indexPath.row > 0) {
+            // 删除货物，刷新表格
+            [self.goods removeObject:self.goods[indexPath.row - 1]];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        }
+    }
 }
-
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];

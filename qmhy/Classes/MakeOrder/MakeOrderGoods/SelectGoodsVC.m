@@ -64,8 +64,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _rightBarButtonItem = self.navigationItem.rightBarButtonItem;
-    self.smailCargoView.hidden = YES;
-    self.bigCargoView.hidden = NO;
+    self.smailCargoView.hidden = NO;
+    self.bigCargoView.hidden = YES;
 }
 
 // 初始化界面
@@ -218,16 +218,20 @@
 
 // 大货物 小货物 切换按钮
 - (IBAction)segmentedControl:(UISegmentedControl *)sender {
-    if (self.segmentedControl.selectedSegmentIndex == 0) {
+    if (self.segmentedControl.selectedSegmentIndex == 1) {
         self.smailCargoView.hidden = YES;
         self.bigCargoView.hidden = NO;
         self.navigationItem.rightBarButtonItem = _rightBarButtonItem;
     }
-    if (self.segmentedControl.selectedSegmentIndex == 1) {
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
         self.bigCargoView.hidden = YES;
         self.smailCargoView.hidden = NO;
         self.navigationItem.rightBarButtonItem = _rightBarButtonItem;
     }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 @end

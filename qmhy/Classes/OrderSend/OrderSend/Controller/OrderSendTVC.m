@@ -157,6 +157,9 @@
     if (indexPath.section==1 && indexPath.row==0) {
         // 1.订单未确认
         OrderDidNotConfirmTableViewController *tvc = [[OrderDidNotConfirmTableViewController alloc] init];
+        tvc.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+        tvc.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+        [tvc.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
         tvc.labelOne = @"您提交的订单还没有";
         tvc.labelTwo = @"被客服审核请耐心等待";
         tvc.status = 10;

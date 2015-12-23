@@ -10,4 +10,6 @@
 
 @interface AddConfigCFahuoViewController : UIViewController
 
+@property (nonatomic, copy) NSString *zhuangtaiye;
+
 @end

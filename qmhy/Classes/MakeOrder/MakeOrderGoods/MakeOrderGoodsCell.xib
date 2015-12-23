@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -17,14 +17,12 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wea_yuebao" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-xa-XMH">
                         <rect key="frame" x="8" y="8" width="50" height="50"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="6bK-Tp-sEO"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水果" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKq-k7-X37">
                         <rect key="frame" x="71" y="37" width="169" height="21"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="169" id="GK1-VG-Kl8"/>
                         </constraints>
@@ -34,7 +32,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1件" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-7E-F7w">
                         <rect key="frame" x="255" y="37" width="57" height="21"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="57" id="Vfe-Ld-Wrc"/>
                         </constraints>
@@ -44,7 +41,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 小件" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-Eo-h4S">
                         <rect key="frame" x="71" y="8" width="246" height="21"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="peL-PD-LmQ"/>
                         </constraints>
@@ -52,7 +48,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="sKq-k7-X37" firstAttribute="top" secondItem="fGP-Eo-h4S" secondAttribute="bottom" constant="8" symbolic="YES" id="AmP-Rp-lG4"/>
                     <constraint firstItem="sKq-k7-X37" firstAttribute="leading" secondItem="mpL-xa-XMH" secondAttribute="trailing" constant="13" id="Deu-Z0-JiW"/>
@@ -66,7 +61,6 @@
                     <constraint firstItem="k9j-7E-F7w" firstAttribute="bottom" secondItem="mpL-xa-XMH" secondAttribute="bottom" id="w1B-iu-M36"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="goodsCategoryLabel" destination="fGP-Eo-h4S" id="chy-3S-TnM"/>
                 <outlet property="goodsCountLabel" destination="k9j-7E-F7w" id="Fcz-6E-x5r"/>

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface AddConfigCShouhuoViewController : UIViewController
+@property (nonatomic, copy) NSString *zhuangtaiye;
 
 @end

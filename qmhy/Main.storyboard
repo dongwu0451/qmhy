@@ -235,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLb-j5-8AH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5144" y="171"/>
+            <point key="canvasLocation" x="5676" y="171"/>
         </scene>
         <!--用户协议-->
         <scene sceneID="3z2-ng-0gc">
@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cE5-cE-DYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5571" y="161"/>
+            <point key="canvasLocation" x="6103" y="161"/>
         </scene>
         <!--配置常用发货信息-->
         <scene sceneID="oOX-7G-LD3">
@@ -307,14 +307,14 @@
                     <navigationItem key="navigationItem" title="配置常用发货信息" id="4iS-KM-dw0">
                         <barButtonItem key="rightBarButtonItem" title="添加" id="2e9-N7-AXB">
                             <connections>
-                                <segue destination="1ai-hZ-gRI" kind="push" id="7BP-6g-nVq"/>
+                                <segue destination="1ai-hZ-gRI" kind="push" identifier="changyongfahuozhuangtai" id="7BP-6g-nVq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Eh-aL-xeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="2401"/>
+            <point key="canvasLocation" x="1740" y="2401"/>
         </scene>
         <!--关于-->
         <scene sceneID="FQE-O1-xym">
@@ -363,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEr-jd-q2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5928" y="155"/>
+            <point key="canvasLocation" x="6460" y="155"/>
         </scene>
         <!--价格表-->
         <scene sceneID="8sg-oj-udK">
@@ -391,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Vg-dO-6g8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4711" y="161"/>
+            <point key="canvasLocation" x="5243" y="161"/>
         </scene>
         <!--更多-->
         <scene sceneID="RRU-j1-1Kb">
@@ -518,6 +518,7 @@
                             </state>
                         </button>
                         <barButtonItem key="rightBarButtonItem" title="查询" id="3B4-X4-GQt">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Y99-tn-dRY" kind="push" identifier="showOrderQuery" id="dCp-Fb-srN"/>
                             </connections>
@@ -577,7 +578,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUg-pL-KbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-910" y="459"/>
+            <point key="canvasLocation" x="-378" y="459"/>
         </scene>
         <!--我的发件-->
         <scene sceneID="B8X-pq-2O6">
@@ -612,7 +613,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRM-Tf-dDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-432" y="447"/>
+            <point key="canvasLocation" x="100" y="447"/>
         </scene>
         <!--各类发件列表-->
         <scene sceneID="udO-jN-K6Y">
@@ -641,7 +642,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcR-oH-byM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1421" y="475"/>
+            <point key="canvasLocation" x="-889" y="475"/>
         </scene>
         <!--查询详情-->
         <scene sceneID="ZMZ-mQ-YB7">
@@ -848,7 +849,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQO-dA-wnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2921" y="323"/>
+            <point key="canvasLocation" x="3453" y="323"/>
         </scene>
         <!--货运小秘-->
         <scene sceneID="lw1-UT-eut">
@@ -909,7 +910,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DR3-hi-VDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="955"/>
+            <point key="canvasLocation" x="2799" y="955"/>
         </scene>
         <!--优惠活动-->
         <scene sceneID="Gog-jY-8Xp">
@@ -1311,7 +1312,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMc-8Z-mby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="501"/>
+            <point key="canvasLocation" x="994" y="501"/>
         </scene>
         <!--银行卡-->
         <scene sceneID="t5I-46-T9e">
@@ -1583,7 +1584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK2-SJ-KUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="3210"/>
+            <point key="canvasLocation" x="1729" y="3206"/>
         </scene>
         <!--添加常用收货信息-->
         <scene sceneID="4gE-Ni-wFs">
@@ -1941,7 +1942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drx-36-4Gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="2390"/>
+            <point key="canvasLocation" x="1352" y="2401"/>
         </scene>
         <!--发件-->
         <scene sceneID="bYo-3S-gpL">
@@ -2259,7 +2260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2X-N3-sbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2434" y="371"/>
+            <point key="canvasLocation" x="2966" y="371"/>
         </scene>
         <!--邀请-->
         <scene sceneID="d9Q-Rz-g7s">
@@ -2288,7 +2289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMo-sH-Zhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="433"/>
+            <point key="canvasLocation" x="2394" y="433"/>
         </scene>
         <!--我的收件-->
         <scene sceneID="mfC-aK-FJo">
@@ -2317,7 +2318,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdT-J8-77W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="352"/>
+            <point key="canvasLocation" x="1917" y="352"/>
         </scene>
         <!--我的-->
         <scene sceneID="M6a-m4-AvS">
@@ -3052,11 +3053,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="选择货物" id="WtN-00-ZQw">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="iEa-on-f5V">
-                            <rect key="frame" x="94" y="7" width="133" height="30"/>
+                            <rect key="frame" x="93.5" y="7" width="133" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="大件货物"/>
                                 <segment title="小件货物"/>
+                                <segment title="大件货物"/>
                             </segments>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -3093,7 +3094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kE-EX-uKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2239" y="269"/>
+            <point key="canvasLocation" x="-1509" y="364"/>
         </scene>
     </scenes>
     <resources>

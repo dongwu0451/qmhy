@@ -17,6 +17,7 @@
 #import "JSONModelConfigCShouhuo.h"
 #import "MBProgressHUD+HM.h"
 #import "EditConfigCShouhuoViewController.h"
+#import "AddConfigCShouhuoViewController.h"
 
 @interface ConfigCShouhuoTVC () <ConfigCShouhuoTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *infoArray;
@@ -27,8 +28,15 @@
     
 @implementation ConfigCShouhuoTVC
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //设置导航栏返回按钮为白色
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    NSLog(@"%@",self.zhuangtaiye);
     [self loadNewData];
 }
 
@@ -136,6 +144,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    id destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass:[AddConfigCShouhuoViewController class]]) {
+        AddConfigCShouhuoViewController *updateVC = destVC;
+        updateVC.zhuangtaiye = self.zhuangtaiye;
+    }
+}
 
 @end

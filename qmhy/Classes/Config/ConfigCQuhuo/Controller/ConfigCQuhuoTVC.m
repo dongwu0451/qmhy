@@ -21,6 +21,7 @@
 #import "JSONModelConfigFahuo.h"
 #import "MBProgressHUD+HM.h"
 #import "ECCFHViewController.h"
+#import "AddConfigCFahuoViewController.h"
 @interface ConfigCQuhuoTVC () <ConfigCFahuoTableViewCellDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSMutableArray *infoArray;
 @property (strong, nonatomic) NSMutableArray *dataArray;
@@ -181,6 +182,19 @@
     return 130;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.delegate selectedConfigCQuhuoTVC:self didInputReturnJSONModelConfigFahuo:self.dataArray[indexPath.row]];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    id destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass:[AddConfigCFahuoViewController class]]) {
+        AddConfigCFahuoViewController *updateVC = destVC;
+        updateVC.zhuangtaiye = self.zhuangtaiye;
+    }
+}
 
 @end
