@@ -13,11 +13,10 @@
 #import "NotifyTVC.h"//我的消息 视图控制器
 #import "OrderGetTVC.h"//我的取件 视图控制器
 #import "YqTVC.h"//邀请 视图控制器
-#import "OrderSendQueryTVC.h"//我的发件 视图控制器  （发件查询）
 #import "JSONModelLogin.h"//登录实体
 #import "AFNetworkTool.h"//httppost类
 #import "MJExtension.h"//JSON与模型转换类
-
+#import "OrderSendTVC.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 
@@ -255,7 +254,7 @@
     
     //我的发件
     if([str isEqualToString:@"我的发件"]){//我的发件 SIDOrderSendQueryTVC  不自带连接线
-        OrderSendQueryTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDOrderSendQueryTVC"];
+        OrderSendTVC *tvc=[mainsb instantiateViewControllerWithIdentifier:@"SIDOrderSendQueryTVC"];
         [self.navigationController pushViewController:tvc animated:YES];
     }
     

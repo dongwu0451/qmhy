@@ -65,13 +65,10 @@
 		04B02A8D1C1FE97C00399206 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B02A8C1C1FE97C00399206 /* CoreTelephony.framework */; };
 		04B02A8F1C1FE99200399206 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B02A8E1C1FE99200399206 /* SystemConfiguration.framework */; };
 		04B02A901C1FE99C00399206 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84AAD11A1219980098E502 /* CoreGraphics.framework */; };
-		04B02A921C1FEA8A00399206 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B02A911C1FEA8A00399206 /* PushConfig.plist */; };
 		04B1E1551C083B4C00AFBF90 /* OrderSendTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1541C083B4C00AFBF90 /* OrderSendTVC.m */; };
 		04B1E15B1C083B6E00AFBF90 /* OrderSendCommentSubmitTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1581C083B6E00AFBF90 /* OrderSendCommentSubmitTVC.m */; };
 		04B1E15C1C083B6E00AFBF90 /* OrderSendCommentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E15A1C083B6E00AFBF90 /* OrderSendCommentTVC.m */; };
 		04B1E1601C083B8200AFBF90 /* OrderSendListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E15F1C083B8200AFBF90 /* OrderSendListTVC.m */; };
-		04B1E1661C083B9A00AFBF90 /* OrderSendQueryContentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1631C083B9A00AFBF90 /* OrderSendQueryContentTVC.m */; };
-		04B1E1671C083B9A00AFBF90 /* OrderSendQueryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1651C083B9A00AFBF90 /* OrderSendQueryTVC.m */; };
 		04B1E16B1C083BCC00AFBF90 /* TousuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E16A1C083BCC00AFBF90 /* TousuVC.m */; };
 		04B1E16F1C083BE100AFBF90 /* YqTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E16E1C083BE100AFBF90 /* YqTVC.m */; };
 		04B1E1731C083C1100AFBF90 /* AboutTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E1721C083C1100AFBF90 /* AboutTVC.m */; };
@@ -82,6 +79,12 @@
 		04BB77D81C19189200DE47A8 /* MakeOrderShouhuoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB77D61C19189200DE47A8 /* MakeOrderShouhuoCell.m */; };
 		04BB77D91C19189200DE47A8 /* MakeOrderShouhuoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB77D71C19189200DE47A8 /* MakeOrderShouhuoCell.xib */; };
 		04BB77DD1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB77DC1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m */; };
+		04CFF1231C2B90D3008F293F /* JSONModelTaborderstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFF1221C2B90D3008F293F /* JSONModelTaborderstate.m */; };
+		04CFF1281C2BB452008F293F /* OrderSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFF1251C2BB452008F293F /* OrderSendButton.m */; };
+		04CFF1291C2BB452008F293F /* OrderSendNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFF1271C2BB452008F293F /* OrderSendNVC.m */; };
+		04CFF12B1C2BB4D2008F293F /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CFF12A1C2BB4D2008F293F /* PushConfig.plist */; };
+		04CFF1301C2BB857008F293F /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFF12D1C2BB857008F293F /* HomeIconButton.m */; };
+		04CFF1311C2BB857008F293F /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFF12F1C2BB857008F293F /* HomeNVC.m */; };
 		04D1B3AC1C0BED9E00890507 /* JSONModelMyEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */; };
 		04D1B3AF1C0BF34B00890507 /* MyEvaluationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3AE1C0BF34B00890507 /* MyEvaluationTableViewController.m */; };
 		04D1B3B31C0BF37C00890507 /* MyEvaluationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1B3B11C0BF37C00890507 /* MyEvaluationTableViewCell.m */; };
@@ -205,8 +208,6 @@
 		04E447231C06949100E05811 /* GesturePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4466A1C06949100E05811 /* GesturePasswordController.m */; };
 		04E447241C06949100E05811 /* GesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4466C1C06949100E05811 /* GesturePasswordView.m */; };
 		04E447251C06949100E05811 /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4466E1C06949100E05811 /* TentacleView.m */; };
-		04E447261C06949100E05811 /* HomeIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446711C06949100E05811 /* HomeIconButton.m */; };
-		04E447271C06949100E05811 /* HomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446731C06949100E05811 /* HomeNVC.m */; };
 		04E447351C06949100E05811 /* BigAndSmallGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446901C06949100E05811 /* BigAndSmallGoodsModel.m */; };
 		04E447361C06949100E05811 /* MakeOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446921C06949100E05811 /* MakeOrderGoodsCell.m */; };
 		04E447371C06949100E05811 /* MakeOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E446931C06949100E05811 /* MakeOrderGoodsCell.xib */; };
@@ -218,8 +219,6 @@
 		04E447471C06949100E05811 /* pricetable.html in Resources */ = {isa = PBXBuildFile; fileRef = 04E446B41C06949100E05811 /* pricetable.html */; };
 		04E447491C06949100E05811 /* userprotocol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04E446B81C06949100E05811 /* userprotocol.gif */; };
 		04E4474A1C06949100E05811 /* userprotocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 04E446B91C06949100E05811 /* userprotocol.html */; };
-		04E4475F1C06949100E05811 /* OrderSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446EC1C06949100E05811 /* OrderSendButton.m */; };
-		04E447601C06949100E05811 /* OrderSendNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E446EE1C06949100E05811 /* OrderSendNVC.m */; };
 		04E4476A1C06951A00E05811 /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E447691C06951A00E05811 /* province_data.xml */; };
 		04E447701C06966800E05811 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4476D1C06966800E05811 /* RootTabBarController.m */; };
 		04E447711C06966800E05811 /* SinglePageNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4476F1C06966800E05811 /* SinglePageNVC.m */; };
@@ -370,7 +369,6 @@
 		04B02A8A1C1FE96300399206 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		04B02A8C1C1FE97C00399206 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		04B02A8E1C1FE99200399206 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		04B02A911C1FEA8A00399206 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		04B1E1531C083B4C00AFBF90 /* OrderSendTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendTVC.h; sourceTree = "<group>"; };
 		04B1E1541C083B4C00AFBF90 /* OrderSendTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendTVC.m; sourceTree = "<group>"; };
 		04B1E1571C083B6E00AFBF90 /* OrderSendCommentSubmitTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendCommentSubmitTVC.h; sourceTree = "<group>"; };
@@ -379,10 +377,6 @@
 		04B1E15A1C083B6E00AFBF90 /* OrderSendCommentTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendCommentTVC.m; sourceTree = "<group>"; };
 		04B1E15E1C083B8200AFBF90 /* OrderSendListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendListTVC.h; sourceTree = "<group>"; };
 		04B1E15F1C083B8200AFBF90 /* OrderSendListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendListTVC.m; sourceTree = "<group>"; };
-		04B1E1621C083B9A00AFBF90 /* OrderSendQueryContentTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendQueryContentTVC.h; sourceTree = "<group>"; };
-		04B1E1631C083B9A00AFBF90 /* OrderSendQueryContentTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendQueryContentTVC.m; sourceTree = "<group>"; };
-		04B1E1641C083B9A00AFBF90 /* OrderSendQueryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendQueryTVC.h; sourceTree = "<group>"; };
-		04B1E1651C083B9A00AFBF90 /* OrderSendQueryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendQueryTVC.m; sourceTree = "<group>"; };
 		04B1E1691C083BCC00AFBF90 /* TousuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TousuVC.h; sourceTree = "<group>"; };
 		04B1E16A1C083BCC00AFBF90 /* TousuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TousuVC.m; sourceTree = "<group>"; };
 		04B1E16D1C083BE100AFBF90 /* YqTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YqTVC.h; sourceTree = "<group>"; };
@@ -402,6 +396,17 @@
 		04BB77D71C19189200DE47A8 /* MakeOrderShouhuoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeOrderShouhuoCell.xib; sourceTree = "<group>"; };
 		04BB77DB1C193BCE00DE47A8 /* JSONModelMakeOrderOK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMakeOrderOK.h; sourceTree = "<group>"; };
 		04BB77DC1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMakeOrderOK.m; sourceTree = "<group>"; };
+		04CFF1211C2B90D3008F293F /* JSONModelTaborderstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelTaborderstate.h; sourceTree = "<group>"; };
+		04CFF1221C2B90D3008F293F /* JSONModelTaborderstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelTaborderstate.m; sourceTree = "<group>"; };
+		04CFF1241C2BB452008F293F /* OrderSendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendButton.h; sourceTree = "<group>"; };
+		04CFF1251C2BB452008F293F /* OrderSendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendButton.m; sourceTree = "<group>"; };
+		04CFF1261C2BB452008F293F /* OrderSendNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendNVC.h; sourceTree = "<group>"; };
+		04CFF1271C2BB452008F293F /* OrderSendNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendNVC.m; sourceTree = "<group>"; };
+		04CFF12A1C2BB4D2008F293F /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PushConfig.plist; path = qmhy/PushConfig.plist; sourceTree = "<group>"; };
+		04CFF12C1C2BB857008F293F /* HomeIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeIconButton.h; sourceTree = "<group>"; };
+		04CFF12D1C2BB857008F293F /* HomeIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIconButton.m; sourceTree = "<group>"; };
+		04CFF12E1C2BB857008F293F /* HomeNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNVC.h; sourceTree = "<group>"; };
+		04CFF12F1C2BB857008F293F /* HomeNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNVC.m; sourceTree = "<group>"; };
 		04D1B3AA1C0BED9E00890507 /* JSONModelMyEvaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelMyEvaluation.h; sourceTree = "<group>"; };
 		04D1B3AB1C0BED9E00890507 /* JSONModelMyEvaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelMyEvaluation.m; sourceTree = "<group>"; };
 		04D1B3AD1C0BF34B00890507 /* MyEvaluationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvaluationTableViewController.h; sourceTree = "<group>"; };
@@ -621,10 +626,6 @@
 		04E4466C1C06949100E05811 /* GesturePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePasswordView.m; sourceTree = "<group>"; };
 		04E4466D1C06949100E05811 /* TentacleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TentacleView.h; sourceTree = "<group>"; };
 		04E4466E1C06949100E05811 /* TentacleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TentacleView.m; sourceTree = "<group>"; };
-		04E446701C06949100E05811 /* HomeIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeIconButton.h; sourceTree = "<group>"; };
-		04E446711C06949100E05811 /* HomeIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIconButton.m; sourceTree = "<group>"; };
-		04E446721C06949100E05811 /* HomeNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNVC.h; sourceTree = "<group>"; };
-		04E446731C06949100E05811 /* HomeNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNVC.m; sourceTree = "<group>"; };
 		04E4468F1C06949100E05811 /* BigAndSmallGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigAndSmallGoodsModel.h; sourceTree = "<group>"; };
 		04E446901C06949100E05811 /* BigAndSmallGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigAndSmallGoodsModel.m; sourceTree = "<group>"; };
 		04E446911C06949100E05811 /* MakeOrderGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeOrderGoodsCell.h; sourceTree = "<group>"; };
@@ -640,10 +641,6 @@
 		04E446B41C06949100E05811 /* pricetable.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pricetable.html; sourceTree = "<group>"; };
 		04E446B81C06949100E05811 /* userprotocol.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = userprotocol.gif; sourceTree = "<group>"; };
 		04E446B91C06949100E05811 /* userprotocol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = userprotocol.html; sourceTree = "<group>"; };
-		04E446EB1C06949100E05811 /* OrderSendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendButton.h; sourceTree = "<group>"; };
-		04E446EC1C06949100E05811 /* OrderSendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendButton.m; sourceTree = "<group>"; };
-		04E446ED1C06949100E05811 /* OrderSendNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSendNVC.h; sourceTree = "<group>"; };
-		04E446EE1C06949100E05811 /* OrderSendNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSendNVC.m; sourceTree = "<group>"; };
 		04E447691C06951A00E05811 /* province_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = province_data.xml; sourceTree = "<group>"; };
 		04E4476C1C06966800E05811 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		04E4476D1C06966800E05811 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
@@ -1025,8 +1022,12 @@
 		04B1E1521C083B4C00AFBF90 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04CFF1261C2BB452008F293F /* OrderSendNVC.h */,
+				04CFF1271C2BB452008F293F /* OrderSendNVC.m */,
 				04B1E1531C083B4C00AFBF90 /* OrderSendTVC.h */,
 				04B1E1541C083B4C00AFBF90 /* OrderSendTVC.m */,
+				04CFF1241C2BB452008F293F /* OrderSendButton.h */,
+				04CFF1251C2BB452008F293F /* OrderSendButton.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1047,17 +1048,6 @@
 			children = (
 				04B1E15E1C083B8200AFBF90 /* OrderSendListTVC.h */,
 				04B1E15F1C083B8200AFBF90 /* OrderSendListTVC.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		04B1E1611C083B9A00AFBF90 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				04B1E1621C083B9A00AFBF90 /* OrderSendQueryContentTVC.h */,
-				04B1E1631C083B9A00AFBF90 /* OrderSendQueryContentTVC.m */,
-				04B1E1641C083B9A00AFBF90 /* OrderSendQueryTVC.h */,
-				04B1E1651C083B9A00AFBF90 /* OrderSendQueryTVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1130,6 +1120,15 @@
 			children = (
 				04BB77DB1C193BCE00DE47A8 /* JSONModelMakeOrderOK.h */,
 				04BB77DC1C193BCE00DE47A8 /* JSONModelMakeOrderOK.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CFF1201C2B8F9F008F293F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CFF1211C2B90D3008F293F /* JSONModelTaborderstate.h */,
+				04CFF1221C2B90D3008F293F /* JSONModelTaborderstate.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1233,13 +1232,13 @@
 			children = (
 				04E444F91C0690DD00E05811 /* Main (主要) */,
 				04E446761C06949100E05811 /* Login(登录) */,
-				04E4466F1C06949100E05811 /* Home */,
-				04E446141C06949000E05811 /* Config(常用配置) */,
-				04E446651C06949100E05811 /* GesturePassword */,
-				04E4467D1C06949100E05811 /* MakeOrder */,
-				04E446A41C06949100E05811 /* More */,
-				04E446BC1C06949100E05811 /* My(我的) */,
+				04E4466F1C06949100E05811 /* Home(首页) */,
 				04E446E91C06949100E05811 /* OrderSend(发件) */,
+				04E446BC1C06949100E05811 /* My(我的) */,
+				04E446A41C06949100E05811 /* More(更多) */,
+				04E446141C06949000E05811 /* Config(常用配置) */,
+				04E4467D1C06949100E05811 /* MakeOrder(下单) */,
+				04E446651C06949100E05811 /* GesturePassword */,
 			);
 			name = Classes;
 			path = qmhy/Classes;
@@ -1720,15 +1719,12 @@
 			path = GesturePassword;
 			sourceTree = "<group>";
 		};
-		04E4466F1C06949100E05811 /* Home */ = {
+		04E4466F1C06949100E05811 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
 				04E447D41C06C9BD00E05811 /* Controller */,
-				04E446701C06949100E05811 /* HomeIconButton.h */,
-				04E446711C06949100E05811 /* HomeIconButton.m */,
-				04E446721C06949100E05811 /* HomeNVC.h */,
-				04E446731C06949100E05811 /* HomeNVC.m */,
 			);
+			name = "Home(首页)";
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -1742,12 +1738,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		04E4467D1C06949100E05811 /* MakeOrder */ = {
+		04E4467D1C06949100E05811 /* MakeOrder(下单) */ = {
 			isa = PBXGroup;
 			children = (
 				04E4467E1C06949100E05811 /* MakeOrder(下单) */,
-				04E4468E1C06949100E05811 /* MakeOrderGoods */,
+				04E4468E1C06949100E05811 /* MakeOrderGoods(大小货物) */,
 			);
+			name = "MakeOrder(下单)";
 			path = MakeOrder;
 			sourceTree = "<group>";
 		};
@@ -1762,7 +1759,7 @@
 			path = MakeOrder;
 			sourceTree = "<group>";
 		};
-		04E4468E1C06949100E05811 /* MakeOrderGoods */ = {
+		04E4468E1C06949100E05811 /* MakeOrderGoods(大小货物) */ = {
 			isa = PBXGroup;
 			children = (
 				04E4468F1C06949100E05811 /* BigAndSmallGoodsModel.h */,
@@ -1773,10 +1770,11 @@
 				04E446941C06949100E05811 /* SelectGoodsVC.h */,
 				04E446951C06949100E05811 /* SelectGoodsVC.m */,
 			);
+			name = "MakeOrderGoods(大小货物)";
 			path = MakeOrderGoods;
 			sourceTree = "<group>";
 		};
-		04E446A41C06949100E05811 /* More */ = {
+		04E446A41C06949100E05811 /* More(更多) */ = {
 			isa = PBXGroup;
 			children = (
 				04E446A51C06949100E05811 /* About */,
@@ -1785,6 +1783,7 @@
 				04E446B21C06949100E05811 /* PriceTable */,
 				04E446B71C06949100E05811 /* UserProtocol */,
 			);
+			name = "More(更多)";
 			path = More;
 			sourceTree = "<group>";
 		};
@@ -1942,7 +1941,6 @@
 				04E446EA1C06949100E05811 /* OrderSend */,
 				04E446F11C06949100E05811 /* OrderSendComment */,
 				04E446F61C06949100E05811 /* OrderSendList */,
-				04E446F91C06949100E05811 /* OrderSendQuery */,
 			);
 			name = "OrderSend(发件)";
 			path = OrderSend;
@@ -1951,11 +1949,8 @@
 		04E446EA1C06949100E05811 /* OrderSend */ = {
 			isa = PBXGroup;
 			children = (
+				04CFF1201C2B8F9F008F293F /* Model */,
 				04B1E1521C083B4C00AFBF90 /* Controller */,
-				04E446EB1C06949100E05811 /* OrderSendButton.h */,
-				04E446EC1C06949100E05811 /* OrderSendButton.m */,
-				04E446ED1C06949100E05811 /* OrderSendNVC.h */,
-				04E446EE1C06949100E05811 /* OrderSendNVC.m */,
 			);
 			path = OrderSend;
 			sourceTree = "<group>";
@@ -1974,14 +1969,6 @@
 				04B1E15D1C083B8200AFBF90 /* Controller */,
 			);
 			path = OrderSendList;
-			sourceTree = "<group>";
-		};
-		04E446F91C06949100E05811 /* OrderSendQuery */ = {
-			isa = PBXGroup;
-			children = (
-				04B1E1611C083B9A00AFBF90 /* Controller */,
-			);
-			path = OrderSendQuery;
 			sourceTree = "<group>";
 		};
 		04E4476B1C06966800E05811 /* Controller */ = {
@@ -2158,6 +2145,10 @@
 		04E447D41C06C9BD00E05811 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04CFF12C1C2BB857008F293F /* HomeIconButton.h */,
+				04CFF12D1C2BB857008F293F /* HomeIconButton.m */,
+				04CFF12E1C2BB857008F293F /* HomeNVC.h */,
+				04CFF12F1C2BB857008F293F /* HomeNVC.m */,
 				04E447D51C06C9BD00E05811 /* HomeVC.h */,
 				04E447D61C06C9BD00E05811 /* HomeVC.m */,
 			);
@@ -2337,7 +2328,7 @@
 				04E444EE1C068F5900E05811 /* qmhy-Info.plist */,
 				04E444F61C06904900E05811 /* Supporting Files */,
 				04E446131C06944100E05811 /* qmhy-Prefix.pch */,
-				04B02A911C1FEA8A00399206 /* PushConfig.plist */,
+				04CFF12A1C2BB4D2008F293F /* PushConfig.plist */,
 			);
 			name = qmhy;
 			sourceTree = "<group>";
@@ -2450,7 +2441,7 @@
 				04E447E31C06CA0300E05811 /* LoginVC.xib in Resources */,
 				04E447E51C06CA0300E05811 /* RegisterTVC.xib in Resources */,
 				04E3E0751C1680540023D440 /* MakeOrderBzCell.xib in Resources */,
-				04B02A921C1FEA8A00399206 /* PushConfig.plist in Resources */,
+				04CFF12B1C2BB4D2008F293F /* PushConfig.plist in Resources */,
 				0483FDF51C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.xib in Resources */,
 				04E4476A1C06951A00E05811 /* province_data.xml in Resources */,
 				0471C3F61C1FC222002905F2 /* ShareSDK简洁版新功能介绍.pages in Resources */,
@@ -2480,7 +2471,6 @@
 				04E444DD1C068CDD00E05811 /* AppDelegate.m in Sources */,
 				04E447C31C06C1FC00E05811 /* OrderGetXiangQingViewController.m in Sources */,
 				04E447E41C06CA0300E05811 /* RegisterTVC.m in Sources */,
-				04B1E1671C083B9A00AFBF90 /* OrderSendQueryTVC.m in Sources */,
 				04E445C21C06914000E05811 /* NSObject+MJKeyValue.m in Sources */,
 				04E447B61C06A4B400E05811 /* MJRefreshBackNormalFooter.m in Sources */,
 				04B1E1601C083B8200AFBF90 /* OrderSendListTVC.m in Sources */,
@@ -2495,7 +2485,6 @@
 				0483FDF41C0ECA0B00FB2BBE /* MyEvaluationSJXXTableViewCell.m in Sources */,
 				04E447B11C06A4B400E05811 /* MJRefreshHeader.m in Sources */,
 				04E447441C06949100E05811 /* MoreNVC.m in Sources */,
-				04E4475F1C06949100E05811 /* OrderSendButton.m in Sources */,
 				04E445B41C06914000E05811 /* AFNetworkReachabilityManager.m in Sources */,
 				04E447EF1C06CD4500E05811 /* MyNVC.m in Sources */,
 				04E445B71C06914000E05811 /* AFURLRequestSerialization.m in Sources */,
@@ -2509,8 +2498,8 @@
 				04E447AE1C06A4B400E05811 /* MJRefreshBackFooter.m in Sources */,
 				04E445E11C06914000E05811 /* SDWebImagePrefetcher.m in Sources */,
 				04E4470F1C06949100E05811 /* ConfigCFahuoTableViewCell.m in Sources */,
+				04CFF1301C2BB857008F293F /* HomeIconButton.m in Sources */,
 				04E447B71C06A4B400E05811 /* MJRefreshBackStateFooter.m in Sources */,
-				04E447601C06949100E05811 /* OrderSendNVC.m in Sources */,
 				0403FA341C103D4000422138 /* OrderQHZTableViewController.m in Sources */,
 				04F5081F1C0822D0009F0ACD /* JSONModelOrderDingDanZhuangTai.m in Sources */,
 				04B1E17F1C083C5F00AFBF90 /* PriceTableVC.m in Sources */,
@@ -2532,7 +2521,6 @@
 				04E447031C06949100E05811 /* JSONModelConfigGGoods.m in Sources */,
 				04E445C11C06914000E05811 /* NSObject+MJCoding.m in Sources */,
 				04E3E0731C1680540023D440 /* MakeOrderTVC.m in Sources */,
-				04B1E1661C083B9A00AFBF90 /* OrderSendQueryContentTVC.m in Sources */,
 				04E4477D1C06A20F00E05811 /* JSONModelOrderGet.m in Sources */,
 				04E4471A1C06949100E05811 /* ADDConfigCWuliuViewController.m in Sources */,
 				04E4471F1C06949100E05811 /* ConfigCWuliuTableViewCell.m in Sources */,
@@ -2567,7 +2555,6 @@
 				04E4480E1C06CE3900E05811 /* JSONModelNotifyWLTZ.m in Sources */,
 				04B1E15C1C083B6E00AFBF90 /* OrderSendCommentTVC.m in Sources */,
 				04E446FF1C06949100E05811 /* AddGoodsVC.m in Sources */,
-				04E447271C06949100E05811 /* HomeNVC.m in Sources */,
 				04E445E51C06914000E05811 /* UIImage+WebP.m in Sources */,
 				04E445E81C06914000E05811 /* UIView+WebCacheOperation.m in Sources */,
 				04E447B51C06A4B400E05811 /* MJRefreshBackGifFooter.m in Sources */,
@@ -2595,10 +2582,12 @@
 				04D1B3C11C0C422B00890507 /* DXStarRatingView.m in Sources */,
 				04B1E1831C083C8400AFBF90 /* UserProtocolVC.m in Sources */,
 				04E447F01C06CD4500E05811 /* MyTVC.m in Sources */,
+				04CFF1291C2BB452008F293F /* OrderSendNVC.m in Sources */,
 				04E445EF1C06914000E05811 /* UIProgressView+AFNetworking.m in Sources */,
 				0403FA371C103D5900422138 /* JSONModelOrderQHZ.m in Sources */,
 				04E447E61C06CA0300E05811 /* JSONModelLogin.m in Sources */,
 				04E447B21C06A4B400E05811 /* MJRefreshAutoGifFooter.m in Sources */,
+				04CFF1311C2BB857008F293F /* HomeNVC.m in Sources */,
 				04E445E61C06914000E05811 /* UIImageView+HighlightedWebCache.m in Sources */,
 				04E4470E1C06949100E05811 /* JSONModelConfigFahuo.m in Sources */,
 				04E447E91C06CD1D00E05811 /* JSONModelOrderGetXiangQing.m in Sources */,
@@ -2606,7 +2595,6 @@
 				04E447041C06949100E05811 /* ConfigCGoodsTableViewCell.m in Sources */,
 				04E445E21C06914000E05811 /* UIButton+WebCache.m in Sources */,
 				04E445E91C06914000E05811 /* TLTagsControl.m in Sources */,
-				04E447261C06949100E05811 /* HomeIconButton.m in Sources */,
 				04E445BF1C06914000E05811 /* MJProperty.m in Sources */,
 				04B1E1731C083C1100AFBF90 /* AboutTVC.m in Sources */,
 				04E445B81C06914000E05811 /* AFURLResponseSerialization.m in Sources */,
@@ -2629,6 +2617,7 @@
 				04E445C31C06914000E05811 /* NSObject+MJProperty.m in Sources */,
 				040F743E1C0D420600FC4AB9 /* MyEvaluationXQTableViewController.m in Sources */,
 				04E447E21C06CA0300E05811 /* LoginVC.m in Sources */,
+				04CFF1231C2B90D3008F293F /* JSONModelTaborderstate.m in Sources */,
 				04E445B21C06914000E05811 /* AFHTTPRequestOperationManager.m in Sources */,
 				0403F7FB1C1531C800B38DBB /* OrderDLWTableViewController.m in Sources */,
 				04E448181C06CE7700E05811 /* NotifyZXTZViewController.m in Sources */,
@@ -2637,6 +2626,7 @@
 				04E445F91C06914000E05811 /* AESCrypt.m in Sources */,
 				04E4471B1C06949100E05811 /* ConfigCWuliuTVC.m in Sources */,
 				04D492131C17B11400ACD102 /* MakeOrderJSDZViewController.m in Sources */,
+				04CFF1281C2BB452008F293F /* OrderSendButton.m in Sources */,
 				04E445B51C06914000E05811 /* AFSecurityPolicy.m in Sources */,
 				04E3E6181C11354A00014EDB /* OrderQHZEwmViewController.m in Sources */,
 				04B1E17B1C083C4A00AFBF90 /* MoreTVC.m in Sources */,

@@ -18,11 +18,6 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-////腾讯开放平台（对应QQ和QQ空间）SDK头文件
-//#import <TencentOpenAPI/TencentOAuth.h>
-//#import <TencentOpenAPI/QQApiInterface.h>
-
-
 //微信SDK头文件
 #import "WXApi.h"
 
@@ -42,12 +37,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //    application
-    //    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+    
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
-    
-    //    [[UIApplication sharedApplication] applicationIconBadgeNumber];
     
     /**
      *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，

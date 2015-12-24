@@ -20,20 +20,17 @@
 
 @implementation OrderSendButton
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.initialized=NO;
+        self.initialized = NO;
     }
     return self;
 }
 
 
-// Only override drawRect: if you perform custom drawing.
 //重写drawRect
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
 
     if (self.initialized) {
@@ -61,7 +58,7 @@
     self.initialized=YES;
 }
 
--(void)touchUp{
+- (void)touchUp {
     self.backgroundColor=[UIColor whiteColor];
 }
 
